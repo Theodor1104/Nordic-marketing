@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 628px;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a3d2e;
+      position: relative;
+      overflow: hidden;
+    }
+    .accent-bg {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: linear-gradient(135deg, #f0f4f2 0%, #e0e7e3 100%);
+      border-radius: 50%;
+    }
+    .accent-bg-2 {
+      position: absolute;
+      bottom: -150px;
+      left: -150px;
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #1a3d2e 0%, #2d5a45 100%);
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 50px 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1a3d2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      background: #3d8b6e;
+      border-radius: 50%;
+      margin-left: -5px;
+      margin-top: -15px;
+    }
+    .logo span { color: #3d8b6e; }
+    .tagline {
+      color: #6b7d73;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      gap: 60px;
+    }
+    .left {
+      flex: 1;
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #1a3d2e;
+    }
+    h1 span { color: #3d8b6e; }
+    .description {
+      font-size: 18px;
+      color: #4a5a51;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1a3d2e;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .cta-arrow {
+      font-size: 18px;
+    }
+    .right {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .service-card {
+      background: #f8faf9;
+      border: 1px solid #e0e7e3;
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.2s;
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: #1a3d2e;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      color: white;
+      font-size: 20px;
+    }
+    .service-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1a3d2e;
+    }
+    .service-card p {
+      font-size: 13px;
+      color: #6b7d73;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="accent-bg"></div>
+  <div class="accent-bg-2"></div>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">N</div>
+        <div class="logo-dot"></div>
+        Nordic<span>Marketing</span>
+      </div>
+      <div class="tagline">Digital Marketing Bureau i København</div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <h1>Vi hjælper din virksomhed med at <span>vokse online</span></h1>
+        <p class="description">Gennem strategisk digital markedsføring, datadrevet optimering og kreativt indhold skaber vi målbare resultater for din virksomhed.</p>
+        <div class="cta">
+          Gratis konsultation
+          <span class="cta-arrow">→</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>SEO & GEO</h3>
+          <p>Bliv fundet på Google og i AI-søgninger</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>Google Ads</h3>
+          <p>Målrettede annoncer der konverterer</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Social Media</h3>
+          <p>Facebook, Instagram & LinkedIn marketing</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Webdesign</h3>
+          <p>Moderne hjemmesider der performer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

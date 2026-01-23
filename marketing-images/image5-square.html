@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 800px;
+      height: 800px;
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #1a3d2e;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-circle {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: linear-gradient(135deg, #f0f4f2 0%, #e0e7e3 100%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+    }
+    .logo-circle {
+      width: 180px;
+      height: 180px;
+      background: #1a3d2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(26, 61, 46, 0.3);
+    }
+    .logo-n {
+      font-size: 90px;
+      font-weight: 700;
+      color: white;
+    }
+    .logo-dot {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      width: 25px;
+      height: 25px;
+      background: #5ba88a;
+      border-radius: 50%;
+    }
+    .brand-name {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .brand-name span { color: #3d8b6e; }
+    .tagline {
+      font-size: 18px;
+      color: #6b7d73;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      max-width: 500px;
+    }
+    .service-tag {
+      background: #1a3d2e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .website {
+      position: absolute;
+      bottom: 40px;
+      font-size: 16px;
+      color: #6b7d73;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-circle"></div>
+  <div class="container">
+    <div class="logo-circle">
+      <span class="logo-n">N</span>
+      <span class="logo-dot"></span>
+    </div>
+    <div class="brand-name">Nordic<span>Marketing</span></div>
+    <div class="tagline">Digital Marketing Bureau i København</div>
+    <div class="services">
+      <div class="service-tag">SEO & GEO</div>
+      <div class="service-tag">Google Ads</div>
+      <div class="service-tag">Social Media</div>
+      <div class="service-tag">Webdesign</div>
+    </div>
+    <div class="website">nordic-marketing.dk</div>
+  </div>
+</body>
+</html>

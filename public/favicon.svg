@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Round background -->
+  <circle cx="32" cy="32" r="32" fill="#1a3d2e"/>
+  <!-- N letter -->
+  <text x="32" y="44" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">N</text>
+  <!-- Green dot -->
+  <circle cx="48" cy="14" r="7" fill="#5ba88a"/>
+</svg>

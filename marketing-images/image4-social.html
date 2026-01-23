@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 628px;
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #1a3d2e;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-shape {
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: linear-gradient(135deg, #1a3d2e 0%, #2d5a45 100%);
+      border-radius: 50%;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 50px 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1a3d2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .logo-text span { color: #3d8b6e; }
+    .main {
+      flex: 1;
+      display: flex;
+      gap: 80px;
+    }
+    .left {
+      flex: 1;
+      max-width: 550px;
+    }
+    .badge {
+      display: inline-block;
+      background: #f0f4f2;
+      color: #1a3d2e;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #1a3d2e;
+    }
+    h1 span { color: #3d8b6e; }
+    .description {
+      font-size: 18px;
+      color: #4a5a51;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .platforms {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    .platform {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8faf9;
+      border: 1px solid #e0e7e3;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .platform-icon {
+      font-size: 20px;
+    }
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: #364039;
+    }
+    .check {
+      width: 22px;
+      height: 22px;
+      background: #3d8b6e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .right {
+      flex: 0 0 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .phone-mockup {
+      width: 280px;
+      height: 480px;
+      background: #1a3d2e;
+      border-radius: 40px;
+      padding: 12px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .phone-header {
+      background: linear-gradient(135deg, #1a3d2e 0%, #3d8b6e 100%);
+      padding: 30px 20px 20px;
+      color: white;
+    }
+    .phone-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .phone-avatar {
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .phone-name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .phone-handle {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+    .phone-stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      border-bottom: 1px solid #e0e7e3;
+    }
+    .phone-stat {
+      text-align: center;
+    }
+    .phone-stat-value {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a3d2e;
+    }
+    .phone-stat-label {
+      font-size: 11px;
+      color: #6b7d73;
+    }
+    .phone-posts {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      padding: 2px;
+    }
+    .phone-post {
+      background: #f0f4f2;
+      aspect-ratio: 1;
+    }
+    .phone-post:nth-child(2) { background: #e0e7e3; }
+    .phone-post:nth-child(4) { background: #d0dbd5; }
+    .phone-post:nth-child(6) { background: #e0e7e3; }
+  </style>
+</head>
+<body>
+  <div class="bg-shape"></div>
+  <div class="container">
+    <div class="header">
+      <div class="logo-icon">N</div>
+      <div class="logo-text">Nordic<span>Marketing</span></div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div class="badge">Social Media Marketing</div>
+        <h1>Nå din målgruppe på <span>sociale medier</span></h1>
+        <p class="description">Vi hjælper dig med at opbygge en stærk tilstedeværelse på sociale medier og skabe engagement med din målgruppe.</p>
+        <div class="platforms">
+          <div class="platform">
+            <span class="platform-icon">📘</span>
+            Facebook
+          </div>
+          <div class="platform">
+            <span class="platform-icon">📸</span>
+            Instagram
+          </div>
+          <div class="platform">
+            <span class="platform-icon">💼</span>
+            LinkedIn
+          </div>
+        </div>
+        <div class="services-list">
+          <div class="service-item">
+            <div class="check">✓</div>
+            <span>Strategi og indholdsplanlægning</span>
+          </div>
+          <div class="service-item">
+            <div class="check">✓</div>
+            <span>Professionelt indhold og grafik</span>
+          </div>
+          <div class="service-item">
+            <div class="check">✓</div>
+            <span>Målrettet annoncering og kampagner</span>
+          </div>
+          <div class="service-item">
+            <div class="check">✓</div>
+            <span>Community management</span>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <div class="phone-profile">
+                <div class="phone-avatar">N</div>
+                <div>
+                  <div class="phone-name">Nordic Marketing</div>
+                  <div class="phone-handle">@nordicmarketing</div>
+                </div>
+              </div>
+            </div>
+            <div class="phone-stats">
+              <div class="phone-stat">
+                <div class="phone-stat-value">127</div>
+                <div class="phone-stat-label">Opslag</div>
+              </div>
+              <div class="phone-stat">
+                <div class="phone-stat-value">2.4K</div>
+                <div class="phone-stat-label">Følgere</div>
+              </div>
+              <div class="phone-stat">
+                <div class="phone-stat-value">189</div>
+                <div class="phone-stat-label">Følger</div>
+              </div>
+            </div>
+            <div class="phone-posts">
+              <div class="phone-post"></div>
+              <div class="phone-post"></div>
+              <div class="phone-post"></div>
+              <div class="phone-post"></div>
+              <div class="phone-post"></div>
+              <div class="phone-post"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

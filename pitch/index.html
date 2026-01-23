@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordic Marketing - Pitch Deck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a3d2e;
+            --primary-light: #2d5a45;
+            --accent: #3d8b6e;
+            --accent-light: #5ba88a;
+            --white: #ffffff;
+            --off-white: #f8faf9;
+            --gray: #6b7d73;
+        }
+
+        .reveal {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .reveal .slides {
+            text-align: left;
+        }
+
+        .reveal .slides section {
+            padding: 40px;
+        }
+
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--accent) 100%);
+            text-align: center !important;
+        }
+
+        .title-slide h1 {
+            font-size: 4em !important;
+            font-weight: 800 !important;
+            margin-bottom: 0 !important;
+            background: linear-gradient(90deg, #fff 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title-slide .tagline {
+            font-size: 1.5em;
+            color: var(--accent-light);
+            margin-top: 20px;
+            font-weight: 300;
+        }
+
+        .title-slide .logo-shape {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 30px;
+            margin: 0 auto 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .title-slide .logo-text {
+            font-size: 3em;
+            font-weight: 800;
+            color: white;
+        }
+
+        /* Content Slides */
+        .content-slide {
+            background: var(--white);
+        }
+
+        .content-slide h2 {
+            color: var(--primary) !important;
+            font-size: 2.5em !important;
+            font-weight: 700 !important;
+            margin-bottom: 40px !important;
+            position: relative;
+        }
+
+        .content-slide h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+            border-radius: 2px;
+        }
+
+        .content-slide p, .content-slide li {
+            color: var(--gray) !important;
+            font-size: 1.3em !important;
+            line-height: 1.6 !important;
+        }
+
+        .content-slide ul {
+            list-style: none !important;
+            padding: 0 !important;
+        }
+
+        .content-slide li {
+            padding: 15px 0 15px 50px !important;
+            position: relative;
+        }
+
+        .content-slide li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            border-radius: 8px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, var(--off-white) 0%, #fff 100%);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(26, 61, 46, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(26, 61, 46, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(26, 61, 46, 0.15);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .card-icon.meta { background: linear-gradient(135deg, #0866ff 0%, #a033ff 100%); }
+        .card-icon.google { background: linear-gradient(135deg, #4285f4 0%, #ea4335 100%); }
+        .card-icon.seo { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); }
+        .card-icon.web { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+
+        .card h3 {
+            color: var(--primary) !important;
+            font-size: 1.3em !important;
+            margin-bottom: 10px !important;
+        }
+
+        .card p {
+            color: var(--gray) !important;
+            font-size: 1em !important;
+            margin: 0 !important;
+        }
+
+        /* USP Cards */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .usp-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: 0 5px 30px rgba(26, 61, 46, 0.08);
+            border-left: 4px solid var(--accent);
+        }
+
+        .usp-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.3em;
+        }
+
+        .usp-card h4 {
+            color: var(--primary) !important;
+            font-size: 1.1em !important;
+            margin: 0 0 5px 0 !important;
+        }
+
+        .usp-card p {
+            color: var(--gray) !important;
+            font-size: 0.9em !important;
+            margin: 0 !important;
+        }
+
+        /* Process Steps */
+        .process-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .process-container::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 10px 30px rgba(26, 61, 46, 0.3);
+        }
+
+        .process-step h4 {
+            color: var(--primary) !important;
+            font-size: 1em !important;
+            margin: 0 !important;
+        }
+
+        /* CTA Slide */
+        .cta-slide {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--accent) 100%);
+            text-align: center !important;
+        }
+
+        .cta-slide h2 {
+            color: white !important;
+            font-size: 3em !important;
+            margin-bottom: 20px !important;
+        }
+
+        .cta-slide h2::after {
+            display: none;
+        }
+
+        .cta-slide .subtitle {
+            color: var(--accent-light);
+            font-size: 1.5em;
+            margin-bottom: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: 15px;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            box-shadow: 0 15px 40px rgba(26, 61, 46, 0.2);
+        }
+
+        .team-member h4 {
+            color: var(--primary) !important;
+            font-size: 1.3em !important;
+            margin: 0 0 5px 0 !important;
+        }
+
+        .team-member p {
+            color: var(--gray) !important;
+            font-size: 1em !important;
+        }
+
+        /* Animations */
+        .reveal .slides section .fragment.grow-in {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .reveal .slides section .fragment.grow-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 40px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 4em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section class="title-slide" data-transition="zoom">
+                <div class="logo-shape">
+                    <span class="logo-text">N</span>
+                </div>
+                <h1>Nordic Marketing</h1>
+                <p class="tagline">Digital marketing der skaber resultater</p>
+            </section>
+
+            <!-- Slide 2: Hvem er vi -->
+            <section class="content-slide" data-transition="slide">
+                <h2>Hvem er vi?</h2>
+                <div class="team-grid">
+                    <div class="team-member fragment fade-up">
+                        <div class="team-avatar">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128100;</span>
+                        </div>
+                        <h4>Grundlægger 1</h4>
+                        <p>Niels Brock studerende</p>
+                    </div>
+                    <div class="team-member fragment fade-up" data-fragment-index="1">
+                        <div class="team-avatar">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128100;</span>
+                        </div>
+                        <h4>Grundlægger 2</h4>
+                        <p>Niels Brock studerende</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 40px;" class="fragment fade-up">
+                    To unge iværksættere med passion for digital marketing<br>
+                    <strong style="color: var(--accent);">Vokset op i den digitale verden</strong>
+                </p>
+            </section>
+
+            <!-- Slide 3: Problem -->
+            <section class="content-slide" data-transition="slide">
+                <h2>Problemet</h2>
+                <div class="stats-grid">
+                    <div class="stat fragment fade-up">
+                        <div class="stat-number">73%</div>
+                        <div class="stat-label">af små virksomheder kæmper<br>med online markedsføring</div>
+                    </div>
+                    <div class="stat fragment fade-up">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">kroner koster traditionelle<br>bureauer om måneden</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 30px;" class="fragment fade-up">
+                    <strong style="color: var(--primary); font-size: 1.2em;">
+                        Der mangler gennemsigtighed og tilgængelighed i branchen
+                    </strong>
+                </p>
+            </section>
+
+            <!-- Slide 4: Løsningen -->
+            <section class="content-slide" data-transition="slide">
+                <h2>Vores løsning</h2>
+                <ul>
+                    <li class="fragment fade-right">Gennemsigtig marketing til <strong style="color: var(--accent);">fair priser</strong></li>
+                    <li class="fragment fade-right">No cure, no pay - <strong style="color: var(--accent);">du betaler for resultater</strong></li>
+                    <li class="fragment fade-right">Moderne værktøjer og <strong style="color: var(--accent);">intelligent brug af AI</strong></li>
+                    <li class="fragment fade-right">Personlig service hvor <strong style="color: var(--accent);">du er prioriteten</strong></li>
+                </ul>
+            </section>
+
+            <!-- Slide 5: Services -->
+            <section class="content-slide" data-transition="slide">
+                <h2>Hvad vi tilbyder</h2>
+                <div class="cards-grid">
+                    <div class="card fragment fade-up">
+                        <div class="card-icon meta">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128246;</span>
+                        </div>
+                        <h3>Meta Ads</h3>
+                        <p>Målrettede annoncer på Facebook og Instagram der konverterer</p>
+                    </div>
+                    <div class="card fragment fade-up">
+                        <div class="card-icon google">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128269;</span>
+                        </div>
+                        <h3>Google Ads</h3>
+                        <p>Bliv synlig når kunderne søger efter dine produkter</p>
+                    </div>
+                    <div class="card fragment fade-up">
+                        <div class="card-icon seo">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128200;</span>
+                        </div>
+                        <h3>SEO</h3>
+                        <p>Organisk synlighed der bringer langvarige resultater</p>
+                    </div>
+                    <div class="card fragment fade-up">
+                        <div class="card-icon web">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128187;</span>
+                        </div>
+                        <h3>Hjemmesider</h3>
+                        <p>Moderne, hurtige sider der konverterer besøgende til kunder</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: USP -->
+            <section class="content-slide" data-transition="slide">
+                <h2>Hvorfor vælge os?</h2>
+                <div class="usp-grid">
+                    <div class="usp-card fragment fade-up">
+                        <div class="usp-icon">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128176;</span>
+                        </div>
+                        <div>
+                            <h4>No cure, no pay</h4>
+                            <p>Du betaler kun når vi leverer resultater</p>
+                        </div>
+                    </div>
+                    <div class="usp-card fragment fade-up">
+                        <div class="usp-icon">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128230;</span>
+                        </div>
+                        <div>
+                            <h4>Komplet pakke</h4>
+                            <p>Marketing OG hjemmeside samlet ét sted</p>
+                        </div>
+                    </div>
+                    <div class="usp-card fragment fade-up">
+                        <div class="usp-icon">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#128241;</span>
+                        </div>
+                        <div>
+                            <h4>Digital natives</h4>
+                            <p>Vi forstår online trends og unge målgrupper</p>
+                        </div>
+                    </div>
+                    <div class="usp-card fragment fade-up">
+                        <div class="usp-icon">
+                            <span style="filter: grayscale(100%) brightness(200%);">&#10084;</span>
+                        </div>
+                        <div>
+                            <h4>Personlig service</h4>
+                            <p>Du er altid vores førsteprioritet</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Process -->
+            <section class="content-slide" data-transition="slide">
+                <h2>Sådan arbejder vi</h2>
+                <div class="process-container">
+                    <div class="process-step fragment fade-up">
+                        <div class="step-number">1</div>
+                        <h4>Gratis<br>konsultation</h4>
+                    </div>
+                    <div class="process-step fragment fade-up">
+                        <div class="step-number">2</div>
+                        <h4>Strategi &<br>forslag</h4>
+                    </div>
+                    <div class="process-step fragment fade-up">
+                        <div class="step-number">3</div>
+                        <h4>Justering &<br>godkendelse</h4>
+                    </div>
+                    <div class="process-step fragment fade-up">
+                        <div class="step-number">4</div>
+                        <h4>Eksekvering &<br>resultater</h4>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: CTA -->
+            <section class="cta-slide" data-transition="zoom">
+                <h2>Klar til at vokse online?</h2>
+                <p class="subtitle">Book en gratis og uforpligtende konsultation</p>
+                <div class="contact-info">
+                    <div class="contact-item fragment fade-up">
+                        &#128231; kontakt@nordicmarketing.dk
+                    </div>
+                    <div class="contact-item fragment fade-up">
+                        &#127760; nordicmarketing.dk
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            center: true,
+            progress: true,
+            controls: true,
+            controlsTutorial: false,
+            slideNumber: false,
+            autoAnimate: true,
+            autoAnimateDuration: 0.7
+        });
+    </script>
+</body>
+</html>

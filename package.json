@@ -1,0 +1,49 @@
+{
+  "name": "nordic-marketing",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.90.1",
+    "framer-motion": "^12.26.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && npm run copy:admin && npm run zip:build",
+    "copy:admin": "rm -rf admin-panel && cp -r build admin-panel && node scripts/build-admin.js && rm -f admin-panel.zip && zip -r admin-panel.zip admin-panel",
+    "zip:build": "rm -f build.zip && zip -r build.zip build",
+    "watch:build": "npm-watch build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src",
+        "public"
+      ],
+      "extensions": "js,jsx,css,html,svg,png,json",
+      "quiet": false
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "npm-watch": "^0.13.0",
+    "sharp": "^0.34.5"
+  }
+}

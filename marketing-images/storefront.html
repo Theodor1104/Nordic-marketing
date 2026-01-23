@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 900px;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #f8faf9 0%, #e8eeeb 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .desk {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 350px;
+      background: linear-gradient(180deg, #c4a77d 0%, #a8895c 100%);
+      border-top: 8px solid #8b7355;
+    }
+    .wall-art {
+      position: absolute;
+      top: 60px;
+      left: 80px;
+      width: 200px;
+      height: 150px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .wall-art-logo {
+      width: 60px;
+      height: 60px;
+      background: #1a3d2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 28px;
+      position: relative;
+    }
+    .wall-art-dot {
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      width: 12px;
+      height: 12px;
+      background: #5ba88a;
+      border-radius: 50%;
+    }
+    .wall-art-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a3d2e;
+    }
+    .monitor {
+      position: absolute;
+      bottom: 320px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 420px;
+      background: #2a2a2a;
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    }
+    .monitor-screen {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .website-header {
+      background: #1a3d2e;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 25px;
+      gap: 12px;
+    }
+    .website-logo {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .website-name {
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .website-name span { color: #5ba88a; }
+    .website-nav {
+      margin-left: auto;
+      display: flex;
+      gap: 20px;
+    }
+    .website-nav div {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+    }
+    .website-content {
+      padding: 30px;
+    }
+    .website-hero {
+      display: flex;
+      gap: 30px;
+    }
+    .website-hero-left {
+      flex: 1;
+    }
+    .website-hero h1 {
+      font-size: 26px;
+      color: #1a3d2e;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .website-hero h1 span { color: #3d8b6e; }
+    .website-hero p {
+      font-size: 12px;
+      color: #6b7d73;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .website-cta {
+      background: #1a3d2e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .website-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      flex: 1;
+    }
+    .website-card {
+      background: #f8faf9;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    .website-card-icon {
+      width: 28px;
+      height: 28px;
+      background: #1a3d2e;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .website-card h3 {
+      font-size: 12px;
+      color: #1a3d2e;
+      margin-bottom: 4px;
+    }
+    .website-card p {
+      font-size: 10px;
+      color: #6b7d73;
+    }
+    .monitor-stand {
+      position: absolute;
+      bottom: 280px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 50px;
+      background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
+      border-radius: 0 0 10px 10px;
+    }
+    .monitor-base {
+      position: absolute;
+      bottom: 260px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 25px;
+      background: linear-gradient(180deg, #4a4a4a 0%, #3a3a3a 100%);
+      border-radius: 15px;
+    }
+    .plant {
+      position: absolute;
+      bottom: 350px;
+      right: 120px;
+    }
+    .plant-pot {
+      width: 80px;
+      height: 70px;
+      background: linear-gradient(180deg, #d4a574 0%, #b8956a 100%);
+      border-radius: 10px 10px 20px 20px;
+      position: relative;
+    }
+    .plant-leaves {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .leaf {
+      width: 40px;
+      height: 60px;
+      background: #3d8b6e;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+    }
+    .leaf:nth-child(1) { transform: rotate(-30deg); left: -25px; }
+    .leaf:nth-child(2) { transform: rotate(0deg); left: 0; bottom: 10px; }
+    .leaf:nth-child(3) { transform: rotate(30deg); left: 25px; }
+    .leaf:nth-child(4) { transform: rotate(-15deg); left: -10px; bottom: 20px; }
+    .leaf:nth-child(5) { transform: rotate(15deg); left: 10px; bottom: 20px; }
+    .coffee {
+      position: absolute;
+      bottom: 350px;
+      left: 150px;
+    }
+    .coffee-mug {
+      width: 60px;
+      height: 50px;
+      background: white;
+      border-radius: 5px 5px 15px 15px;
+      border: 3px solid #e0e0e0;
+      position: relative;
+    }
+    .coffee-handle {
+      position: absolute;
+      right: -18px;
+      top: 10px;
+      width: 20px;
+      height: 30px;
+      border: 4px solid #e0e0e0;
+      border-left: none;
+      border-radius: 0 15px 15px 0;
+    }
+    .coffee-liquid {
+      position: absolute;
+      top: 8px;
+      left: 5px;
+      right: 5px;
+      height: 15px;
+      background: #6b4423;
+      border-radius: 3px;
+    }
+    .keyboard {
+      position: absolute;
+      bottom: 360px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 40px;
+      background: linear-gradient(180deg, #e8e8e8 0%, #d8d8d8 100%);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .mouse {
+      position: absolute;
+      bottom: 365px;
+      left: calc(50% + 230px);
+      width: 45px;
+      height: 70px;
+      background: linear-gradient(180deg, #e8e8e8 0%, #d8d8d8 100%);
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .badge {
+      position: absolute;
+      top: 80px;
+      right: 100px;
+      background: #1a3d2e;
+      color: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(26, 61, 46, 0.3);
+    }
+    .badge-title {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 5px;
+    }
+    .badge-text {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .window-light {
+      position: absolute;
+      top: 0;
+      right: 300px;
+      width: 300px;
+      height: 250px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="window-light"></div>
+
+  <div class="wall-art">
+    <div class="wall-art-logo">
+      N
+      <div class="wall-art-dot"></div>
+    </div>
+    <div class="wall-art-text">NordicMarketing</div>
+  </div>
+
+  <div class="badge">
+    <div class="badge-title">Digital Bureau</div>
+    <div class="badge-text">København</div>
+  </div>
+
+  <div class="monitor">
+    <div class="monitor-screen">
+      <div class="website-header">
+        <div class="website-logo">N</div>
+        <div class="website-name">Nordic<span>Marketing</span></div>
+        <div class="website-nav">
+          <div>Services</div>
+          <div>Om Os</div>
+          <div>Kontakt</div>
+        </div>
+      </div>
+      <div class="website-content">
+        <div class="website-hero">
+          <div class="website-hero-left">
+            <h1>Vi hjælper din virksomhed med at <span>vokse online</span></h1>
+            <p>Gennem strategisk digital markedsføring og datadrevet optimering skaber vi målbare resultater.</p>
+            <div class="website-cta">Gratis konsultation</div>
+          </div>
+          <div class="website-cards">
+            <div class="website-card">
+              <div class="website-card-icon">🔍</div>
+              <h3>SEO & GEO</h3>
+              <p>Bliv fundet på Google</p>
+            </div>
+            <div class="website-card">
+              <div class="website-card-icon">📈</div>
+              <h3>Google Ads</h3>
+              <p>Målrettede annoncer</p>
+            </div>
+            <div class="website-card">
+              <div class="website-card-icon">📱</div>
+              <h3>Social Media</h3>
+              <p>Facebook & Instagram</p>
+            </div>
+            <div class="website-card">
+              <div class="website-card-icon">💻</div>
+              <h3>Webdesign</h3>
+              <p>Moderne hjemmesider</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="monitor-stand"></div>
+  <div class="monitor-base"></div>
+
+  <div class="keyboard"></div>
+  <div class="mouse"></div>
+
+  <div class="desk"></div>
+
+  <div class="plant">
+    <div class="plant-leaves">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+    <div class="plant-pot"></div>
+  </div>
+
+  <div class="coffee">
+    <div class="coffee-mug">
+      <div class="coffee-liquid"></div>
+      <div class="coffee-handle"></div>
+    </div>
+  </div>
+</body>
+</html>

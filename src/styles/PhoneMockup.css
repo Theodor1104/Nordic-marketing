@@ -1,0 +1,1138 @@
+/* Phone Mockup Container */
+.phone-mockup-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glow ring behind phone */
+.phone-mockup-container::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 580px;
+  background: linear-gradient(135deg, var(--color-accent), #667eea, var(--color-accent));
+  background-size: 200% 200%;
+  animation: gradient-rotate 4s ease infinite;
+  border-radius: 3.5rem;
+  filter: blur(20px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Phone Frame */
+.phone-frame {
+  position: relative;
+  background: linear-gradient(145deg, #2d3748, #1a202c);
+  border-radius: 3rem;
+  padding: 12px;
+  box-shadow:
+    0 25px 80px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.phone-frame:hover {
+  transform: translateY(-5px);
+}
+
+/* Notch */
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 24px;
+  background: #1a202c;
+  border-radius: 0 0 16px 16px;
+  z-index: 10;
+}
+
+/* Side buttons */
+.phone-frame::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 120px;
+  width: 3px;
+  height: 60px;
+  background: linear-gradient(to bottom, #3d4852, #2d3748);
+  border-radius: 0 2px 2px 0;
+}
+
+.phone-screen {
+  background: white;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  height: 540px;
+  position: relative;
+}
+
+/* Status Bar */
+.phone-status-bar {
+  background: white;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.status-icons {
+  display: flex;
+  gap: 4px;
+}
+
+/* Phone Content */
+.phone-content {
+  height: calc(540px - 36px);
+  background: linear-gradient(to bottom, #f8fafc, white);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+.phone-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.phone-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phone-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(61, 139, 110, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.phone-brand {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.phone-nav-icons {
+  display: flex;
+  gap: 12px;
+  color: #94a3b8;
+}
+
+/* Hero Area */
+.phone-hero {
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(61, 139, 110, 0.2), rgba(61, 139, 110, 0.1), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-hero-content {
+  text-align: center;
+}
+
+.phone-hero-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-hero-subtitle {
+  font-size: 10px;
+  color: var(--color-accent);
+  margin: 4px 0 0 0;
+}
+
+/* Action Buttons */
+.phone-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px;
+  margin-top: -16px;
+  position: relative;
+  z-index: 10;
+}
+
+.phone-action-btn {
+  flex: 1;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 10px 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #667eea 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.phone-action-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.phone-action-btn:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(61, 139, 110, 0.15);
+}
+
+.phone-action-btn.active {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #4a9e7d 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(61, 139, 110, 0.4);
+  transform: translateY(-2px);
+}
+
+.phone-action-btn.active::before {
+  opacity: 1;
+}
+
+/* View Content */
+.phone-view-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  padding-bottom: 60px;
+}
+
+/* Banner */
+.phone-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.phone-banner-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.phone-banner span {
+  font-size: 10px;
+  color: #15803d;
+  font-weight: 500;
+}
+
+/* Section */
+.phone-section {
+  margin-bottom: 16px;
+}
+
+.phone-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.phone-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-section-link {
+  font-size: 10px;
+  color: var(--color-accent);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* List */
+.phone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.phone-list-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(61, 139, 110, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.phone-list-text {
+  flex: 1;
+}
+
+.phone-list-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-list-desc {
+  font-size: 9px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* Reviews */
+.phone-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone-review {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.phone-review-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.phone-review-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(61, 139, 110, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.phone-review-name {
+  font-size: 10px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.phone-review-stars {
+  font-size: 10px;
+  color: #f59e0b;
+}
+
+.phone-review-text {
+  font-size: 9px;
+  color: #64748b;
+  margin: 0;
+  font-style: italic;
+}
+
+/* View Header */
+.phone-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.phone-view-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-close-btn {
+  font-size: 10px;
+  color: #64748b;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Services List */
+.phone-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone-service-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.phone-service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(61, 139, 110, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.phone-service-text {
+  flex: 1;
+}
+
+.phone-service-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-service-desc {
+  font-size: 9px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+.phone-service-price {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+/* Stats Grid */
+.phone-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.phone-stat {
+  background: rgba(61, 139, 110, 0.1);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.phone-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.phone-stat-label {
+  font-size: 9px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+/* CTA Button */
+.phone-cta-btn {
+  width: 100%;
+  background: var(--color-accent);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Contact Content */
+.phone-contact-content {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.phone-contact-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(61, 139, 110, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 28px;
+}
+
+.phone-contact-label {
+  font-size: 10px;
+  color: #64748b;
+  margin: 0 0 8px 0;
+}
+
+.phone-contact-phone {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.phone-call-btn {
+  width: 100%;
+  background: #22c55e;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.phone-contact-info {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.phone-contact-info-label {
+  font-size: 10px;
+  color: #64748b;
+  margin: 0 0 12px 0;
+}
+
+.phone-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone-contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.phone-contact-detail-icon {
+  font-size: 18px;
+}
+
+.phone-contact-detail-title {
+  font-size: 10px;
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-contact-detail-text {
+  font-size: 9px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* Bottom Navigation */
+.phone-bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #f1f5f9;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.phone-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.phone-nav-btn.active {
+  color: var(--color-accent);
+}
+
+.phone-nav-btn span {
+  font-size: 8px;
+  font-weight: 500;
+}
+
+/* Floating Elements */
+.phone-float {
+  position: absolute;
+  background: white;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+}
+
+.phone-float:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.phone-float-1 {
+  right: -180px;
+  top: 0px;
+  animation: float-1 6s ease-in-out infinite;
+}
+
+.phone-float-2 {
+  right: -200px;
+  top: 140px;
+  animation: float-2 7s ease-in-out infinite;
+}
+
+.phone-float-3 {
+  right: -180px;
+  top: 280px;
+  animation: float-3 5s ease-in-out infinite;
+}
+
+.phone-float-4 {
+  right: -200px;
+  top: 420px;
+  animation: float-4 6.5s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-2deg); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1deg); }
+}
+
+.phone-float-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phone-float-icon.green {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #16a34a;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.phone-float-icon.blue {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.phone-float-icon.primary {
+  background: linear-gradient(135deg, rgba(61, 139, 110, 0.2) 0%, rgba(61, 139, 110, 0.3) 100%);
+  color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(61, 139, 110, 0.2);
+}
+
+.phone-float-icon.purple {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  color: #9333ea;
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.2);
+}
+
+.phone-float-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-float-desc {
+  font-size: 9px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* Service Arrow */
+.phone-service-arrow {
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.phone-service-item:hover .phone-service-arrow {
+  transform: translateX(3px);
+  color: var(--color-accent);
+}
+
+/* NEW: Services Grid */
+.phone-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.phone-service-card {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.phone-service-card .phone-service-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 0 auto 8px;
+}
+
+.phone-service-card .phone-service-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 2px 0;
+}
+
+.phone-service-card .phone-service-desc {
+  font-size: 8px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* NEW: Why Us Section */
+.phone-why-us {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.phone-features {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.phone-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #475569;
+}
+
+.phone-feature-check {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* NEW: Contact CTA */
+.phone-contact-cta {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.phone-contact-title {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 8px 0;
+}
+
+.phone-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Notification Popup */
+.phone-notification {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 180px;
+}
+
+.phone-notification-icon {
+  font-size: 20px;
+}
+
+.phone-notification-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-notification-desc {
+  font-size: 8px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* Page Header */
+.phone-page-header {
+  text-align: center;
+  padding: 16px 12px 12px;
+}
+
+.phone-page-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-page-subtitle {
+  font-size: 10px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+/* Info Box */
+.phone-info-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 12px;
+}
+
+.phone-info-icon {
+  font-size: 16px;
+}
+
+.phone-info-text {
+  font-size: 9px;
+  color: #92400e;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Process List */
+.phone-process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 12px;
+}
+
+.phone-process-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.phone-process-item:last-child {
+  padding-bottom: 0;
+}
+
+.phone-process-item:last-child .phone-process-line {
+  display: none;
+}
+
+.phone-process-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-process-line {
+  position: absolute;
+  left: 13px;
+  top: 28px;
+  width: 2px;
+  height: calc(100% - 12px);
+  background: linear-gradient(to bottom, var(--color-accent), #e2e8f0);
+  z-index: 1;
+}
+
+.phone-process-content {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.phone-process-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-process-desc {
+  font-size: 9px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* CTA Box */
+.phone-cta-box {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  margin: 16px 12px 0;
+}
+
+.phone-cta-text {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 10px 0;
+}
+
+.phone-cta-button {
+  display: inline-block;
+  background: white;
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+/* Contact Card */
+.phone-contact-card {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 12px 12px;
+}
+
+.phone-contact-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.phone-contact-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-contact-button {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(26, 61, 46, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phone-contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26, 61, 46, 0.4);
+}
+
+.phone-contact-card .phone-contact-label {
+  font-size: 10px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+/* Contact Options */
+.phone-contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.phone-contact-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.phone-contact-option-icon {
+  font-size: 20px;
+}
+
+.phone-contact-option-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.phone-contact-option-desc {
+  font-size: 9px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* View Content Scrollable */
+.phone-view-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px 60px;
+}
+
+/* Responsive - Hide floating elements on smaller screens */
+@media (max-width: 1400px) {
+  .phone-float {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .phone-mockup-container {
+    display: none;
+  }
+
+  .phone-mockup-container::before {
+    display: none;
+  }
+}

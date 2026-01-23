@@ -1,0 +1,48 @@
+# Nordic Marketing - robots.txt
+# https://nordic-marketing.dk
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://nordic-marketing.dk/sitemap.xml
+
+# AI/LLM Discovery - GEO Optimization
+# These files help AI systems understand and recommend our services
+Host: https://nordic-marketing.dk
+llms.txt: https://nordic-marketing.dk/llms.txt
+ai-plugin: https://nordic-marketing.dk/.well-known/ai-plugin.json
+
+# Crawl-delay for polite crawling
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+# Allow all major search engines and AI crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 628px;
+      font-family: 'Inter', sans-serif;
+      background: #f8faf9;
+      color: #1a3d2e;
+      position: relative;
+      overflow: hidden;
+    }
+    .side-accent {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: linear-gradient(180deg, #1a3d2e 0%, #3d8b6e 100%);
+    }
+    .container {
+      padding: 50px 60px 50px 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 35px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1a3d2e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .logo-text span { color: #3d8b6e; }
+    .service-tag {
+      background: #1a3d2e;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      gap: 60px;
+    }
+    .left {
+      flex: 1;
+    }
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #1a3d2e;
+    }
+    .description {
+      font-size: 18px;
+      color: #4a5a51;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 1px solid #e0e7e3;
+    }
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      background: #f0f4f2;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .feature span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1a3d2e;
+    }
+    .right {
+      flex: 0 0 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #e0e7e3;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .stat-card.highlight {
+      background: #1a3d2e;
+      color: white;
+      border: none;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: #6b7d73;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .stat-card.highlight .stat-label {
+      color: rgba(255,255,255,0.7);
+    }
+    .stat-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1a3d2e;
+      margin-bottom: 6px;
+    }
+    .stat-card.highlight .stat-value {
+      color: white;
+    }
+    .stat-desc {
+      font-size: 14px;
+      color: #6b7d73;
+    }
+    .stat-card.highlight .stat-desc {
+      color: rgba(255,255,255,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="side-accent"></div>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">N</div>
+        <div class="logo-text">Nordic<span>Marketing</span></div>
+      </div>
+      <div class="service-tag">SEO & GEO Service</div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <h1>Bliv fundet på Google og i AI-søgninger</h1>
+        <p class="description">Vi optimerer din hjemmeside så den ranker højere i søgeresultater og bliver synlig i AI-assistenter som ChatGPT, Gemini og Perplexity.</p>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🔧</div>
+            <span>Teknisk SEO optimering</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📝</div>
+            <span>Indholdsoptimering</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔗</div>
+            <span>Linkbuilding strategi</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📍</div>
+            <span>Lokal SEO</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🤖</div>
+            <span>GEO optimering</span>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📊</div>
+            <span>Månedlig rapportering</span>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="stat-card highlight">
+          <div class="stat-label">Organisk trafik</div>
+          <div class="stat-value">+250%</div>
+          <div class="stat-desc">Gennemsnitlig stigning efter 6 måneder</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Forventet resultat</div>
+          <div class="stat-value">3-6 mdr</div>
+          <div class="stat-desc">SEO er en langsigtet investering med vedvarende resultater</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

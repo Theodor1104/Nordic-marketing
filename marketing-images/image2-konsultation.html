@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 628px;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1a3d2e 0%, #2d5a45 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 50px 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .logo-text span { color: #5ba88a; }
+    .main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 80px;
+    }
+    .left {
+      flex: 1;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(91, 168, 138, 0.2);
+      border: 1px solid rgba(91, 168, 138, 0.4);
+      color: #5ba88a;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .description {
+      font-size: 20px;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 35px;
+      max-width: 500px;
+    }
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+    }
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      background: #5ba88a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .right {
+      flex: 0 0 400px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      color: #1a3d2e;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    }
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #1a3d2e;
+    }
+    .card-subtitle {
+      color: #6b7d73;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+    .card-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid #e0e7e3;
+    }
+    .card-item:last-child {
+      border-bottom: none;
+    }
+    .card-item-icon {
+      width: 36px;
+      height: 36px;
+      background: #f0f4f2;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .card-item h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #1a3d2e;
+    }
+    .card-item p {
+      font-size: 13px;
+      color: #6b7d73;
+    }
+  </style>
+</head>
+<body>
+  <div class="pattern"></div>
+  <div class="container">
+    <div class="header">
+      <div class="logo-icon">N</div>
+      <div class="logo-text">Nordic<span>Marketing</span></div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div class="badge">100% Gratis & Uforpligtende</div>
+        <h1>Book en gratis konsultation</h1>
+        <p class="description">Lad os tale om din virksomheds digitale muligheder og hvordan vi kan hjælpe dig med at nå dine mål.</p>
+        <div class="benefits">
+          <div class="benefit">
+            <div class="benefit-icon">✓</div>
+            <span>Gennemgang af din nuværende online tilstedeværelse</span>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">✓</div>
+            <span>Konkrete anbefalinger til forbedringer</span>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">✓</div>
+            <span>Skræddersyet strategi til din virksomhed</span>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="card">
+          <h2>Hvad du får</h2>
+          <p class="card-subtitle">I din gratis konsultation</p>
+          <div class="card-item">
+            <div class="card-item-icon">🔍</div>
+            <div>
+              <h4>Website analyse</h4>
+              <p>Vi gennemgår din hjemmesides styrker og svagheder</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-icon">📊</div>
+            <div>
+              <h4>Konkurrent analyse</h4>
+              <p>Se hvordan du står i forhold til konkurrenterne</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-icon">🎯</div>
+            <div>
+              <h4>Handlingsplan</h4>
+              <p>Konkrete næste skridt du kan tage i dag</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
