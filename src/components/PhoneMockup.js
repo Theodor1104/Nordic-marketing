@@ -9,10 +9,10 @@ function PhoneMockup() {
   const views = ['Forside', 'Services', 'Proces', 'Kontakt'];
 
   const services = [
-    { name: "SEO & GEO", desc: "Synlighed på Google & AI", icon: "📊", color: "#10b981" },
-    { name: "Google Ads", desc: "Målrettet annoncering", icon: "🎯", color: "#ef4444" },
-    { name: "Meta Ads", desc: "Facebook & Instagram", icon: "📱", color: "#8b5cf6" },
-    { name: "Webdesign", desc: "Moderne hjemmesider", icon: "💻", color: "#3b82f6" }
+    { name: "Meta Ads", desc: "Facebook & Instagram", color: "#8b5cf6", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
+    { name: "Google Ads", desc: "Målrettet annoncering", color: "#ef4444", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> },
+    { name: "SEO & GEO", desc: "Synlighed på Google & AI", color: "#10b981", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/><path d="M3 20h18"/></svg> },
+    { name: "Hjemmesider", desc: "Moderne hjemmesider", color: "#3b82f6", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> }
   ];
 
   const processSteps = [
@@ -84,7 +84,7 @@ function PhoneMockup() {
                       className="phone-service-card"
                     >
                       <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
-                        <span>{service.icon}</span>
+                        {service.svg}
                       </div>
                       <p className="phone-service-name">{service.name}</p>
                       <p className="phone-service-desc">{service.desc}</p>
@@ -143,7 +143,7 @@ function PhoneMockup() {
                     className="phone-service-item"
                   >
                     <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
-                      <span>{service.icon}</span>
+                      {service.svg}
                     </div>
                     <div className="phone-service-text">
                       <p className="phone-service-name">{service.name}</p>
