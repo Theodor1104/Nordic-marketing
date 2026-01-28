@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "node scripts/update-seo.js",
     "build": "react-scripts build && npm run copy:admin && npm run zip:build",
     "copy:admin": "rm -rf admin-panel && cp -r build admin-panel && node scripts/build-admin.js && rm -f admin-panel.zip && zip -r admin-panel.zip admin-panel",
     "zip:build": "rm -f build.zip && zip -r build.zip build",

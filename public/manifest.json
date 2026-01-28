@@ -1,0 +1,23 @@
+{
+  "short_name": "Nordic Marketing",
+  "name": "Nordic Marketing - Digital Marketing Bureau",
+  "description": "Nordic Marketing - Dit digitale marketing bureau i København. SEO, GEO, Google Ads, Meta Ads og webdesign.",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1a3d2e",
+  "background_color": "#ffffff",
+  "lang": "da",
+  "orientation": "portrait-primary"
+}

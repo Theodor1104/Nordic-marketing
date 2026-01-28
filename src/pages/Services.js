@@ -4,102 +4,175 @@ import SEO from '../components/SEO';
 import '../styles/Services.css';
 
 function Services() {
-  // Service Schema for rich results - Enhanced with pricing
-  const serviceSchema = {
+  const providerRef = {
+    "@type": "MarketingAgency",
+    "@id": "https://nordic-marketing.dk/#marketingagency",
+    "name": "Nordic Marketing",
+    "url": "https://nordic-marketing.dk"
+  };
+
+  const areaServedFull = [
+    {"@type": "Country", "name": "Danmark"},
+    {"@type": "City", "name": "København"},
+    {"@type": "City", "name": "Frederiksberg"}
+  ];
+
+  // ItemList Schema for rich results
+  const serviceListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Nordic Marketing Services",
     "description": "Digitale marketing services fra Nordic Marketing - SEO, GEO, Google Ads, Meta Ads og Webdesign",
+    "numberOfItems": 4,
     "itemListElement": [
       {
-        "@type": "Service",
+        "@type": "ListItem",
         "position": 1,
         "name": "SEO & GEO Optimering",
-        "description": "Bliv synlig både i traditionelle søgemaskiner (Google) og i AI-baserede søgesystemer som ChatGPT, Perplexity og Google AI Overview. Komplet søgemaskineoptimering med teknisk SEO, on-page optimering og linkbuilding.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Nordic Marketing",
-          "url": "https://nordic-marketing.dk"
-        },
-        "areaServed": ["Danmark", "København", "Frederiksberg"],
-        "serviceType": "Search Engine Optimization",
-        "offers": {
-          "@type": "Offer",
-          "price": "2500",
-          "priceCurrency": "DKK",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "2500",
-            "priceCurrency": "DKK",
-            "unitText": "måned"
-          }
-        }
+        "url": "https://nordic-marketing.dk/services#seo"
       },
       {
-        "@type": "Service",
+        "@type": "ListItem",
         "position": 2,
         "name": "Google Ads Management",
-        "description": "Professionel opsætning og løbende optimering af Google søgeannoncer med fokus på ROI. Inkluderer søgeordsanalyse, kampagneopbygning, A/B testing og konverteringssporing.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Nordic Marketing",
-          "url": "https://nordic-marketing.dk"
-        },
-        "areaServed": ["Danmark", "København"],
-        "serviceType": "Pay-Per-Click Advertising",
-        "offers": {
-          "@type": "Offer",
-          "price": "2500",
-          "priceCurrency": "DKK",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "2500",
-            "priceCurrency": "DKK",
-            "unitText": "måned"
-          }
-        }
+        "url": "https://nordic-marketing.dk/services#google-ads"
       },
       {
-        "@type": "Service",
+        "@type": "ListItem",
         "position": 3,
         "name": "Meta Ads (Facebook & Instagram)",
-        "description": "Professionel Facebook og Instagram annoncering med målrettet annoncering baseret på interesser, demografi og adfærd. A/B testing og løbende optimering for bedste ROI.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Nordic Marketing",
-          "url": "https://nordic-marketing.dk"
-        },
-        "areaServed": ["Danmark", "København"],
-        "serviceType": "Social Media Advertising",
-        "offers": {
-          "@type": "Offer",
-          "price": "2500",
-          "priceCurrency": "DKK",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "2500",
-            "priceCurrency": "DKK",
-            "unitText": "måned"
-          }
+        "url": "https://nordic-marketing.dk/services#meta-ads"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Webdesign & Webudvikling",
+        "url": "https://nordic-marketing.dk/services#webdesign"
+      }
+    ]
+  };
+
+  // Individual Service schemas for richer results
+  const seoServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://nordic-marketing.dk/services#seo",
+    "name": "SEO & GEO Optimering",
+    "description": "Bliv synlig både i traditionelle søgemaskiner (Google) og i AI-baserede søgesystemer som ChatGPT, Perplexity og Google AI Overview. Komplet søgemaskineoptimering med teknisk SEO, on-page optimering, linkbuilding og GEO-optimering.",
+    "provider": providerRef,
+    "areaServed": areaServedFull,
+    "serviceType": ["SEO", "GEO", "Search Engine Optimization", "AI Search Optimization"],
+    "offers": {
+      "@type": "Offer",
+      "price": "2500",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2500",
+        "priceCurrency": "DKK",
+        "unitText": "måned",
+        "referenceQuantity": {"@type": "QuantitativeValue", "value": "1", "unitCode": "MON"}
+      },
+      "availability": "https://schema.org/InStock"
+    },
+    "url": "https://nordic-marketing.dk/services"
+  };
+
+  const googleAdsServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://nordic-marketing.dk/services#google-ads",
+    "name": "Google Ads Management",
+    "description": "Professionel opsætning og løbende optimering af Google søgeannoncer med fokus på ROI. Inkluderer søgeordsanalyse, kampagneopbygning, A/B testing og konverteringssporing.",
+    "provider": providerRef,
+    "areaServed": areaServedFull,
+    "serviceType": ["Google Ads", "Pay-Per-Click Advertising", "SEM"],
+    "offers": {
+      "@type": "Offer",
+      "price": "2500",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2500",
+        "priceCurrency": "DKK",
+        "unitText": "måned",
+        "referenceQuantity": {"@type": "QuantitativeValue", "value": "1", "unitCode": "MON"}
+      },
+      "availability": "https://schema.org/InStock"
+    },
+    "url": "https://nordic-marketing.dk/services"
+  };
+
+  const metaAdsServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://nordic-marketing.dk/services#meta-ads",
+    "name": "Meta Ads (Facebook & Instagram)",
+    "description": "Professionel Facebook og Instagram annoncering med målrettet annoncering baseret på interesser, demografi og adfærd. A/B testing, retargeting og løbende optimering for bedste ROI.",
+    "provider": providerRef,
+    "areaServed": areaServedFull,
+    "serviceType": ["Meta Ads", "Facebook Advertising", "Instagram Marketing", "Social Media Advertising"],
+    "offers": {
+      "@type": "Offer",
+      "price": "2500",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2500",
+        "priceCurrency": "DKK",
+        "unitText": "måned",
+        "referenceQuantity": {"@type": "QuantitativeValue", "value": "1", "unitCode": "MON"}
+      },
+      "availability": "https://schema.org/InStock"
+    },
+    "url": "https://nordic-marketing.dk/services"
+  };
+
+  const webdesignServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://nordic-marketing.dk/services#webdesign",
+    "name": "Webdesign & Webudvikling",
+    "description": "Moderne, hurtige og konverteringsoptimerede hjemmesider med responsivt design. SEO-venlig struktur fra start, integration med analytics og tracking. Specialiseret i hjemmesider til restauranter og lokale virksomheder.",
+    "provider": providerRef,
+    "areaServed": areaServedFull,
+    "serviceType": ["Web Design", "Web Development", "Responsive Design"],
+    "offers": {
+      "@type": "Offer",
+      "price": "5000",
+      "priceCurrency": "DKK",
+      "description": "Priser fra 5.000 DKK for en landingsside",
+      "availability": "https://schema.org/InStock"
+    },
+    "url": "https://nordic-marketing.dk/services"
+  };
+
+  const servicesFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvilke marketing services tilbyder Nordic Marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nordic Marketing tilbyder fire kerneservices: SEO & GEO Optimering (synlighed i Google og AI-søgemaskiner), Google Ads Management (betalt søgeannoncering), Meta Ads (Facebook og Instagram annoncering) og Webdesign & Webudvikling. Alle services starter fra 2.500 DKK/md."
         }
       },
       {
-        "@type": "Service",
-        "position": 4,
-        "name": "Webdesign & Webudvikling",
-        "description": "Moderne, hurtige og konverteringsoptimerede hjemmesider med responsivt design. SEO-venlig struktur fra start, integration med analytics og tracking.",
-        "provider": {
-          "@type": "Organization",
-          "name": "Nordic Marketing",
-          "url": "https://nordic-marketing.dk"
-        },
-        "areaServed": ["Danmark", "København", "Frederiksberg"],
-        "serviceType": "Web Design",
-        "offers": {
-          "@type": "Offer",
-          "price": "5000",
-          "priceCurrency": "DKK",
-          "description": "Priser fra 5.000 DKK for en landingsside"
+        "@type": "Question",
+        "name": "Hvad er forskellen på SEO og GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO (Search Engine Optimization) optimerer din hjemmeside til traditionelle søgemaskiner som Google. GEO (Generative Engine Optimization) optimerer dit indhold til AI-baserede søgesystemer som ChatGPT, Perplexity og Google AI Overview. Nordic Marketing tilbyder begge dele som en samlet service, så din virksomhed er synlig overalt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad koster Meta Ads annoncering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nordic Marketing tilbyder Meta Ads management fra 2.500 DKK per måned. Dette inkluderer opsætning af kampagner, målgruppeanalyse, A/B testing af annoncer, retargeting og løbende optimering. Annoncebudgettet kommer oveni og aftales individuelt baseret på dine mål."
         }
       }
     ]
@@ -117,7 +190,7 @@ function Services() {
         description="Se vores digitale marketing services: SEO & GEO optimering til AI-søgning (ChatGPT, Perplexity), Google Ads, Meta Ads og webdesign. Bliv synlig online. Gratis konsultation!"
         keywords="SEO services København, GEO optimering Danmark, AI søgemaskineoptimering, ChatGPT optimering, Perplexity SEO, Google Ads bureau København, Meta Ads bureau, Facebook annoncering Danmark, Instagram marketing bureau, webdesign Frederiksberg, digital marketing services, lokal SEO København"
         canonical="https://nordic-marketing.dk/services"
-        schema={serviceSchema}
+        schema={[serviceListSchema, seoServiceSchema, googleAdsServiceSchema, metaAdsServiceSchema, webdesignServiceSchema, servicesFaqSchema]}
         breadcrumbs={breadcrumbs}
       />
       {/* Hero Section */}

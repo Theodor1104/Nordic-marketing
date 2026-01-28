@@ -218,6 +218,15 @@ a:hover {
   text-align: center;
 }
 
+/* Performance: Defer rendering of below-fold content */
+.usp-section,
+.process-preview,
+.cta-section,
+.process-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
 .cta-section h2 {
   color: var(--color-white);
   margin-bottom: var(--spacing-md);

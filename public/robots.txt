@@ -15,13 +15,6 @@ Host: https://nordic-marketing.dk
 llms.txt: https://nordic-marketing.dk/llms.txt
 ai-plugin: https://nordic-marketing.dk/.well-known/ai-plugin.json
 
-# Crawl-delay for polite crawling
-User-agent: Googlebot
-Crawl-delay: 1
-
-User-agent: Bingbot
-Crawl-delay: 1
-
 # Allow all major search engines and AI crawlers
 User-agent: Googlebot
 Allow: /

@@ -20,6 +20,53 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const homeFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvad tilbyder Nordic Marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nordic Marketing tilbyder en komplet pakke af digitale marketing services: SEO (søgemaskineoptimering), GEO (AI-søgemaskineoptimering til ChatGPT og Perplexity), Google Ads, Meta Ads (Facebook og Instagram annoncering) og professionelt webdesign. Alle services starter fra 2.500 DKK per måned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad er GEO-optimering og hvorfor har min virksomhed brug for det?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO (Generative Engine Optimization) er optimering af dit online indhold så AI-søgemaskiner som ChatGPT, Perplexity og Google AI Overview kan finde og anbefale din virksomhed. Flere og flere danskere bruger AI til at søge efter produkter og services. Nordic Marketing er et af de få danske bureauer der tilbyder specialiseret GEO-optimering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad betyder no cure, no pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No cure, no pay betyder at du kun betaler for resultater. Hos Nordic Marketing tilbyder vi denne garanti på udvalgte ydelser, hvilket betyder at vi deler risikoen med dig. Det er vores måde at vise, at vi tror på vores evne til at levere målbare resultater for din virksomhed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvordan kommer jeg i gang med Nordic Marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Det er nemt at komme i gang. Book en gratis og uforpligtende konsultation via vores kontaktformular eller send en email til nordicmarketin@outlook.dk. Vi analyserer din nuværende online tilstedeværelse, præsenterer en skræddersyet strategi og går i gang når du er klar. Vi svarer inden for 24 timer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvem er Nordic Marketing for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nordic Marketing hjælper primært små og mellemstore virksomheder i Danmark med at vokse online. Vi har særlig erfaring med restauranter, caféer, håndværkere, konsulenter, lokale butikker og startups. Vores priser fra 2.500 kr/md gør professionel digital marketing tilgængeligt for alle virksomhedsstørrelser."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="home">
       <SEO
@@ -27,6 +74,7 @@ function Home() {
         description="Nordic Marketing - Dit lokale marketing bureau i København. Eksperter i SEO, GEO (AI-søgning), Google Ads & Meta Ads. Priser fra 2.500 kr/md. Gratis konsultation. No cure, no pay!"
         keywords="digital marketing bureau København, SEO bureau Danmark, GEO optimering, AI søgemaskineoptimering, Google Ads bureau, Meta Ads, Facebook annoncering København, Instagram marketing, webdesign Frederiksberg, online markedsføring, marketing for små virksomheder, billigt marketing bureau"
         canonical="https://nordic-marketing.dk/"
+        schema={homeFaqSchema}
       />
       {/* Hero Section */}
       <section className="hero">

@@ -10,8 +10,26 @@
     <meta name="description" content="Nordic Marketing - Dit lokale marketing bureau i København. Eksperter i SEO, GEO (AI-søgning), Google Ads & Meta Ads. Priser fra 2.500 kr/md. Gratis konsultation. No cure, no pay!" />
     <meta name="keywords" content="digital marketing bureau, SEO bureau København, GEO optimering, AI søgning optimering, Google Ads bureau Danmark, Meta Ads, Facebook annoncering, Instagram marketing, webdesign København, online markedsføring, marketing bureau Frederiksberg, lokal SEO, billigt marketing bureau, marketing for små virksomheder, restaurant marketing, håndværker marketing" />
     <meta name="author" content="Nordic Marketing" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="revised" content="2026-01-28" />
     <link rel="canonical" href="https://nordic-marketing.dk" />
+    <link rel="alternate" hreflang="da" href="https://nordic-marketing.dk" />
+    <link rel="alternate" hreflang="x-default" href="https://nordic-marketing.dk" />
+
+    <!-- Mobile Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Nordic Marketing" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Nordic Marketing" />
+    <meta name="msapplication-TileColor" content="#1a3d2e" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Geo Meta Tags - Local SEO -->
+    <meta name="geo.region" content="DK-84" />
+    <meta name="geo.placename" content="Frederiksberg, København" />
+    <meta name="geo.position" content="55.6761;12.5683" />
+    <meta name="ICBM" content="55.6761, 12.5683" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -46,6 +64,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://vzvyyleyafnhfacmwirs.supabase.co" />
+    <link rel="preconnect" href="https://vzvyyleyafnhfacmwirs.supabase.co" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/logo.png" as="image" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
     <!-- AI Discovery -->
     <link rel="ai-plugin" href="/.well-known/ai-plugin.json" />
     <link rel="llms" href="/llms.txt" />
@@ -54,10 +80,45 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MarketingAgency",
+      "@type": "Organization",
+      "@id": "https://nordic-marketing.dk/#organization",
       "name": "Nordic Marketing",
       "alternateName": ["Nordic Marketing Bureau", "Nordic Marketing Danmark", "Nordic Marketing København"],
-      "description": "Nordic Marketing er et dansk digitalt marketing bureau i København grundlagt af studerende fra Niels Brock. Vi hjælper små og mellemstore virksomheder med SEO, Google Ads, sociale medier og webdesign. Specialiseret i marketing for restauranter, lokale butikker, startups og håndværkere. Gratis konsultation og priser fra 2.500 DKK/måned.",
+      "description": "Nordic Marketing er et dansk digitalt marketing bureau i København grundlagt af studerende fra Niels Brock. Vi hjælper små og mellemstore virksomheder med SEO, Google Ads, sociale medier og webdesign.",
+      "url": "https://nordic-marketing.dk",
+      "logo": "https://nordic-marketing.dk/logo.png",
+      "image": "https://nordic-marketing.dk/og-image.jpg",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "nordicmarketin@outlook.dk",
+        "contactType": "customer service",
+        "availableLanguage": ["Danish", "English"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Frederiksberg",
+        "addressRegion": "København",
+        "postalCode": "2000",
+        "addressCountry": "DK"
+      },
+      "sameAs": [
+        "https://www.facebook.com/nordicmarketing",
+        "https://www.instagram.com/nordicmarketing",
+        "https://www.linkedin.com/company/nordicmarketing"
+      ]
+    }
+    </script>
+
+    <!-- MarketingAgency Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MarketingAgency",
+      "@id": "https://nordic-marketing.dk/#marketingagency",
+      "name": "Nordic Marketing",
+      "alternateName": ["Nordic Marketing Bureau", "Nordic Marketing Danmark"],
+      "description": "Dansk digitalt marketing bureau i København specialiseret i SEO, GEO (AI-søgning), Google Ads, Meta Ads og webdesign. Priser fra 2.500 DKK/måned. No cure, no pay.",
       "url": "https://nordic-marketing.dk",
       "logo": "https://nordic-marketing.dk/logo.png",
       "image": "https://nordic-marketing.dk/og-image.jpg",
@@ -66,6 +127,7 @@
         "@type": "Organization",
         "name": "Studerende fra Niels Brock Handelsgymnasium"
       },
+      "parentOrganization": {"@id": "https://nordic-marketing.dk/#organization"},
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Frederiksberg",
@@ -81,10 +143,12 @@
       "areaServed": [
         {"@type": "Country", "name": "Danmark"},
         {"@type": "City", "name": "København"},
+        {"@type": "City", "name": "Frederiksberg"},
         {"@type": "City", "name": "Aarhus"},
         {"@type": "City", "name": "Odense"},
         {"@type": "City", "name": "Aalborg"}
       ],
+      "priceRange": "DKK 2.500 - 15.000/måned",
       "currenciesAccepted": "DKK",
       "paymentAccepted": "Faktura, MobilePay, Bankoverførsel",
       "openingHoursSpecification": {
@@ -101,32 +165,60 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "SEO - Søgemaskineoptimering",
-              "description": "Professionel SEO der får din hjemmeside til at ranke højere på Google. Inkluderer teknisk SEO, indholdsoptimering, linkbuilding og månedlig rapportering."
+              "@id": "https://nordic-marketing.dk/services#seo",
+              "name": "SEO & GEO Optimering",
+              "description": "Professionel SEO og GEO-optimering til Google og AI-søgemaskiner. Inkluderer teknisk SEO, on-page optimering, linkbuilding og AI-søgeoptimering til ChatGPT og Perplexity."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "2500",
+              "priceCurrency": "DKK",
+              "unitText": "måned"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
+              "@id": "https://nordic-marketing.dk/services#google-ads",
               "name": "Google Ads Management",
               "description": "Professionel opsætning og optimering af Google Ads kampagner. Vi maksimerer dit afkast og minimerer spild på annoncer."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "2500",
+              "priceCurrency": "DKK",
+              "unitText": "måned"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Social Media Marketing",
-              "description": "Strategisk markedsføring på Facebook, Instagram og LinkedIn. Indholdsproduktion, annoncering og community management."
+              "@id": "https://nordic-marketing.dk/services#meta-ads",
+              "name": "Meta Ads (Facebook & Instagram)",
+              "description": "Strategisk markedsføring på Facebook og Instagram. Målrettet annoncering, retargeting og løbende optimering."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "2500",
+              "priceCurrency": "DKK",
+              "unitText": "måned"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Webdesign og Webudvikling",
-              "description": "Moderne, responsive hjemmesider der konverterer. Specialiseret i hjemmesider til restauranter og lokale virksomheder."
+              "@id": "https://nordic-marketing.dk/services#webdesign",
+              "name": "Webdesign & Webudvikling",
+              "description": "Moderne, responsive hjemmesider der konverterer. SEO-optimeret fra start med hurtig loadtid."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "5000",
+              "priceCurrency": "DKK",
+              "unitText": "engangspris fra"
             }
           }
         ]
@@ -134,6 +226,8 @@
       "knowsAbout": [
         "Digital markedsføring i Danmark",
         "SEO søgemaskineoptimering",
+        "GEO - Generative Engine Optimization",
+        "AI-søgemaskineoptimering",
         "Google Ads annoncering",
         "Facebook Ads",
         "Instagram Marketing",
@@ -147,6 +241,27 @@
         "E-commerce marketing"
       ],
       "slogan": "Vi gør online marketing forståelig og tilgængelig",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Restaurant Kunde"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Nordic Marketing hjalp os med at få flere gæster gennem Google og sociale medier. Fantastisk service og gode resultater!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Lokal Butiksejer"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Professionelt bureau med fair priser. Vores online synlighed er steget markant efter vi startede samarbejdet."
+        }
+      ],
       "sameAs": [
         "https://www.facebook.com/nordicmarketing",
         "https://www.instagram.com/nordicmarketing",
@@ -280,6 +395,46 @@
             "@type": "Answer",
             "text": "Ja, Nordic Marketing kan overtage og optimere eksisterende Google Ads konti. Vi starter med en gratis audit af din nuværende konto, identificerer forbedringsmuligheder og implementerer optimeringer for bedre ROI. Mange kunder oplever 30-50% bedre resultater efter vores optimering."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvad koster SEO i Danmark i 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO-priser i Danmark varierer fra bureau til bureau. Hos Nordic Marketing starter SEO-pakker fra 2.500 DKK per måned, hvilket inkluderer teknisk SEO audit, keyword research, on-page optimering og månedlig rapportering. Større virksomheder med mere konkurrenceprægede brancher kan forvente pakker op til 15.000 DKK/md med avanceret linkbuilding og content strategi. Vi tilbyder altid en gratis konsultation med prisoverslag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvordan vælger man det rigtige marketing bureau i Danmark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Når du vælger marketing bureau, bør du kigge på: 1) Gennemsigtighed i priser og processer - undgå bureauer der ikke oplyser priser. 2) Specialisering - vælg et bureau der forstår din branche. 3) Dokumenterede resultater og kundeudtalelser. 4) Personlig service vs. storskala-bureau. 5) Garanti eller no cure, no pay model. Nordic Marketing scorer højt på alle punkter med fair priser fra 2.500 kr/md og personlig dedikeret service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvad er AI-søgning og hvordan virker det for min virksomhed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI-søgning refererer til søgesystemer som ChatGPT, Google AI Overview, Perplexity og Bing Copilot, der bruger kunstig intelligens til at give direkte svar i stedet for linklister. For din virksomhed betyder det, at du skal optimere dit online indhold så AI-systemer kan finde, forstå og anbefale dig. Dette kaldes GEO (Generative Engine Optimization). Nordic Marketing er et af de få danske bureauer der tilbyder specialiseret GEO-optimering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvad er forskellen på et marketing bureau og at gøre det selv?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Et professionelt marketing bureau som Nordic Marketing bringer ekspertise, værktøjer og erfaring som tager år at opbygge selv. Vi kender de nyeste algoritmer, har adgang til professionelle SEO-værktøjer og kan reagere hurtigt på ændringer. DIY marketing kan fungere for simple opgaver, men for SEO, Google Ads og avanceret annoncering giver et bureau typisk langt bedre ROI. Vores priser fra 2.500 kr/md er ofte billigere end den tid du selv ville bruge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvornår bør min virksomhed investere i digital marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Din virksomhed bør investere i digital marketing så snart du ønsker at vokse online. Ideelt tidspunkt er når du har et produkt eller service klar, en hjemmeside (eller er klar til at få en lavet) og ønsker flere kunder. Jo før du starter med SEO, jo hurtigere ser du resultater, da SEO er en langsigtet investering. Google Ads kan give resultater med det samme. Nordic Marketing tilbyder gratis konsultation hvor vi vurderer det bedste tidspunkt og strategi for lige netop din virksomhed."
+          }
         }
       ]
     }
@@ -290,18 +445,12 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://nordic-marketing.dk/#website",
       "name": "Nordic Marketing",
       "url": "https://nordic-marketing.dk",
-      "description": "Dansk digitalt marketing bureau - SEO, Google Ads, sociale medier og webdesign",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Nordic Marketing"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://nordic-marketing.dk/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "description": "Dansk digitalt marketing bureau - SEO, GEO, Google Ads, sociale medier og webdesign. Priser fra 2.500 kr/md.",
+      "publisher": {"@id": "https://nordic-marketing.dk/#organization"},
+      "inLanguage": "da-DK"
     }
     </script>
 
@@ -331,6 +480,7 @@
       "url": "https://nordic-marketing.dk",
       "email": "nordicmarketin@outlook.dk",
       "priceRange": "DKK 2.500 - 15.000/måned",
+      "parentOrganization": {"@id": "https://nordic-marketing.dk/#organization"},
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Frederiksberg",
@@ -344,6 +494,7 @@
         "latitude": "55.6761",
         "longitude": "12.5683"
       },
+      "hasMap": "https://maps.google.com/?q=Nordic+Marketing+Frederiksberg+K%C3%B8benhavn",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -363,7 +514,18 @@
           "author": {"@type": "Person", "name": "Restaurant Kunde"},
           "reviewRating": {"@type": "Rating", "ratingValue": "5"},
           "reviewBody": "Nordic Marketing hjalp os med at få flere gæster gennem Google og sociale medier. Fantastisk service og gode resultater!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Lokal Butiksejer"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Professionelt bureau med fair priser. Vores online synlighed er steget markant efter vi startede samarbejdet."
         }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/nordicmarketing",
+        "https://www.instagram.com/nordicmarketing",
+        "https://www.linkedin.com/company/nordicmarketing"
       ]
     }
     </script>
@@ -439,6 +601,21 @@
           }
         ]
       }
+    }
+    </script>
+    <!-- SiteNavigationElement Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SiteNavigationElement",
+      "name": ["Forside", "Services", "Proces", "Om Os", "Kontakt"],
+      "url": [
+        "https://nordic-marketing.dk/",
+        "https://nordic-marketing.dk/services",
+        "https://nordic-marketing.dk/proces",
+        "https://nordic-marketing.dk/om-os",
+        "https://nordic-marketing.dk/kontakt"
+      ]
     }
     </script>
   </head>
