@@ -1,0 +1,44 @@
+name: Daily SEO Freshness Update
+
+  on:
+    schedule:
+      - cron: '0 5 * * *'
+    workflow_dispatch:
+
+  permissions:
+    contents: write
+
+  jobs:
+    update-seo:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+
+        - name: Update sitemap lastmod dates
+          run: |
+            TODAY=$(date +%Y-%m-%d)
+            sed -i "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}</lastmod>|<lastmod>${TODAY}</lastmod>|g" public/sitemap.xml
+
+        - name: Update index.html revised date
+          run: |
+            TODAY=$(date +%Y-%m-%d)
+            sed -i "s|<meta name=\"revised\" content=\"[^\"]*\"|<meta name=\"revised\" content=\"${TODAY}\"|" public/index.html
+
+        - name: Update llms.txt last-updated date
+          run: |
+            TODAY_DK=$(date +"%d. MONTH %Y" | sed \
+              -e "s/MONTH/$(date +%m | sed \
+                -e 's/01/januar/' -e 's/02/februar/' -e 's/03/marts/' \
+                -e 's/04/april/' -e 's/05/maj/' -e 's/06/juni/' \
+                -e 's/07/juli/' -e 's/08/august/' -e 's/09/september/' \
+                -e 's/10/oktober/' -e 's/11/november/' -e 's/12/december/')/" \
+            )
+            sed -i "s|Sidst opdateret:.*|Sidst opdateret: ${TODAY_DK}|" public/llms.txt
+
+        - name: Commit and push changes
+          run: |
+            git config user.name "SEO Bot"
+            git config user.email "seo-bot@nordic-marketing.dk"
+            git add -A
+            git diff --staged --quiet || git commit -m "chore(seo): daily freshness update $(date +%Y-%m-%d)"
+            git push
