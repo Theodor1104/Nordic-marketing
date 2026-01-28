@@ -76,19 +76,20 @@ function PhoneMockup() {
               </div>
               <div className="phone-services-grid">
                 {services.map((service, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="phone-service-card"
-                  >
-                    <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
-                      <span>{service.icon}</span>
-                    </div>
-                    <p className="phone-service-name">{service.name}</p>
-                    <p className="phone-service-desc">{service.desc}</p>
-                  </motion.div>
+                  <Link to="/services" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="phone-service-card"
+                    >
+                      <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
+                        <span>{service.icon}</span>
+                      </div>
+                      <p className="phone-service-name">{service.name}</p>
+                      <p className="phone-service-desc">{service.desc}</p>
+                    </motion.div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -134,33 +135,34 @@ function PhoneMockup() {
 
             <div className="phone-services-list">
               {services.map((service, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="phone-service-item"
-                >
-                  <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
-                    <span>{service.icon}</span>
-                  </div>
-                  <div className="phone-service-text">
-                    <p className="phone-service-name">{service.name}</p>
-                    <p className="phone-service-desc">{service.desc}</p>
-                  </div>
-                  <div className="phone-service-arrow">
-                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </motion.div>
+                <Link to="/services" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="phone-service-item"
+                  >
+                    <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
+                      <span>{service.icon}</span>
+                    </div>
+                    <div className="phone-service-text">
+                      <p className="phone-service-name">{service.name}</p>
+                      <p className="phone-service-desc">{service.desc}</p>
+                    </div>
+                    <div className="phone-service-arrow">
+                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </motion.div>
+                </Link>
               ))}
             </div>
 
-            <div className="phone-info-box">
+            <Link to="/services" className="phone-info-box" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', cursor: 'pointer' }}>
               <span className="phone-info-icon">💡</span>
-              <p className="phone-info-text">Alle services kan kombineres efter behov</p>
-            </div>
+              <p className="phone-info-text">Se alle services →</p>
+            </Link>
           </motion.div>
         );
 
