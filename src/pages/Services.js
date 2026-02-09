@@ -153,10 +153,10 @@ function Services() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Hvilke marketing services tilbyder Nordic Marketing?",
+        "name": "Hvilke marketing services tilbyder Nordic Marketing i Danmark?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nordic Marketing tilbyder fire kerneservices: SEO & GEO Optimering (synlighed i Google og AI-søgemaskiner), Google Ads Management (betalt søgeannoncering), Meta Ads (Facebook og Instagram annoncering) og Webdesign & Webudvikling. Alle services starter fra 2.500 DKK/md."
+          "text": "Nordic Marketing tilbyder fire kerneservices i hele Danmark: SEO & GEO Optimering (synlighed i Google og AI-søgemaskiner), Google Ads Management (betalt søgeannoncering), Meta Ads (Facebook og Instagram annoncering) og Webdesign & Webudvikling. Alle services starter fra 2.500 DKK/md med no cure, no pay garanti."
         }
       },
       {
@@ -164,15 +164,39 @@ function Services() {
         "name": "Hvad er forskellen på SEO og GEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SEO (Search Engine Optimization) optimerer din hjemmeside til traditionelle søgemaskiner som Google. GEO (Generative Engine Optimization) optimerer dit indhold til AI-baserede søgesystemer som ChatGPT, Perplexity og Google AI Overview. Nordic Marketing tilbyder begge dele som en samlet service, så din virksomhed er synlig overalt."
+          "text": "SEO (Search Engine Optimization) optimerer din hjemmeside til traditionelle søgemaskiner som Google. GEO (Generative Engine Optimization) optimerer dit indhold til AI-baserede søgesystemer som ChatGPT, Perplexity og Google AI Overview. Nordic Marketing tilbyder begge dele som en samlet service, så din virksomhed er synlig overalt i Danmark."
         }
       },
       {
         "@type": "Question",
-        "name": "Hvad koster Meta Ads annoncering?",
+        "name": "Hvad koster Facebook annoncering i Danmark?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nordic Marketing tilbyder Meta Ads management fra 2.500 DKK per måned. Dette inkluderer opsætning af kampagner, målgruppeanalyse, A/B testing af annoncer, retargeting og løbende optimering. Annoncebudgettet kommer oveni og aftales individuelt baseret på dine mål."
+          "text": "Nordic Marketing tilbyder professionel Facebook og Instagram annoncering (Meta Ads) fra 2.500 DKK per måned. Dette inkluderer opsætning af kampagner, dansk målgruppeanalyse, A/B testing af annoncer, retargeting og løbende optimering. Annoncebudgettet kommer oveni og aftales individuelt baseret på dine mål."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad koster SEO i Danmark?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Professionel SEO hos Nordic Marketing starter fra 2.500 DKK per måned. Dette inkluderer teknisk SEO audit, keyword research for det danske marked, on-page optimering, linkbuilding og månedlig rapportering. Vi tilbyder SEO services til virksomheder i hele Danmark."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad koster Google Ads bureau i Danmark?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Ads management hos Nordic Marketing starter fra 2.500 DKK per måned. Vi tilbyder professionel opsætning, søgeordsanalyse for danske søgninger, kampagneoptimering, konverteringssporing og ROI-fokuseret optimering. Vi servicerer virksomheder i hele Danmark."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor finder jeg et godt webdesign bureau i Danmark?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nordic Marketing tilbyder professionelt webdesign til virksomheder i hele Danmark. Vi bygger moderne, hurtige og SEO-optimerede hjemmesider. Priser starter fra 5.000 DKK for en landingsside. Alle hjemmesider er mobilvenlige, hurtige og optimeret til Google fra dag ét."
         }
       }
     ]
@@ -186,9 +210,9 @@ function Services() {
   return (
     <div className="services-page">
       <SEO
-        title="Marketing Services - SEO, GEO, Google Ads & Webdesign | Priser fra 2.500 kr"
-        description="Se vores digitale marketing services: SEO & GEO optimering til AI-søgning (ChatGPT, Perplexity), Google Ads, Meta Ads og webdesign. Bliv synlig online. Gratis konsultation!"
-        keywords="SEO services København, GEO optimering Danmark, AI søgemaskineoptimering, ChatGPT optimering, Perplexity SEO, Google Ads bureau København, Meta Ads bureau, Facebook annoncering Danmark, Instagram marketing bureau, webdesign Frederiksberg, digital marketing services, lokal SEO København"
+        title="SEO Bureau Danmark | Google Ads | Facebook Annoncering | Webdesign"
+        description="Professionelle marketing services i Danmark: SEO optimering, Google Ads annoncering, Facebook & Instagram ads, webdesign. Danmarks bedste priser fra 2.500 kr/md. Gratis konsultation!"
+        keywords="SEO bureau danmark, SEO services danmark, Google Ads bureau danmark, Google Ads management danmark, Facebook annoncering danmark, Instagram annoncering danmark, Meta Ads bureau danmark, webdesign danmark, webdesign bureau danmark, digital marketing services danmark, lokal SEO danmark, søgemaskineoptimering danmark, GEO optimering, AI søgemaskineoptimering"
         canonical="https://nordic-marketing.dk/services"
         schema={[serviceListSchema, seoServiceSchema, googleAdsServiceSchema, metaAdsServiceSchema, webdesignServiceSchema, servicesFaqSchema]}
         breadcrumbs={breadcrumbs}
@@ -196,8 +220,8 @@ function Services() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Vores Services</h1>
-          <p>Vi tilbyder en komplet pakke af digitale marketingløsninger til fair priser</p>
+          <h1>Marketing Services Danmark - SEO, Google Ads, Facebook Annoncering & Webdesign</h1>
+          <p>Vi tilbyder en komplet pakke af digitale marketingløsninger til Danmarks bedste priser</p>
         </div>
       </section>
 
@@ -208,10 +232,10 @@ function Services() {
           <div className="service-detail-card">
             <div className="service-detail-content">
               <div className="service-badge">Social Media</div>
-              <h2>Meta Ads</h2>
+              <h2>Facebook & Instagram Annoncering i Danmark</h2>
               <p>
                 Facebook og Instagram er stadig de mest effektive platforme til at nå
-                din målgruppe. Vi hjælper dig med at oprette og optimere annoncer der
+                din målgruppe i Danmark. Vi hjælper dig med at oprette og optimere annoncer der
                 rent faktisk konverterer.
               </p>
               <ul className="service-features">
@@ -234,9 +258,9 @@ function Services() {
           <div className="service-detail-card reverse">
             <div className="service-detail-content">
               <div className="service-badge">Søgemaskine</div>
-              <h2>Google Ads</h2>
+              <h2>Google Ads Bureau Danmark</h2>
               <p>
-                Bliv synlig præcis når potentielle kunder søger efter det du tilbyder.
+                Bliv synlig præcis når potentielle kunder i Danmark søger efter det du tilbyder.
                 Google Ads er en af de mest effektive måder at få kvalificeret trafik til
                 din hjemmeside.
               </p>
@@ -263,9 +287,9 @@ function Services() {
           <div className="service-detail-card">
             <div className="service-detail-content">
               <div className="service-badge">Organisk & AI</div>
-              <h2>SEO & GEO</h2>
+              <h2>SEO Bureau Danmark - Søgemaskineoptimering & GEO</h2>
               <p>
-                Bliv synlig både i traditionelle søgemaskiner og i AI-baserede søgesystemer.
+                Bliv synlig både i traditionelle søgemaskiner og i AI-baserede søgesystemer i hele Danmark.
                 SEO (Search Engine Optimization) og GEO (Generative Engine Optimization)
                 arbejder sammen for at sikre din virksomhed maksimal online synlighed.
               </p>
@@ -294,11 +318,10 @@ function Services() {
           <div className="service-detail-card reverse">
             <div className="service-detail-content">
               <div className="service-badge">Web</div>
-              <h2>Hjemmesider</h2>
+              <h2>Webdesign Bureau Danmark - Professionelle Hjemmesider</h2>
               <p>
                 Din hjemmeside er dit digitale visitkort. Vi bygger moderne, hurtige
-                og konverteringsoptimerede hjemmesider der får dine besøgende til at
-                handle.
+                og konverteringsoptimerede hjemmesider til virksomheder i hele Danmark.
               </p>
               <ul className="service-features">
                 <li>Responsivt design til alle enheder</li>

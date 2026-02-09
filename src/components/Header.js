@@ -53,6 +53,9 @@ function Header() {
             <NavLink to="/services" className="nav-link" onClick={closeMenu}>
               Services
             </NavLink>
+            <NavLink to="/blog" className="nav-link" onClick={closeMenu}>
+              Blog
+            </NavLink>
             <NavLink to="/proces" className="nav-link" onClick={closeMenu}>
               Proces
             </NavLink>

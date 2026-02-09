@@ -70,9 +70,9 @@ function Home() {
   return (
     <div className="home">
       <SEO
-        title="Digital Marketing Bureau i København"
-        description="Nordic Marketing - Dit lokale marketing bureau i København. Eksperter i SEO, GEO (AI-søgning), Google Ads & Meta Ads. Priser fra 2.500 kr/md. Gratis konsultation. No cure, no pay!"
-        keywords="digital marketing bureau København, SEO bureau Danmark, GEO optimering, AI søgemaskineoptimering, Google Ads bureau, Meta Ads, Facebook annoncering København, Instagram marketing, webdesign Frederiksberg, online markedsføring, marketing for små virksomheder, billigt marketing bureau"
+        title="Marketing Bureau Danmark | SEO Bureau & Google Ads Eksperter"
+        description="Nordic Marketing er Danmarks bedste marketing bureau for små og mellemstore virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!"
+        keywords="marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau, Facebook annoncering danmark, Instagram marketing danmark, webdesign danmark, online markedsføring danmark, bedste marketing bureau, billigt marketing bureau danmark, marketing for små virksomheder danmark, SEO København, marketing bureau København"
         canonical="https://nordic-marketing.dk/"
         schema={homeFaqSchema}
       />
@@ -84,7 +84,7 @@ function Home() {
             <span className="hero-logo-accent">Marketing</span>
           </Link>
           <h1>
-            Få din virksomhed til at <span className="highlight">vokse online</span>
+            Marketing Bureau Danmark - <span className="highlight">Få din virksomhed til at vokse online</span>
           </h1>
           <p className="hero-subtitle">
             Vi gør online marketing gennemsigtigt, effektivt og tilgængeligt.

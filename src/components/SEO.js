@@ -13,9 +13,9 @@ function SEO({
   lastModified = null
 }) {
   const siteTitle = 'Nordic Marketing';
-  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Digital Marketing Bureau i København`;
-  const defaultDescription = 'Nordic Marketing - Dit lokale marketing bureau i København. Eksperter i SEO, GEO (AI-søgning), Google Ads & Meta Ads. Priser fra 2.500 kr/md. Gratis konsultation. No cure, no pay!';
-  const defaultKeywords = 'digital marketing bureau, SEO bureau København, GEO optimering, AI søgning, Google Ads bureau, Meta Ads, Facebook annoncering, Instagram marketing, webdesign København, marketing bureau Frederiksberg, lokal SEO Danmark';
+  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Marketing Bureau Danmark | SEO, Google Ads & Webdesign`;
+  const defaultDescription = 'Nordic Marketing er Danmarks bedste marketing bureau for små virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!';
+  const defaultKeywords = 'marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau danmark, Facebook annoncering danmark, webdesign bureau danmark, marketing bureau København, SEO København, GEO optimering, AI søgning, lokal SEO Danmark, bedste marketing bureau';
   const modifiedDate = lastModified || new Date().toISOString().split('T')[0];
 
   // Breadcrumb Schema

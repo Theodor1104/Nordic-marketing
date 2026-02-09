@@ -90,9 +90,9 @@ function Contact() {
   return (
     <div className="contact-page">
       <SEO
-        title="Kontakt Os - Gratis Konsultation | Book et Møde i Dag"
-        description="Kontakt Nordic Marketing for en gratis og uforpligtende konsultation. Vi hjælper med SEO, GEO (AI-søgning), Google Ads & Meta Ads. Svar inden 24 timer. No cure, no pay!"
-        keywords="kontakt marketing bureau København, gratis marketing konsultation, digital marketing hjælp Danmark, marketing tilbud, kontakt Nordic Marketing, book møde marketing bureau, SEO konsultation gratis"
+        title="Kontakt Danmarks Marketing Bureau | Gratis Konsultation"
+        description="Kontakt Nordic Marketing - Danmarks marketing bureau for små virksomheder. Gratis konsultation om SEO, Google Ads, Facebook annoncering & webdesign. Svar inden 24 timer. No cure, no pay!"
+        keywords="kontakt marketing bureau danmark, gratis marketing konsultation danmark, digital marketing hjælp danmark, marketing tilbud danmark, kontakt Nordic Marketing, book møde marketing bureau, SEO konsultation gratis, Google Ads konsultation"
         canonical="https://nordic-marketing.dk/kontakt"
         schema={contactSchema}
         breadcrumbs={breadcrumbs}
@@ -100,8 +100,8 @@ function Contact() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Kontakt os</h1>
-          <p>Lad os tage en snak om dine muligheder - helt uforpligtende</p>
+          <h1>Kontakt Danmarks Marketing Bureau</h1>
+          <p>Gratis konsultation om SEO, Google Ads, Facebook annoncering & webdesign - helt uforpligtende</p>
         </div>
       </section>
 

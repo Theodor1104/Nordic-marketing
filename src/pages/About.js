@@ -78,9 +78,9 @@ function About() {
   return (
     <div className="about-page">
       <SEO
-        title="Om Os - Dansk Marketing Bureau i København | Vores Historie"
-        description="Lær Nordic Marketing at kende. Et dansk digitalt marketing bureau fra København. Vi specialiserer i SEO, GEO (AI-søgning), Google Ads & Meta Ads. No cure, no pay garanti."
-        keywords="om Nordic Marketing, marketing bureau København, dansk marketing bureau, digital marketing team Danmark, SEO eksperter København, GEO specialister, AI marketing bureau, marketing Frederiksberg"
+        title="Om Os - Danmarks Marketing Bureau | SEO & Google Ads Eksperter"
+        description="Lær Nordic Marketing at kende - Danmarks marketing bureau for små virksomheder. Vi specialiserer i SEO, Google Ads, Facebook annoncering & webdesign. No cure, no pay garanti. Gratis konsultation."
+        keywords="om Nordic Marketing, marketing bureau danmark, dansk marketing bureau, digital marketing team danmark, SEO eksperter danmark, Google Ads eksperter, Facebook annoncering bureau, marketing bureau København, bedste marketing bureau danmark"
         canonical="https://nordic-marketing.dk/om-os"
         schema={[aboutSchema, faqSchema]}
         breadcrumbs={breadcrumbs}
@@ -88,8 +88,8 @@ function About() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Om Nordic Marketing</h1>
-          <p>Et digitalt marketingbureau med fokus på resultater og gennemsigtighed</p>
+          <h1>Om Nordic Marketing - Danmarks Marketing Bureau</h1>
+          <p>Et dansk digitalt marketingbureau med fokus på resultater og gennemsigtighed</p>
         </div>
       </section>
 

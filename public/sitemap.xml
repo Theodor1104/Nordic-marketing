@@ -4,39 +4,93 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://nordic-marketing.dk/</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://nordic-marketing.dk/og-image.jpg</image:loc>
-      <image:title>Nordic Marketing - Digital Marketing Bureau i København</image:title>
+      <image:title>Nordic Marketing - Marketing Bureau Danmark - SEO, Google Ads og Webdesign</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://nordic-marketing.dk/services</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://nordic-marketing.dk/og-image.jpg</image:loc>
-      <image:title>Marketing Services - SEO, GEO, Google Ads & Webdesign</image:title>
+      <image:title>Marketing Services Danmark - SEO Bureau, Google Ads, Facebook Annoncering og Webdesign</image:title>
     </image:image>
   </url>
+
+  <!-- Service Landing Pages -->
+  <url>
+    <loc>https://nordic-marketing.dk/seo-bureau-danmark</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nordic-marketing.dk/google-ads-bureau-danmark</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nordic-marketing.dk/facebook-annoncering-danmark</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nordic-marketing.dk/webdesign-bureau-danmark</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://nordic-marketing.dk/blog</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nordic-marketing.dk/blog/seo-guide-danmark-2026</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nordic-marketing.dk/blog/google-ads-begynder-guide</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nordic-marketing.dk/blog/facebook-annoncering-tips</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Other Pages -->
   <url>
     <loc>https://nordic-marketing.dk/proces</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nordic-marketing.dk/om-os</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nordic-marketing.dk/kontakt</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

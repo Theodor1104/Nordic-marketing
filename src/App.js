@@ -8,6 +8,12 @@ import Process from './pages/Process';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import SEOService from './pages/SEOService';
+import GoogleAdsService from './pages/GoogleAdsService';
+import FacebookAdsService from './pages/FacebookAdsService';
+import WebdesignService from './pages/WebdesignService';
 import './styles/App.css';
 
 function App() {
@@ -29,6 +35,12 @@ function App() {
           <Route path="/proces" element={<Process />} />
           <Route path="/om-os" element={<About />} />
           <Route path="/kontakt" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/seo-bureau-danmark" element={<SEOService />} />
+          <Route path="/google-ads-bureau-danmark" element={<GoogleAdsService />} />
+          <Route path="/facebook-annoncering-danmark" element={<FacebookAdsService />} />
+          <Route path="/webdesign-bureau-danmark" element={<WebdesignService />} />
         </Routes>
       </main>
       <Footer />

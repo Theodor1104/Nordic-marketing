@@ -52,9 +52,9 @@ function Process() {
   return (
     <div className="process-page">
       <SEO
-        title="Vores Arbejdsproces - 5 Trin til Online Succes | Nordic Marketing"
-        description="Se hvordan Nordic Marketing arbejder. Vores gennemprøvede 5-trins proces: Opdagelse, Strategi, Kreation, Lancering og Optimering. 100% gennemsigtighed. No cure, no pay."
-        keywords="marketing proces, digital strategi København, marketing bureau arbejdsgang, transparent marketing bureau, resultatorienteret marketing Danmark, SEO proces, hvordan virker SEO, marketing samarbejde"
+        title="Vores Marketing Proces | Danmarks Gennemsigtige Marketing Bureau"
+        description="Se hvordan Danmarks marketing bureau arbejder. Nordic Marketings gennemprøvede 5-trins proces: Opdagelse, Strategi, Kreation, Lancering og Optimering. 100% gennemsigtighed. No cure, no pay."
+        keywords="marketing proces danmark, digital strategi danmark, marketing bureau arbejdsgang, transparent marketing bureau danmark, resultatorienteret marketing danmark, SEO proces, hvordan virker SEO, marketing samarbejde danmark"
         canonical="https://nordic-marketing.dk/proces"
         schema={processSchema}
         breadcrumbs={breadcrumbs}
