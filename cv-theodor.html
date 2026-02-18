@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Theodor Hauch Fausbøll</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .cv {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 48px 48px 40px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .photo {
+      width: 150px;
+      height: 185px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 3px solid rgba(255,255,255,0.2);
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .header .tagline {
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #b0b0b0;
+      margin-bottom: 24px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 13px;
+      font-weight: 400;
+      color: #d0d0d0;
+    }
+
+    .contact-row span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-row .dot {
+      width: 4px;
+      height: 4px;
+      background: #e0e0e0;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Main content */
+    .content {
+      padding: 40px 48px 48px;
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Profile */
+    .profile-text {
+      font-size: 15px;
+      font-weight: 400;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Experience */
+    .experience-item {
+      margin-bottom: 24px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .exp-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .exp-period {
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .exp-company {
+      font-size: 13px;
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .exp-details {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-details li {
+      font-size: 14px;
+      color: #444;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .exp-details li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 1px;
+      background: #1a1a1a;
+    }
+
+    /* Education */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .edu-period {
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .edu-school {
+      font-size: 13px;
+      font-weight: 500;
+      color: #666;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 40px;
+    }
+
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .skill-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .skill-bar {
+      display: flex;
+      gap: 3px;
+    }
+
+    .skill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ddd;
+    }
+
+    .skill-dot.filled {
+      background: #1a1a1a;
+    }
+
+    /* Interests */
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .interest-tag {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+      }
+      .cv {
+        box-shadow: none;
+      }
+    }
+
+    @media screen {
+      .cv {
+        box-shadow: 0 0 40px rgba(0,0,0,0.1);
+        margin: 40px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv">
+    <!-- Header -->
+    <div class="header">
+      <img src="cv-photo.jpg" alt="Theodor Hauch Fausbøll" class="photo">
+      <div class="header-text">
+        <h1>Theodor Hauch Fausbøll</h1>
+        <div class="tagline">Service · Energi · Dedikation</div>
+        <div class="contact-row">
+          <span>53 89 11 04</span>
+          <span class="dot"></span>
+          <span>theodorhauch@gmail.com</span>
+          <span class="dot"></span>
+          <span>Frederiksberg, København</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Profil -->
+      <div class="section">
+        <div class="section-title">Profil</div>
+        <p class="profile-text">
+          Udadvendt og energisk med 4 års erfaring i kundeservice og detailhandel hos 7-Eleven.
+          Trives med højt tempo, direkte kundekontakt og et tæt teamsamarbejde. Har solid erfaring
+          med tilberedning af mad og drikkevarer, kassebetjening og mersalg. Brænder for at skabe
+          gode oplevelser for kunderne og bidrage til en positiv og inkluderende stemning på arbejdspladsen.
+          Motiveret af personlig udvikling og nye udfordringer.
+        </p>
+      </div>
+
+      <!-- Erfaring -->
+      <div class="section">
+        <div class="section-title">Erfaring</div>
+        <div class="experience-item">
+          <div class="exp-header">
+            <div class="exp-title">Salgsmedarbejder</div>
+            <div class="exp-period">4 års erfaring</div>
+          </div>
+          <div class="exp-company">7-Eleven</div>
+          <ul class="exp-details">
+            <li>Betjening af kunder med fokus på hurtig, venlig og engageret service</li>
+            <li>Tilberedning af mad og drikkevarer efter gældende kvalitets- og hygiejnestandarder</li>
+            <li>Aktiv mersalg og produktanbefalinger til kunder</li>
+            <li>Ansvarlig kassebetjening, POS-system og daglig kasseafstemning</li>
+            <li>Tæt teamsamarbejde om at holde butikken kørende i spidsbelastningsperioder</li>
+            <li>Åbne- og lukkevagter med selvstændigt ansvar for butiksdrift og rengøring</li>
+            <li>Vareoptælling, bestilling og sikring af at butikken altid fremstår indbydende</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Uddannelse -->
+      <div class="section">
+        <div class="section-title">Uddannelse</div>
+        <div class="edu-header">
+          <div class="edu-title">HHX — Økonomi</div>
+          <div class="edu-period">Igangværende</div>
+        </div>
+        <div class="edu-school">Niels Brock, København</div>
+      </div>
+
+      <!-- Kompetencer -->
+      <div class="section">
+        <div class="section-title">Kompetencer</div>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <span class="skill-name">Kundeservice</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Kassebetjening</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Teamwork</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Engelsk</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Dansk</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Mad & Drikkevarer</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Stresshåndtering</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Salg & mersalg</span>
+            <div class="skill-bar">
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div>
+              <div class="skill-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interesser -->
+      <div class="section">
+        <div class="section-title">Interesser</div>
+        <div class="interests">
+          <span class="interest-tag">Fitness & Træning</span>
+          <span class="interest-tag">Sundhed & Ernæring</span>
+          <span class="interest-tag">Kaffe & Juice</span>
+          <span class="interest-tag">Personlig Udvikling</span>
+          <span class="interest-tag">Musik</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

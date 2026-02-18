@@ -244,6 +244,7 @@ function Services() {
                 <li>Retargeting af besøgende på din hjemmeside</li>
                 <li>Løbende optimering og rapportering</li>
               </ul>
+              <Link to="/facebook-annoncering-danmark" className="service-link">Læs mere om Facebook Ads →</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder meta-visual">
@@ -270,6 +271,7 @@ function Services() {
                 <li>Display og Shopping kampagner</li>
                 <li>Konverteringssporing og ROI måling</li>
               </ul>
+              <Link to="/google-ads-bureau-danmark" className="service-link">Læs mere om Google Ads →</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder google-visual">
@@ -301,6 +303,7 @@ function Services() {
                 <li>Strukturerede data og schema markup</li>
                 <li>Linkbuilding og autoritet</li>
               </ul>
+              <Link to="/seo-bureau-danmark" className="service-link">Læs mere om SEO →</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder seo-visual">
@@ -329,6 +332,7 @@ function Services() {
                 <li>SEO-venlig struktur fra start</li>
                 <li>Integration med analytics og tracking</li>
               </ul>
+              <Link to="/webdesign-bureau-danmark" className="service-link">Læs mere om webdesign →</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder web-visual">

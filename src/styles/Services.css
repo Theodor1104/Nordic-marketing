@@ -64,6 +64,19 @@
   border-radius: 50%;
 }
 
+.service-link {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.service-link:hover {
+  color: var(--color-primary);
+}
+
 /* Service Visual */
 .service-detail-visual {
   display: flex;

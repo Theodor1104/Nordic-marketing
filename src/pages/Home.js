@@ -72,7 +72,7 @@ function Home() {
       <SEO
         title="Marketing Bureau Danmark | SEO Bureau & Google Ads Eksperter"
         description="Nordic Marketing er Danmarks bedste marketing bureau for små og mellemstore virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!"
-        keywords="marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau, Facebook annoncering danmark, Instagram marketing danmark, webdesign danmark, online markedsføring danmark, bedste marketing bureau, billigt marketing bureau danmark, marketing for små virksomheder danmark, SEO København, marketing bureau København"
+        keywords="marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau, Facebook annoncering danmark, Instagram marketing danmark, webdesign danmark, online markedsføring danmark, bedste marketing bureau, billigt marketing bureau danmark, marketing for små virksomheder danmark, SEO København, marketing bureau København, marketing bureau aarhus, marketing bureau odense, marketing bureau aalborg, digital marketing 2026, online synlighed danmark"
         canonical="https://nordic-marketing.dk/"
         schema={homeFaqSchema}
       />
