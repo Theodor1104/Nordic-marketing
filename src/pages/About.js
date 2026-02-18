@@ -14,7 +14,7 @@ function About() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "Om Nordic Marketing",
-    "description": "Lær Nordic Marketing at kende. Et dansk digitalt marketing bureau fra København grundlagt af studerende fra Niels Brock.",
+    "description": "Lær Nordic Marketing at kende. Et dansk digitalt marketing bureau fra København med fokus på resultater og gennemsigtighed.",
     "mainEntity": {
       "@type": "Organization",
       "name": "Nordic Marketing",
@@ -99,26 +99,24 @@ function About() {
           <div className="story-content">
             <h2>Hvem vi er</h2>
             <p>
-              Vi er to energiske og engagerede studerende fra Niels Brock Handelsgymnasium
-              med en stor passion for marketing. Under vores studier har vi fået en solid
-              forståelse for marketing, afsætning og de klassiske økonomifag, og vi ønskede
-              at omsætte vores viden til praksis – derfor startede vi Nordic Marketing.
+              Nordic Marketing er et ambitiøst dansk digitalt marketingbureau med base i
+              København. Vi har specialiseret os i at hjælpe virksomheder med at vokse
+              online gennem effektiv digital markedsføring og professionelt webdesign.
             </p>
             <p>
-              Udover marketing og økonomi har vi også studeret informatik, hvor vi har lært
-              om opsætning af hjemmesider, digital struktur og tekniske løsninger. Denne
-              erfaring giver os mulighed for at kombinere kreativt marketingarbejde med
-              praktisk digital implementering – fra idé til færdig hjemmeside.
+              Vores team kombinerer solid faglig ekspertise inden for marketing, økonomi
+              og teknologi. Vi mestrer både den kreative side af markedsføring og den
+              tekniske implementering – fra strategi til færdig hjemmeside og kampagne.
             </p>
             <p>
-              Vores mål er at gøre marketing mere tilgængeligt, gennemsigtigt og effektivt
-              for virksomheder i alle størrelser. Vi kombinerer teoretisk viden med kreativitet
-              og ny teknologi, herunder AI, for at udvikle løsninger, der skaber konkrete resultater.
+              Vi tror på, at professionel digital marketing skal være tilgængeligt for
+              virksomheder i alle størrelser. Derfor tilbyder vi gennemsigtige priser,
+              målbare resultater og personlig service til hver eneste kunde.
             </p>
             <p>
-              Som et ungt og dynamisk team bringer vi frisk energi, nye perspektiver og en
-              innovativ tilgang til marketing – altid med fokus på at levere værdi og skabe
-              vækst for vores kunder.
+              Med et skarpt fokus på de nyeste trends inden for SEO, GEO, annoncering og
+              AI-teknologi sikrer vi, at vores kunder altid er et skridt foran konkurrenterne.
+              Din succes er vores mission.
             </p>
           </div>
         </div>
