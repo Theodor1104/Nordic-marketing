@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salgsguide - Nordic Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052CC;
+            --secondary: #00C896;
+            --dark: #1a1a2e;
+            --gray-900: #111827;
+            --gray-800: #1f2937;
+            --gray-700: #374151;
+            --gray-600: #4b5563;
+            --gray-500: #6b7280;
+            --gray-400: #9ca3af;
+            --gray-300: #d1d5db;
+            --gray-200: #e5e7eb;
+            --gray-100: #f3f4f6;
+            --gray-50: #f9fafb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #0066FF 0%, #00C896 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--dark);
+            padding: 2rem 0;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo {
+            padding: 0 1.5rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .nav-logo h1 {
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .nav-logo span {
+            color: var(--secondary);
+        }
+
+        .nav-logo p {
+            color: var(--gray-400);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .nav-section {
+            padding: 0.75rem 1.5rem;
+            color: var(--gray-500);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .nav a:hover {
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            border-left-color: var(--primary);
+        }
+
+        .nav a.active {
+            background: rgba(0,102,255,0.1);
+            color: var(--primary);
+            border-left-color: var(--primary);
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,102,255,0.3);
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+
+        /* Hero */
+        .hero {
+            background: var(--gradient);
+            padding: 4rem 3rem;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Content */
+        .content {
+            padding: 3rem;
+            max-width: 1000px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .section-number {
+            background: var(--gradient);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .card p {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+
+        /* Highlight card */
+        .card-highlight {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8fff6 100%);
+            border-color: var(--primary);
+        }
+
+        /* Info boxes */
+        .info-box {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .info-box.tip {
+            background: #ecfdf5;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .info-box.important {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+        }
+
+        .info-box-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+
+        th {
+            background: var(--gray-900);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        tr:hover td {
+            background: var(--gray-50);
+        }
+
+        .price {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Script boxes */
+        .script-box {
+            background: var(--gray-900);
+            color: var(--gray-100);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .script-label {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .script-box p {
+            color: var(--gray-300);
+            margin-bottom: 0.75rem;
+        }
+
+        .script-box .highlight {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        /* Objection cards */
+        .objection-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .objection-header {
+            background: #fef2f2;
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .objection-response {
+            padding: 1.25rem;
+            background: #f0fdf4;
+            color: var(--gray-700);
+        }
+
+        .objection-response strong {
+            color: #16a34a;
+        }
+
+        /* Lists */
+        ul.check-list {
+            list-style: none;
+        }
+
+        ul.check-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        ul.check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        ul.x-list {
+            list-style: none;
+        }
+
+        ul.x-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        ul.x-list li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        /* Target audience cards */
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .target-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid var(--gray-200);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .target-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .target-card h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .target-card h5 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .target-card ul {
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .target-card ul li {
+            padding: 0.25rem 0;
+        }
+
+        /* KPI boxes */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .kpi-box {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+        }
+
+        .kpi-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .kpi-label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
+        }
+
+        /* Case study */
+        .case-study {
+            background: linear-gradient(135deg, var(--dark) 0%, #2d2d4a 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+        }
+
+        .case-study h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study .subtitle {
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .case-feature {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .case-feature h4 {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .case-feature p {
+            font-size: 0.8rem;
+            color: var(--gray-300);
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .before, .after {
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        .before {
+            background: rgba(220, 38, 38, 0.2);
+        }
+
+        .after {
+            background: rgba(0, 200, 150, 0.2);
+        }
+
+        .before h4, .after h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .before h4 {
+            color: #fca5a5;
+        }
+
+        .after h4 {
+            color: var(--secondary);
+        }
+
+        .before ul, .after ul {
+            list-style: none;
+            font-size: 0.8rem;
+        }
+
+        .before ul li, .after ul li {
+            padding: 0.25rem 0;
+            color: var(--gray-300);
+        }
+
+        /* Golden quote */
+        .golden-quote {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border: 2px solid #f59e0b;
+        }
+
+        .golden-quote p {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #92400e;
+            font-style: italic;
+        }
+
+        .golden-quote span {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #b45309;
+        }
+
+        /* Email template */
+        .email-template {
+            background: white;
+            border: 1px solid var(--gray-300);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .email-header {
+            background: var(--gray-100);
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .email-field {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .email-field strong {
+            color: var(--gray-500);
+            min-width: 60px;
+        }
+
+        .email-body {
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            white-space: pre-line;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-200);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2rem;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-day {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.875rem;
+        }
+
+        .timeline-action {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        /* Quick reference */
+        .quick-ref {
+            background: var(--gray-900);
+            color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .quick-ref h3 {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quick-ref table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .quick-ref th {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .quick-ref td {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        .quick-ref tr:hover td {
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav {
+                transform: translateX(-100%);
+            }
+
+            .nav.open {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main {
+                margin-left: 0;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 2rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .nav, .menu-toggle {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleNav()">☰</button>
+
+    <nav class="nav" id="nav">
+        <div class="nav-logo">
+            <h1>Nordic<span>Marketing</span></h1>
+            <p>Salgsguide 2026</p>
+        </div>
+
+        <div class="nav-section">Grundlag</div>
+        <a href="#om"><span class="nav-icon">🏢</span> Om Nordic Marketing</a>
+        <a href="#services"><span class="nav-icon">💼</span> Services & Priser</a>
+
+        <div class="nav-section">Case Study</div>
+        <a href="#case"><span class="nav-icon">🏆</span> The Office Case</a>
+
+        <div class="nav-section">Salg</div>
+        <a href="#malgrupper"><span class="nav-icon">🎯</span> Målgrupper</a>
+        <a href="#scripts"><span class="nav-icon">📞</span> Salgsscripts</a>
+        <a href="#indvendinger"><span class="nav-icon">🛡️</span> Indvendinger</a>
+
+        <div class="nav-section">Praktisk</div>
+        <a href="#opfolgning"><span class="nav-icon">📧</span> Opfølgning</a>
+        <a href="#rutine"><span class="nav-icon">📅</span> Daglig Rutine</a>
+        <a href="#kpi"><span class="nav-icon">📊</span> KPI'er & Mål</a>
+
+        <div class="nav-section">Reference</div>
+        <a href="#husk"><span class="nav-icon">💡</span> Vigtige Pointer</a>
+        <a href="#prisliste"><span class="nav-icon">💰</span> Prisliste</a>
+    </nav>
+
+    <main class="main">
+        <div class="hero">
+            <h1>Salgsguide</h1>
+            <p>Den komplette blueprint for telefonsalg</p>
+            <div class="hero-badge">📘 Version 1.0 – Marts 2026</div>
+        </div>
+
+        <div class="content">
+            <!-- DEL 1: OM NORDIC MARKETING -->
+            <section class="section" id="om">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <h2 class="section-title">Hvem er Nordic Marketing?</h2>
+                </div>
+
+                <div class="card card-highlight">
+                    <div class="card-header">
+                        <div class="card-icon">🏢</div>
+                        <h3>Om Virksomheden</h3>
+                    </div>
+                    <p>Nordic Marketing er et ungt, moderne digitalt marketingbureau baseret i Frederiksberg, København. Vi hjælper små og mellemstore danske virksomheder med at vokse online gennem målrettede digitale løsninger.</p>
+                    <div class="info-box">
+                        <div class="info-box-icon">📍</div>
+                        <div>
+                            <strong>Grundlagt:</strong> 2024<br>
+                            <strong>Placering:</strong> Frederiksberg, København<br>
+                            <strong>Fokus:</strong> SMB'er i hele Danmark
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">💎</div>
+                        <h3>Vores Kernværdier</h3>
+                    </div>
+                    <ul class="check-list">
+                        <li><strong>Gennemsigtighed</strong> – Ingen skjulte gebyrer, klar kommunikation</li>
+                        <li><strong>Resultatsorienteret</strong> – Vi måles på KPI'er og ROI</li>
+                        <li><strong>Partnerskab</strong> – Vi er en forlængelse af kundens team</li>
+                        <li><strong>Innovation</strong> – AI-drevet marketing, GEO-optimering</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">⭐</div>
+                        <h3>Hvad Gør Os Unikke?</h3>
+                    </div>
+                    <ul class="check-list">
+                        <li><strong>Laveste indgangspris</strong> – Start fra kun 2.500 kr/md</li>
+                        <li><strong>GEO-optimering</strong> – Optimering til AI-søgemaskiner (ChatGPT, Perplexity) – meget få bureauer tilbyder dette</li>
+                        <li><strong>No Cure, No Pay</strong> – Vi deler risikoen med kunden</li>
+                        <li><strong>Alt-i-én løsning</strong> – Marketing + Webdesign + Booking-systemer</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- DEL 2: SERVICES & PRISER -->
+            <section class="section" id="services">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <h2 class="section-title">Services & Priser</h2>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🔍</div>
+                        <h3>1. SEO & GEO Optimering</h3>
+                    </div>
+                    <p><em>Bliv fundet på Google OG AI-søgemaskiner</em></p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pakke</th>
+                                    <th>Pris</th>
+                                    <th>Indhold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Starter</td>
+                                    <td class="price">2.500 kr/md</td>
+                                    <td>5 fokus-keywords, basis support</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional</td>
+                                    <td class="price">5.000 kr/md</td>
+                                    <td>15 keywords, linkbuilding (5 links/md), lokal SEO</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise</td>
+                                    <td class="price">10.000 kr/md</td>
+                                    <td>Ubegrænsede keywords, GEO-optimering, dedikeret konsulent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-box tip">
+                        <div class="info-box-icon">💬</div>
+                        <div><strong>Salgspunkt:</strong> "Vidste du at 40% af alle søgninger nu sker via AI som ChatGPT? Vi sikrer at din virksomhed også findes der."</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📢</div>
+                        <h3>2. Google Ads</h3>
+                    </div>
+                    <p><em>Betalte annoncer der giver resultater fra dag 1</em></p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pakke</th>
+                                    <th>Pris</th>
+                                    <th>Indhold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Starter</td>
+                                    <td class="price">2.500 kr/md</td>
+                                    <td>1 kampagne, op til 50 keywords</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional</td>
+                                    <td class="price">5.000 kr/md</td>
+                                    <td>3 kampagner, 200 keywords, display remarketing</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise</td>
+                                    <td class="price">10.000 kr/md</td>
+                                    <td>Ubegrænsede kampagner, YouTube Ads, daglig optimering</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-box tip">
+                        <div class="info-box-icon">💬</div>
+                        <div><strong>Salgspunkt:</strong> "Med Google Ads kan du se resultater allerede fra dag 1. Vi garanterer minimum 3:1 afkast på dit annoncebudget."</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📱</div>
+                        <h3>3. Meta Ads (Facebook & Instagram)</h3>
+                    </div>
+                    <p><em>Målrettet annoncering på sociale medier</em></p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pakke</th>
+                                    <th>Pris</th>
+                                    <th>Indhold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Starter</td>
+                                    <td class="price">2.500 kr/md</td>
+                                    <td>1 kampagne, 2 målgrupper, 3 annoncer</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional</td>
+                                    <td class="price">5.000 kr/md</td>
+                                    <td>3 kampagner, retargeting, lookalike audiences</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise</td>
+                                    <td class="price">10.000 kr/md</td>
+                                    <td>Videoproduktion, Instagram Reels, Lead Ads</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="info-box tip">
+                        <div class="info-box-icon">💬</div>
+                        <div><strong>Salgspunkt:</strong> "Vi kan ramme præcis de kunder der bor i dit lokalområde og er interesserede i din type virksomhed."</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🌐</div>
+                        <h3>4. Webdesign & Webudvikling</h3>
+                    </div>
+                    <p><em>Moderne, hurtige hjemmesider der konverterer</em></p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Pris</th>
+                                    <th>Indhold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Landing Page</td>
+                                    <td class="price">5.000 kr</td>
+                                    <td>1 side, responsive, kontaktformular</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Website</td>
+                                    <td class="price">15.000 kr</td>
+                                    <td>5-8 sider, blog, 3 måneders support</td>
+                                </tr>
+                                <tr>
+                                    <td>E-commerce</td>
+                                    <td class="price">25.000 kr</td>
+                                    <td>Webshop, betaling, lagerstyring, 6 md support</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card card-highlight">
+                    <div class="card-header">
+                        <div class="card-icon">⚡</div>
+                        <h3>5. Skræddersyede Systemer (SPECIALITET!)</h3>
+                    </div>
+                    <p><em>Booking-systemer, admin-paneler, kundestyring</em></p>
+                    <p>Dette er vores <strong>hemmelige våben</strong> – vi bygger komplette digitale løsninger:</p>
+                    <ul class="check-list">
+                        <li>Booking-systemer til restauranter, frisører, klinikker</li>
+                        <li>Kundehåndtering med login, profiler, historik</li>
+                        <li>Admin-paneler så ejeren kan styre alt selv</li>
+                        <li>Lead management til at fange og følge op på henvendelser</li>
+                    </ul>
+                    <div class="info-box important">
+                        <div class="info-box-icon">💰</div>
+                        <div><strong>Priser:</strong> Afhænger af omfang – typisk 15.000-50.000 kr for komplet system</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 3: CASE STUDY -->
+            <section class="section" id="case">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <h2 class="section-title">Case Study: The Office</h2>
+                </div>
+
+                <div class="case-study">
+                    <h3>🏢 The Office Frederiksberg</h3>
+                    <p class="subtitle">Coworking space & mødelokaler – the-office.dk</p>
+
+                    <div class="info-box" style="background: rgba(255,255,255,0.1); border-left: 4px solid var(--secondary);">
+                        <div class="info-box-icon">📍</div>
+                        <div style="color: var(--gray-300);">
+                            <strong style="color: white;">Adresse:</strong> Martensens Allé 8, 1828 Frederiksberg<br>
+                            <strong style="color: white;">Website:</strong> https://the-office.dk
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 1.5rem; color: var(--gray-400); font-size: 0.875rem;">UDFORDRINGEN</h4>
+                    <ul style="list-style: none; color: var(--gray-300); font-size: 0.9rem; margin-top: 0.5rem;">
+                        <li>• Manuel booking via telefon og email var tidskrævende</li>
+                        <li>• Ingen overblik over ledige pladser</li>
+                        <li>• Svært at håndtere medlemmer vs. gæster</li>
+                        <li>• Mistede potentielle kunder uden for åbningstid</li>
+                    </ul>
+
+                    <h4 style="margin-top: 1.5rem; color: var(--secondary); font-size: 0.875rem;">HVAD VI BYGGEDE</h4>
+                    <div class="case-features">
+                        <div class="case-feature">
+                            <h4>🌐 Marketing Website</h4>
+                            <p>Moderne design, mobilvenlig, SEO-optimeret</p>
+                        </div>
+                        <div class="case-feature">
+                            <h4>📅 Booking-System</h4>
+                            <p>Online kalender, realtid, ingen dobbeltbookinger</p>
+                        </div>
+                        <div class="case-feature">
+                            <h4>👤 Medlemsportal</h4>
+                            <p>Personlig profil, bookinghistorik, selvbetjening</p>
+                        </div>
+                        <div class="case-feature">
+                            <h4>⚙️ Admin-Panel</h4>
+                            <p>Komplet overblik, godkendelser, statistik</p>
+                        </div>
+                        <div class="case-feature">
+                            <h4>📨 Lead Management</h4>
+                            <p>Kontaktformular, kategorisering, opfølgning</p>
+                        </div>
+                    </div>
+
+                    <div class="before-after">
+                        <div class="before">
+                            <h4>❌ FØR</h4>
+                            <ul>
+                                <li>Manuel booking via telefon</li>
+                                <li>Ingen overblik</li>
+                                <li>Tabte kunder uden for åbningstid</li>
+                                <li>Uorganiserede henvendelser</li>
+                                <li>Tidskrævende administration</li>
+                            </ul>
+                        </div>
+                        <div class="after">
+                            <h4>✓ EFTER</h4>
+                            <ul>
+                                <li>24/7 online selvbetjening</li>
+                                <li>Real-time dashboard</li>
+                                <li>Bookinger døgnet rundt</li>
+                                <li>Struktureret lead management</li>
+                                <li>Automatiseret workflow</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">💰</div>
+                        <h3>Prissætning hos The Office</h3>
+                    </div>
+                    <ul class="check-list">
+                        <li><strong>Kontorplads:</strong> 2.500 kr/md (enkelt skrivebord)</li>
+                        <li><strong>Privat kontor:</strong> 8.000 kr/md (4 personer)</li>
+                        <li><strong>Mødelokale:</strong> Gratis for medlemmer, 750 kr/dag for gæster</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- DEL 4: MÅLGRUPPER -->
+            <section class="section" id="malgrupper">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <h2 class="section-title">Målgrupper & Tilgang</h2>
+                </div>
+
+                <div class="target-grid">
+                    <div class="target-card">
+                        <h4>🍽️ Restauranter & Caféer</h4>
+                        <h5>Behov</h5>
+                        <ul>
+                            <li>• Bordbestilling online</li>
+                            <li>• Google synlighed</li>
+                            <li>• Instagram/Facebook ads</li>
+                            <li>• Moderne hjemmeside med menu</li>
+                        </ul>
+                        <h5>Smertepunkter</h5>
+                        <ul>
+                            <li>• Telefonen ringer konstant</li>
+                            <li>• Svært at blive fundet på Google</li>
+                            <li>• Konkurrenter tager deres kunder</li>
+                        </ul>
+                        <h5>Åbningsspørgsmål</h5>
+                        <p style="font-style: italic; color: var(--primary); font-size: 0.85rem; margin-top: 0.5rem;">"Får I mange bordbestillinger online, eller sker det mest over telefon?"</p>
+                    </div>
+
+                    <div class="target-card">
+                        <h4>🔧 Håndværkere & Servicefag</h4>
+                        <h5>Behov</h5>
+                        <ul>
+                            <li>• Lokal SEO ("elektriker København")</li>
+                            <li>• Google Ads for akutte opgaver</li>
+                            <li>• Simpel hjemmeside</li>
+                        </ul>
+                        <h5>Smertepunkter</h5>
+                        <ul>
+                            <li>• Lever af mund-til-mund</li>
+                            <li>• Betaler for Krak/Eniro uden resultat</li>
+                            <li>• Konkurrenter overtager Google</li>
+                        </ul>
+                        <h5>Åbningsspørgsmål</h5>
+                        <p style="font-style: italic; color: var(--primary); font-size: 0.85rem; margin-top: 0.5rem;">"Når folk googler 'elektriker i [by]', kommer I så op som én af de første?"</p>
+                    </div>
+
+                    <div class="target-card">
+                        <h4>💆 Klinikker & Wellness</h4>
+                        <h5>Behov</h5>
+                        <ul>
+                            <li>• Online booking-system</li>
+                            <li>• Professionel hjemmeside</li>
+                            <li>• Google My Business</li>
+                        </ul>
+                        <h5>Smertepunkter</h5>
+                        <ul>
+                            <li>• Tid på at koordinere bookinger</li>
+                            <li>• Kunder vil booke uden for åbningstid</li>
+                            <li>• Mangler kalender-overblik</li>
+                        </ul>
+                        <h5>Åbningsspørgsmål</h5>
+                        <p style="font-style: italic; color: var(--primary); font-size: 0.85rem; margin-top: 0.5rem;">"Bruger I stadig telefon og email til bookinger, eller har I et online system?"</p>
+                    </div>
+
+                    <div class="target-card">
+                        <h4>🏢 Kontorer & Coworking</h4>
+                        <h5>Behov</h5>
+                        <ul>
+                            <li>• Booking-system til mødelokaler</li>
+                            <li>• Medlemshåndtering</li>
+                            <li>• Lead generation</li>
+                        </ul>
+                        <h5>Smertepunkter</h5>
+                        <ul>
+                            <li>• Manuel administration</li>
+                            <li>• Dobbeltbookinger</li>
+                            <li>• Ingen selvbetjening</li>
+                        </ul>
+                        <h5>Åbningsspørgsmål</h5>
+                        <p style="font-style: italic; color: var(--primary); font-size: 0.85rem; margin-top: 0.5rem;">"Vi har lige hjulpet The Office i Frederiksberg. Hvordan håndterer I jeres bookinger?"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 5: SALGSSCRIPTS -->
+            <section class="section" id="scripts">
+                <div class="section-header">
+                    <div class="section-number">5</div>
+                    <h2 class="section-title">Salgsscripts</h2>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📞</div>
+                        <h3>Script 1: Kold Opringning (Generel)</h3>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">DIG</div>
+                        <p>"Hej, mit navn er <span class="highlight">[NAVN]</span> og jeg ringer fra Nordic Marketing. Taler jeg med ejeren/den ansvarlige for marketing?"</p>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">HVIS JA</div>
+                        <p>"Perfekt! Jeg ringer fordi vi hjælper virksomheder som jeres med at få flere kunder gennem Google og sociale medier.</p>
+                        <p>Jeg vil ikke tage meget af din tid – må jeg stille dig ét hurtigt spørgsmål?"</p>
+                        <p style="margin-top: 1rem;"><em>[VENT PÅ SVAR]</em></p>
+                        <p>"Når folk søger efter <span class="highlight">[DERES BRANCHE]</span> i <span class="highlight">[DERES BY]</span> på Google – kommer I så op på første side?"</p>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">HVIS NEJ / VED IKKE</div>
+                        <p>"Det er faktisk ret normalt. Problemet er at 90% af alle klik går til de første 3 resultater.</p>
+                        <p>Vi har lige hjulpet <span class="highlight">The Office</span> – et kontorfællesskab i Frederiksberg – med at komme på første side OG bygge et komplet booking-system. De får nu bookinger døgnet rundt uden at løfte telefonen.</p>
+                        <p>Kunne det være interessant at høre hvordan vi kunne gøre noget lignende for jer? Det tager 15 minutter."</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">🍽️</div>
+                        <h3>Script 2: Restaurant-Specifikt</h3>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">ÅBNING</div>
+                        <p>"Hej, mit navn er <span class="highlight">[NAVN]</span> fra Nordic Marketing. Er det <span class="highlight">[EJERENS NAVN]</span> jeg taler med?</p>
+                        <p>Hej [NAVN]! Jeg ringer fordi jeg lige sad og kiggede på restauranter i <span class="highlight">[OMRÅDE]</span>, og jeg lagde mærke til jeres.</p>
+                        <p>Jeg har et hurtigt spørgsmål: Får I flest bordbestillinger via telefon eller online?"</p>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">HVIS TELEFON</div>
+                        <p>"Det er ret typisk. Men vidste du at 70% af danskere foretrækker at booke online?</p>
+                        <p>Vi har specialiseret os i at hjælpe restauranter med at:</p>
+                        <p>1. Blive fundet på Google når folk søger 'restaurant nær mig'<br>
+                        2. Få et online booking-system så gæster kan reservere 24/7<br>
+                        3. Køre målrettede Facebook/Instagram annoncer til folk i nærområdet</p>
+                        <p>Vi starter fra kun <span class="highlight">2.500 kr om måneden</span> – og vi har en 'no cure, no pay' garanti på visse services.</p>
+                        <p>Kunne I være interesserede i et gratis 15-minutters opkald hvor jeg viser jer præcis hvad vi kunne gøre?"</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📅</div>
+                        <h3>Script 3: Booking-System Fokus</h3>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">ÅBNING</div>
+                        <p>"Hej, jeg ringer fra Nordic Marketing. Vi har netop bygget et komplet booking-system til <span class="highlight">The Office</span> i Frederiksberg – et kontorfællesskab der nu får bookinger døgnet rundt uden at løfte telefonen.</p>
+                        <p>Hvordan håndterer I jeres bookinger i dag?"</p>
+                    </div>
+
+                    <div class="script-box">
+                        <div class="script-label">HVIS MANUELT</div>
+                        <p>"Okay, så I bruger sikkert en del tid på at koordinere over telefon og email?</p>
+                        <p>Det vi byggede til The Office var:</p>
+                        <p>• En online kalender hvor kunderne selv kan se ledige tider<br>
+                        • Automatisk bekræftelse så I ikke skal gøre noget<br>
+                        • Et admin-panel hvor I har komplet overblik<br>
+                        • Alt sammen integreret med jeres hjemmeside</p>
+                        <p>Systemet koster typisk mellem <span class="highlight">15.000-30.000 kr</span> som en engangsinvestering – og så sparer I tid hver eneste dag.</p>
+                        <p>Skal jeg sende jer en demo af hvad vi lavede til The Office?"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 6: INDVENDINGER -->
+            <section class="section" id="indvendinger">
+                <div class="section-header">
+                    <div class="section-number">6</div>
+                    <h2 class="section-title">Indvendingshåndtering</h2>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-header">❌ "Det er for dyrt"</div>
+                    <div class="objection-response">
+                        <p>"Jeg forstår godt at prisen er vigtig. Lad mig spørge dig: <strong>Hvad koster det jer at miste bare én kunde om ugen</strong> til en konkurrent der er nemmere at finde på Google?</p>
+                        <p>Vores starter-pakke koster 2.500 kr om måneden. Hvis det bare giver jer én ekstra kunde om måneden, har det jo betalt sig selv – og resten er ren profit.</p>
+                        <p>Desuden tilbyder vi <strong>'no cure, no pay'</strong> på visse services, så I kun betaler for resultater."</p>
+                    </div>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-header">❌ "Vi har ikke tid lige nu"</div>
+                    <div class="objection-response">
+                        <p>"Det forstår jeg helt – I har travlt med at drive forretning.</p>
+                        <p>Men det er faktisk derfor vi er her: <strong>Vi tager os af alt det digitale</strong>, så I kan fokusere på det I er gode til.</p>
+                        <p>Hvad nu hvis jeg sender jer en kort email med hvad vi kunne gøre, og så kan I kigge på det når det passer jer?"</p>
+                    </div>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-header">❌ "Vi har allerede en hjemmeside"</div>
+                    <div class="objection-response">
+                        <p>"Perfekt! Må jeg spørge: <strong>Hvornår blev den sidst opdateret?</strong> Og ved du om den er optimeret til mobil og Google?</p>
+                        <p>Mange hjemmesider fra bare 2-3 år siden performer faktisk ret dårligt på Google i dag. Vi kan lave en <strong>gratis analyse</strong> af jeres nuværende side og vise jer præcis hvor I taber kunder."</p>
+                    </div>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-header">❌ "Vi bruger allerede et andet bureau"</div>
+                    <div class="objection-response">
+                        <p>"Det er helt fint! Må jeg spørge hvad I betaler i dag – og <strong>hvilke resultater I ser?</strong></p>
+                        <p>Mange af vores kunder kom fra andre bureauer fordi de betalte meget men ikke kunne se hvad de fik for pengene.</p>
+                        <p>Vi er 100% transparente: I får <strong>månedlige rapporter</strong> med præcis hvor mange der besøger jeres side, hvor mange der kontakter jer, og hvad jeres penge går til."</p>
+                    </div>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-header">❌ "Jeg skal tænke over det"</div>
+                    <div class="objection-response">
+                        <p>"Selvfølgelig – det er en vigtig beslutning.</p>
+                        <p>Hvad hvis jeg sender dig en <strong>case study</strong> om hvad vi lavede for The Office, plus et konkret forslag til hvad vi kunne gøre for jer? Så har du noget konkret at tage stilling til.</p>
+                        <p><strong>Hvornår passer det at jeg følger op</strong> – i denne uge eller næste uge?"</p>
+                    </div>
+                </div>
+
+                <div class="objection-card">
+                    <div class="objection-header">❌ "Send mig en email"</div>
+                    <div class="objection-response">
+                        <p>"Det gør jeg gerne! For at sende dig det mest relevante – <strong>hvad er jeres største udfordring lige nu?</strong></p>
+                        <p>Er det at blive fundet på Google, få flere bookinger, eller noget helt tredje?"</p>
+                        <p><em>[NOTER SVARET OG BRUG DET I EMAILEN]</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 7: OPFØLGNING -->
+            <section class="section" id="opfolgning">
+                <div class="section-header">
+                    <div class="section-number">7</div>
+                    <h2 class="section-title">Opfølgning</h2>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📧</div>
+                        <h3>Email-Skabelon efter Opkald</h3>
+                    </div>
+
+                    <div class="email-template">
+                        <div class="email-header">
+                            <div class="email-field"><strong>Til:</strong> [KUNDENS EMAIL]</div>
+                            <div class="email-field"><strong>Emne:</strong> Nordic Marketing – Som aftalt: [DERES BEHOV]</div>
+                        </div>
+                        <div class="email-body">Hej [NAVN],
+
+Tak for snakken i dag!
+
+Som jeg nævnte, hjælper vi virksomheder som [VIRKSOMHEDSNAVN] med at få flere kunder gennem:
+
+✅ Google synlighed – Så I bliver fundet når folk søger
+✅ Online booking – Så kunder kan booke 24/7
+✅ Målrettet annoncering – Til folk i jeres lokalområde
+
+<strong>Case: The Office</strong>
+Vi hjalp The Office i Frederiksberg med et komplet booking-system. Nu får de bookinger døgnet rundt – uden at løfte telefonen.
+
+<strong>Næste skridt:</strong>
+Jeg foreslår et gratis 15-minutters opkald hvor jeg viser jer præcis hvad vi kunne gøre for [VIRKSOMHEDSNAVN].
+
+[KALENDER-LINK ELLER FORESLÅ TIDSPUNKTER]
+
+Med venlig hilsen,
+[DIT NAVN]
+Nordic Marketing
+[TELEFON]</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📅</div>
+                        <h3>Opfølgningsplan</h3>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-day">Dag 0</div>
+                            <div class="timeline-action">Opkald + send email hvis aftalt</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-day">Dag 3</div>
+                            <div class="timeline-action">Opfølgende email: "Har du haft tid til at kigge på det?"</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-day">Dag 7</div>
+                            <div class="timeline-action">Opkald: "Jeg ville lige følge op..."</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-day">Dag 14</div>
+                            <div class="timeline-action">Email med ny værdi (tip, artikel, case)</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-day">Dag 30</div>
+                            <div class="timeline-action">Sidste forsøg: "Er det stadig relevant?"</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 8: DAGLIG RUTINE -->
+            <section class="section" id="rutine">
+                <div class="section-header">
+                    <div class="section-number">8</div>
+                    <h2 class="section-title">Daglig Rutine</h2>
+                </div>
+
+                <div class="target-grid">
+                    <div class="card" style="margin-bottom: 0;">
+                        <div class="card-header">
+                            <div class="card-icon">🌅</div>
+                            <h3>Morgen (9:00-12:00)</h3>
+                        </div>
+                        <ol style="padding-left: 1.25rem; color: var(--gray-600);">
+                            <li>Gennemgå dagens liste med leads</li>
+                            <li>Research hver virksomhed i 2 min</li>
+                            <li>Start opkald – mål: 20-30 opkald</li>
+                            <li>Log alle samtaler</li>
+                        </ol>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 0;">
+                        <div class="card-header">
+                            <div class="card-icon">☀️</div>
+                            <h3>Eftermiddag (13:00-16:00)</h3>
+                        </div>
+                        <ol style="padding-left: 1.25rem; color: var(--gray-600);">
+                            <li>Send opfølgende emails</li>
+                            <li>Fortsæt opkald</li>
+                            <li>Book møder i kalenderen</li>
+                        </ol>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 0;">
+                        <div class="card-header">
+                            <div class="card-icon">🌆</div>
+                            <h3>Slut på dagen (16:00-17:00)</h3>
+                        </div>
+                        <ol style="padding-left: 1.25rem; color: var(--gray-600);">
+                            <li>Opdater CRM/Excel med resultater</li>
+                            <li>Forbered næste dags liste</li>
+                            <li>Send Theodor en kort status</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 9: KPI'ER -->
+            <section class="section" id="kpi">
+                <div class="section-header">
+                    <div class="section-number">9</div>
+                    <h2 class="section-title">KPI'er & Mål</h2>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <h3>Daglige Mål</h3>
+                    </div>
+                    <div class="kpi-grid">
+                        <div class="kpi-box">
+                            <div class="kpi-value">30-50</div>
+                            <div class="kpi-label">Opkald per dag</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-value">15-20</div>
+                            <div class="kpi-label">Faktiske samtaler</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-value">3-5</div>
+                            <div class="kpi-label">Interesserede</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-value">1-2</div>
+                            <div class="kpi-label">Bookede møder</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📈</div>
+                        <h3>Ugentlige Mål</h3>
+                    </div>
+                    <div class="kpi-grid">
+                        <div class="kpi-box">
+                            <div class="kpi-value">5-10</div>
+                            <div class="kpi-label">Møder booket</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-value">3-5</div>
+                            <div class="kpi-label">Tilbud sendt</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-value">1-2</div>
+                            <div class="kpi-label">Lukkede deals</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box important">
+                    <div class="info-box-icon">💰</div>
+                    <div>
+                        <strong>Provision/Bonus</strong> (aftal detaljerne med Theodor)<br>
+                        • Basis: [AFTAL]<br>
+                        • Bonus per lukket deal: [AFTAL]<br>
+                        • Bonus ved opnåelse af ugentlige mål: [AFTAL]
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEL 10: VIGTIGE POINTER -->
+            <section class="section" id="husk">
+                <div class="section-header">
+                    <div class="section-number">10</div>
+                    <h2 class="section-title">Vigtige Pointer</h2>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">❌</div>
+                        <h3>Det Vi IKKE Er</h3>
+                    </div>
+                    <ul class="x-list">
+                        <li>Et stort, upersonligt bureau</li>
+                        <li>Dyre konsulenter der tager 50.000 kr for en rapport</li>
+                        <li>Folk der lover guld og grønne skove uden resultater</li>
+                    </ul>
+                </div>
+
+                <div class="card card-highlight">
+                    <div class="card-header">
+                        <div class="card-icon">✓</div>
+                        <h3>Det Vi ER</h3>
+                    </div>
+                    <ul class="check-list">
+                        <li>Et ungt, sultent team der vil bevise os selv</li>
+                        <li>Transparente med priser og resultater</li>
+                        <li>Specialister i SMB'er – vi forstår små virksomheders udfordringer</li>
+                        <li>Teknisk stærke – vi kan bygge ALT (websites, booking-systemer, apps)</li>
+                    </ul>
+                </div>
+
+                <div class="golden-quote">
+                    <p>"Vi hjælper små virksomheder med at konkurrere med de store – til en pris de har råd til."</p>
+                    <span>— Den Gyldne Sætning</span>
+                </div>
+            </section>
+
+            <!-- PRISLISTE -->
+            <section class="section" id="prisliste">
+                <div class="section-header">
+                    <div class="section-number">💰</div>
+                    <h2 class="section-title">Prisliste – Hurtig Reference</h2>
+                </div>
+
+                <div class="quick-ref">
+                    <h3>📋 Komplet Prisoversigt</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Starter</th>
+                                    <th>Professional</th>
+                                    <th>Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SEO & GEO</td>
+                                    <td>2.500 kr/md</td>
+                                    <td>5.000 kr/md</td>
+                                    <td>10.000 kr/md</td>
+                                </tr>
+                                <tr>
+                                    <td>Google Ads</td>
+                                    <td>2.500 kr/md</td>
+                                    <td>5.000 kr/md</td>
+                                    <td>10.000 kr/md</td>
+                                </tr>
+                                <tr>
+                                    <td>Meta Ads</td>
+                                    <td>2.500 kr/md</td>
+                                    <td>5.000 kr/md</td>
+                                    <td>10.000 kr/md</td>
+                                </tr>
+                                <tr>
+                                    <td>Webdesign</td>
+                                    <td>5.000 kr (landing)</td>
+                                    <td>15.000 kr (business)</td>
+                                    <td>25.000 kr (e-commerce)</td>
+                                </tr>
+                                <tr>
+                                    <td>Booking-system</td>
+                                    <td colspan="3">Fra 15.000 kr (afhænger af omfang)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; color: var(--gray-400);">⚠️ Alle priser er ekskl. moms</p>
+                </div>
+            </section>
+
+            <div class="footer">
+                <p>Dokumentet er udarbejdet af Nordic Marketing – Marts 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('nav').classList.toggle('open');
+        }
+
+        // Close nav when clicking a link on mobile
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) {
+                    document.getElementById('nav').classList.remove('open');
+                }
+            });
+        });
+
+        // Highlight active section in nav
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

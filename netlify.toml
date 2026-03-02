@@ -67,6 +67,12 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Salgsguide - serve directly (hidden URL)
+[[redirects]]
+  from = "/intern-salgsguide-nm2026-x7k9"
+  to = "/intern-salgsguide-nm2026-x7k9.html"
+  status = 200
+
 # SPA redirect - all routes to index.html
 [[redirects]]
   from = "/*"
