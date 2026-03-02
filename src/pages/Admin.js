@@ -380,7 +380,7 @@ function Admin() {
 
   // Admin dashboard
   return (
-    <div className={`admin-page ${sidebarCollapsed ? 'sidebar-collapsed' : ''} ${settings.darkMode ? 'dark-mode' : ''}`}>
+    <div className={`admin-page ${sidebarCollapsed ? 'sidebar-collapsed' : ''} dark-mode`}>
       {/* Notification */}
       {notification && (
         <div className={`admin-notification ${notification.type}`}>
@@ -1381,30 +1381,6 @@ function Admin() {
                       type="checkbox"
                       checked={settings.autoResponse}
                       onChange={(e) => setSettings({...settings, autoResponse: e.target.checked})}
-                    />
-                    <span className="toggle"></span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="setting-card">
-                <div className="setting-header">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 6v6l4 2"/>
-                  </svg>
-                  <div>
-                    <h3>Udseende</h3>
-                    <p>Tilpas admin panel udseende</p>
-                  </div>
-                </div>
-                <div className="setting-options">
-                  <label className="toggle-option">
-                    <span>Mørk tilstand</span>
-                    <input
-                      type="checkbox"
-                      checked={settings.darkMode}
-                      onChange={(e) => setSettings({...settings, darkMode: e.target.checked})}
                     />
                     <span className="toggle"></span>
                   </label>
