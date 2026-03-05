@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 import '../styles/About.css';
 
 function About() {
+  const { t } = useTranslation();
   const breadcrumbs = [
     { name: "Forside", url: "https://nordic-marketing.dk/" },
     { name: "Om Os", url: "https://nordic-marketing.dk/om-os" }
@@ -88,8 +90,8 @@ function About() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Om Nordic Marketing - Danmarks Marketing Bureau</h1>
-          <p>Et dansk digitalt marketingbureau med fokus på resultater og gennemsigtighed</p>
+          <h1>{t('about.hero_title')}</h1>
+          <p>{t('about.hero_desc')}</p>
         </div>
       </section>
 
@@ -97,27 +99,11 @@ function About() {
       <section className="story-section">
         <div className="container">
           <div className="story-content">
-            <h2>Hvem vi er</h2>
-            <p>
-              Nordic Marketing er et ambitiøst dansk digitalt marketingbureau med base i
-              København. Vi har specialiseret os i at hjælpe virksomheder med at vokse
-              online gennem effektiv digital markedsføring og professionelt webdesign.
-            </p>
-            <p>
-              Vores team kombinerer solid faglig ekspertise inden for marketing, økonomi
-              og teknologi. Vi mestrer både den kreative side af markedsføring og den
-              tekniske implementering – fra strategi til færdig hjemmeside og kampagne.
-            </p>
-            <p>
-              Vi tror på, at professionel digital marketing skal være tilgængeligt for
-              virksomheder i alle størrelser. Derfor tilbyder vi gennemsigtige priser,
-              målbare resultater og personlig service til hver eneste kunde.
-            </p>
-            <p>
-              Med et skarpt fokus på de nyeste trends inden for SEO, GEO, annoncering og
-              AI-teknologi sikrer vi, at vores kunder altid er et skridt foran konkurrenterne.
-              Din succes er vores mission.
-            </p>
+            <h2>{t('about.story_title')}</h2>
+            <p>{t('about.story_p1')}</p>
+            <p>{t('about.story_p2')}</p>
+            <p>{t('about.story_p3')}</p>
+            <p>{t('about.story_p4')}</p>
           </div>
         </div>
       </section>
@@ -134,12 +120,8 @@ function About() {
                   <circle cx="12" cy="12" r="2"/>
                 </svg>
               </div>
-              <h3>Vores Mission</h3>
-              <p>
-                At demokratisere digital markedsføring ved at levere professionelle
-                løsninger til fair priser. Vi kombinerer datadrevet indsigt med
-                kreativ eksekvering for at skabe målbare resultater for vores kunder.
-              </p>
+              <h3>{t('about.mission_title')}</h3>
+              <p>{t('about.mission_desc')}</p>
             </div>
             <div className="mv-card vision-card">
               <div className="mv-icon">
@@ -148,11 +130,8 @@ function About() {
                   <circle cx="12" cy="12" r="3"/>
                 </svg>
               </div>
-              <h3>Vores Vision</h3>
-              <p>
-                At være den foretrukne marketingpartner for ambitiøse virksomheder
-                der søger vækst gennem effektiv og gennemsigtig digital markedsføring.
-              </p>
+              <h3>{t('about.vision_title')}</h3>
+              <p>{t('about.vision_desc')}</p>
             </div>
           </div>
         </div>
@@ -161,23 +140,23 @@ function About() {
       {/* Values Section */}
       <section className="values-section">
         <div className="container">
-          <h2>Vores værdier</h2>
+          <h2>{t('about.values_title')}</h2>
           <div className="values-grid">
             <div className="value-card">
-              <h3>Gennemsigtighed</h3>
-              <p>Klar kommunikation og ingen skjulte omkostninger. Vi rapporterer løbende og du har altid fuldt overblik over din investering.</p>
+              <h3>{t('about.value1_title')}</h3>
+              <p>{t('about.value1_desc')}</p>
             </div>
             <div className="value-card">
-              <h3>Resultatorienteret</h3>
-              <p>Alt vi gør er datadrevet og måles på konkrete KPI'er. Vi fokuserer på ROI og reel forretningsværdi.</p>
+              <h3>{t('about.value2_title')}</h3>
+              <p>{t('about.value2_desc')}</p>
             </div>
             <div className="value-card">
-              <h3>Partnerskab</h3>
-              <p>Vi ser os selv som en forlængelse af dit team. Din succes er vores succes, og vi investerer os i hvert samarbejde.</p>
+              <h3>{t('about.value3_title')}</h3>
+              <p>{t('about.value3_desc')}</p>
             </div>
             <div className="value-card">
-              <h3>Innovation</h3>
-              <p>Vi holder os konstant opdateret på de nyeste trends og teknologier for at sikre din konkurrencefordel.</p>
+              <h3>{t('about.value4_title')}</h3>
+              <p>{t('about.value4_desc')}</p>
             </div>
           </div>
         </div>
@@ -186,9 +165,9 @@ function About() {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Skal vi arbejde sammen?</h2>
-          <p>Lad os tage en snak om hvordan vi kan hjælpe din virksomhed</p>
-          <Link to="/kontakt" className="btn btn-light">Tag kontakt</Link>
+          <h2>{t('about.cta_title')}</h2>
+          <p>{t('about.cta_desc')}</p>
+          <Link to="/kontakt" className="btn btn-light">{t('about.cta_button')}</Link>
         </div>
       </section>
     </div>

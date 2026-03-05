@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 import '../styles/Services.css';
 
 function Services() {
+  const { t } = useTranslation();
   const providerRef = {
     "@type": "MarketingAgency",
     "@id": "https://nordic-marketing.dk/#marketingagency",
@@ -220,8 +222,8 @@ function Services() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Marketing Services Danmark - SEO, Google Ads, Facebook Annoncering & Webdesign</h1>
-          <p>Vi tilbyder en komplet pakke af digitale marketingløsninger til Danmarks bedste priser</p>
+          <h1>{t('services.hero_title')}</h1>
+          <p>{t('services.hero_desc')}</p>
         </div>
       </section>
 
@@ -231,20 +233,18 @@ function Services() {
           {/* Meta Ads */}
           <div className="service-detail-card">
             <div className="service-detail-content">
-              <div className="service-badge">Social Media</div>
-              <h2>Facebook & Instagram Annoncering i Danmark</h2>
+              <div className="service-badge">{t('services.meta_badge')}</div>
+              <h2>{t('services.meta_title')}</h2>
               <p>
-                Facebook og Instagram er stadig de mest effektive platforme til at nå
-                din målgruppe i Danmark. Vi hjælper dig med at oprette og optimere annoncer der
-                rent faktisk konverterer.
+                {t('services.meta_desc')}
               </p>
               <ul className="service-features">
-                <li>Målrettet annoncering baseret på interesser og demografi</li>
-                <li>A/B testing af annoncer for bedste resultater</li>
-                <li>Retargeting af besøgende på din hjemmeside</li>
-                <li>Løbende optimering og rapportering</li>
+                <li>{t('services.meta_feature1')}</li>
+                <li>{t('services.meta_feature2')}</li>
+                <li>{t('services.meta_feature3')}</li>
+                <li>{t('services.meta_feature4')}</li>
               </ul>
-              <Link to="/facebook-annoncering-danmark" className="service-link">Læs mere om Facebook Ads →</Link>
+              <Link to="/facebook-annoncering-danmark" className="service-link">{t('services.meta_link')}</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder meta-visual">
@@ -258,20 +258,18 @@ function Services() {
           {/* Google Ads */}
           <div className="service-detail-card reverse">
             <div className="service-detail-content">
-              <div className="service-badge">Søgemaskine</div>
-              <h2>Google Ads Bureau Danmark</h2>
+              <div className="service-badge">{t('services.google_badge')}</div>
+              <h2>{t('services.google_title')}</h2>
               <p>
-                Bliv synlig præcis når potentielle kunder i Danmark søger efter det du tilbyder.
-                Google Ads er en af de mest effektive måder at få kvalificeret trafik til
-                din hjemmeside.
+                {t('services.google_desc')}
               </p>
               <ul className="service-features">
-                <li>Søgeordsanalyse og kampagneopbygning</li>
-                <li>Optimering af Quality Score</li>
-                <li>Display og Shopping kampagner</li>
-                <li>Konverteringssporing og ROI måling</li>
+                <li>{t('services.google_feature1')}</li>
+                <li>{t('services.google_feature2')}</li>
+                <li>{t('services.google_feature3')}</li>
+                <li>{t('services.google_feature4')}</li>
               </ul>
-              <Link to="/google-ads-bureau-danmark" className="service-link">Læs mere om Google Ads →</Link>
+              <Link to="/google-ads-bureau-danmark" className="service-link">{t('services.google_link')}</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder google-visual">
@@ -288,22 +286,20 @@ function Services() {
           {/* SEO & GEO */}
           <div className="service-detail-card">
             <div className="service-detail-content">
-              <div className="service-badge">Organisk & AI</div>
-              <h2>SEO Bureau Danmark - Søgemaskineoptimering & GEO</h2>
+              <div className="service-badge">{t('services.seo_badge')}</div>
+              <h2>{t('services.seo_title')}</h2>
               <p>
-                Bliv synlig både i traditionelle søgemaskiner og i AI-baserede søgesystemer i hele Danmark.
-                SEO (Search Engine Optimization) og GEO (Generative Engine Optimization)
-                arbejder sammen for at sikre din virksomhed maksimal online synlighed.
+                {t('services.seo_desc')}
               </p>
               <ul className="service-features">
-                <li>Teknisk SEO audit og optimering</li>
-                <li>GEO-optimering til AI-søgninger (ChatGPT, Perplexity, etc.)</li>
-                <li>On-page optimering af indhold</li>
-                <li>Lokal SEO for lokale virksomheder</li>
-                <li>Strukturerede data og schema markup</li>
-                <li>Linkbuilding og autoritet</li>
+                <li>{t('services.seo_feature1')}</li>
+                <li>{t('services.seo_feature2')}</li>
+                <li>{t('services.seo_feature3')}</li>
+                <li>{t('services.seo_feature4')}</li>
+                <li>{t('services.seo_feature5')}</li>
+                <li>{t('services.seo_feature6')}</li>
               </ul>
-              <Link to="/seo-bureau-danmark" className="service-link">Læs mere om SEO →</Link>
+              <Link to="/seo-bureau-danmark" className="service-link">{t('services.seo_link')}</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder seo-visual">
@@ -320,19 +316,18 @@ function Services() {
           {/* Hjemmesider */}
           <div className="service-detail-card reverse">
             <div className="service-detail-content">
-              <div className="service-badge">Web</div>
-              <h2>Webdesign Bureau Danmark - Professionelle Hjemmesider</h2>
+              <div className="service-badge">{t('services.web_badge')}</div>
+              <h2>{t('services.web_title')}</h2>
               <p>
-                Din hjemmeside er dit digitale visitkort. Vi bygger moderne, hurtige
-                og konverteringsoptimerede hjemmesider til virksomheder i hele Danmark.
+                {t('services.web_desc')}
               </p>
               <ul className="service-features">
-                <li>Responsivt design til alle enheder</li>
-                <li>Hurtig loadtid og god brugeroplevelse</li>
-                <li>SEO-venlig struktur fra start</li>
-                <li>Integration med analytics og tracking</li>
+                <li>{t('services.web_feature1')}</li>
+                <li>{t('services.web_feature2')}</li>
+                <li>{t('services.web_feature3')}</li>
+                <li>{t('services.web_feature4')}</li>
               </ul>
-              <Link to="/webdesign-bureau-danmark" className="service-link">Læs mere om webdesign →</Link>
+              <Link to="/webdesign-bureau-danmark" className="service-link">{t('services.web_link')}</Link>
             </div>
             <div className="service-detail-visual">
               <div className="visual-placeholder web-visual">
@@ -353,28 +348,28 @@ function Services() {
       {/* Process Section */}
       <section className="process-section">
         <div className="container">
-          <h2>Vores proces</h2>
-          <p className="section-subtitle">Sådan arbejder vi sammen med dig</p>
+          <h2>{t('services.process_title')}</h2>
+          <p className="section-subtitle">{t('services.process_subtitle')}</p>
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">1</div>
-              <h3>Gratis konsultation</h3>
-              <p>Vi lytter til dine udfordringer og mål</p>
+              <h3>{t('services.process_step1_title')}</h3>
+              <p>{t('services.process_step1_desc')}</p>
             </div>
             <div className="process-step">
               <div className="step-number">2</div>
-              <h3>Strategi</h3>
-              <p>Vi præsenterer vores bedste bud på en løsning</p>
+              <h3>{t('services.process_step2_title')}</h3>
+              <p>{t('services.process_step2_desc')}</p>
             </div>
             <div className="process-step">
               <div className="step-number">3</div>
-              <h3>Justering</h3>
-              <p>Vi tilpasser efter dine ønsker og feedback</p>
+              <h3>{t('services.process_step3_title')}</h3>
+              <p>{t('services.process_step3_desc')}</p>
             </div>
             <div className="process-step">
               <div className="step-number">4</div>
-              <h3>Eksekvering</h3>
-              <p>Vi implementerer og leverer målbare resultater</p>
+              <h3>{t('services.process_step4_title')}</h3>
+              <p>{t('services.process_step4_desc')}</p>
             </div>
           </div>
         </div>
@@ -383,9 +378,9 @@ function Services() {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Klar til at komme i gang?</h2>
-          <p>Book en gratis konsultation og lad os tale om dine muligheder</p>
-          <Link to="/kontakt" className="btn btn-light">Kontakt os</Link>
+          <h2>{t('services.cta_title')}</h2>
+          <p>{t('services.cta_desc')}</p>
+          <Link to="/kontakt" className="btn btn-light">{t('services.cta_button')}</Link>
         </div>
       </section>
     </div>

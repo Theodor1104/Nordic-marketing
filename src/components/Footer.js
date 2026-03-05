@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../styles/Footer.css';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="footer">
@@ -14,32 +16,32 @@ function Footer() {
             <span className="logo-accent">Marketing</span>
           </h3>
           <p className="footer-description">
-            Vi gør online marketing forståelig, tilgængelig og resultatskabende for virksomheder uanset størrelse.
+            {t('footer.description')}
           </p>
         </div>
 
         <div className="footer-section">
-          <h4>Navigation</h4>
+          <h4>{t('footer.navigation')}</h4>
           <ul className="footer-links">
-            <li><Link to="/">Forside</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/om-os">Om Os</Link></li>
-            <li><Link to="/kontakt">Kontakt</Link></li>
+            <li><Link to="/">{t('nav.home')}</Link></li>
+            <li><Link to="/services">{t('nav.services')}</Link></li>
+            <li><Link to="/om-os">{t('nav.about')}</Link></li>
+            <li><Link to="/kontakt">{t('nav.contact')}</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4>Services</h4>
+          <h4>{t('footer.services')}</h4>
           <ul className="footer-links">
             <li><Link to="/services">Meta Ads</Link></li>
             <li><Link to="/services">Google Ads</Link></li>
             <li><Link to="/services">SEO</Link></li>
-            <li><Link to="/services">Hjemmesider</Link></li>
+            <li><Link to="/services">{t('footer.websites')}</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4>Kontakt</h4>
+          <h4>{t('footer.contact')}</h4>
           <ul className="footer-links">
             <li>
               <a href="mailto:nordicmarketin@outlook.dk">nordicmarketin@outlook.dk</a>
@@ -52,7 +54,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Nordic Marketing. Alle rettigheder forbeholdes.</p>
+        <p>&copy; {currentYear} {t('footer.copyright')}</p>
         <Link to="/admin" className="admin-link">Admin</Link>
       </div>
     </footer>

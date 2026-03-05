@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 import '../styles/Blog.css';
 
 function Blog() {
+  const { t } = useTranslation();
   const breadcrumbs = [
     { name: "Forside", url: "https://nordic-marketing.dk/" },
     { name: "Blog", url: "https://nordic-marketing.dk/blog" }
@@ -63,8 +65,8 @@ function Blog() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Marketing Blog - Guides & Tips til Digital Marketing i Danmark</h1>
-          <p>Gratis viden om SEO, Google Ads, Facebook annoncering og webdesign</p>
+          <h1>{t('blog.hero_title')}</h1>
+          <p>{t('blog.hero_desc')}</p>
         </div>
       </section>
 
@@ -84,9 +86,9 @@ function Blog() {
                   </h2>
                   <p>{article.excerpt}</p>
                   <div className="blog-footer">
-                    <span className="read-time">{article.readTime} læsetid</span>
+                    <span className="read-time">{article.readTime} {t('blog.read_time')}</span>
                     <Link to={`/blog/${article.slug}`} className="read-more">
-                      Læs mere →
+                      {t('blog.read_more')}
                     </Link>
                   </div>
                 </div>
@@ -99,9 +101,9 @@ function Blog() {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Brug for hjælp med din marketing?</h2>
-          <p>Book en gratis konsultation og lad os hjælpe dig med at vokse online</p>
-          <Link to="/kontakt" className="btn btn-light">Kontakt os</Link>
+          <h2>{t('blog.cta_title')}</h2>
+          <p>{t('blog.cta_desc')}</p>
+          <Link to="/kontakt" className="btn btn-light">{t('blog.cta_button')}</Link>
         </div>
       </section>
     </div>

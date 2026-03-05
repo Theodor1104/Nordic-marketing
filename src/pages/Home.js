@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 import '../styles/Home.css';
 import '../styles/PhoneMockup.css';
@@ -9,6 +10,7 @@ import WebsiteShowcase from '../components/WebsiteShowcase';
 
 function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,19 +86,17 @@ function Home() {
             <span className="hero-logo-accent">Marketing</span>
           </Link>
           <h1>
-            Marketing Bureau Danmark - <span className="highlight">Få din virksomhed til at vokse online</span>
+            {t('home.hero_title')} - <span className="highlight">{t('home.hero_highlight')}</span>
           </h1>
           <p className="hero-subtitle">
-            Vi gør online marketing gennemsigtigt, effektivt og tilgængeligt.
-            Gennem nytænkning, fair priser og intelligent brug af AI skaber vi
-            målbare resultater for din virksomhed.
+            {t('home.hero_subtitle')}
           </p>
           <div className="hero-buttons">
             <Link to="/kontakt" className="btn btn-primary">
-              Gratis konsultation
+              {t('home.cta_consultation')}
             </Link>
             <Link to="/services" className="btn btn-secondary">
-              Se vores services
+              {t('home.cta_services')}
             </Link>
           </div>
         </div>
@@ -111,7 +111,7 @@ function Home() {
       {/* USP Section */}
       <section className="usp-section">
         <div className="container">
-          <h2>Hvorfor vælge Nordic Marketing?</h2>
+          <h2>{t('home.usp_title')}</h2>
           <div className="usp-grid">
             <div className="usp-card">
               <div className="usp-icon">
@@ -123,8 +123,8 @@ function Home() {
                 </svg>
               </div>
               <div className="usp-card-content">
-                <h3>Komplet løsning</h3>
-                <p>Vi tilbyder både markedsføring og hjemmesideudvikling - alt samlet ét sted.</p>
+                <h3>{t('home.usp_complete')}</h3>
+                <p>{t('home.usp_complete_desc')}</p>
               </div>
             </div>
             <div className="usp-card">
@@ -137,8 +137,8 @@ function Home() {
                 </svg>
               </div>
               <div className="usp-card-content">
-                <h3>Digital native</h3>
-                <p>Vokset op i den digitale verden med dyb forståelse for online trends og unges adfærd.</p>
+                <h3>{t('home.usp_digital')}</h3>
+                <p>{t('home.usp_digital_desc')}</p>
               </div>
             </div>
             <div className="usp-card">
@@ -149,8 +149,8 @@ function Home() {
                 </svg>
               </div>
               <div className="usp-card-content">
-                <h3>No cure, no pay</h3>
-                <p>Vi tror på vores resultater - du betaler kun når vi leverer.</p>
+                <h3>{t('home.usp_nocure')}</h3>
+                <p>{t('home.usp_nocure_desc')}</p>
               </div>
             </div>
             <div className="usp-card">
@@ -160,8 +160,8 @@ function Home() {
                 </svg>
               </div>
               <div className="usp-card-content">
-                <h3>Personlig service</h3>
-                <p>Du er øverst på vores prioritetsliste - vi lytter til dine behov og tilpasser løsningen.</p>
+                <h3>{t('home.usp_personal')}</h3>
+                <p>{t('home.usp_personal_desc')}</p>
               </div>
             </div>
           </div>
@@ -173,47 +173,46 @@ function Home() {
         <div className="container">
           <div className="process-preview-content">
             <div className="process-preview-text">
-              <h2>Sådan arbejder vi</h2>
+              <h2>{t('home.process_title')}</h2>
               <p>
-                Vi følger en gennemprøvet proces der sikrer gennemsigtighed og resultater.
-                Fra den første analyse til løbende optimering - du er med hele vejen.
+                {t('home.process_desc')}
               </p>
               <div className="process-stats">
                 <div className="process-stat">
                   <span className="process-stat-value">5</span>
-                  <span className="process-stat-label">Faser</span>
+                  <span className="process-stat-label">{t('home.process_phases')}</span>
                 </div>
                 <div className="process-stat">
                   <span className="process-stat-value">100%</span>
-                  <span className="process-stat-label">Gennemsigtighed</span>
+                  <span className="process-stat-label">{t('home.process_transparency')}</span>
                 </div>
                 <div className="process-stat">
                   <span className="process-stat-value">24/7</span>
-                  <span className="process-stat-label">Support</span>
+                  <span className="process-stat-label">{t('home.process_support')}</span>
                 </div>
               </div>
-              <Link to="/proces" className="btn btn-light">Se vores proces</Link>
+              <Link to="/proces" className="btn btn-light">{t('home.process_cta')}</Link>
             </div>
             <div className="process-preview-steps">
               <div className="preview-step">
                 <span className="preview-step-number">01</span>
-                <span className="preview-step-text">Opdagelse</span>
+                <span className="preview-step-text">{t('home.process_step1')}</span>
               </div>
               <div className="preview-step">
                 <span className="preview-step-number">02</span>
-                <span className="preview-step-text">Strategi</span>
+                <span className="preview-step-text">{t('home.process_step2')}</span>
               </div>
               <div className="preview-step">
                 <span className="preview-step-number">03</span>
-                <span className="preview-step-text">Kreation</span>
+                <span className="preview-step-text">{t('home.process_step3')}</span>
               </div>
               <div className="preview-step">
                 <span className="preview-step-number">04</span>
-                <span className="preview-step-text">Lancering</span>
+                <span className="preview-step-text">{t('home.process_step4')}</span>
               </div>
               <div className="preview-step">
                 <span className="preview-step-number">05</span>
-                <span className="preview-step-text">Optimering</span>
+                <span className="preview-step-text">{t('home.process_step5')}</span>
               </div>
             </div>
           </div>
@@ -223,9 +222,9 @@ function Home() {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Klar til at tage næste skridt?</h2>
-          <p>Lad os tale om hvordan vi kan hjælpe din virksomhed med at vokse online.</p>
-          <Link to="/kontakt" className="btn btn-light">Kontakt os i dag</Link>
+          <h2>{t('home.cta_title')}</h2>
+          <p>{t('home.cta_desc')}</p>
+          <Link to="/kontakt" className="btn btn-light">{t('home.cta_button')}</Link>
         </div>
       </section>
     </div>

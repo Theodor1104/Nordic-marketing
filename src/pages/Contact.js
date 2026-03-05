@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { saveMessage } from '../firebase';
 import SEO from '../components/SEO';
 import '../styles/Contact.css';
@@ -14,6 +15,7 @@ function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const { t } = useTranslation();
 
   const breadcrumbs = [
     { name: "Forside", url: "https://nordic-marketing.dk/" },
@@ -62,8 +64,8 @@ function Contact() {
       <div className="contact-page">
         <section className="page-hero">
           <div className="container">
-            <h1>Tak for din henvendelse!</h1>
-            <p>Vi vender tilbage til dig hurtigst muligt</p>
+            <h1>{t('contact.success_title')}</h1>
+            <p>{t('contact.success_subtitle')}</p>
           </div>
         </section>
         <section className="success-section">
@@ -75,10 +77,9 @@ function Contact() {
                   <polyline points="22,4 12,14.01 9,11.01"/>
                 </svg>
               </div>
-              <h2>Din besked er modtaget</h2>
+              <h2>{t('contact.success_message_title')}</h2>
               <p>
-                Tak fordi du kontaktede Nordic Marketing. Vi gennemgår din henvendelse
-                og vender tilbage inden for 24 timer.
+                {t('contact.success_message_desc')}
               </p>
             </div>
           </div>
@@ -100,8 +101,8 @@ function Contact() {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1>Kontakt Danmarks Marketing Bureau</h1>
-          <p>Gratis konsultation om SEO, Google Ads, Facebook annoncering & webdesign - helt uforpligtende</p>
+          <h1>{t('contact.hero_title')}</h1>
+          <p>{t('contact.hero_desc')}</p>
         </div>
       </section>
 
@@ -111,10 +112,9 @@ function Contact() {
           <div className="contact-grid">
             {/* Contact Info */}
             <div className="contact-info">
-              <h2>Lad os høre fra dig</h2>
+              <h2>{t('contact.info_title')}</h2>
               <p>
-                Udfyld formularen eller kontakt os direkte. Vi svarer som regel
-                inden for 24 timer.
+                {t('contact.info_desc')}
               </p>
 
               <div className="info-items">
@@ -126,7 +126,7 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4>Email</h4>
+                    <h4>{t('contact.email')}</h4>
                     <a href="mailto:nordicmarketin@outlook.dk">nordicmarketin@outlook.dk</a>
                   </div>
                 </div>
@@ -140,15 +140,15 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4>LinkedIn</h4>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Find os på LinkedIn</a>
+                    <h4>{t('contact.linkedin')}</h4>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">{t('contact.linkedin_text')}</a>
                   </div>
                 </div>
               </div>
 
               <div className="guarantee-box">
-                <h4>No cure, no pay</h4>
-                <p>Vi tror på vores resultater. Du betaler først når vi leverer.</p>
+                <h4>{t('contact.guarantee_title')}</h4>
+                <p>{t('contact.guarantee_desc')}</p>
               </div>
             </div>
 
@@ -157,7 +157,7 @@ function Contact() {
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="name">Navn *</label>
+                    <label htmlFor="name">{t('contact.form_name')} {t('common.required')}</label>
                     <input
                       type="text"
                       id="name"
@@ -165,11 +165,11 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="Dit navn"
+                      placeholder={t('contact.form_name_placeholder')}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email">Email *</label>
+                    <label htmlFor="email">{t('contact.form_email')} {t('common.required')}</label>
                     <input
                       type="email"
                       id="email"
@@ -177,56 +177,56 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      placeholder="din@email.dk"
+                      placeholder={t('contact.form_email_placeholder')}
                     />
                   </div>
                 </div>
 
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="company">Virksomhed</label>
+                    <label htmlFor="company">{t('contact.form_company')}</label>
                     <input
                       type="text"
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      placeholder="Din virksomhed"
+                      placeholder={t('contact.form_company_placeholder')}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="phone">Telefon</label>
+                    <label htmlFor="phone">{t('contact.form_phone')}</label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+45 12 34 56 78"
+                      placeholder={t('contact.form_phone_placeholder')}
                     />
                   </div>
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="service">Hvad er du interesseret i?</label>
+                  <label htmlFor="service">{t('contact.form_service')}</label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
                   >
-                    <option value="">Vælg en service</option>
-                    <option value="meta-ads">Meta Ads (Facebook/Instagram)</option>
-                    <option value="google-ads">Google Ads</option>
-                    <option value="seo">SEO</option>
-                    <option value="website">Hjemmeside</option>
-                    <option value="package">Komplet pakke</option>
-                    <option value="other">Andet</option>
+                    <option value="">{t('contact.form_service_placeholder')}</option>
+                    <option value="meta-ads">{t('contact.form_service_meta')}</option>
+                    <option value="google-ads">{t('contact.form_service_google')}</option>
+                    <option value="seo">{t('contact.form_service_seo')}</option>
+                    <option value="website">{t('contact.form_service_website')}</option>
+                    <option value="package">{t('contact.form_service_package')}</option>
+                    <option value="other">{t('contact.form_service_other')}</option>
                   </select>
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message">Fortæl os om dit projekt *</label>
+                  <label htmlFor="message">{t('contact.form_message')} {t('common.required')}</label>
                   <textarea
                     id="message"
                     name="message"
@@ -234,12 +234,12 @@ function Contact() {
                     onChange={handleChange}
                     required
                     rows="5"
-                    placeholder="Beskriv kort hvad du har brug for hjælp til..."
+                    placeholder={t('contact.form_message_placeholder')}
                   ></textarea>
                 </div>
 
                 <button type="submit" className="btn btn-primary btn-full" disabled={sending}>
-                  {sending ? 'Sender...' : 'Send besked'}
+                  {sending ? t('contact.form_sending') : t('contact.form_submit')}
                 </button>
               </form>
             </div>

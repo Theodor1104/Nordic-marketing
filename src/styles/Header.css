@@ -90,6 +90,24 @@
   color: var(--color-white);
 }
 
+/* Language Switcher */
+.lang-switcher {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-gray-600);
+  background: var(--color-gray-100);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-switcher:hover {
+  background: var(--color-gray-200);
+  color: var(--color-primary);
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
@@ -234,6 +252,14 @@
   .nav-link.cta-button:hover,
   .nav-link.cta-button:active {
     background-color: var(--color-primary-light);
+  }
+
+  .lang-switcher {
+    position: absolute;
+    top: 80px;
+    right: var(--container-padding);
+    font-size: var(--font-size-base);
+    padding: 0.75rem 1.25rem;
   }
 }
 

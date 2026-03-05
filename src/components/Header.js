@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../styles/Header.css';
 
 function Header() {
@@ -7,6 +8,12 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'da' ? 'en' : 'da';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,23 +55,26 @@ function Header() {
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
           <div className="nav-links">
             <NavLink to="/" className="nav-link" onClick={closeMenu}>
-              Forside
+              {t('nav.home')}
             </NavLink>
             <NavLink to="/services" className="nav-link" onClick={closeMenu}>
-              Services
+              {t('nav.services')}
             </NavLink>
             <NavLink to="/blog" className="nav-link" onClick={closeMenu}>
-              Blog
+              {t('nav.blog')}
             </NavLink>
             <NavLink to="/proces" className="nav-link" onClick={closeMenu}>
-              Proces
+              {t('nav.process')}
             </NavLink>
             <NavLink to="/om-os" className="nav-link" onClick={closeMenu}>
-              Om Os
+              {t('nav.about')}
             </NavLink>
           </div>
+          <button className="lang-switcher" onClick={toggleLanguage} aria-label="Switch language">
+            {i18n.language === 'da' ? 'EN' : 'DA'}
+          </button>
           <NavLink to="/kontakt" className="nav-link cta-button" onClick={closeMenu}>
-            Kontakt
+            {t('nav.contact')}
           </NavLink>
         </nav>
       </div>

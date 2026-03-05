@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 import '../styles/Process.css';
 
 function Process() {
+  const { t } = useTranslation();
   const breadcrumbs = [
     { name: "Forside", url: "https://nordic-marketing.dk/" },
     { name: "Proces", url: "https://nordic-marketing.dk/proces" }
@@ -67,26 +69,25 @@ function Process() {
           <div className="shape shape-3"></div>
         </div>
         <div className="container">
-          <div className="hero-badge">Vores tilgang</div>
-          <h1>Fra vision til <span className="gradient-text">virkelighed</span></h1>
+          <div className="hero-badge">{t('process.hero_badge')}</div>
+          <h1>{t('process.hero_title')} <span className="gradient-text">{t('process.hero_highlight')}</span></h1>
           <p className="hero-description">
-            Vi har perfektioneret en proces der transformerer dine ambitioner til målbare resultater.
-            Gennemsigtighed, samarbejde og ekspertise i hvert skridt.
+            {t('process.hero_desc')}
           </p>
           <div className="hero-stats">
             <div className="stat">
               <span className="stat-number">5</span>
-              <span className="stat-label">Faser</span>
+              <span className="stat-label">{t('process.phases')}</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat">
               <span className="stat-number">100%</span>
-              <span className="stat-label">Gennemsigtighed</span>
+              <span className="stat-label">{t('process.transparency')}</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat">
               <span className="stat-number">24/7</span>
-              <span className="stat-label">Support</span>
+              <span className="stat-label">{t('process.support')}</span>
             </div>
           </div>
         </div>
@@ -96,9 +97,9 @@ function Process() {
       <section className="timeline-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Processen</span>
-            <h2>Fem skridt til succes</h2>
-            <p>Hver fase er designet til at maksimere værdien og sikre de bedste resultater</p>
+            <span className="section-tag">{t('process.section_tag')}</span>
+            <h2>{t('process.section_title')}</h2>
+            <p>{t('process.section_desc')}</p>
           </div>
 
           <div className="timeline">
@@ -347,11 +348,10 @@ function Process() {
         <div className="container">
           <div className="benefits-grid">
             <div className="benefits-content">
-              <span className="section-tag">Fordele</span>
-              <h2>Hvorfor vores proces virker</h2>
+              <span className="section-tag">{t('process.benefits_tag')}</span>
+              <h2>{t('process.benefits_title')}</h2>
               <p>
-                Vores strukturerede tilgang sikrer, at intet overlades til tilfældighederne.
-                Du får fuld indsigt og kontrol hele vejen.
+                {t('process.benefits_desc')}
               </p>
             </div>
             <div className="benefits-cards">
@@ -362,8 +362,8 @@ function Process() {
                     <circle cx="12" cy="12" r="3"/>
                   </svg>
                 </div>
-                <h4>100% Gennemsigtighed</h4>
-                <p>Du har altid fuld indsigt i hvad vi arbejder på og hvorfor</p>
+                <h4>{t('process.benefit1_title')}</h4>
+                <p>{t('process.benefit1_desc')}</p>
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
@@ -371,8 +371,8 @@ function Process() {
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                   </svg>
                 </div>
-                <h4>Ingen Risiko</h4>
-                <p>No cure, no pay - du betaler kun for resultater</p>
+                <h4>{t('process.benefit2_title')}</h4>
+                <p>{t('process.benefit2_desc')}</p>
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
@@ -381,8 +381,8 @@ function Process() {
                     <polyline points="12 6 12 12 16 14"/>
                   </svg>
                 </div>
-                <h4>Hurtig Eksekvering</h4>
-                <p>Fra strategi til lancering på rekordtid</p>
+                <h4>{t('process.benefit3_title')}</h4>
+                <p>{t('process.benefit3_desc')}</p>
               </div>
               <div className="benefit-card">
                 <div className="benefit-icon">
@@ -393,8 +393,8 @@ function Process() {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                   </svg>
                 </div>
-                <h4>Dedikeret Team</h4>
-                <p>Et fast team der kender din virksomhed</p>
+                <h4>{t('process.benefit4_title')}</h4>
+                <p>{t('process.benefit4_desc')}</p>
               </div>
             </div>
           </div>
@@ -405,11 +405,11 @@ function Process() {
       <section className="process-cta">
         <div className="container">
           <div className="cta-content">
-            <h2>Klar til at starte din rejse?</h2>
-            <p>Book et gratis strategimøde og lad os vise dig vejen til vækst</p>
+            <h2>{t('process.cta_title')}</h2>
+            <p>{t('process.cta_desc')}</p>
             <div className="cta-buttons">
               <Link to="/kontakt" className="btn btn-light">
-                Book gratis møde
+                {t('process.cta_button')}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14"/>
                   <path d="M12 5l7 7-7 7"/>
