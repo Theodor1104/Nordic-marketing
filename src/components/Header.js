@@ -22,16 +22,20 @@ function Header() {
       const scrollY = window.scrollY;
       setScrolled(scrollY > 100);
 
-      // Hide on scroll down, show on scroll up
-      if (scrollY > lastScrollY.current && scrollY > 100) {
-        setHidden(true);
-      } else if (scrollY < lastScrollY.current) {
+      // Only hide/show on desktop (disable on mobile to prevent lag)
+      if (window.innerWidth > 768) {
+        if (scrollY > lastScrollY.current && scrollY > 100) {
+          setHidden(true);
+        } else if (scrollY < lastScrollY.current) {
+          setHidden(false);
+        }
+      } else {
         setHidden(false);
       }
       lastScrollY.current = scrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
