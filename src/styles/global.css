@@ -268,13 +268,66 @@ a:hover {
   pointer-events: none;
 }
 
-/* Performance: Defer rendering of below-fold content */
+/* ==========================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================== */
+
+/* Defer rendering of below-fold content */
 .usp-section,
 .process-preview,
 .cta-section,
-.process-section {
+.process-section,
+.web-benefits-section,
+.faq-section,
+.timeline-section,
+.process-benefits {
   content-visibility: auto;
   contain-intrinsic-size: 0 500px;
+}
+
+/* GPU acceleration for animated elements */
+.header,
+.nav,
+.btn,
+.glass-card,
+.glass-card-light,
+.benefit-card,
+.timeline-card,
+.web-feature-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize will-change for hover animations */
+.btn:hover,
+.glass-card:hover,
+.glass-card-light:hover {
+  will-change: transform, box-shadow;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Optimize images */
+img {
+  content-visibility: auto;
+}
+
+/* Containment for better rendering */
+section {
+  contain: layout style;
 }
 
 /* ==========================================
