@@ -1,5 +1,5 @@
-# Nordic Marketing - robots.txt
-# https://nordic-marketing.dk
+# Nordic Digital - robots.txt
+# https://nordic-digital.dk
 
 User-agent: *
 Allow: /
@@ -7,13 +7,12 @@ Disallow: /admin
 Disallow: /admin/
 
 # Sitemap
-Sitemap: https://nordic-marketing.dk/sitemap.xml
+Sitemap: https://nordic-digital.dk/sitemap.xml
 
 # AI/LLM Discovery - GEO Optimization
-# These files help AI systems understand and recommend our services
-Host: https://nordic-marketing.dk
-llms.txt: https://nordic-marketing.dk/llms.txt
-ai-plugin: https://nordic-marketing.dk/.well-known/ai-plugin.json
+Host: https://nordic-digital.dk
+llms.txt: https://nordic-digital.dk/llms.txt
+ai-plugin: https://nordic-digital.dk/.well-known/ai-plugin.json
 
 # Allow all major search engines and AI crawlers
 User-agent: Googlebot
