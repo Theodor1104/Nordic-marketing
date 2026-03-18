@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Business Billeder - Nordic Digital</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Inter, -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #fff;
+      padding: 40px;
+      min-height: 100vh;
+    }
+    h1 { margin-bottom: 10px; }
+    p { color: #94a3b8; margin-bottom: 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section { margin-bottom: 60px; }
+    h2 { color: #2dd4bf; margin-bottom: 20px; font-size: 1.25rem; }
+    .image-box {
+      background: #0f172a;
+      border-radius: 16px;
+      padding: 30px;
+      display: inline-block;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    .instructions {
+      background: rgba(20, 184, 166, 0.1);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+    .instructions h3 { color: #2dd4bf; margin-bottom: 10px; }
+    .instructions ol { padding-left: 20px; }
+    .instructions li { margin-bottom: 8px; color: #cbd5e1; }
+    .size { color: #64748b; font-size: 0.875rem; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Google Business Billeder</h1>
+    <p>Højreklik på billederne og vælg "Gem billede som" for at downloade.</p>
+
+    <div class="section">
+      <h2>1. Logo (720x720px)</h2>
+      <div class="image-box">
+        <img src="logo.svg" alt="Nordic Digital Logo" width="360">
+      </div>
+      <p class="size">Anbefalet størrelse: 720x720 px (kvadratisk)</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Coverbillede (1080x608px)</h2>
+      <div class="image-box">
+        <img src="cover.svg" alt="Nordic Digital Cover" width="540">
+      </div>
+      <p class="size">Anbefalet størrelse: 1080x608 px</p>
+    </div>
+
+    <div class="instructions">
+      <h3>Sådan downloader du:</h3>
+      <ol>
+        <li>Højreklik på billedet</li>
+        <li>Vælg "Gem billede som..." eller "Save image as..."</li>
+        <li>Gem filen på din computer</li>
+        <li>Upload til Google Business Profile</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

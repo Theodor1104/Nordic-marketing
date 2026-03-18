@@ -1,0 +1,27 @@
+<svg width="720" height="720" viewBox="0 0 720 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2d3d"/>
+      <stop offset="100%" style="stop-color:#091c28"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#14b8a6"/>
+      <stop offset="100%" style="stop-color:#2dd4bf"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="720" rx="80" fill="url(#bgGradient)"/>
+
+  <!-- N Letter stylized -->
+  <g transform="translate(360, 320)">
+    <!-- Large N -->
+    <text x="0" y="0" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="280" font-weight="800" fill="#ffffff">N</text>
+  </g>
+
+  <!-- Accent bar -->
+  <rect x="260" y="480" width="200" height="8" rx="4" fill="url(#accentGradient)"/>
+
+  <!-- "Digital" text -->
+  <text x="360" y="560" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="48" font-weight="600" fill="#2dd4bf">DIGITAL</text>
+</svg>
