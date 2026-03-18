@@ -1014,9 +1014,7 @@
   }
 
   .hero-visual {
-    margin-top: 0;
-    margin-right: 0;
-    transform: scale(0.85);
+    display: none;
   }
 
   .web-package-section,
