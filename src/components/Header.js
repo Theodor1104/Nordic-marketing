@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import '../styles/Header.css';
@@ -6,8 +6,10 @@ import '../styles/Header.css';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isDarkHeroPage = ['/', '/apps', '/hjemmesider', '/cases', '/om-os', '/proces'].includes(location.pathname);
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -19,10 +21,18 @@ function Header() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setScrolled(scrollY > 100);
+
+      // Hide on scroll down, show on scroll up
+      if (scrollY > lastScrollY.current && scrollY > 100) {
+        setHidden(true);
+      } else if (scrollY < lastScrollY.current) {
+        setHidden(false);
+      }
+      lastScrollY.current = scrollY;
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial scroll position
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -35,9 +45,9 @@ function Header() {
   };
 
   return (
-    <header className={`header ${isHomePage && !scrolled ? 'header-transparent' : ''}`}>
+    <header className={`header ${isDarkHeroPage && !scrolled ? 'header-transparent' : ''} ${hidden ? 'header-hidden' : ''}`}>
       <div className="header-container">
-        <Link to="/" className={`logo ${isHomePage && !scrolled ? 'logo-hidden' : ''}`} onClick={closeMenu}>
+        <Link to="/" className="logo" onClick={closeMenu}>
           <span className="logo-text">Nordic</span>
           <span className="logo-accent">Digital</span>
         </Link>
@@ -57,25 +67,25 @@ function Header() {
             <NavLink to="/" className="nav-link" onClick={closeMenu}>
               {t('nav.home')}
             </NavLink>
+            <NavLink to="/apps" className="nav-link" onClick={closeMenu}>
+              {t('nav.apps')}
+            </NavLink>
             <NavLink to="/hjemmesider" className="nav-link" onClick={closeMenu}>
               {t('nav.websites')}
             </NavLink>
-            <NavLink to="/apps" className="nav-link" onClick={closeMenu}>
-              {t('nav.apps')}
+            <NavLink to="/proces" className="nav-link" onClick={closeMenu}>
+              Proces
             </NavLink>
             <NavLink to="/om-os" className="nav-link" onClick={closeMenu}>
               {t('nav.about')}
             </NavLink>
-            <NavLink to="/blog" className="nav-link" onClick={closeMenu}>
-              {t('nav.blog')}
+            <button className="lang-switcher" onClick={toggleLanguage} aria-label="Switch language">
+              {i18n.language === 'da' ? 'EN' : 'DA'}
+            </button>
+            <NavLink to="/kontakt" className="nav-link cta-button" onClick={closeMenu}>
+              {t('nav.contact')}
             </NavLink>
           </div>
-          <button className="lang-switcher" onClick={toggleLanguage} aria-label="Switch language">
-            {i18n.language === 'da' ? 'EN' : 'DA'}
-          </button>
-          <NavLink to="/kontakt" className="nav-link cta-button" onClick={closeMenu}>
-            {t('nav.contact')}
-          </NavLink>
         </nav>
       </div>
     </header>

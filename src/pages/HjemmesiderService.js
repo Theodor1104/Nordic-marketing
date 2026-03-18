@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -6,8 +6,106 @@ import SEO from '../components/SEO';
 import LaptopMockup from '../components/LaptopMockup';
 import '../styles/HjemmesiderService.css';
 
+// Typewriter code component
+function TypewriterCode() {
+  const codeLines = [
+    '<div class="hero">',
+    '  <h1>Din Virksomhed</h1>',
+    '  <p>Professionel online</p>',
+    '  <button>Kontakt</button>',
+    '</div>'
+  ];
+
+  const [displayedLines, setDisplayedLines] = useState([]);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [currentChar, setCurrentChar] = useState(0);
+
+  useEffect(() => {
+    if (currentLine >= codeLines.length) {
+      // Reset after a pause
+      const resetTimer = setTimeout(() => {
+        setDisplayedLines([]);
+        setCurrentLine(0);
+        setCurrentChar(0);
+      }, 3000);
+      return () => clearTimeout(resetTimer);
+    }
+
+    if (currentChar < codeLines[currentLine].length) {
+      const charTimer = setTimeout(() => {
+        setDisplayedLines(prev => {
+          const newLines = [...prev];
+          if (!newLines[currentLine]) newLines[currentLine] = '';
+          newLines[currentLine] = codeLines[currentLine].substring(0, currentChar + 1);
+          return newLines;
+        });
+        setCurrentChar(prev => prev + 1);
+      }, 40);
+      return () => clearTimeout(charTimer);
+    } else {
+      const lineTimer = setTimeout(() => {
+        setCurrentLine(prev => prev + 1);
+        setCurrentChar(0);
+      }, 200);
+      return () => clearTimeout(lineTimer);
+    }
+  }, [currentLine, currentChar, codeLines]);
+
+  return (
+    <code>
+      {displayedLines.map((line, idx) => (
+        <span key={idx}>
+          {line}
+          {idx === currentLine && currentChar < codeLines[currentLine]?.length && (
+            <span className="cursor">|</span>
+          )}
+          {idx < displayedLines.length - 1 && <br />}
+        </span>
+      ))}
+      {currentLine < codeLines.length && displayedLines.length > 0 &&
+       currentChar >= codeLines[currentLine - 1]?.length && <br />}
+    </code>
+  );
+}
+
 function HjemmesiderService() {
   const { t } = useTranslation();
+  const [expandedCard, setExpandedCard] = useState(null);
+
+  const featureDetails = [
+    {
+      id: 'tech',
+      title: 'Moderne Tech',
+      subtitle: 'React, Next.js & Tailwind',
+      description: 'Vi bygger din hjemmeside med de nyeste teknologier som React og Next.js. Det betyder lynhurtig performance, bedre SEO og en moderne brugeroplevelse der imponerer dine kunder.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    },
+    {
+      id: 'seo',
+      title: 'SEO & GEO',
+      subtitle: 'Synlighed der virker',
+      description: 'Din hjemmeside optimeres til både Google og AI-søgemaskiner som ChatGPT og Perplexity. Vi sørger for at potentielle kunder finder dig når de søger efter dine ydelser.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-5 5"/></svg>
+    },
+    {
+      id: 'customers',
+      title: 'Flere Kunder',
+      subtitle: 'Konverterende design',
+      description: 'Vores design er fokuseret på konvertering. Strategisk placerede call-to-actions, tillidsopbyggende elementer og intuitiv navigation får besøgende til at blive til kunder.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    },
+    {
+      id: 'allinone',
+      title: 'Alt-i-én',
+      subtitle: 'Web + SEO + Support',
+      description: 'Du får alt samlet ét sted: Professionel hjemmeside, SEO-optimering, hosting, SSL-certifikat og løbende support. Ingen skjulte omkostninger eller bøvl med flere leverandører.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    }
+  ];
+
+  const toggleCard = (id) => {
+    setExpandedCard(expandedCard === id ? null : id);
+  };
 
   const breadcrumbs = [
     { name: "Forside", url: "https://nordic-digital.dk/" },
@@ -133,232 +231,265 @@ function HjemmesiderService() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="features-section">
+      {/* Section 1: Complete Package (White) */}
+      <section id="features" className="web-package-section">
         <div className="container">
-          <motion.div
-            className="section-header"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2>{t('hjemmesider.features_title')}</h2>
-            <p>{t('hjemmesider.features_subtitle')}</p>
-          </motion.div>
-
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="feature-card glass-card-light"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-              >
-                <div className="feature-icon">{feature.icon}</div>
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO/GEO Section */}
-      <section id="seo" className="seo-section">
-        <div className="container">
-          <div className="seo-grid">
+          <div className="package-grid">
+            {/* Browser Mockup */}
             <motion.div
-              className="seo-content"
-              initial={{ opacity: 0, x: -30 }}
+              className="browser-mockup-wrapper"
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="section-badge">{t('hjemmesider.seo_badge')}</span>
-              <h2>{t('hjemmesider.seo_title')}</h2>
-              <p>{t('hjemmesider.seo_desc')}</p>
-
-              <ul className="seo-features">
-                <li>
-                  <span className="check-icon">&#10003;</span>
-                  {t('hjemmesider.seo_feature1')}
-                </li>
-                <li>
-                  <span className="check-icon">&#10003;</span>
-                  {t('hjemmesider.seo_feature2')}
-                </li>
-                <li>
-                  <span className="check-icon">&#10003;</span>
-                  {t('hjemmesider.seo_feature3')}
-                </li>
-                <li>
-                  <span className="check-icon">&#10003;</span>
-                  {t('hjemmesider.seo_feature4')}
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              className="seo-visual"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              {/* Search Results Mockup */}
-              <div className="search-mockup glass-card-light">
-                <div className="search-bar">
-                  <span className="search-icon">&#128269;</span>
-                  <span className="search-text">{t('hjemmesider.search_query')}</span>
+              <div className="browser-mockup">
+                <div className="browser-header">
+                  <div className="browser-dots">
+                    <span className="dot red"></span>
+                    <span className="dot yellow"></span>
+                    <span className="dot green"></span>
+                  </div>
+                  <div className="browser-url">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span>dinvirksomhed.dk</span>
+                  </div>
+                  <div className="react-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" strokeWidth="1"/></svg>
+                    React
+                  </div>
                 </div>
-                <div className="search-results">
+                <div className="browser-content">
                   <motion.div
-                    className="result featured"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    className="deployed-badge"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
                   >
-                    <span className="rank">#1</span>
-                    <div className="result-content">
-                      <span className="result-url">dinvirksomhed.dk</span>
-                      <span className="result-title">Din Virksomhed - Professionelle Løsninger</span>
-                    </div>
-                    <span className="your-badge">{t('hjemmesider.your_site')}</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Deployed
                   </motion.div>
-                  <div className="result">
-                    <span className="rank">#2</span>
-                    <div className="result-content">
-                      <span className="result-url">konkurrent1.dk</span>
-                      <span className="result-title">Konkurrent A</span>
+                  <div className="mock-content">
+                    <div className="mock-header-bar"></div>
+                    <div className="mock-nav"></div>
+                    <div className="mock-hero">
+                      <div className="mock-text-lg"></div>
+                      <div className="mock-text-md"></div>
+                      <div className="mock-btn"></div>
                     </div>
+                    <div className="mock-image"></div>
                   </div>
-                  <div className="result">
-                    <span className="rank">#3</span>
-                    <div className="result-content">
-                      <span className="result-url">konkurrent2.dk</span>
-                      <span className="result-title">Konkurrent B</span>
-                    </div>
-                  </div>
+                  <motion.div
+                    className="css-badge"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <span className="css-tag">CSS</span>
+                    Design
+                  </motion.div>
+                  <motion.div
+                    className="code-snippet"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <TypewriterCode />
+                  </motion.div>
                 </div>
               </div>
+            </motion.div>
 
-              {/* AI Preview */}
-              <motion.div
-                className="ai-preview glass-card-light"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
-                <div className="ai-header">
-                  <span className="ai-badge">AI Søgning</span>
-                  <span className="ai-source">ChatGPT / Perplexity</span>
-                </div>
-                <p className="ai-response">
-                  "{t('hjemmesider.ai_response')}"
-                </p>
-              </motion.div>
+            {/* Feature Cards */}
+            <motion.div
+              className="feature-cards-wrapper"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="feature-cards-header">
+                <h2>Din komplette digitale pakke</h2>
+                <p>Alt samlet ét sted - ingen bøvl</p>
+              </div>
+
+              <div className="feature-cards-list">
+                {featureDetails.map((feature) => (
+                  <motion.div
+                    key={feature.id}
+                    className={`web-feature-card ${expandedCard === feature.id ? 'expanded' : ''}`}
+                    onClick={() => toggleCard(feature.id)}
+                    whileHover={{ x: expandedCard === feature.id ? 0 : 5 }}
+                  >
+                    <div className="wf-main">
+                      <div className="wf-icon">
+                        {feature.icon}
+                      </div>
+                      <div className="wf-content">
+                        <h3>{feature.title}</h3>
+                        <p>{feature.subtitle}</p>
+                      </div>
+                      <div className={`wf-chevron ${expandedCard === feature.id ? 'rotated' : ''}`}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <motion.div
+                      className="wf-dropdown"
+                      initial={false}
+                      animate={{
+                        height: expandedCard === feature.id ? 'auto' : 0,
+                        opacity: expandedCard === feature.id ? 1 : 0
+                      }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    >
+                      <p>{feature.description}</p>
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <Link to="/kontakt" className="web-cta-btn">
+                Få et uforpligtende tilbud
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </Link>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Package Section */}
-      <section className="package-section section-gradient">
+      {/* Section 2: What You Get (Dark) */}
+      <section className="web-benefits-section">
         <div className="container">
           <motion.div
-            className="package-card glass-card"
+            className="benefits-header"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="package-content">
-              <span className="package-badge">{t('hjemmesider.package_badge')}</span>
-              <h2>{t('hjemmesider.package_title')}</h2>
-              <p>{t('hjemmesider.package_desc')}</p>
-
-              <ul className="package-features">
-                <li><span>&#10003;</span> {t('hjemmesider.package_feature1')}</li>
-                <li><span>&#10003;</span> {t('hjemmesider.package_feature2')}</li>
-                <li><span>&#10003;</span> {t('hjemmesider.package_feature3')}</li>
-                <li><span>&#10003;</span> {t('hjemmesider.package_feature4')}</li>
-              </ul>
-
-              <Link to="/kontakt" className="btn btn-primary">{t('hjemmesider.package_cta')}</Link>
-            </div>
-            <div className="package-visual">
-              <div className="device-stack">
-                <div className="device-laptop">
-                  <div className="device-screen"></div>
-                </div>
-                <div className="device-phone">
-                  <div className="device-screen"></div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="faq-section">
-        <div className="container">
-          <motion.div
-            className="section-header"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2>{t('hjemmesider.faq_title')}</h2>
+            <h2>Hvad du får med din hjemmeside</h2>
+            <p>Vi leverer alt hvad du behøver for at lykkes online</p>
           </motion.div>
 
-          <div className="faq-grid">
+          <div className="benefits-grid">
             <motion.div
-              className="faq-item glass-card-light"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h3>{t('hjemmesider.faq1_q')}</h3>
-              <p>{t('hjemmesider.faq1_a')}</p>
-            </motion.div>
-            <motion.div
-              className="faq-item glass-card-light"
+              className="benefit-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <h3>{t('hjemmesider.faq2_q')}</h3>
-              <p>{t('hjemmesider.faq2_a')}</p>
+              <div className="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+                </svg>
+              </div>
+              <h3>Responsivt Design</h3>
+              <p>Perfekt visning på alle enheder - desktop, tablet og mobil</p>
             </motion.div>
+
             <motion.div
-              className="faq-item glass-card-light"
+              className="benefit-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <h3>{t('hjemmesider.faq3_q')}</h3>
-              <p>{t('hjemmesider.faq3_a')}</p>
+              <div className="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </div>
+              <h3>Lynhurtig Loadtid</h3>
+              <p>Optimeret performance med under 2 sekunders loadtid</p>
+            </motion.div>
+
+            <motion.div
+              className="benefit-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <div className="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+              <h3>SEO Optimering</h3>
+              <p>Bliv fundet på Google med teknisk og on-page SEO</p>
+            </motion.div>
+
+            <motion.div
+              className="benefit-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3>SSL Sikkerhed</h3>
+              <p>Sikker forbindelse med SSL-certifikat inkluderet</p>
+            </motion.div>
+
+            <motion.div
+              className="benefit-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <h3>Support & Vedligehold</h3>
+              <p>Løbende support og teknisk vedligeholdelse</p>
+            </motion.div>
+
+            <motion.div
+              className="benefit-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+            >
+              <div className="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <h3>GEO Optimering</h3>
+              <p>Bliv anbefalet af AI-søgemaskiner som ChatGPT</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
+      {/* Section 3: CTA (Light with gradient) */}
+      <section className="web-cta-section">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            className="web-cta-content"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>{t('hjemmesider.cta_title')}</h2>
-            <p>{t('hjemmesider.cta_desc')}</p>
-            <Link to="/kontakt" className="btn btn-light">{t('hjemmesider.cta_button')}</Link>
+            <h2>Klar til en professionel hjemmeside?</h2>
+            <p>Lad os skabe noget fantastisk sammen. Vi tager os af alt det tekniske.</p>
+            <div className="web-cta-buttons">
+              <Link to="/kontakt" className="btn-primary-new">
+                <span>Start dit projekt</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

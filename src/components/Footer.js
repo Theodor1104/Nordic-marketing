@@ -36,7 +36,7 @@ function Footer() {
           <ul className="footer-links">
             <li><Link to="/hjemmesider">{t('footer.websites')}</Link></li>
             <li><Link to="/apps">Apps</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/cases">Cases</Link></li>
           </ul>
         </div>
 

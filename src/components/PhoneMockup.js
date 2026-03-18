@@ -1,43 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import '../styles/PhoneMockup.css';
 
 function PhoneMockup() {
   const [activeView, setActiveView] = useState(0);
-  const [lastClickTime, setLastClickTime] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+  const [selectedDay, setSelectedDay] = useState(17);
+  const [selectedTime, setSelectedTime] = useState(1);
 
-  const views = ['Forside', 'Services', 'Proces', 'Kontakt'];
+  const views = ['Forside', 'Services', 'Booking', 'Kontakt'];
 
-  const services = [
-    { name: "Meta Ads", desc: "Facebook & Instagram", color: "#8b5cf6", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
-    { name: "Google Ads", desc: "Målrettet annoncering", color: "#ef4444", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> },
-    { name: "SEO & GEO", desc: "Synlighed på Google & AI", color: "#10b981", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/><path d="M3 20h18"/></svg> },
-    { name: "Hjemmesider", desc: "Moderne hjemmesider", color: "#3b82f6", svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> }
-  ];
-
-  const processSteps = [
-    { num: "1", title: "Konsultation", desc: "Gratis og uforpligtende" },
-    { num: "2", title: "Strategi", desc: "Skræddersyet plan" },
-    { num: "3", title: "Eksekvering", desc: "Vi går i gang" },
-    { num: "4", title: "Optimering", desc: "Løbende forbedring" }
-  ];
-
-  // Auto-cycle views (pause for 30 seconds after user click)
+  // Auto-cycle views
   useEffect(() => {
+    if (!autoPlay) return;
     const interval = setInterval(() => {
-      const timeSinceLastClick = Date.now() - lastClickTime;
-      // Only auto-cycle if 30 seconds have passed since last click
-      if (timeSinceLastClick >= 30000) {
-        setActiveView((prev) => (prev + 1) % views.length);
-      }
-    }, 5000);
+      setActiveView((prev) => (prev + 1) % views.length);
+    }, 4000);
     return () => clearInterval(interval);
-  }, [views.length, lastClickTime]);
+  }, [autoPlay, views.length]);
 
-  // Handle manual navigation click
   const handleNavClick = (index) => {
     setActiveView(index);
-    setLastClickTime(Date.now());
+    setAutoPlay(false);
+    // Resume auto-play after 10 seconds
+    setTimeout(() => setAutoPlay(true), 10000);
   };
 
   const renderContent = () => {
@@ -49,71 +35,28 @@ function PhoneMockup() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="phone-view-content"
+            className="screen-content"
           >
-            {/* Hero area */}
-            <div className="phone-hero">
-              <motion.div
-                animate={{ scale: [1, 1.02, 1] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="phone-hero-content"
-              >
-                <p className="phone-hero-title">Vækst din virksomhed</p>
-                <p className="phone-hero-subtitle">Digital marketing der virker</p>
-              </motion.div>
-            </div>
-
-            {/* CTA Banner */}
-            <div className="phone-banner">
-              <div className="phone-banner-dot"></div>
-              <span>Book gratis konsultation</span>
-            </div>
-
-            {/* Services Grid */}
-            <div className="phone-section">
-              <div className="phone-section-header">
-                <p className="phone-section-title">Vores Services</p>
-              </div>
-              <div className="phone-services-grid">
-                {services.map((service, i) => (
-                  <Link to="/services" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.1 }}
-                      className="phone-service-card"
-                    >
-                      <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
-                        {service.svg}
-                      </div>
-                      <p className="phone-service-name">{service.name}</p>
-                      <p className="phone-service-desc">{service.desc}</p>
-                    </motion.div>
-                  </Link>
-                ))}
+            <div className="hero-card" onClick={() => handleNavClick(1)} style={{ cursor: 'pointer' }}>
+              <span className="hero-badge">Apps & Web</span>
+              <h3 className="hero-title">Din digitale partner</h3>
+              <p className="hero-desc">Professionelle løsninger der virker</p>
+              <div className="hero-visual">
+                <div className="visual-circle"></div>
               </div>
             </div>
-
-            {/* Why Us Section */}
-            <div className="phone-section phone-why-us">
-              <p className="phone-section-title">Hvorfor os?</p>
-              <div className="phone-features">
-                {[
-                  { icon: "✓", text: "Personlig service" },
-                  { icon: "✓", text: "Gennemsigtige priser" },
-                  { icon: "✓", text: "Dansk team" }
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 + 0.3 }}
-                    className="phone-feature-item"
-                  >
-                    <span className="phone-feature-check">{item.icon}</span>
-                    <span>{item.text}</span>
-                  </motion.div>
-                ))}
+            <div className="quick-stats">
+              <div className="quick-stat" onClick={() => handleNavClick(3)} style={{ cursor: 'pointer' }}>
+                <span className="stat-num">100%</span>
+                <span className="stat-txt">Tilfredshed</span>
+              </div>
+              <div className="quick-stat" onClick={() => handleNavClick(2)} style={{ cursor: 'pointer' }}>
+                <span className="stat-num">24/7</span>
+                <span className="stat-txt">Support</span>
+              </div>
+              <div className="quick-stat" onClick={() => handleNavClick(3)} style={{ cursor: 'pointer' }}>
+                <span className="stat-num">DK</span>
+                <span className="stat-txt">Baseret</span>
               </div>
             </div>
           </motion.div>
@@ -126,83 +69,84 @@ function PhoneMockup() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="phone-view-content"
+            className="screen-content"
           >
-            <div className="phone-page-header">
-              <p className="phone-page-title">Vores Services</p>
-              <p className="phone-page-subtitle">Komplette løsninger til fair priser</p>
-            </div>
-
-            <div className="phone-services-list">
-              {services.map((service, i) => (
-                <Link to="/services" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="phone-service-item"
-                  >
-                    <div className="phone-service-icon" style={{ background: `${service.color}15` }}>
-                      {service.svg}
-                    </div>
-                    <div className="phone-service-text">
-                      <p className="phone-service-name">{service.name}</p>
-                      <p className="phone-service-desc">{service.desc}</p>
-                    </div>
-                    <div className="phone-service-arrow">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <p className="screen-label">Vores Services</p>
+            <div className="service-list">
+              {[
+                { icon: 'app', name: 'Apps', desc: 'Mobil', nav: 2 },
+                { icon: 'web', name: 'Hjemmesider', desc: 'Web', nav: 2 },
+                { icon: 'seo', name: 'SEO', desc: 'Synlighed', nav: 3 }
+              ].map((service, idx) => (
+                <div key={idx} className="service-item" onClick={() => handleNavClick(service.nav)}>
+                  <div className={`service-icon ${service.icon}`}>
+                    {service.icon === 'web' && (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
                       </svg>
-                    </div>
-                  </motion.div>
-                </Link>
+                    )}
+                    {service.icon === 'app' && (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/>
+                      </svg>
+                    )}
+                    {service.icon === 'seo' && (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                      </svg>
+                    )}
+                  </div>
+                  <div className="service-info">
+                    <span className="service-name">{service.name}</span>
+                    <span className="service-desc">{service.desc}</span>
+                  </div>
+                  <span className="service-arrow">→</span>
+                </div>
               ))}
             </div>
-
-            <Link to="/services" className="phone-info-box" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', cursor: 'pointer' }}>
-              <span className="phone-info-icon">💡</span>
-              <p className="phone-info-text">Se alle services →</p>
-            </Link>
           </motion.div>
         );
 
-      case 2: // Proces
+      case 2: // Booking
         return (
           <motion.div
-            key="proces"
+            key="booking"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="phone-view-content"
+            className="screen-content"
           >
-            <div className="phone-page-header">
-              <p className="phone-page-title">Vores Proces</p>
-              <p className="phone-page-subtitle">Sådan arbejder vi sammen</p>
+            <p className="screen-label">Booking System</p>
+            <div className="booking-preview">
+              <div className="calendar-header">
+                <span>Marts 2026</span>
+                <div className="calendar-nav">
+                  <button>‹</button>
+                  <button>›</button>
+                </div>
+              </div>
+              <div className="calendar-grid">
+                {['Ma', 'Ti', 'On', 'To', 'Fr', 'Lø', 'Sø'].map((day, i) => (
+                  <span key={i} className="cal-day-name">{day}</span>
+                ))}
+                {[...Array(31)].map((_, i) => (
+                  <span
+                    key={i}
+                    className={`cal-day ${i === selectedDay ? 'selected' : ''} ${[5, 12, 19, 26].includes(i) ? 'available' : ''}`}
+                    onClick={() => setSelectedDay(i)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {i + 1}
+                  </span>
+                ))}
+              </div>
+              <div className="time-slots">
+                <span className={`time-slot ${selectedTime === 0 ? 'active' : ''}`} onClick={() => setSelectedTime(0)} style={{ cursor: 'pointer' }}>09:00</span>
+                <span className={`time-slot ${selectedTime === 1 ? 'active' : ''}`} onClick={() => setSelectedTime(1)} style={{ cursor: 'pointer' }}>10:30</span>
+                <span className={`time-slot ${selectedTime === 2 ? 'active' : ''}`} onClick={() => setSelectedTime(2)} style={{ cursor: 'pointer' }}>14:00</span>
+              </div>
             </div>
-
-            <div className="phone-process-list">
-              {processSteps.map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.15 }}
-                  className="phone-process-item"
-                >
-                  <div className="phone-process-number">{step.num}</div>
-                  <div className="phone-process-line"></div>
-                  <div className="phone-process-content">
-                    <p className="phone-process-title">{step.title}</p>
-                    <p className="phone-process-desc">{step.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="phone-cta-box">
-              <p className="phone-cta-text">Start din rejse i dag</p>
-              <Link to="/kontakt" className="phone-cta-button" style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}>Book møde</Link>
-            </div>
+            <button className="book-btn" onClick={() => handleNavClick(3)}>Book møde</button>
           </motion.div>
         );
 
@@ -213,62 +157,33 @@ function PhoneMockup() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="phone-view-content"
+            className="screen-content"
           >
-            <div className="phone-page-header">
-              <p className="phone-page-title">Kontakt Os</p>
-              <p className="phone-page-subtitle">Vi er klar til at hjælpe</p>
-            </div>
-
-            <div className="phone-contact-card">
-              <div className="phone-contact-avatar">
-                <span>✉️</span>
+            <p className="screen-label">Kontakt Os</p>
+            <div className="contact-form">
+              <div className="form-field">
+                <label>Navn</label>
+                <div className="input-preview">Dit navn...</div>
               </div>
-              <Link to="/kontakt" className="phone-contact-button" style={{ textDecoration: 'none' }}>
-                Gå til kontaktformular
-              </Link>
-              <p className="phone-contact-label">Udfyld formularen</p>
+              <div className="form-field">
+                <label>Email</label>
+                <div className="input-preview">din@email.dk</div>
+              </div>
+              <div className="form-field">
+                <label>Besked</label>
+                <div className="input-preview textarea">Fortæl os om dit projekt...</div>
+              </div>
             </div>
-
-            <div className="phone-contact-options">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="phone-contact-option"
-              >
-                <span className="phone-contact-option-icon">📧</span>
-                <div>
-                  <p className="phone-contact-option-title">Email</p>
-                  <p className="phone-contact-option-desc">nordicmarketin@outlook.dk</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="phone-contact-option"
-              >
-                <span className="phone-contact-option-icon">📍</span>
-                <div>
-                  <p className="phone-contact-option-title">Lokation</p>
-                  <p className="phone-contact-option-desc">Frederiksberg, København</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="phone-contact-option"
-              >
-                <span className="phone-contact-option-icon">🕐</span>
-                <div>
-                  <p className="phone-contact-option-title">Åbningstider</p>
-                  <p className="phone-contact-option-desc">Man-Fre 09:00-17:00</p>
-                </div>
-              </motion.div>
+            <button className="send-btn" onClick={() => handleNavClick(0)}>Send besked</button>
+            <div className="contact-info">
+              <div className="contact-item" style={{ cursor: 'pointer' }} onClick={() => handleNavClick(0)}>
+                <span>📧</span>
+                <span>kontakt@nordic.dk</span>
+              </div>
+              <div className="contact-item" style={{ cursor: 'pointer' }} onClick={() => handleNavClick(0)}>
+                <span>📍</span>
+                <span>København, DK</span>
+              </div>
             </div>
           </motion.div>
         );
@@ -280,130 +195,141 @@ function PhoneMockup() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.4 }}
-      className="phone-mockup-container"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="phone-mockup-wrapper"
     >
-      {/* Phone mockup */}
-      <div className="phone-frame">
-        {/* Screen */}
-        <div className="phone-screen">
-          {/* Status bar */}
-          <div className="phone-status-bar">
-            <span>9:41</span>
-            <div className="status-icons">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17 4h-3V2h-4v2H7v18h10V4z"/></svg>
+      <div className="iphone-frame">
+        <div className="dynamic-island"></div>
+        <div className="iphone-screen">
+          {/* App Header */}
+          <div className="app-header">
+            <div className="app-logo">
+              <span className="app-logo-icon">N</span>
+              <span className="app-logo-text">Nordic Digital</span>
             </div>
           </div>
 
-          {/* Website preview content */}
-          <div className="phone-content">
-            {/* Navigation bar */}
-            <div className="phone-nav">
-              <div className="phone-nav-left">
-                <div className="phone-logo">
-                  <span>📈</span>
-                </div>
-                <span className="phone-brand">Nordic Marketing</span>
-              </div>
-              <div className="phone-nav-icons">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </div>
-            </div>
+          {/* Content */}
+          <AnimatePresence mode="wait">
+            {renderContent()}
+          </AnimatePresence>
 
-            {/* View Content */}
-            <AnimatePresence mode="wait">
-              {renderContent()}
-            </AnimatePresence>
-
-            {/* Bottom Navigation */}
-            <div className="phone-bottom-nav">
-              {views.map((view, i) => (
-                <button
-                  key={i}
-                  className={`phone-nav-btn ${activeView === i ? 'active' : ''}`}
-                  onClick={() => handleNavClick(i)}
-                >
-                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {i === 0 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />}
-                    {i === 1 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />}
-                    {i === 2 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />}
-                    {i === 3 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />}
+          {/* Bottom Navigation */}
+          <div className="bottom-nav">
+            {views.map((view, i) => (
+              <button
+                key={i}
+                className={`nav-btn ${activeView === i ? 'active' : ''}`}
+                onClick={() => handleNavClick(i)}
+              >
+                {i === 0 && (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
                   </svg>
-                  <span>{view}</span>
-                </button>
-              ))}
-            </div>
+                )}
+                {i === 1 && (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                  </svg>
+                )}
+                {i === 2 && (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                )}
+                {i === 3 && (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                )}
+                <span>{view}</span>
+              </button>
+            ))}
           </div>
+
+          <div className="home-indicator"></div>
         </div>
       </div>
 
-      {/* Floating elements */}
+      {/* Floating Badges - Left Side */}
       <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="phone-float phone-float-1"
+        className="float-badge float-1"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="phone-float-icon green">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        <div className="float-icon teal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
           </svg>
         </div>
-        <div>
-          <p className="phone-float-title">SEO & GEO</p>
-          <p className="phone-float-desc">Google + AI synlighed</p>
+        <div className="float-text">
+          <span className="float-title">SEO Optimeret</span>
+          <span className="float-desc">Top rankings</span>
         </div>
       </motion.div>
 
       <motion.div
+        className="float-badge float-2"
         animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        className="phone-float phone-float-2"
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
       >
-        <div className="phone-float-icon blue">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div className="float-icon blue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
           </svg>
         </div>
-        <div>
-          <p className="phone-float-title">Gratis Tilbud</p>
-          <p className="phone-float-desc">Uforpligtende samtale</p>
+        <div className="float-text">
+          <span className="float-title">Booking System</span>
+          <span className="float-desc">Nem tidsbestilling</span>
         </div>
       </motion.div>
 
       <motion.div
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="phone-float phone-float-3"
+        className="float-badge float-3"
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       >
-        <div className="phone-float-icon primary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        <div className="float-icon purple">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <div>
-          <p className="phone-float-title">Dansk Team</p>
-          <p className="phone-float-desc">Personlig kontakt</p>
+        <div className="float-text">
+          <span className="float-title">Dansk Team</span>
+          <span className="float-desc">Personlig service</span>
         </div>
       </motion.div>
 
       <motion.div
-        animate={{ y: [0, 6, 0] }}
-        transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-        className="phone-float phone-float-4"
+        className="float-badge float-4"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
       >
-        <div className="phone-float-icon purple">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <div className="float-icon green">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
           </svg>
         </div>
-        <div>
-          <p className="phone-float-title">Fair Priser</p>
-          <p className="phone-float-desc">Gennemsigtig prissætning</p>
+        <div className="float-text">
+          <span className="float-title">App & Web</span>
+          <span className="float-desc">Udvikling</span>
         </div>
       </motion.div>
     </motion.div>

@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Cases from './pages/Cases';
+import Process from './pages/Process';
 import './styles/App.css';
 
 function App() {
@@ -31,12 +33,13 @@ function App() {
           <Route path="/apps" element={<AppsService />} />
           <Route path="/om-os" element={<About />} />
           <Route path="/kontakt" element={<Contact />} />
+          <Route path="/cases" element={<Cases />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/proces" element={<Process />} />
 
           {/* Redirects from old URLs for SEO */}
           <Route path="/services" element={<Navigate to="/" replace />} />
-          <Route path="/proces" element={<Navigate to="/" replace />} />
           <Route path="/seo-bureau-danmark" element={<Navigate to="/hjemmesider" replace />} />
           <Route path="/webdesign-bureau-danmark" element={<Navigate to="/hjemmesider" replace />} />
           <Route path="/app-udvikling-danmark" element={<Navigate to="/apps" replace />} />

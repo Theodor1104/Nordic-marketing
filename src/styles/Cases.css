@@ -1,0 +1,260 @@
+.cases-page {
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.cases-hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.cases-hero .hero-content.centered {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cases-hero .hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent-light);
+  margin-bottom: 1.5rem;
+}
+
+.cases-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.cases-hero .hero-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cases Section */
+.cases-section {
+  padding: 6rem 0;
+  background: var(--color-off-white);
+}
+
+/* Featured Case */
+.featured-case {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  background: var(--color-white);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Case Image */
+.case-image-wrapper {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.case-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.case-image-wrapper:hover .case-image {
+  transform: scale(1.03);
+}
+
+.case-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.case-image-wrapper:hover .case-image-overlay {
+  opacity: 1;
+}
+
+/* Case Details */
+.case-details {
+  padding: 3rem;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-tag {
+  padding: 0.35rem 0.85rem;
+  background: var(--gradient-card);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.case-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.case-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.case-description {
+  font-size: 1rem;
+  color: var(--color-gray-500);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Features Section */
+.case-features-section {
+  margin-bottom: 2rem;
+}
+
+.case-features-section h3,
+.case-tech-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.case-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.case-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+}
+
+.case-features .check {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Tech Section */
+.case-tech-section {
+  margin-bottom: 2rem;
+}
+
+.tech-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tech-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tech-value {
+  font-size: 0.95rem;
+  color: var(--color-gray-700);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featured-case {
+    grid-template-columns: 1fr;
+  }
+
+  .case-image-wrapper {
+    min-height: 300px;
+  }
+
+  .case-details {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cases-hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .cases-section {
+    padding: 4rem 0;
+  }
+
+  .case-title {
+    font-size: 2rem;
+  }
+
+  .case-features {
+    grid-template-columns: 1fr;
+  }
+
+  .case-image-wrapper {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-details {
+    padding: 1.5rem;
+  }
+
+  .case-title {
+    font-size: 1.75rem;
+  }
+
+  .case-tags {
+    gap: 0.35rem;
+  }
+
+  .case-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+}

@@ -104,34 +104,6 @@ function LaptopMockup({ size = 'large' }) {
       {/* Glow effect behind laptop */}
       <div className="laptop-glow"></div>
 
-      {/* Floating badges */}
-      <motion.div
-        className="floating-badge speed"
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <span className="badge-icon">&#9889;</span>
-        <span>PageSpeed 98</span>
-      </motion.div>
-
-      <motion.div
-        className="floating-badge seo"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      >
-        <span className="badge-icon">&#128269;</span>
-        <span>SEO Optimeret</span>
-      </motion.div>
-
-      <motion.div
-        className="floating-badge responsive"
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      >
-        <span className="badge-icon">&#128241;</span>
-        <span>Responsivt</span>
-      </motion.div>
-
       {/* Laptop frame */}
       <div className="laptop-frame">
         <div className="laptop-screen">

@@ -103,44 +103,12 @@ function Home() {
           </motion.div>
 
           <div className="services-grid">
-            {/* Hjemmesider Card */}
-            <motion.div
-              className="service-card glass-card-light"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-            >
-              <div className="service-icon-container">
-                <div className="service-mockup laptop">
-                  <div className="mockup-screen">
-                    <div className="mockup-content">
-                      <div className="mock-bar"></div>
-                      <div className="mock-text"></div>
-                      <div className="mock-text short"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="service-content">
-                <h3>{t('footer.websites')}</h3>
-                <p>{t('showcase.web_desc')}</p>
-                <ul className="service-features-list">
-                  <li><span>&#10003;</span> Responsivt design</li>
-                  <li><span>&#10003;</span> SEO & GEO optimeret</li>
-                  <li><span>&#10003;</span> Hurtig loadtid</li>
-                </ul>
-                <Link to="/hjemmesider" className="btn btn-primary">{t('showcase.see_all_services')}</Link>
-              </div>
-            </motion.div>
-
             {/* Apps Card */}
             <motion.div
               className="service-card glass-card-light"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
               whileHover={{ y: -10 }}
             >
               <div className="service-icon-container">
@@ -163,9 +131,41 @@ function Home() {
                 <ul className="service-features-list">
                   <li><span>&#10003;</span> iOS & Android</li>
                   <li><span>&#10003;</span> React Native & Flutter</li>
-                  <li><span>&#10003;</span> Native performance</li>
+                  <li><span>&#10003;</span> Booking systemer</li>
                 </ul>
                 <Link to="/apps" className="btn btn-primary">{t('showcase.see_all_services')}</Link>
+              </div>
+            </motion.div>
+
+            {/* Hjemmesider Card */}
+            <motion.div
+              className="service-card glass-card-light"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="service-icon-container">
+                <div className="service-mockup laptop">
+                  <div className="mockup-screen">
+                    <div className="mockup-content">
+                      <div className="mock-bar"></div>
+                      <div className="mock-text"></div>
+                      <div className="mock-text short"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="service-content">
+                <h3>{t('footer.websites')}</h3>
+                <p>{t('showcase.web_desc')}</p>
+                <ul className="service-features-list">
+                  <li><span>&#10003;</span> Responsivt design</li>
+                  <li><span>&#10003;</span> SEO & GEO optimeret</li>
+                  <li><span>&#10003;</span> Booking systemer</li>
+                </ul>
+                <Link to="/hjemmesider" className="btn btn-primary">{t('showcase.see_all_services')}</Link>
               </div>
             </motion.div>
           </div>
@@ -234,6 +234,43 @@ function Home() {
               <p>{t('home.usp_personal_desc')}</p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Package Section */}
+      <section className="package-section section-gradient">
+        <div className="container">
+          <motion.div
+            className="package-card glass-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="package-content">
+              <span className="package-badge">{t('hjemmesider.package_badge')}</span>
+              <h2>{t('hjemmesider.package_title')}</h2>
+              <p>{t('hjemmesider.package_desc')}</p>
+
+              <ul className="package-features">
+                <li><span>&#10003;</span> {t('hjemmesider.package_feature1')}</li>
+                <li><span>&#10003;</span> {t('hjemmesider.package_feature2')}</li>
+                <li><span>&#10003;</span> {t('hjemmesider.package_feature3')}</li>
+                <li><span>&#10003;</span> {t('hjemmesider.package_feature4')}</li>
+              </ul>
+
+              <Link to="/kontakt" className="btn btn-primary">{t('hjemmesider.package_cta')}</Link>
+            </div>
+            <div className="package-visual">
+              <div className="device-stack">
+                <div className="device-laptop">
+                  <div className="device-screen"></div>
+                </div>
+                <div className="device-phone">
+                  <div className="device-screen"></div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
