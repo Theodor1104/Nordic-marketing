@@ -1,23 +1,44 @@
 /* CSS Variables */
 :root {
-  /* Colors - Dark Green & White Theme */
-  --color-primary: #1a3d2e;
-  --color-primary-dark: #0f2a1e;
-  --color-primary-light: #2d5a45;
-  --color-accent: #3d8b6e;
-  --color-accent-light: #5ba88a;
+  /* Colors - Premium Blue-Green Theme (Trust & Tech) */
+  --color-primary: #0f2d3d;
+  --color-primary-dark: #091c28;
+  --color-primary-light: #1a4d66;
+  --color-accent: #14b8a6;
+  --color-accent-light: #2dd4bf;
+  --color-accent-dark: #0d9488;
+
+  /* Trust Blue */
+  --color-blue: #3b82f6;
+  --color-blue-light: #60a5fa;
+  --color-blue-dark: #2563eb;
 
   --color-white: #ffffff;
-  --color-off-white: #f8faf9;
-  --color-gray-100: #f0f4f2;
-  --color-gray-200: #e0e7e3;
-  --color-gray-300: #c5d1ca;
-  --color-gray-400: #9aaca2;
-  --color-gray-500: #6b7d73;
-  --color-gray-600: #4a5a51;
-  --color-gray-700: #364039;
-  --color-gray-800: #1f2722;
-  --color-black: #0a0f0c;
+  --color-off-white: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-black: #0f172a;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-light: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-light: rgba(15, 45, 61, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --glass-blur: blur(20px);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-blue) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.2) 0%, transparent 70%);
+  --gradient-hero: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
 
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -145,15 +166,17 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background: var(--gradient-accent);
   color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+  border-radius: var(--radius-full);
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.4);
   color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
@@ -192,10 +215,23 @@ a:hover {
 
 /* Page Hero */
 .page-hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: var(--gradient-hero);
   color: var(--color-white);
   padding: var(--spacing-4xl) 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .page-hero h1 {
@@ -212,10 +248,23 @@ a:hover {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: var(--gradient-hero);
   color: var(--color-white);
   padding: var(--spacing-4xl) 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 /* Performance: Defer rendering of below-fold content */
@@ -225,6 +274,98 @@ a:hover {
 .process-section {
   content-visibility: auto;
   contain-intrinsic-size: 0 500px;
+}
+
+/* ==========================================
+   GLASSMORPHISM & MODERN EFFECTS
+   ========================================== */
+
+/* Glassmorphism Card - Dark Background */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+/* Glassmorphism Card - Light Background */
+.glass-card-light {
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  border-radius: 24px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-light:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow Effect */
+.glow {
+  position: relative;
+}
+
+.glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  background: var(--gradient-glow);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glow:hover::before {
+  opacity: 1;
+}
+
+/* Bold Typography */
+.heading-bold {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* Section with gradient background */
+.section-gradient {
+  background: var(--gradient-hero);
+  color: var(--color-white);
+}
+
+.section-gradient h1,
+.section-gradient h2,
+.section-gradient h3 {
+  color: var(--color-white);
 }
 
 .cta-section h2 {

@@ -24,7 +24,8 @@ function Footer() {
           <h4>{t('footer.navigation')}</h4>
           <ul className="footer-links">
             <li><Link to="/">{t('nav.home')}</Link></li>
-            <li><Link to="/services">{t('nav.services')}</Link></li>
+            <li><Link to="/hjemmesider">{t('nav.websites')}</Link></li>
+            <li><Link to="/apps">{t('nav.apps')}</Link></li>
             <li><Link to="/om-os">{t('nav.about')}</Link></li>
             <li><Link to="/kontakt">{t('nav.contact')}</Link></li>
           </ul>
@@ -33,9 +34,9 @@ function Footer() {
         <div className="footer-section">
           <h4>{t('footer.services')}</h4>
           <ul className="footer-links">
-            <li><Link to="/app-udvikling-danmark">App Udvikling</Link></li>
-            <li><Link to="/webdesign-bureau-danmark">{t('footer.websites')}</Link></li>
-            <li><Link to="/seo-bureau-danmark">SEO & GEO</Link></li>
+            <li><Link to="/hjemmesider">{t('footer.websites')}</Link></li>
+            <li><Link to="/apps">Apps</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
           </ul>
         </div>
 

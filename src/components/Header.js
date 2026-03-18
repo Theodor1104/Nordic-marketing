@@ -57,17 +57,17 @@ function Header() {
             <NavLink to="/" className="nav-link" onClick={closeMenu}>
               {t('nav.home')}
             </NavLink>
-            <NavLink to="/services" className="nav-link" onClick={closeMenu}>
-              {t('nav.services')}
+            <NavLink to="/hjemmesider" className="nav-link" onClick={closeMenu}>
+              {t('nav.websites')}
             </NavLink>
-            <NavLink to="/blog" className="nav-link" onClick={closeMenu}>
-              {t('nav.blog')}
-            </NavLink>
-            <NavLink to="/proces" className="nav-link" onClick={closeMenu}>
-              {t('nav.process')}
+            <NavLink to="/apps" className="nav-link" onClick={closeMenu}>
+              {t('nav.apps')}
             </NavLink>
             <NavLink to="/om-os" className="nav-link" onClick={closeMenu}>
               {t('nav.about')}
+            </NavLink>
+            <NavLink to="/blog" className="nav-link" onClick={closeMenu}>
+              {t('nav.blog')}
             </NavLink>
           </div>
           <button className="lang-switcher" onClick={toggleLanguage} aria-label="Switch language">

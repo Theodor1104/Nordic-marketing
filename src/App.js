@@ -1,18 +1,15 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Services from './pages/Services';
-import Process from './pages/Process';
+import HjemmesiderService from './pages/HjemmesiderService';
+import AppsService from './pages/AppsService';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
-import SEOService from './pages/SEOService';
-import WebdesignService from './pages/WebdesignService';
-import AppDevelopmentService from './pages/AppDevelopmentService';
 import './styles/App.css';
 
 function App() {
@@ -30,15 +27,19 @@ function App() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/proces" element={<Process />} />
+          <Route path="/hjemmesider" element={<HjemmesiderService />} />
+          <Route path="/apps" element={<AppsService />} />
           <Route path="/om-os" element={<About />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/seo-bureau-danmark" element={<SEOService />} />
-          <Route path="/webdesign-bureau-danmark" element={<WebdesignService />} />
-          <Route path="/app-udvikling-danmark" element={<AppDevelopmentService />} />
+
+          {/* Redirects from old URLs for SEO */}
+          <Route path="/services" element={<Navigate to="/" replace />} />
+          <Route path="/proces" element={<Navigate to="/" replace />} />
+          <Route path="/seo-bureau-danmark" element={<Navigate to="/hjemmesider" replace />} />
+          <Route path="/webdesign-bureau-danmark" element={<Navigate to="/hjemmesider" replace />} />
+          <Route path="/app-udvikling-danmark" element={<Navigate to="/apps" replace />} />
         </Routes>
       </main>
       <Footer />
