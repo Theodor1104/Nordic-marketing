@@ -168,6 +168,11 @@
   border-color: var(--color-gray-300);
 }
 
+/* Mobile Language Switcher - Hidden on desktop */
+.lang-switcher-mobile {
+  display: none;
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
@@ -314,16 +319,32 @@
     color: #ffffff !important;
   }
 
+  /* Hide lang-switcher inside dropdown on mobile */
   .nav .lang-switcher,
   .header.header-transparent .nav .lang-switcher {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    background: #f3f4f6 !important;
-    color: #374151 !important;
-    border: 1px solid #e5e7eb !important;
-    text-align: center;
-    width: 100%;
+    display: none;
+  }
+
+  /* Show mobile lang-switcher next to hamburger */
+  .lang-switcher-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-gray-600);
+    background: transparent;
+    border: 1px solid var(--color-gray-200);
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+
+  .header.header-transparent .lang-switcher-mobile {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 

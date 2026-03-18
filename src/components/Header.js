@@ -56,6 +56,11 @@ function Header() {
           <span className="logo-accent">Digital</span>
         </Link>
 
+        {/* Mobile language switcher - visible only on mobile */}
+        <button className="lang-switcher-mobile" onClick={toggleLanguage} aria-label="Switch language">
+          {i18n.language === 'da' ? 'EN' : 'DA'}
+        </button>
+
         <button
           className={`menu-toggle ${menuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
