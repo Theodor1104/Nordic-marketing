@@ -531,12 +531,18 @@
 
   .process-stats {
     flex-direction: column;
-    max-width: 200px;
+    max-width: 280px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .stat-card {
-    padding: 0.875rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
   }
 
   .timeline-header h2,
