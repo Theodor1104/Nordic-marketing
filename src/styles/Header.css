@@ -294,9 +294,9 @@
 
   .nav .nav-link.active,
   .header.header-transparent .nav .nav-link.active {
-    color: #0f2d3d !important;
-    font-weight: 600;
-    background-color: #f0fdfa !important;
+    color: #1f2937 !important;
+    font-weight: 500;
+    background-color: transparent !important;
   }
 
   .nav .nav-link.cta-button,
