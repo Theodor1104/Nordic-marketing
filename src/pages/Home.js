@@ -28,42 +28,42 @@ function Home() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Hvad tilbyder Nordic Marketing?",
+        "name": "Hvad tilbyder Nordic Digital?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nordic Marketing tilbyder en komplet pakke af digitale marketing services: SEO (søgemaskineoptimering), GEO (AI-søgemaskineoptimering til ChatGPT og Perplexity), Google Ads, Meta Ads (Facebook og Instagram annoncering) og professionelt webdesign. Alle services starter fra 2.500 DKK per måned."
+          "text": "Nordic Digital tilbyder professionel app udvikling til iOS og Android, moderne webdesign og SEO/GEO optimering. Vi bruger teknologier som React Native, Flutter og moderne web frameworks. Kontakt os for en gratis konsultation."
         }
       },
       {
         "@type": "Question",
-        "name": "Hvad er GEO-optimering og hvorfor har min virksomhed brug for det?",
+        "name": "Hvad koster det at udvikle en app?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "GEO (Generative Engine Optimization) er optimering af dit online indhold så AI-søgemaskiner som ChatGPT, Perplexity og Google AI Overview kan finde og anbefale din virksomhed. Flere og flere danskere bruger AI til at søge efter produkter og services. Nordic Marketing er et af de få danske bureauer der tilbyder specialiseret GEO-optimering."
+          "text": "App udvikling hos Nordic Digital starter fra 25.000 DKK for en simpel MVP app. En fuld business app til iOS og Android koster typisk 50.000-150.000 DKK afhængig af funktionalitet og kompleksitet."
         }
       },
       {
         "@type": "Question",
-        "name": "Hvad betyder no cure, no pay?",
+        "name": "Laver I apps til både iOS og Android?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No cure, no pay betyder at du kun betaler for resultater. Hos Nordic Marketing tilbyder vi denne garanti på udvalgte ydelser, hvilket betyder at vi deler risikoen med dig. Det er vores måde at vise, at vi tror på vores evne til at levere målbare resultater for din virksomhed."
+          "text": "Ja, vi udvikler apps til både iOS og Android. Vi bruger primært cross-platform teknologier som React Native og Flutter, hvilket giver dig apps til begge platforme til én pris. Vi tilbyder også native udvikling for mere komplekse projekter."
         }
       },
       {
         "@type": "Question",
-        "name": "Hvordan kommer jeg i gang med Nordic Marketing?",
+        "name": "Hvad koster en hjemmeside?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Det er nemt at komme i gang. Book en gratis og uforpligtende konsultation via vores kontaktformular eller send en email til nordicmarketin@outlook.dk. Vi analyserer din nuværende online tilstedeværelse, præsenterer en skræddersyet strategi og går i gang når du er klar. Vi svarer inden for 24 timer."
+          "text": "En professionel hjemmeside fra Nordic Digital starter fra 5.000 DKK for en landingsside. En fuld virksomhedshjemmeside koster typisk 10.000-25.000 DKK. Alle vores hjemmesider er responsive, hurtige og SEO-optimeret."
         }
       },
       {
         "@type": "Question",
-        "name": "Hvem er Nordic Marketing for?",
+        "name": "Hvad er SEO og GEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nordic Marketing hjælper primært små og mellemstore virksomheder i Danmark med at vokse online. Vi har særlig erfaring med restauranter, caféer, håndværkere, konsulenter, lokale butikker og startups. Vores priser fra 2.500 kr/md gør professionel digital marketing tilgængeligt for alle virksomhedsstørrelser."
+          "text": "SEO (Search Engine Optimization) optimerer din hjemmeside til Google. GEO (Generative Engine Optimization) optimerer dit indhold til AI-søgemaskiner som ChatGPT og Perplexity. Nordic Digital tilbyder begge dele som en samlet service for maksimal online synlighed."
         }
       }
     ]
@@ -72,10 +72,10 @@ function Home() {
   return (
     <div className="home">
       <SEO
-        title="Marketing Bureau Danmark | SEO Bureau & Google Ads Eksperter"
-        description="Nordic Marketing er Danmarks bedste marketing bureau for små og mellemstore virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!"
-        keywords="marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau, Facebook annoncering danmark, Instagram marketing danmark, webdesign danmark, online markedsføring danmark, bedste marketing bureau, billigt marketing bureau danmark, marketing for små virksomheder danmark, SEO København, marketing bureau København, marketing bureau aarhus, marketing bureau odense, marketing bureau aalborg, digital marketing 2026, online synlighed danmark"
-        canonical="https://nordic-marketing.dk/"
+        title="App Udvikling & Webdesign Bureau Danmark | Nordic Digital"
+        description="Nordic Digital er Danmarks app og web bureau. Vi udvikler professionelle iOS & Android apps, moderne hjemmesider og SEO/GEO optimering. React Native, Flutter. Gratis konsultation!"
+        keywords="app udvikling danmark, app bureau danmark, iOS app udvikling, Android app udvikling, React Native Danmark, Flutter apps Danmark, webdesign danmark, webdesign bureau danmark, SEO bureau danmark, GEO optimering, hjemmeside pris danmark, mobile apps udvikling, cross-platform apps"
+        canonical="https://nordic-digital.dk/"
         schema={homeFaqSchema}
       />
       {/* Hero Section */}
@@ -83,7 +83,7 @@ function Home() {
         <div className="hero-content">
           <Link to="/" className={`hero-logo ${scrolled ? 'hero-logo-hidden' : ''}`}>
             <span className="hero-logo-text">Nordic</span>
-            <span className="hero-logo-accent">Marketing</span>
+            <span className="hero-logo-accent">Digital</span>
           </Link>
           <h1>
             {t('home.hero_title')} - <span className="highlight">{t('home.hero_highlight')}</span>

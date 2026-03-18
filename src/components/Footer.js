@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer-section">
           <h3 className="footer-logo">
             <span className="logo-text">Nordic</span>
-            <span className="logo-accent">Marketing</span>
+            <span className="logo-accent">Digital</span>
           </h3>
           <p className="footer-description">
             {t('footer.description')}
@@ -33,10 +33,9 @@ function Footer() {
         <div className="footer-section">
           <h4>{t('footer.services')}</h4>
           <ul className="footer-links">
-            <li><Link to="/services">Meta Ads</Link></li>
-            <li><Link to="/services">Google Ads</Link></li>
-            <li><Link to="/services">SEO</Link></li>
-            <li><Link to="/services">{t('footer.websites')}</Link></li>
+            <li><Link to="/app-udvikling-danmark">App Udvikling</Link></li>
+            <li><Link to="/webdesign-bureau-danmark">{t('footer.websites')}</Link></li>
+            <li><Link to="/seo-bureau-danmark">SEO & GEO</Link></li>
           </ul>
         </div>
 

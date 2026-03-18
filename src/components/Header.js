@@ -39,7 +39,7 @@ function Header() {
       <div className="header-container">
         <Link to="/" className={`logo ${isHomePage && !scrolled ? 'logo-hidden' : ''}`} onClick={closeMenu}>
           <span className="logo-text">Nordic</span>
-          <span className="logo-accent">Marketing</span>
+          <span className="logo-accent">Digital</span>
         </Link>
 
         <button

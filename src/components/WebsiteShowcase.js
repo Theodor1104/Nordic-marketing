@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function WebsiteShowcase() {
   const [activeFeature, setActiveFeature] = useState(0);
   const [typedCode, setTypedCode] = useState('');
+  const { t } = useTranslation();
 
   const codeSnippet = `<div class="hero">
-  <h1>Din Virksomhed</h1>
-  <p>Professionel online</p>
-  <button>Kontakt</button>
+  <h1>Your Business</h1>
+  <p>Professional online</p>
+  <button>Contact</button>
 </div>`;
 
   // Typing animation effect
@@ -38,17 +40,16 @@ function WebsiteShowcase() {
   }, []);
 
   const features = [
-    { icon: "M13 10V3L4 14h7v7l9-11h-7z", title: "Lynhurtig", desc: "Optimeret hjemmeside" },
-    { icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z", title: "SEO, GEO & Ads", desc: "Integreret markedsføring" },
-    { icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z", title: "Flere Kunder", desc: "Konverterende design" },
-    { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", title: "Alt-i-én", desc: "Hjemmeside + marketing" }
+    { icon: "M13 10V3L4 14h7v7l9-11h-7z", title: t('showcase.feature_fast'), desc: t('showcase.feature_fast_desc') },
+    { icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z", title: t('showcase.feature_marketing'), desc: t('showcase.feature_marketing_desc') },
+    { icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z", title: t('showcase.feature_customers'), desc: t('showcase.feature_customers_desc') },
+    { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", title: t('showcase.feature_allinone'), desc: t('showcase.feature_allinone_desc') }
   ];
 
   const serviceTypes = [
-    { name: "Hjemmesider", color: "#667eea" },
-    { name: "SEO & GEO", color: "#10b981" },
-    { name: "Google Ads", color: "#ef4444" },
-    { name: "Social Media", color: "#8b5cf6" }
+    { name: "App Udvikling", color: "#667eea" },
+    { name: t('footer.websites'), color: "#10b981" },
+    { name: "SEO & GEO", color: "#8b5cf6" }
   ];
 
   return (
@@ -61,9 +62,9 @@ function WebsiteShowcase() {
           viewport={{ once: true }}
           className="showcase-header"
         >
-          <span className="showcase-badge">Komplet Løsning</span>
-          <h2>Alt du behøver for at <span className="gradient-text">vækste online</span></h2>
-          <p>Hjemmeside, markedsføring og synlighed - samlet i én pakke</p>
+          <span className="showcase-badge">{t('showcase.badge')}</span>
+          <h2>{t('showcase.title')} <span className="gradient-text">{t('showcase.title_highlight')}</span></h2>
+          <p>{t('showcase.subtitle')}</p>
         </motion.div>
 
         {/* Services Grid First */}
@@ -75,37 +76,15 @@ function WebsiteShowcase() {
         >
           <div className="services-grid-top">
             <motion.div className="service-card-top" whileHover={{ y: -5 }}>
-              <div className="service-icon-top meta">
+              <div className="service-icon-top app">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                  <path d="M12 18h.01"/>
                 </svg>
               </div>
               <div className="service-text-top">
-                <h4>Meta Ads</h4>
-                <p>Facebook & Instagram annoncer</p>
-              </div>
-            </motion.div>
-            <motion.div className="service-card-top" whileHover={{ y: -5 }}>
-              <div className="service-icon-top google">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="M21 21l-4.35-4.35"/>
-                </svg>
-              </div>
-              <div className="service-text-top">
-                <h4>Google Ads</h4>
-                <p>Synlighed i søgeresultater</p>
-              </div>
-            </motion.div>
-            <motion.div className="service-card-top" whileHover={{ y: -5 }}>
-              <div className="service-icon-top seo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/>
-                </svg>
-              </div>
-              <div className="service-text-top">
-                <h4>SEO & GEO</h4>
-                <p>Synlighed på Google & AI</p>
+                <h4>App Udvikling</h4>
+                <p>{t('showcase.app_desc')}</p>
               </div>
             </motion.div>
             <motion.div className="service-card-top" whileHover={{ y: -5 }}>
@@ -116,8 +95,19 @@ function WebsiteShowcase() {
                 </svg>
               </div>
               <div className="service-text-top">
-                <h4>Hjemmesider</h4>
-                <p>Professionelt webdesign</p>
+                <h4>{t('footer.websites')}</h4>
+                <p>{t('showcase.web_desc')}</p>
+              </div>
+            </motion.div>
+            <motion.div className="service-card-top" whileHover={{ y: -5 }}>
+              <div className="service-icon-top seo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/>
+                </svg>
+              </div>
+              <div className="service-text-top">
+                <h4>SEO & GEO</h4>
+                <p>{t('showcase.seo_desc')}</p>
               </div>
             </motion.div>
           </div>
@@ -128,7 +118,7 @@ function WebsiteShowcase() {
             viewport={{ once: true }}
           >
             <Link to="/services" className="services-link-btn">
-              <span>Se alle services</span>
+              <span>{t('showcase.see_all_services')}</span>
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -258,8 +248,8 @@ function WebsiteShowcase() {
             className="showcase-features"
           >
             <div className="features-header">
-              <h3>Din komplette digitale pakke</h3>
-              <p>Alt samlet ét sted - ingen bøvl</p>
+              <h3>{t('showcase.package_title')}</h3>
+              <p>{t('showcase.package_subtitle')}</p>
             </div>
 
             {/* Feature Cards */}
@@ -306,7 +296,7 @@ function WebsiteShowcase() {
               whileTap={{ scale: 0.98 }}
             >
               <Link to="/kontakt" className="cta-button">
-                <span>Få et uforpligtende tilbud</span>
+                <span>{t('showcase.cta')}</span>
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
