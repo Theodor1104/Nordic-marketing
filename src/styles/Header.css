@@ -338,7 +338,7 @@
     padding: 0.4rem 0.75rem;
     border-radius: var(--radius-full);
     cursor: pointer;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
   }
 
   .header.header-transparent .lang-switcher-mobile {
