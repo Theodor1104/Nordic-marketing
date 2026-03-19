@@ -35,7 +35,7 @@ function Admin() {
     autoResponse: false,
     darkMode: false,
     businessName: 'Nordic Digital',
-    businessEmail: 'nordicmarketin@outlook.dk',
+    businessEmail: 'kontakt@nordic-digital.dk',
     businessPhone: '',
     businessAddress: 'Frederiksberg, København'
   });
@@ -351,7 +351,7 @@ function Admin() {
           <div className="login-header">
             <div className="login-logo">
               <span className="logo-text">Nordic</span>
-              <span className="logo-accent">Marketing</span>
+              <span className="logo-accent">Digital</span>
             </div>
             <h1>Admin Panel</h1>
             <p>Indtast kodeord for at fortsætte</p>
@@ -399,7 +399,7 @@ function Admin() {
         <div className="sidebar-header">
           <div className="admin-logo">
             <span className="logo-text">Nordic</span>
-            <span className="logo-accent">Marketing</span>
+            <span className="logo-accent">Digital</span>
           </div>
           <span className="admin-badge">Admin</span>
         </div>
