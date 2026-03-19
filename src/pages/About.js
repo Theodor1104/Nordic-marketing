@@ -15,11 +15,11 @@ function About() {
   const aboutSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "Om Nordic Marketing",
-    "description": "Lær Nordic Marketing at kende. Et dansk digitalt marketing bureau fra København med fokus på resultater og gennemsigtighed.",
+    "name": "Om Nordic Digital",
+    "description": "Lær Nordic Digital at kende. Et dansk digitalt marketing bureau fra København med fokus på resultater og gennemsigtighed.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "foundingLocation": {
         "@type": "Place",
         "name": "København, Danmark"
@@ -44,7 +44,7 @@ function About() {
       },
       {
         "@type": "Question",
-        "name": "Hvad koster det at arbejde med Nordic Marketing?",
+        "name": "Hvad koster det at arbejde med Nordic Digital?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Vores priser starter fra 2.500 kr/md for løbende services. Vi tilbyder No cure, no pay på udvalgte ydelser, så du kun betaler for resultater. Kontakt os for et uforpligtende tilbud."
@@ -81,8 +81,8 @@ function About() {
     <div className="about-page">
       <SEO
         title="Om Os - Danmarks Marketing Bureau | SEO & Google Ads Eksperter"
-        description="Lær Nordic Marketing at kende - Danmarks marketing bureau for små virksomheder. Vi specialiserer i SEO, Google Ads, Facebook annoncering & webdesign. No cure, no pay garanti. Gratis konsultation."
-        keywords="om Nordic Marketing, marketing bureau danmark, dansk marketing bureau, digital marketing team danmark, SEO eksperter danmark, Google Ads eksperter, Facebook annoncering bureau, marketing bureau København, bedste marketing bureau danmark"
+        description="Lær Nordic Digital at kende - Danmarks marketing bureau for små virksomheder. Vi specialiserer i SEO, Google Ads, Facebook annoncering & webdesign. No cure, no pay garanti. Gratis konsultation."
+        keywords="om Nordic Digital, marketing bureau danmark, dansk marketing bureau, digital marketing team danmark, SEO eksperter danmark, Google Ads eksperter, Facebook annoncering bureau, marketing bureau København, bedste marketing bureau danmark"
         canonical="https://nordic-marketing.dk/om-os"
         schema={[aboutSchema, faqSchema]}
         breadcrumbs={breadcrumbs}

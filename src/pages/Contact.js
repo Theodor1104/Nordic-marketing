@@ -26,11 +26,11 @@ function Contact() {
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Kontakt Nordic Marketing",
-    "description": "Kontakt Nordic Marketing for en gratis og uforpligtende konsultation.",
+    "name": "Kontakt Nordic Digital",
+    "description": "Kontakt Nordic Digital for en gratis og uforpligtende konsultation.",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "email": "nordicmarketin@outlook.dk",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -92,8 +92,8 @@ function Contact() {
     <div className="contact-page">
       <SEO
         title="Kontakt Danmarks Marketing Bureau | Gratis Konsultation"
-        description="Kontakt Nordic Marketing - Danmarks marketing bureau for små virksomheder. Gratis konsultation om SEO, Google Ads, Facebook annoncering & webdesign. Svar inden 24 timer. No cure, no pay!"
-        keywords="kontakt marketing bureau danmark, gratis marketing konsultation danmark, digital marketing hjælp danmark, marketing tilbud danmark, kontakt Nordic Marketing, book møde marketing bureau, SEO konsultation gratis, Google Ads konsultation"
+        description="Kontakt Nordic Digital - Danmarks marketing bureau for små virksomheder. Gratis konsultation om SEO, Google Ads, Facebook annoncering & webdesign. Svar inden 24 timer. No cure, no pay!"
+        keywords="kontakt marketing bureau danmark, gratis marketing konsultation danmark, digital marketing hjælp danmark, marketing tilbud danmark, kontakt Nordic Digital, book møde marketing bureau, SEO konsultation gratis, Google Ads konsultation"
         canonical="https://nordic-marketing.dk/kontakt"
         schema={contactSchema}
         breadcrumbs={breadcrumbs}

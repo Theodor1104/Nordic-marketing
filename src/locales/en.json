@@ -16,7 +16,7 @@
     "hero_subtitle": "We make online marketing transparent, effective and accessible. Through innovation, fair prices and intelligent use of AI, we create measurable results for your business.",
     "cta_consultation": "Free consultation",
     "cta_services": "See our services",
-    "usp_title": "Why choose Nordic Marketing?",
+    "usp_title": "Why choose Nordic Digital?",
     "usp_complete": "Complete solution",
     "usp_complete_desc": "We offer both marketing and website development - everything in one place.",
     "usp_digital": "Digital native",
@@ -143,10 +143,10 @@
     "cta_button": "Book free meeting"
   },
   "about": {
-    "hero_title": "About Nordic Marketing - Denmark's Marketing Agency",
+    "hero_title": "About Nordic Digital - Denmark's Marketing Agency",
     "hero_desc": "A Danish digital marketing agency focused on results and transparency",
     "story_title": "Who we are",
-    "story_p1": "Nordic Marketing is an ambitious Danish digital marketing agency based in Copenhagen. We specialize in helping businesses grow online through effective digital marketing and professional web design.",
+    "story_p1": "Nordic Digital is an ambitious Danish digital marketing agency based in Copenhagen. We specialize in helping businesses grow online through effective digital marketing and professional web design.",
     "story_p2": "Our team combines solid expertise in marketing, economics and technology. We master both the creative side of marketing and the technical implementation – from strategy to finished website and campaign.",
     "story_p3": "We believe that professional digital marketing should be accessible to businesses of all sizes. That's why we offer transparent prices, measurable results and personal service to every customer.",
     "story_p4": "With a sharp focus on the latest trends in SEO, GEO, advertising and AI technology, we ensure that our customers are always one step ahead of the competition. Your success is our mission.",
@@ -200,7 +200,7 @@
     "success_title": "Thank you for your inquiry!",
     "success_subtitle": "We'll get back to you as soon as possible",
     "success_message_title": "Your message has been received",
-    "success_message_desc": "Thank you for contacting Nordic Marketing. We will review your inquiry and get back to you within 24 hours."
+    "success_message_desc": "Thank you for contacting Nordic Digital. We will review your inquiry and get back to you within 24 hours."
   },
   "blog": {
     "hero_title": "Marketing Blog - Guides & Tips for Digital Marketing in Denmark",
@@ -217,7 +217,7 @@
     "services": "Services",
     "websites": "Websites",
     "contact": "Contact",
-    "copyright": "Nordic Marketing. All rights reserved."
+    "copyright": "Nordic Digital. All rights reserved."
   },
   "common": {
     "required": "*"
@@ -340,13 +340,13 @@
     "get_started": "Get started",
     "faq_title": "Frequently asked questions about SEO",
     "faq1_question": "What does SEO cost in Denmark?",
-    "faq1_answer": "Professional SEO at Nordic Marketing starts from 2,500 DKK per month. The price includes technical SEO audit, keyword research, on-page optimization and monthly reporting. Contact us for a customized quote based on your needs.",
+    "faq1_answer": "Professional SEO at Nordic Digital starts from 2,500 DKK per month. The price includes technical SEO audit, keyword research, on-page optimization and monthly reporting. Contact us for a customized quote based on your needs.",
     "faq2_question": "How long does it take to see SEO results?",
     "faq2_answer": "SEO is a long-term investment. Typically you see the first improvements after 3-6 months, with significant results after 6-12 months. The timeline depends on competition in your industry and your website's current state.",
     "faq3_question": "What's the difference between SEO and GEO?",
-    "faq3_answer": "SEO optimizes your website for traditional search engines like Google. GEO (Generative Engine Optimization) optimizes your content for AI search engines like ChatGPT and Perplexity. Nordic Marketing offers both as a combined service.",
+    "faq3_answer": "SEO optimizes your website for traditional search engines like Google. GEO (Generative Engine Optimization) optimizes your content for AI search engines like ChatGPT and Perplexity. Nordic Digital offers both as a combined service.",
     "faq4_question": "Do you offer SEO throughout Denmark?",
-    "faq4_answer": "Yes, Nordic Marketing offers SEO services to businesses throughout Denmark. We work with customers in Copenhagen, Aarhus, Odense, Aalborg and all other Danish cities. Our digital services can be delivered regardless of location.",
+    "faq4_answer": "Yes, Nordic Digital offers SEO services to businesses throughout Denmark. We work with customers in Copenhagen, Aarhus, Odense, Aalborg and all other Danish cities. Our digital services can be delivered regardless of location.",
     "cta_title": "Ready to rank higher on Google?",
     "cta_desc": "Book a free SEO analysis and get concrete recommendations for your website"
   },
@@ -394,7 +394,7 @@
     "get_started": "Get started",
     "faq_title": "Frequently asked questions about Google Ads",
     "faq1_question": "What does Google Ads management cost in Denmark?",
-    "faq1_answer": "Google Ads management at Nordic Marketing starts from 2,500 DKK per month. This includes setup, optimization and reporting. The ad budget comes on top and is agreed individually based on your goals.",
+    "faq1_answer": "Google Ads management at Nordic Digital starts from 2,500 DKK per month. This includes setup, optimization and reporting. The ad budget comes on top and is agreed individually based on your goals.",
     "faq2_question": "How quickly do you see results with Google Ads?",
     "faq2_answer": "Google Ads gives immediate results. You can see traffic and conversions from day 1. Optimal performance is typically achieved after 2-4 weeks of optimization, when there's enough data to adjust bids and targeting.",
     "faq3_question": "What's a good ROI on Google Ads?",
@@ -448,7 +448,7 @@
     "get_started": "Get started",
     "faq_title": "Frequently asked questions about Facebook advertising",
     "faq1_question": "What does Facebook advertising cost in Denmark?",
-    "faq1_answer": "Facebook advertising management at Nordic Marketing starts from 2,500 DKK per month. This includes campaign setup, audience analysis, A/B testing and ongoing optimization. The ad budget comes on top and is agreed individually.",
+    "faq1_answer": "Facebook advertising management at Nordic Digital starts from 2,500 DKK per month. This includes campaign setup, audience analysis, A/B testing and ongoing optimization. The ad budget comes on top and is agreed individually.",
     "faq2_question": "Is Facebook advertising still effective in 2026?",
     "faq2_answer": "Yes, Facebook and Instagram are still among the most effective advertising platforms with over 3.5 million Danish users. Meta's advanced targeting makes it possible to reach exactly your target audience.",
     "faq3_question": "How much should I spend on Facebook ads?",
@@ -464,7 +464,7 @@
     "desc": "Your website is your digital business card. We build modern, fast and conversion-optimized websites for businesses throughout Denmark.",
     "cta_button": "Free Consultation",
     "price_tag": "From 5,000 DKK",
-    "features_title": "What do you get with a website from Nordic Marketing?",
+    "features_title": "What do you get with a website from Nordic Digital?",
     "feature1_title": "Responsive Design",
     "feature1_desc": "Your website looks great on all devices - desktop, tablet and mobile.",
     "feature2_title": "Fast Load Time",
@@ -513,7 +513,7 @@
     "city4_desc": "North Jutland and surroundings",
     "faq_title": "Frequently asked questions about web design",
     "faq1_question": "What does a website cost in Denmark?",
-    "faq1_answer": "A professional website from Nordic Marketing starts from 5,000 DKK for a landing page. A full business website typically costs 10,000-25,000 DKK depending on scope and functionality.",
+    "faq1_answer": "A professional website from Nordic Digital starts from 5,000 DKK for a landing page. A full business website typically costs 10,000-25,000 DKK depending on scope and functionality.",
     "faq2_question": "How long does it take to make a website?",
     "faq2_answer": "A simple landing page can be made in 1-2 weeks. A full business website typically takes 3-6 weeks, depending on scope and how quickly we receive feedback and content.",
     "faq3_question": "Are your websites SEO-optimized?",

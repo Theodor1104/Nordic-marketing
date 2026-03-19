@@ -34,7 +34,7 @@ function Admin() {
     dailySummary: false,
     autoResponse: false,
     darkMode: false,
-    businessName: 'Nordic Marketing',
+    businessName: 'Nordic Digital',
     businessEmail: 'nordicmarketin@outlook.dk',
     businessPhone: '',
     businessAddress: 'Frederiksberg, København'
@@ -503,7 +503,7 @@ function Admin() {
             <div className="content-header">
               <div>
                 <h1>Dashboard</h1>
-                <p>Velkommen tilbage til Nordic Marketing admin panel</p>
+                <p>Velkommen tilbage til Nordic Digital admin panel</p>
               </div>
               <div className="header-actions">
                 <button
@@ -906,7 +906,7 @@ function Admin() {
                   {/* Quick Contact Buttons - Prominent placement */}
                   <div className="quick-contact-bar">
                     <a
-                      href={`mailto:${selectedMessage.email}?subject=Re: Henvendelse fra Nordic Marketing`}
+                      href={`mailto:${selectedMessage.email}?subject=Re: Henvendelse fra Nordic Digital`}
                       className="contact-btn email"
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -963,7 +963,7 @@ function Admin() {
                     <h4>Hurtig handling</h4>
                     <div className="quick-reply-actions">
                       <a
-                        href={`mailto:${selectedMessage.email}?subject=Re: Henvendelse fra Nordic Marketing`}
+                        href={`mailto:${selectedMessage.email}?subject=Re: Henvendelse fra Nordic Digital`}
                         className="btn btn-primary"
                       >
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1553,9 +1553,9 @@ function Admin() {
                   </div>
                 </div>
                 <div className="about-info">
-                  <p><strong>Nordic Marketing Admin Panel</strong></p>
+                  <p><strong>Nordic Digital Admin Panel</strong></p>
                   <p>Version 2.0.0</p>
-                  <p className="about-copyright">© 2024 Nordic Marketing</p>
+                  <p className="about-copyright">© 2024 Nordic Digital</p>
                 </div>
               </div>
             </div>

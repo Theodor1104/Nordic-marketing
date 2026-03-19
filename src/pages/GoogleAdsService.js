@@ -19,7 +19,7 @@ function GoogleAdsService() {
     "description": "Professionel Google Ads management for danske virksomheder. Søgeannoncering, Display, Shopping og YouTube Ads. Priser fra 2.500 kr/md.",
     "provider": {
       "@type": "MarketingAgency",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "url": "https://nordic-marketing.dk"
     },
     "areaServed": { "@type": "Country", "name": "Danmark" },
@@ -45,7 +45,7 @@ function GoogleAdsService() {
         "name": "Hvad koster Google Ads management i Danmark?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Google Ads management hos Nordic Marketing starter fra 2.500 DKK per måned. Dette inkluderer opsætning, optimering og rapportering. Annoncebudgettet kommer oveni og aftales individuelt."
+          "text": "Google Ads management hos Nordic Digital starter fra 2.500 DKK per måned. Dette inkluderer opsætning, optimering og rapportering. Annoncebudgettet kommer oveni og aftales individuelt."
         }
       },
       {

@@ -51,7 +51,7 @@ const blogPosts = {
       </ul>
 
       <div class="tip-box">
-        <h4>Pro tip fra Nordic Marketing:</h4>
+        <h4>Pro tip fra Nordic Digital:</h4>
         <p>Start med teknisk SEO og on-page optimering før du fokuserer på linkbuilding. Det giver det bedste fundament for langsigtede resultater.</p>
       </div>
 
@@ -119,7 +119,7 @@ const blogPosts = {
       </ul>
 
       <div class="tip-box">
-        <h4>Nordic Marketing tilbyder SEO fra 2.500 kr/md</h4>
+        <h4>Nordic Digital tilbyder SEO fra 2.500 kr/md</h4>
         <p>Vi hjælper danske virksomheder med at ranke højere på Google. Book en gratis konsultation og få en SEO-analyse af din hjemmeside.</p>
       </div>
     `
@@ -226,7 +226,7 @@ const blogPosts = {
       </ul>
 
       <div class="tip-box">
-        <h4>Nordic Marketing tilbyder Google Ads management fra 2.500 kr/md</h4>
+        <h4>Nordic Digital tilbyder Google Ads management fra 2.500 kr/md</h4>
         <p>Vi hjælper danske virksomheder med at få mere ud af deres Google Ads budget. Gratis audit af din eksisterende konto.</p>
       </div>
     `
@@ -354,7 +354,7 @@ const blogPosts = {
       <p>Vi anbefaler et minimum annoncebudget på 3.000-5.000 kr/md for at få nok data til optimering.</p>
 
       <div class="tip-box">
-        <h4>Nordic Marketing tilbyder Meta Ads management fra 2.500 kr/md</h4>
+        <h4>Nordic Digital tilbyder Meta Ads management fra 2.500 kr/md</h4>
         <p>Vi hjælper danske virksomheder med at få bedre resultater fra Facebook og Instagram annoncering. Book en gratis konsultation.</p>
       </div>
     `
@@ -384,12 +384,12 @@ function BlogPost() {
     "dateModified": "2026-02-09",
     "author": {
       "@type": "Organization",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "url": "https://nordic-marketing.dk"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "url": "https://nordic-marketing.dk",
       "logo": {
         "@type": "ImageObject",

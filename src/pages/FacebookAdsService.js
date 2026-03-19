@@ -19,7 +19,7 @@ function FacebookAdsService() {
     "description": "Professionel Facebook og Instagram annoncering for danske virksomheder. Meta Ads management, målgruppeanalyse og A/B testing. Priser fra 2.500 kr/md.",
     "provider": {
       "@type": "MarketingAgency",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "url": "https://nordic-marketing.dk"
     },
     "areaServed": { "@type": "Country", "name": "Danmark" },
@@ -39,7 +39,7 @@ function FacebookAdsService() {
         "name": "Hvad koster Facebook annoncering i Danmark?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Facebook annoncering management hos Nordic Marketing starter fra 2.500 DKK per måned. Dette inkluderer kampagneopsætning, målgruppeanalyse, A/B testing og løbende optimering. Annoncebudgettet kommer oveni."
+          "text": "Facebook annoncering management hos Nordic Digital starter fra 2.500 DKK per måned. Dette inkluderer kampagneopsætning, målgruppeanalyse, A/B testing og løbende optimering. Annoncebudgettet kommer oveni."
         }
       },
       {

@@ -14,12 +14,12 @@ function Blog() {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Nordic Marketing Blog",
+    "name": "Nordic Digital Blog",
     "description": "Guides, tips og nyheder om digital marketing, SEO, Google Ads og sociale medier i Danmark",
     "url": "https://nordic-marketing.dk/blog",
     "publisher": {
       "@type": "Organization",
-      "name": "Nordic Marketing",
+      "name": "Nordic Digital",
       "url": "https://nordic-marketing.dk"
     }
   };

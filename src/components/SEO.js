@@ -12,9 +12,9 @@ function SEO({
   noindex = false,
   lastModified = null
 }) {
-  const siteTitle = 'Nordic Marketing';
+  const siteTitle = 'Nordic Digital';
   const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Marketing Bureau Danmark | SEO, Google Ads & Webdesign`;
-  const defaultDescription = 'Nordic Marketing er Danmarks bedste marketing bureau for små virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!';
+  const defaultDescription = 'Nordic Digital er Danmarks bedste marketing bureau for små virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!';
   const defaultKeywords = 'marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau danmark, Facebook annoncering danmark, webdesign bureau danmark, marketing bureau København, SEO København, GEO optimering, AI søgning, lokal SEO Danmark, bedste marketing bureau';
   const modifiedDate = lastModified || new Date().toISOString().split('T')[0];
 
@@ -61,9 +61,9 @@ function SEO({
       {/* Mobile Web App */}
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Nordic Marketing" />
+      <meta name="apple-mobile-web-app-title" content="Nordic Digital" />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="application-name" content="Nordic Marketing" />
+      <meta name="application-name" content="Nordic Digital" />
       <meta name="format-detection" content="telephone=no" />
 
       {/* Open Graph */}
@@ -74,8 +74,8 @@ function SEO({
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${fullTitle} - Nordic Marketing`} />
-      <meta property="og:site_name" content="Nordic Marketing" />
+      <meta property="og:image:alt" content={`${fullTitle} - Nordic Digital`} />
+      <meta property="og:site_name" content="Nordic Digital" />
       {canonical && <meta property="og:url" content={canonical} />}
 
       {/* Twitter */}
