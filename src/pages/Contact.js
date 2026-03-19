@@ -216,12 +216,10 @@ function Contact() {
                     onChange={handleChange}
                   >
                     <option value="">{t('contact.form_service_placeholder')}</option>
-                    <option value="meta-ads">{t('contact.form_service_meta')}</option>
-                    <option value="google-ads">{t('contact.form_service_google')}</option>
-                    <option value="seo">{t('contact.form_service_seo')}</option>
-                    <option value="website">{t('contact.form_service_website')}</option>
-                    <option value="package">{t('contact.form_service_package')}</option>
-                    <option value="other">{t('contact.form_service_other')}</option>
+                    <option value="app">App</option>
+                    <option value="website-seo">Hjemmeside + SEO & GEO</option>
+                    <option value="package">Samlet Pakke</option>
+                    <option value="other">Andet</option>
                   </select>
                 </div>
 

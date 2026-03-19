@@ -74,7 +74,12 @@ function Home() {
               <p className="hero-subtitle">{t('home.hero_subtitle')}</p>
               <div className="hero-buttons">
                 <Link to="/kontakt" className="btn btn-primary">{t('home.cta_consultation')}</Link>
-                <Link to="/hjemmesider" className="btn btn-secondary">{t('home.cta_services')}</Link>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}
+                >
+                  {t('home.cta_services')}
+                </button>
               </div>
             </motion.div>
             <motion.div
@@ -90,7 +95,7 @@ function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="services-overview">
+      <section id="services" className="services-overview">
         <div className="container">
           <motion.div
             className="section-header"
