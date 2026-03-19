@@ -100,6 +100,13 @@ function HjemmesiderService() {
       subtitle: 'Web + SEO + Support',
       description: 'Du får alt samlet ét sted: Professionel hjemmeside, SEO-optimering, hosting, SSL-certifikat og løbende support. Ingen skjulte omkostninger eller bøvl med flere leverandører.',
       icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    },
+    {
+      id: 'webshop',
+      title: 'Webshop',
+      subtitle: 'Sælg online',
+      description: 'Vi bygger professionelle webshops der sælger. Med integration til betalingsløsninger, lagerstyring og automatisk ordrehåndtering får du en komplet e-commerce løsning.',
+      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
     }
   ];
 

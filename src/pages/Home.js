@@ -168,7 +168,7 @@ function Home() {
                 <ul className="service-features-list">
                   <li><span>&#10003;</span> Responsivt design</li>
                   <li><span>&#10003;</span> SEO & GEO optimeret</li>
-                  <li><span>&#10003;</span> Booking systemer</li>
+                  <li><span>&#10003;</span> Webshops & e-commerce</li>
                 </ul>
                 <Link to="/hjemmesider" className="btn btn-primary">{t('showcase.see_all_services')}</Link>
               </div>
