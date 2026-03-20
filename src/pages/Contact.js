@@ -127,7 +127,7 @@ function Contact() {
                   </div>
                   <div>
                     <h4>{t('contact.email')}</h4>
-                    <a href="mailto:nordicdigital.theodor@gmail.com">nordicdigital.theodor@gmail.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nordicdigital.theodor@gmail.com" target="_blank" rel="noopener noreferrer">nordicdigital.theodor@gmail.com</a>
                   </div>
                 </div>
 
