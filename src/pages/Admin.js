@@ -35,7 +35,7 @@ function Admin() {
     autoResponse: false,
     darkMode: false,
     businessName: 'Nordic Digital',
-    businessEmail: 'kontakt@nordic-digital.dk',
+    businessEmail: 'nordicdigital.theodor@gmail.com',
     businessPhone: '',
     businessAddress: 'Frederiksberg, København'
   });
