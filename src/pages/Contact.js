@@ -31,7 +31,7 @@ function Contact() {
     "mainEntity": {
       "@type": "Organization",
       "name": "Nordic Digital",
-      "email": "nordicdigital.theodor@gmail.com",
+      "email": "hauch@nordic-digital.dk",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
@@ -127,7 +127,7 @@ function Contact() {
                   </div>
                   <div>
                     <h4>{t('contact.email')}</h4>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nordicdigital.theodor@gmail.com" target="_blank" rel="noopener noreferrer">nordicdigital.theodor@gmail.com</a>
+                    <a href="mailto:hauch@nordic-digital.dk">hauch@nordic-digital.dk</a>
                   </div>
                 </div>
 
