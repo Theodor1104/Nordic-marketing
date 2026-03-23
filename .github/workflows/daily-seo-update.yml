@@ -38,7 +38,7 @@ name: Daily SEO Freshness Update
         - name: Commit and push changes
           run: |
             git config user.name "SEO Bot"
-            git config user.email "seo-bot@nordic-marketing.dk"
+            git config user.email "seo-bot@nordic-digital.dk"
             git add -A
             git diff --staged --quiet || git commit -m "chore(seo): daily freshness update $(date +%Y-%m-%d)"
             git push

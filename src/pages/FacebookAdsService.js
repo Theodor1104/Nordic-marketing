@@ -7,9 +7,9 @@ import '../styles/ServicePage.css';
 function FacebookAdsService() {
   const { t } = useTranslation();
   const breadcrumbs = [
-    { name: "Forside", url: "https://nordic-marketing.dk/" },
-    { name: "Services", url: "https://nordic-marketing.dk/services" },
-    { name: "Facebook Annoncering", url: "https://nordic-marketing.dk/facebook-annoncering-danmark" }
+    { name: "Forside", url: "https://nordic-digital.dk/" },
+    { name: "Services", url: "https://nordic-digital.dk/services" },
+    { name: "Facebook Annoncering", url: "https://nordic-digital.dk/facebook-annoncering-danmark" }
   ];
 
   const serviceSchema = {
@@ -20,7 +20,7 @@ function FacebookAdsService() {
     "provider": {
       "@type": "MarketingAgency",
       "name": "Nordic Digital",
-      "url": "https://nordic-marketing.dk"
+      "url": "https://nordic-digital.dk"
     },
     "areaServed": { "@type": "Country", "name": "Danmark" },
     "offers": {
@@ -67,7 +67,7 @@ function FacebookAdsService() {
         title="Facebook Annoncering Danmark | Meta Ads Bureau fra 2.500 kr/md"
         description="Danmarks Facebook annoncering bureau for små og mellemstore virksomheder. Facebook Ads, Instagram Ads, retargeting og leadgenerering. Gratis konsultation. No cure, no pay!"
         keywords="Facebook annoncering danmark, Instagram annoncering danmark, Meta Ads bureau, Facebook Ads bureau danmark, social media annoncering, Facebook marketing danmark, Instagram marketing bureau, Facebook retargeting"
-        canonical="https://nordic-marketing.dk/facebook-annoncering-danmark"
+        canonical="https://nordic-digital.dk/facebook-annoncering-danmark"
         schema={[serviceSchema, faqSchema]}
         breadcrumbs={breadcrumbs}
       />

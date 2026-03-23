@@ -6,7 +6,7 @@ function SEO({
   keywords,
   canonical,
   type = 'website',
-  image = 'https://nordic-marketing.dk/og-image.jpg',
+  image = 'https://nordic-digital.dk/og-image.jpg',
   schema = null,
   breadcrumbs = null,
   noindex = false,

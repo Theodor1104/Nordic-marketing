@@ -7,8 +7,8 @@ import '../styles/About.css';
 function About() {
   const { t } = useTranslation();
   const breadcrumbs = [
-    { name: "Forside", url: "https://nordic-marketing.dk/" },
-    { name: "Om Os", url: "https://nordic-marketing.dk/om-os" }
+    { name: "Forside", url: "https://nordic-digital.dk/" },
+    { name: "Om Os", url: "https://nordic-digital.dk/om-os" }
   ];
 
   // AboutPage Schema
@@ -83,7 +83,7 @@ function About() {
         title="Om Os - Danmarks Marketing Bureau | SEO & Google Ads Eksperter"
         description="Lær Nordic Digital at kende - Danmarks marketing bureau for små virksomheder. Vi specialiserer i SEO, Google Ads, Facebook annoncering & webdesign. No cure, no pay garanti. Gratis konsultation."
         keywords="om Nordic Digital, marketing bureau danmark, dansk marketing bureau, digital marketing team danmark, SEO eksperter danmark, Google Ads eksperter, Facebook annoncering bureau, marketing bureau København, bedste marketing bureau danmark"
-        canonical="https://nordic-marketing.dk/om-os"
+        canonical="https://nordic-digital.dk/om-os"
         schema={[aboutSchema, faqSchema]}
         breadcrumbs={breadcrumbs}
       />

@@ -7,9 +7,9 @@ import '../styles/ServicePage.css';
 function GoogleAdsService() {
   const { t } = useTranslation();
   const breadcrumbs = [
-    { name: "Forside", url: "https://nordic-marketing.dk/" },
-    { name: "Services", url: "https://nordic-marketing.dk/services" },
-    { name: "Google Ads Bureau", url: "https://nordic-marketing.dk/google-ads-bureau-danmark" }
+    { name: "Forside", url: "https://nordic-digital.dk/" },
+    { name: "Services", url: "https://nordic-digital.dk/services" },
+    { name: "Google Ads Bureau", url: "https://nordic-digital.dk/google-ads-bureau-danmark" }
   ];
 
   const serviceSchema = {
@@ -20,7 +20,7 @@ function GoogleAdsService() {
     "provider": {
       "@type": "MarketingAgency",
       "name": "Nordic Digital",
-      "url": "https://nordic-marketing.dk"
+      "url": "https://nordic-digital.dk"
     },
     "areaServed": { "@type": "Country", "name": "Danmark" },
     "offers": {
@@ -73,7 +73,7 @@ function GoogleAdsService() {
         title="Google Ads Bureau Danmark | Professionel Google Annoncering fra 2.500 kr/md"
         description="Danmarks Google Ads bureau for små og mellemstore virksomheder. Professionel søgeannoncering, Shopping Ads og Display kampagner. Gratis Google Ads audit. No cure, no pay!"
         keywords="Google Ads bureau danmark, Google annoncering danmark, PPC bureau danmark, Google Ads management, søgeannoncering danmark, Google Ads eksperter, SEM bureau, Google Shopping ads, betalt søgning danmark"
-        canonical="https://nordic-marketing.dk/google-ads-bureau-danmark"
+        canonical="https://nordic-digital.dk/google-ads-bureau-danmark"
         schema={[serviceSchema, faqSchema]}
         breadcrumbs={breadcrumbs}
       />

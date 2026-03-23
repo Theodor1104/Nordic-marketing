@@ -18,8 +18,8 @@ function Contact() {
   const { t } = useTranslation();
 
   const breadcrumbs = [
-    { name: "Forside", url: "https://nordic-marketing.dk/" },
-    { name: "Kontakt", url: "https://nordic-marketing.dk/kontakt" }
+    { name: "Forside", url: "https://nordic-digital.dk/" },
+    { name: "Kontakt", url: "https://nordic-digital.dk/kontakt" }
   ];
 
   // ContactPage Schema
@@ -94,7 +94,7 @@ function Contact() {
         title="Kontakt Danmarks Marketing Bureau | Gratis Konsultation"
         description="Kontakt Nordic Digital - Danmarks marketing bureau for små virksomheder. Gratis konsultation om SEO, Google Ads, Facebook annoncering & webdesign. Svar inden 24 timer. No cure, no pay!"
         keywords="kontakt marketing bureau danmark, gratis marketing konsultation danmark, digital marketing hjælp danmark, marketing tilbud danmark, kontakt Nordic Digital, book møde marketing bureau, SEO konsultation gratis, Google Ads konsultation"
-        canonical="https://nordic-marketing.dk/kontakt"
+        canonical="https://nordic-digital.dk/kontakt"
         schema={contactSchema}
         breadcrumbs={breadcrumbs}
       />

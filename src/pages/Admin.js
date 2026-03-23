@@ -532,7 +532,7 @@ function Admin() {
                       const url = URL.createObjectURL(blob);
                       const a = document.createElement('a');
                       a.href = url;
-                      a.download = `nordic-marketing-export-${new Date().toISOString().split('T')[0]}.json`;
+                      a.download = `nordic-digital-export-${new Date().toISOString().split('T')[0]}.json`;
                       a.click();
                       showNotification('Data eksporteret');
                     }}>
@@ -1480,7 +1480,7 @@ function Admin() {
                       const url = URL.createObjectURL(blob);
                       const a = document.createElement('a');
                       a.href = url;
-                      a.download = `nordic-marketing-export-${new Date().toISOString().split('T')[0]}.json`;
+                      a.download = `nordic-digital-export-${new Date().toISOString().split('T')[0]}.json`;
                       a.click();
                       addActivity('export', 'Data eksporteret');
                       showNotification('Data eksporteret');

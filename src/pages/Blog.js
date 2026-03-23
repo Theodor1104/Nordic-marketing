@@ -7,8 +7,8 @@ import '../styles/Blog.css';
 function Blog() {
   const { t } = useTranslation();
   const breadcrumbs = [
-    { name: "Forside", url: "https://nordic-marketing.dk/" },
-    { name: "Blog", url: "https://nordic-marketing.dk/blog" }
+    { name: "Forside", url: "https://nordic-digital.dk/" },
+    { name: "Blog", url: "https://nordic-digital.dk/blog" }
   ];
 
   const blogSchema = {
@@ -16,11 +16,11 @@ function Blog() {
     "@type": "Blog",
     "name": "Nordic Digital Blog",
     "description": "Guides, tips og nyheder om digital marketing, SEO, Google Ads og sociale medier i Danmark",
-    "url": "https://nordic-marketing.dk/blog",
+    "url": "https://nordic-digital.dk/blog",
     "publisher": {
       "@type": "Organization",
       "name": "Nordic Digital",
-      "url": "https://nordic-marketing.dk"
+      "url": "https://nordic-digital.dk"
     }
   };
 
@@ -57,7 +57,7 @@ function Blog() {
         title="Marketing Blog Danmark | SEO Tips, Google Ads Guides & Mere"
         description="Læs de nyeste guides og tips om digital marketing i Danmark. SEO strategier, Google Ads optimering, Facebook annoncering og meget mere. Gratis viden fra eksperterne."
         keywords="marketing blog danmark, SEO tips danmark, Google Ads guide, Facebook annoncering tips, digital marketing guides, søgemaskineoptimering tips, online marketing blog"
-        canonical="https://nordic-marketing.dk/blog"
+        canonical="https://nordic-digital.dk/blog"
         schema={blogSchema}
         breadcrumbs={breadcrumbs}
       />

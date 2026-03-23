@@ -370,9 +370,9 @@ function BlogPost() {
   }
 
   const breadcrumbs = [
-    { name: "Forside", url: "https://nordic-marketing.dk/" },
-    { name: "Blog", url: "https://nordic-marketing.dk/blog" },
-    { name: post.title.substring(0, 30) + "...", url: `https://nordic-marketing.dk/blog/${slug}` }
+    { name: "Forside", url: "https://nordic-digital.dk/" },
+    { name: "Blog", url: "https://nordic-digital.dk/blog" },
+    { name: post.title.substring(0, 30) + "...", url: `https://nordic-digital.dk/blog/${slug}` }
   ];
 
   const articleSchema = {
@@ -385,20 +385,20 @@ function BlogPost() {
     "author": {
       "@type": "Organization",
       "name": "Nordic Digital",
-      "url": "https://nordic-marketing.dk"
+      "url": "https://nordic-digital.dk"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Nordic Digital",
-      "url": "https://nordic-marketing.dk",
+      "url": "https://nordic-digital.dk",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://nordic-marketing.dk/logo.png"
+        "url": "https://nordic-digital.dk/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://nordic-marketing.dk/blog/${slug}`
+      "@id": `https://nordic-digital.dk/blog/${slug}`
     }
   };
 
@@ -408,7 +408,7 @@ function BlogPost() {
         title={post.title}
         description={post.description}
         keywords={post.keywords}
-        canonical={`https://nordic-marketing.dk/blog/${slug}`}
+        canonical={`https://nordic-digital.dk/blog/${slug}`}
         type="article"
         schema={articleSchema}
         breadcrumbs={breadcrumbs}
