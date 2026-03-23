@@ -54,7 +54,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} {t('footer.copyright')}</p>
+        <p>&copy; {currentYear} {t('footer.copyright')} | CVR: 46344871</p>
         <Link to="/admin" className="admin-link">Admin</Link>
       </div>
     </footer>
