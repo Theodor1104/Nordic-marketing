@@ -20,29 +20,6 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const homeFaqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Hvad tilbyder Nordic Digital?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nordic Digital tilbyder professionel app udvikling til iOS og Android, moderne webdesign og SEO/GEO optimering. Vi bruger teknologier som React Native, Flutter og moderne web frameworks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Laver I apps til både iOS og Android?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, vi udvikler apps til både iOS og Android med cross-platform teknologier som React Native og Flutter."
-        }
-      }
-    ]
-  };
-
   return (
     <div className="home">
       <SEO
@@ -50,7 +27,6 @@ function Home() {
         description="Nordic Digital er Danmarks app og web bureau. Vi udvikler professionelle iOS & Android apps, moderne hjemmesider og SEO/GEO optimering. Gratis konsultation!"
         keywords="app udvikling danmark, webdesign danmark, iOS app, Android app, React Native, Flutter, SEO, GEO"
         canonical="https://nordic-digital.dk/"
-        schema={homeFaqSchema}
       />
 
       {/* Hero Section */}
