@@ -5,6 +5,240 @@ import '../styles/Blog.css';
 
 // Blog post data
 const blogPosts = {
+  "app-udvikling-pris-danmark": {
+    title: "Hvad koster app udvikling i Danmark? Komplet prisguide 2026",
+    description: "Få overblik over priser på app udvikling i Danmark. Fra simpel MVP til enterprise app - se hvad det koster at udvikle en iOS eller Android app i 2026.",
+    keywords: "app udvikling pris, hvad koster en app, app udvikling danmark, iOS app pris, Android app udvikling pris, MVP app pris, app bureau priser, mobil app udvikling omkostninger",
+    date: "24. marts 2026",
+    category: "App Udvikling",
+    readTime: "8 min",
+    content: `
+      <h2>Hvad koster det at udvikle en app i Danmark?</h2>
+      <p>Et af de mest stillede spørgsmål vi får hos Nordic Digital er: "Hvad koster det at få udviklet en app?" Svaret afhænger af flere faktorer, men denne guide giver dig et realistisk overblik over priser på app udvikling i Danmark i 2026.</p>
+
+      <h2>Prisoverslag for app udvikling</h2>
+      <p>Her er de typiske prisintervaller for forskellige typer apps i Danmark:</p>
+
+      <h3>Simpel MVP app: 25.000 - 75.000 kr</h3>
+      <p>En MVP (Minimum Viable Product) er den simpleste version af din app med kernefunktionaliteten:</p>
+      <ul>
+        <li>3-5 skærme/funktioner</li>
+        <li>Simpelt brugerlogin</li>
+        <li>Grundlæggende backend</li>
+        <li>Én platform (iOS eller Android)</li>
+        <li>Udviklingstid: 4-8 uger</li>
+      </ul>
+
+      <h3>Standard business app: 75.000 - 200.000 kr</h3>
+      <p>En fuld app med alle nødvendige funktioner:</p>
+      <ul>
+        <li>10-20 skærme/funktioner</li>
+        <li>Brugerregistrering og profiler</li>
+        <li>Push notifikationer</li>
+        <li>Integration med backend/API</li>
+        <li>Både iOS og Android</li>
+        <li>Udviklingstid: 3-6 måneder</li>
+      </ul>
+
+      <h3>Kompleks enterprise app: 200.000 - 500.000+ kr</h3>
+      <p>Avancerede apps med kompleks funktionalitet:</p>
+      <ul>
+        <li>Real-time funktioner</li>
+        <li>Kompleks backend-integration</li>
+        <li>Betalingsintegration</li>
+        <li>Admin-panel</li>
+        <li>Skalerbar arkitektur</li>
+        <li>Udviklingstid: 6-12 måneder</li>
+      </ul>
+
+      <div class="tip-box">
+        <h4>Spar penge med cross-platform udvikling</h4>
+        <p>Med React Native eller Flutter kan du få apps til både iOS og Android fra én kodebase - det sparer typisk 30-40% sammenlignet med native udvikling til begge platforme.</p>
+      </div>
+
+      <h2>Faktorer der påvirker prisen</h2>
+
+      <h3>1. Kompleksitet og features</h3>
+      <p>Jo flere funktioner, jo højere pris. Prioriter de vigtigste features til version 1.0 og tilføj resten senere.</p>
+
+      <h3>2. Design</h3>
+      <p>Custom design koster mere end standardløsninger, men giver en unik brugeroplevelse.</p>
+
+      <h3>3. Backend krav</h3>
+      <p>Kræver din app en kompleks backend med database, API'er og brugeradministration? Det øger prisen.</p>
+
+      <h3>4. Integrationer</h3>
+      <p>Integration med betalingsløsninger, sociale medier, eller tredjepartssystemer tager ekstra tid.</p>
+
+      <h3>5. Platform</h3>
+      <p>Udvikling til både iOS og Android koster mere end én platform - men cross-platform reducerer forskellen.</p>
+
+      <h2>Løbende omkostninger efter lancering</h2>
+      <p>Husk at budgettere for:</p>
+      <ul>
+        <li><strong>App Store gebyrer:</strong> Apple Developer Program: 99 USD/år, Google Play: 25 USD engangspris</li>
+        <li><strong>Hosting/Backend:</strong> 200-2.000 kr/md afhængig af trafik</li>
+        <li><strong>Vedligeholdelse:</strong> 2.000-10.000 kr/md for opdateringer og fejlrettelser</li>
+        <li><strong>Marketing:</strong> Budget til at få brugere til at downloade din app</li>
+      </ul>
+
+      <h2>Sådan vælger du det rigtige app bureau</h2>
+      <p>Når du skal vælge et app bureau i Danmark, overvej:</p>
+      <ul>
+        <li><strong>Portfolio:</strong> Har de erfaring med lignende apps?</li>
+        <li><strong>Teknologi:</strong> Bruger de moderne frameworks som React Native eller Flutter?</li>
+        <li><strong>Kommunikation:</strong> Er de nemme at komme i kontakt med?</li>
+        <li><strong>Pris vs. kvalitet:</strong> Det billigste er sjældent det bedste</li>
+        <li><strong>Support:</strong> Hvad sker der efter lancering?</li>
+      </ul>
+
+      <h2>Hvorfor vælge Nordic Digital til app udvikling?</h2>
+      <p>Hos Nordic Digital tilbyder vi:</p>
+      <ul>
+        <li>Professionel app udvikling fra 25.000 kr</li>
+        <li>Cross-platform udvikling med React Native og Flutter</li>
+        <li>Dansk team med direkte kommunikation</li>
+        <li>Support og vedligeholdelse efter lancering</li>
+        <li>Gratis konsultation og prisoverslag</li>
+      </ul>
+
+      <div class="tip-box">
+        <h4>Få et gratis prisoverslag</h4>
+        <p>Kontakt os for en uforpligtende snak om dit app-projekt. Vi giver dig et ærligt prisoverslag baseret på dine specifikke behov.</p>
+      </div>
+    `
+  },
+  "hjemmeside-udvikling-guide": {
+    title: "Guide til hjemmeside udvikling i Danmark: Alt du skal vide i 2026",
+    description: "Komplet guide til hjemmeside udvikling i Danmark. Lær om priser, teknologier, SEO og hvordan du vælger det rigtige webbureau til din virksomhed.",
+    keywords: "hjemmeside udvikling, hjemmeside udvikling danmark, hjemmeside pris, webbureau danmark, professionel hjemmeside, hjemmeside til virksomhed, web udvikling, hjemmeside guide",
+    date: "24. marts 2026",
+    category: "Hjemmesider",
+    readTime: "10 min",
+    content: `
+      <h2>Hvad er hjemmeside udvikling?</h2>
+      <p>Hjemmeside udvikling dækker hele processen fra idé til færdig hjemmeside - design, programmering, indhold og lancering. I 2026 er en professionel hjemmeside afgørende for enhver virksomhed der vil tages seriøst online.</p>
+
+      <h2>Hvad koster hjemmeside udvikling i Danmark?</h2>
+      <p>Priserne for hjemmeside udvikling varierer meget. Her er et overblik:</p>
+
+      <h3>Landingsside: 5.000 - 15.000 kr</h3>
+      <ul>
+        <li>1 side med fokus på konvertering</li>
+        <li>Responsivt design</li>
+        <li>Kontaktformular</li>
+        <li>SEO grundopsætning</li>
+      </ul>
+
+      <h3>Virksomhedshjemmeside: 10.000 - 35.000 kr</h3>
+      <ul>
+        <li>5-10 sider</li>
+        <li>Custom design</li>
+        <li>SEO optimering</li>
+        <li>Blog/nyheder</li>
+        <li>Integration med sociale medier</li>
+      </ul>
+
+      <h3>Webshop: 25.000 - 75.000+ kr</h3>
+      <ul>
+        <li>Produktkatalog</li>
+        <li>Betalingsløsning</li>
+        <li>Lagerstyring</li>
+        <li>Fragt integration</li>
+        <li>Kundekonti</li>
+      </ul>
+
+      <h2>Moderne teknologier til hjemmeside udvikling</h2>
+
+      <h3>React og Next.js</h3>
+      <p>React er det mest populære JavaScript framework. Next.js bygger ovenpå React og giver bedre SEO og hurtigere loadtider. Det er hvad vi bruger hos Nordic Digital.</p>
+
+      <h3>WordPress</h3>
+      <p>WordPress driver over 40% af alle hjemmesider. Det er godt til blogs og simple sider, men kan blive langsomt og usikkert uden ordentlig vedligeholdelse.</p>
+
+      <h3>Webflow og Squarespace</h3>
+      <p>Drag-and-drop platforme der er gode til simple sider, men begrænsede i funktionalitet.</p>
+
+      <div class="tip-box">
+        <h4>Vores anbefaling</h4>
+        <p>For de fleste virksomheder anbefaler vi React/Next.js. Det giver den bedste kombination af hastighed, SEO og fleksibilitet.</p>
+      </div>
+
+      <h2>Hvad skal en god hjemmeside indeholde?</h2>
+
+      <h3>1. Responsivt design</h3>
+      <p>Din hjemmeside skal fungere perfekt på alle enheder - mobil, tablet og desktop. Over 60% af al webtrafik kommer fra mobile enheder.</p>
+
+      <h3>2. Hurtig loadtid</h3>
+      <p>En hjemmeside bør loade på under 3 sekunder. Langsom loadtid øger bounce rate og skader SEO.</p>
+
+      <h3>3. SEO optimering</h3>
+      <p>Uden SEO finder kunderne dig ikke på Google. Det inkluderer:</p>
+      <ul>
+        <li>Korrekte meta tags og titler</li>
+        <li>Strukturerede data</li>
+        <li>Optimerede billeder</li>
+        <li>Hurtig loadtid</li>
+        <li>Mobilvenligt design</li>
+      </ul>
+
+      <h3>4. Klare call-to-actions</h3>
+      <p>Gør det tydeligt hvad du vil have besøgende til at gøre - kontakte dig, købe et produkt, eller tilmelde sig dit nyhedsbrev.</p>
+
+      <h3>5. Tillidsopbyggende elementer</h3>
+      <p>Vis at din virksomhed er troværdig med:</p>
+      <ul>
+        <li>Kundeudtalelser og anmeldelser</li>
+        <li>Logoer fra samarbejdspartnere</li>
+        <li>Cases og portfolio</li>
+        <li>Kontaktoplysninger og CVR-nummer</li>
+      </ul>
+
+      <h2>Processen for hjemmeside udvikling</h2>
+
+      <h3>1. Planlægning og strategi</h3>
+      <p>Vi starter med at forstå din virksomhed, målgruppe og mål. Hvad skal hjemmesiden opnå?</p>
+
+      <h3>2. Design</h3>
+      <p>Vi laver wireframes og mockups så du kan se hvordan hjemmesiden kommer til at se ud før vi begynder at bygge.</p>
+
+      <h3>3. Udvikling</h3>
+      <p>Vi bygger hjemmesiden med moderne teknologi og sørger for at den er hurtig og SEO-venlig.</p>
+
+      <h3>4. Test og lancering</h3>
+      <p>Vi tester på alle enheder og browsere før vi lancerer. Du får en gennemgang af hvordan du opdaterer indhold.</p>
+
+      <h3>5. Vedligeholdelse</h3>
+      <p>Efter lancering holder vi din hjemmeside opdateret, sikker og hurtig.</p>
+
+      <h2>Sådan vælger du det rigtige webbureau</h2>
+      <p>Når du skal vælge et webbureau til hjemmeside udvikling, kig efter:</p>
+      <ul>
+        <li><strong>Portfolio:</strong> Kan du lide deres tidligere arbejde?</li>
+        <li><strong>Teknologi:</strong> Bruger de moderne og hurtige teknologier?</li>
+        <li><strong>SEO fokus:</strong> Er SEO en del af deres standardpakke?</li>
+        <li><strong>Kommunikation:</strong> Er de nemme at kommunikere med?</li>
+        <li><strong>Support:</strong> Hvad sker der efter lancering?</li>
+        <li><strong>Priser:</strong> Er priserne gennemsigtige?</li>
+      </ul>
+
+      <h2>Hjemmeside udvikling hos Nordic Digital</h2>
+      <p>Vi tilbyder professionel hjemmeside udvikling til danske virksomheder:</p>
+      <ul>
+        <li>Moderne design med React/Next.js</li>
+        <li>SEO og GEO optimering inkluderet</li>
+        <li>Hurtige loadtider</li>
+        <li>Responsivt design til alle enheder</li>
+        <li>Priser fra 5.000 kr</li>
+        <li>Dansk team med personlig service</li>
+      </ul>
+
+      <div class="tip-box">
+        <h4>Gratis konsultation</h4>
+        <p>Kontakt os for en uforpligtende snak om din nye hjemmeside. Vi giver dig et ærligt prisoverslag og rådgivning.</p>
+      </div>
+    `
+  },
   "seo-guide-danmark-2026": {
     title: "SEO Guide Danmark 2026: Komplet Guide til Søgemaskineoptimering",
     description: "Lær alt om SEO i Danmark. Fra keyword research til teknisk optimering - denne guide dækker alt hvad du behøver at vide for at ranke højere på Google i 2026.",

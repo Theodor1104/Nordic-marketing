@@ -26,6 +26,22 @@ function Blog() {
 
   const articles = [
     {
+      slug: "app-udvikling-pris-danmark",
+      title: "Hvad koster app udvikling i Danmark? Komplet prisguide 2026",
+      excerpt: "Få overblik over priser på app udvikling i Danmark. Fra simpel MVP til enterprise app - se hvad det koster at udvikle en iOS eller Android app.",
+      date: "24. marts 2026",
+      category: "App Udvikling",
+      readTime: "8 min"
+    },
+    {
+      slug: "hjemmeside-udvikling-guide",
+      title: "Guide til hjemmeside udvikling i Danmark: Alt du skal vide i 2026",
+      excerpt: "Komplet guide til hjemmeside udvikling i Danmark. Lær om priser, teknologier, SEO og hvordan du vælger det rigtige webbureau.",
+      date: "24. marts 2026",
+      category: "Hjemmesider",
+      readTime: "10 min"
+    },
+    {
       slug: "seo-guide-danmark-2026",
       title: "SEO Guide Danmark 2026: Komplet Guide til Søgemaskineoptimering",
       excerpt: "Lær alt om SEO i Danmark. Fra keyword research til teknisk optimering - denne guide dækker alt hvad du behøver at vide for at ranke højere på Google.",
