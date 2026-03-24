@@ -23,9 +23,9 @@ function Home() {
   return (
     <div className="home">
       <SEO
-        title="App Udvikling & Webdesign Bureau Danmark | Nordic Digital"
-        description="Nordic Digital er Danmarks app og web bureau. Vi udvikler professionelle iOS & Android apps, moderne hjemmesider og SEO/GEO optimering. Gratis konsultation!"
-        keywords="app udvikling danmark, webdesign danmark, iOS app, Android app, React Native, Flutter, SEO, GEO"
+        title="App Udvikling & Hjemmeside Udvikling Danmark | Nordic Digital"
+        description="Professionel app udvikling og hjemmeside udvikling til danske virksomheder. iOS & Android apps fra 25.000 kr. Moderne hjemmesider fra 5.000 kr. ✓ Gratis konsultation"
+        keywords="app udvikling, app udvikling danmark, hjemmeside udvikling, hjemmeside udvikling danmark, app udvikler, webbureau danmark, iOS app, Android app, React Native, Flutter, professionel hjemmeside, webdesign"
         canonical="https://nordic-digital.dk/"
       />
 

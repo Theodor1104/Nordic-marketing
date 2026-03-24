@@ -122,14 +122,20 @@ function HjemmesiderService() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Professionelle Hjemmesider med SEO",
-    "description": "Professionelt webdesign og hjemmesider for danske virksomheder. Moderne, hurtige og SEO-optimerede hjemmesider med GEO optimering.",
+    "name": "Hjemmeside Udvikling Danmark - Professionelt Webdesign",
+    "description": "Professionel hjemmeside udvikling til danske virksomheder. Vi er et dansk webbureau der laver moderne, SEO-optimerede hjemmesider med GEO optimering.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Nordic Digital",
-      "url": "https://nordic-digital.dk"
+      "url": "https://nordic-digital.dk",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DK",
+        "addressLocality": "København"
+      }
     },
-    "areaServed": { "@type": "Country", "name": "Danmark" }
+    "areaServed": { "@type": "Country", "name": "Danmark" },
+    "serviceType": ["Hjemmeside Udvikling", "Webdesign", "SEO Optimering", "Webshop Udvikling", "Responsivt Webdesign"]
   };
 
   const faqSchema = {
@@ -197,9 +203,9 @@ function HjemmesiderService() {
   return (
     <div className="hjemmesider-page">
       <SEO
-        title="Professionelle Hjemmesider med SEO | Nordic Digital"
-        description="Moderne, hurtige og SEO-optimerede hjemmesider for danske virksomheder. Responsivt design, GEO optimering og professionelt webdesign."
-        keywords="hjemmeside, webdesign, SEO, GEO, professionel hjemmeside, responsivt design, webbureau danmark"
+        title="Hjemmeside Udvikling Danmark | Webbureau København | Nordic Digital"
+        description="Professionel hjemmeside udvikling fra 5.000 kr. Vi laver moderne, SEO-optimerede hjemmesider til danske virksomheder. Gratis konsultation. ✓ Dansk team ✓ Fair priser"
+        keywords="hjemmeside udvikling, hjemmeside udvikling danmark, webdesign danmark, webbureau københavn, professionel hjemmeside, hjemmeside firma, web udvikling, SEO hjemmeside, responsivt webdesign, hjemmeside til virksomhed"
         canonical="https://nordic-digital.dk/hjemmesider"
         schema={[serviceSchema, faqSchema]}
         breadcrumbs={breadcrumbs}

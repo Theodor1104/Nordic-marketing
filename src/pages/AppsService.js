@@ -17,14 +17,20 @@ function AppsService() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "App Udvikling Danmark",
-    "description": "Professionel app udvikling for danske virksomheder. iOS, Android og cross-platform apps med React Native og Flutter.",
+    "name": "App Udvikling Danmark - iOS & Android Apps",
+    "description": "Professionel app udvikling til iOS og Android. Vi er et dansk app bureau der udvikler cross-platform apps med React Native og Flutter til virksomheder i hele Danmark.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Nordic Digital",
-      "url": "https://nordic-digital.dk"
+      "url": "https://nordic-digital.dk",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DK",
+        "addressLocality": "København"
+      }
     },
-    "areaServed": { "@type": "Country", "name": "Danmark" }
+    "areaServed": { "@type": "Country", "name": "Danmark" },
+    "serviceType": ["App Udvikling", "iOS App Udvikling", "Android App Udvikling", "React Native Udvikling", "Flutter App Udvikling"]
   };
 
   const appShowcase = [
@@ -86,9 +92,9 @@ function AppsService() {
   return (
     <div className="apps-page">
       <SEO
-        title="App Udvikling Danmark | iOS & Android Apps | Nordic Digital"
-        description="Professionel app udvikling for danske virksomheder. iOS, Android og cross-platform apps med React Native og Flutter."
-        keywords="app udvikling, iOS app, Android app, React Native, Flutter, mobil app, app bureau danmark"
+        title="App Udvikling Danmark | App Bureau København | Nordic Digital"
+        description="App udvikling til iOS & Android fra 25.000 kr. Vi udvikler professionelle apps med React Native og Flutter. Gratis konsultation. ✓ Dansk team ✓ Fair priser"
+        keywords="app udvikling, app udvikling danmark, app udvikler, iOS app udvikling, Android app udvikling, React Native udvikling, Flutter app, app bureau københavn, mobil app udvikling, app firma danmark"
         canonical="https://nordic-digital.dk/apps"
         schema={[serviceSchema]}
         breadcrumbs={breadcrumbs}
@@ -116,12 +122,12 @@ function AppsService() {
                 App Udvikling
               </span>
               <h1>
-                Vi bygger apps<br />
-                <span className="gradient-text-animated">der skaber værdi</span>
+                App udvikling i Danmark<br />
+                <span className="gradient-text-animated">iOS & Android apps</span>
               </h1>
               <p className="hero-desc-new">
-                Fra idé til App Store. Vi udvikler native og cross-platform apps
-                der engagerer brugere og driver forretningsvækst.
+                Professionel app udvikling til iOS og Android. Vi er et dansk app bureau
+                der bygger cross-platform apps med React Native og Flutter - fra idé til App Store.
               </p>
               <div className="hero-cta-group">
                 <Link to="/kontakt" className="btn-primary-new">
