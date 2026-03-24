@@ -29,53 +29,6 @@ function About() {
     }
   };
 
-  // FAQ Schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Hvad er GEO (Generative Engine Optimization)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GEO er optimering af din online tilstedeværelse til AI-baserede søgesystemer som ChatGPT, Perplexity og Google AI Overview. Det sikrer at din virksomhed bliver anbefalet når brugere stiller spørgsmål til AI-assistenter."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvad koster det at arbejde med Nordic Digital?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vores priser starter fra 2.500 kr/md for løbende services. Vi tilbyder No cure, no pay på udvalgte ydelser, så du kun betaler for resultater. Kontakt os for et uforpligtende tilbud."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvad er forskellen mellem SEO og GEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SEO fokuserer på synlighed i traditionelle søgemaskiner som Google Search. GEO fokuserer på synlighed i AI-baserede søgeværktøjer. Begge er vigtige for moderne digital synlighed."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvor lang tid tager det at se resultater?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For betalte annoncer (Google Ads, Meta Ads) ses resultater ofte inden for de første uger. SEO og GEO tager typisk 3-6 måneder for signifikante forbedringer i organisk synlighed."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Tilbyder I gratis konsultation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, vi tilbyder altid en gratis og uforpligtende konsultation hvor vi gennemgår din nuværende situation og præsenterer vores anbefalinger."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="about-page">
@@ -84,7 +37,7 @@ function About() {
         description="Lær Nordic Digital at kende - Danmarks marketing bureau for små virksomheder. Vi specialiserer i SEO, Google Ads, Facebook annoncering & webdesign. No cure, no pay garanti. Gratis konsultation."
         keywords="om Nordic Digital, marketing bureau danmark, dansk marketing bureau, digital marketing team danmark, SEO eksperter danmark, Google Ads eksperter, Facebook annoncering bureau, marketing bureau København, bedste marketing bureau danmark"
         canonical="https://nordic-digital.dk/om-os"
-        schema={[aboutSchema, faqSchema]}
+        schema={[aboutSchema]}
         breadcrumbs={breadcrumbs}
       />
       {/* Hero Section */}

@@ -138,28 +138,6 @@ function HjemmesiderService() {
     "serviceType": ["Hjemmeside Udvikling", "Webdesign", "SEO Optimering", "Webshop Udvikling", "Responsivt Webdesign"]
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Er jeres hjemmesider SEO-optimerede?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, alle vores hjemmesider er SEO og GEO-optimerede fra start. Det inkluderer teknisk SEO, hurtig loadtid, mobilvenligt design og korrekt struktur."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvad er GEO optimering?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GEO (Generative Engine Optimization) optimerer dit indhold til AI-søgemaskiner som ChatGPT, Perplexity og Google AI Overview."
-        }
-      }
-    ]
-  };
 
   const features = [
     {
@@ -207,7 +185,7 @@ function HjemmesiderService() {
         description="Professionel hjemmeside udvikling fra 5.000 kr. Vi laver moderne, SEO-optimerede hjemmesider til danske virksomheder. Gratis konsultation. ✓ Dansk team ✓ Fair priser"
         keywords="hjemmeside udvikling, hjemmeside udvikling danmark, webdesign danmark, webbureau københavn, professionel hjemmeside, hjemmeside firma, web udvikling, SEO hjemmeside, responsivt webdesign, hjemmeside til virksomhed"
         canonical="https://nordic-digital.dk/hjemmesider"
-        schema={[serviceSchema, faqSchema]}
+        schema={[serviceSchema]}
         breadcrumbs={breadcrumbs}
       />
 

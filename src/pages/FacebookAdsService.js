@@ -30,36 +30,6 @@ function FacebookAdsService() {
     }
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Hvad koster Facebook annoncering i Danmark?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Facebook annoncering management hos Nordic Digital starter fra 2.500 DKK per måned. Dette inkluderer kampagneopsætning, målgruppeanalyse, A/B testing og løbende optimering. Annoncebudgettet kommer oveni."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Er Facebook annoncering stadig effektivt i 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, Facebook og Instagram er stadig blandt de mest effektive annonceplatforme med over 3,5 millioner danske brugere. Metas avancerede målretning gør det muligt at nå præcis din målgruppe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvad er forskellen på Facebook Ads og Instagram Ads?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Facebook og Instagram Ads administreres begge gennem Meta Business Suite. Annoncerne kan vises på begge platforme med samme kampagne. Instagram er typisk bedre for yngre målgrupper og visuelt indhold."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="service-page">
@@ -68,7 +38,7 @@ function FacebookAdsService() {
         description="Danmarks Facebook annoncering bureau for små og mellemstore virksomheder. Facebook Ads, Instagram Ads, retargeting og leadgenerering. Gratis konsultation. No cure, no pay!"
         keywords="Facebook annoncering danmark, Instagram annoncering danmark, Meta Ads bureau, Facebook Ads bureau danmark, social media annoncering, Facebook marketing danmark, Instagram marketing bureau, Facebook retargeting"
         canonical="https://nordic-digital.dk/facebook-annoncering-danmark"
-        schema={[serviceSchema, faqSchema]}
+        schema={[serviceSchema]}
         breadcrumbs={breadcrumbs}
       />
 

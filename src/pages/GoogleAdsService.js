@@ -36,36 +36,6 @@ function GoogleAdsService() {
     }
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Hvad koster Google Ads management i Danmark?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Ads management hos Nordic Digital starter fra 2.500 DKK per måned. Dette inkluderer opsætning, optimering og rapportering. Annoncebudgettet kommer oveni og aftales individuelt."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvor hurtigt ser man resultater med Google Ads?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Ads giver øjeblikkelige resultater. Du kan se trafik og konverteringer fra dag 1. Optimal performance opnås typisk efter 2-4 ugers optimering, når der er nok data til at justere bud og målretning."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hvad er en god ROI på Google Ads?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "En god ROAS (Return On Ad Spend) afhænger af din branche og marginer. Generelt sigter vi efter minimum 3:1 ROAS, hvilket betyder 3 kr i omsætning for hver 1 kr brugt på annoncer."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="service-page">
@@ -74,7 +44,7 @@ function GoogleAdsService() {
         description="Danmarks Google Ads bureau for små og mellemstore virksomheder. Professionel søgeannoncering, Shopping Ads og Display kampagner. Gratis Google Ads audit. No cure, no pay!"
         keywords="Google Ads bureau danmark, Google annoncering danmark, PPC bureau danmark, Google Ads management, søgeannoncering danmark, Google Ads eksperter, SEM bureau, Google Shopping ads, betalt søgning danmark"
         canonical="https://nordic-digital.dk/google-ads-bureau-danmark"
-        schema={[serviceSchema, faqSchema]}
+        schema={[serviceSchema]}
         breadcrumbs={breadcrumbs}
       />
 
