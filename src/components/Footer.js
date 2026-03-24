@@ -44,7 +44,7 @@ function Footer() {
           <h4>{t('footer.contact')}</h4>
           <ul className="footer-links">
             <li>
-              <a href="mailto:hauch@nordic-digital.dk">hauch@nordic-digital.dk</a>
+              <a href="mailto:info@nordic-digital.dk">info@nordic-digital.dk</a>
             </li>
             <li>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
