@@ -7,26 +7,114 @@ import '../styles/Cases.css';
 function Cases() {
   const cases = [
     {
-      id: 'the-office',
-      title: 'The Office',
-      subtitle: 'Hjemmeside & Booking System til Kontorhotel',
-      description: 'En komplet hjemmeside med integreret booking-system til et moderne kontorhotel i Danmark. Brugere kan booke mødelokaler, se ledige tider og administrere deres reservationer.',
-      image: '/images/cases/the-office-hero.jpg',
-      tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Booking System'],
+      id: 'flavour-kitchen',
+      title: 'Flavour Kitchen',
+      subtitle: 'Restaurant Website med Online Bestilling',
+      description: 'Moderne hjemmeside til en populær restaurant i København med integreret online bestillingssystem. Gæster kan se menuen, bestille take-away og reservere bord direkte på siden.',
+      image: '/images/cases/flavour-kitchen.jpg',
+      tags: ['React', 'Node.js', 'Stripe', 'Online Bestilling'],
       features: [
-        'Online booking af mødelokaler',
-        'Bruger login og medlemsportal',
-        'Dynamisk kalender med ledige tider',
-        'Kontaktformularer',
-        'SEO optimeret',
-        'Responsivt design'
+        'Online bestilling med live menu',
+        'Bordreservation med kalender',
+        'Stripe betalingsintegration',
+        'Admin panel til ordrehåndtering',
+        'Push notifikationer til køkkenet',
+        'Google Maps integration'
       ],
       tech: {
-        frontend: 'Next.js 16, React 19, Tailwind CSS',
-        backend: 'Supabase (Auth, Database)',
-        hosting: 'Netlify'
+        frontend: 'React, Tailwind CSS',
+        backend: 'Node.js, PostgreSQL',
+        hosting: 'Vercel'
       },
-      color: '#1a1a2e'
+      color: '#c45c26'
+    },
+    {
+      id: 'fittrack-app',
+      title: 'FitTrack',
+      subtitle: 'Fitness App til iOS & Android',
+      description: 'En komplet fitness-app udviklet til en dansk fitnesskæde. Medlemmer kan booke holdtræning, tracke deres træning, se personlige fremskridt og kommunikere med trænere.',
+      image: '/images/cases/fittrack-app.jpg',
+      tags: ['React Native', 'Firebase', 'iOS', 'Android'],
+      features: [
+        'Holdtræning booking system',
+        'Træningsprogrammer med video',
+        'Fremskridts-tracking med grafer',
+        'Push notifikationer',
+        'Chat med personlige trænere',
+        'Apple Health & Google Fit integration'
+      ],
+      tech: {
+        frontend: 'React Native, Expo',
+        backend: 'Firebase (Auth, Firestore)',
+        hosting: 'App Store & Google Play'
+      },
+      color: '#10b981'
+    },
+    {
+      id: 'nordic-style',
+      title: 'Nordic Style',
+      subtitle: 'E-commerce Webshop for Møbelbrand',
+      description: 'Skalérbar webshop til et dansk møbelbrand med fokus på skandinavisk design. Komplet e-commerce løsning med lagerstyring, betalingsgateway og kundeportal.',
+      image: '/images/cases/nordic-style.jpg',
+      tags: ['Next.js', 'Shopify', 'E-commerce', 'SEO'],
+      features: [
+        'Produktkatalog med filtrering',
+        'Sikker checkout med flere betalingsmuligheder',
+        'Kundelogin og ordrehistorik',
+        'Lagerstyring og automatiske alerts',
+        'SEO optimeret produktsider',
+        'Integration med fragtleverandører'
+      ],
+      tech: {
+        frontend: 'Next.js, React',
+        backend: 'Shopify Headless',
+        hosting: 'Vercel'
+      },
+      color: '#1e3a5f'
+    },
+    {
+      id: 'boligportalen',
+      title: 'BoligNu',
+      subtitle: 'Ejendomsmægler Platform',
+      description: 'Digital platform til en ejendomsmæglerkæde med boligsøgning, virtuelle fremvisninger og direkte kontakt til mæglere. Gør boligkøb nemmere for både købere og sælgere.',
+      image: '/images/cases/bolignu.jpg',
+      tags: ['React', 'Node.js', 'Google Maps', 'CRM'],
+      features: [
+        'Avanceret boligsøgning med kort',
+        'Virtuelle 360° fremvisninger',
+        'Favoritter og gemte søgninger',
+        'Direkte chat med mæglere',
+        'Automatisk prisestimering',
+        'Integration med tinglysning.dk'
+      ],
+      tech: {
+        frontend: 'React, TypeScript',
+        backend: 'Node.js, MongoDB',
+        hosting: 'AWS'
+      },
+      color: '#7c3aed'
+    },
+    {
+      id: 'sundhed-plus',
+      title: 'Sundhed+',
+      subtitle: 'Klinik App med Tidsbestilling',
+      description: 'App til en lægeklinik der gør det nemt for patienter at booke tid, se journaler, forny recepter og kommunikere sikkert med lægen via beskedtråde.',
+      image: '/images/cases/sundhed-plus.jpg',
+      tags: ['Flutter', 'Firebase', 'GDPR', 'Sundhedsapp'],
+      features: [
+        'Online tidsbestilling',
+        'Sikker patientjournal adgang',
+        'Receptfornyelse med ét klik',
+        'Sikker beskedtråd med lægen',
+        'Påmindelser om aftaler',
+        'GDPR-compliant databehandling'
+      ],
+      tech: {
+        frontend: 'Flutter',
+        backend: 'Firebase, Cloud Functions',
+        hosting: 'App Store & Google Play'
+      },
+      color: '#0891b2'
     }
   ];
 
@@ -34,8 +122,8 @@ function Cases() {
     <div className="cases-page">
       <SEO
         title="Cases - Vores Arbejde | Nordic Digital"
-        description="Se eksempler på hjemmesider og apps vi har udviklet. The Office - booking system til kontorhotel."
-        keywords="portfolio, cases, hjemmeside udvikling, booking system, Nordic Digital"
+        description="Se eksempler på hjemmesider og apps vi har udviklet. Restaurant websites, fitness apps, e-commerce webshops og mere. Se hvad vi kan gøre for dig."
+        keywords="portfolio, cases, hjemmeside udvikling, app udvikling, webshop, booking system, Nordic Digital, React, Flutter"
         canonical="https://nordic-digital.dk/cases"
       />
 
@@ -59,7 +147,7 @@ function Cases() {
         </div>
       </section>
 
-      {/* Featured Case - The Office */}
+      {/* Cases Grid */}
       <section className="cases-section">
         <div className="container">
           {cases.map((caseItem, index) => (
