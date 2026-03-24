@@ -12,7 +12,6 @@ function Cases() {
       subtitle: 'Hjemmeside & Booking System til Kontorhotel',
       description: 'En komplet hjemmeside med integreret booking-system til et moderne kontorhotel i Danmark. Brugere kan booke mødelokaler, se ledige tider og administrere deres reservationer.',
       image: '/images/cases/the-office-hero.jpg',
-      url: 'https://the-office.dk',
       tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Booking System'],
       features: [
         'Online booking af mødelokaler',
@@ -79,16 +78,6 @@ function Cases() {
                   alt={caseItem.title}
                   className="case-image"
                 />
-                <div className="case-image-overlay">
-                  <a
-                    href={caseItem.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-light"
-                  >
-                    Besøg siden
-                  </a>
-                </div>
               </div>
 
               {/* Case Details */}
@@ -135,14 +124,6 @@ function Cases() {
                   </div>
                 </div>
 
-                <a
-                  href={caseItem.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  Se live projekt
-                </a>
               </div>
             </motion.div>
           ))}
