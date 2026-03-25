@@ -1,0 +1,1618 @@
+/* Restaurant Demo - Smag & Behag */
+/* Elegant Danish fine dining theme with improved contrast */
+
+/* CSS Variables */
+.restaurant-demo {
+  --bg-dark: #1a1410;
+  --bg-warm: #2a201a;
+  --bg-light: #3d3028;
+  --primary: #d4a855;
+  --primary-dark: #b8923d;
+  --primary-light: #ebc97d;
+  --accent: #8b4d3b;
+  --text-light: #f8f4ed;
+  --text-muted: #c9bfb0;
+  --text-dark: #e8ddd0;
+  --border-color: rgba(212, 168, 85, 0.3);
+  --success: #4ade80;
+  --success-bg: rgba(74, 222, 128, 0.1);
+}
+
+/* Reset & Base */
+.restaurant-demo {
+  min-height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.restaurant-demo * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.restaurant-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Back Button */
+.restaurant-back {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary);
+  border: none;
+  color: var(--bg-dark);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.restaurant-back:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+
+.restaurant-back svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Header */
+.restaurant-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(26, 20, 16, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.restaurant-header .restaurant-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.restaurant-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+.logo-accent {
+  font-size: 1.75rem;
+  color: var(--primary);
+  font-style: italic;
+}
+
+.restaurant-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.restaurant-nav a,
+.restaurant-nav button {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.restaurant-nav a:hover,
+.restaurant-nav button:hover {
+  color: var(--primary);
+}
+
+.cart-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-light);
+}
+
+.cart-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.cart-btn:hover svg {
+  color: var(--bg-dark);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--primary);
+  color: var(--bg-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, sans-serif;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Section */
+.restaurant-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26, 20, 16, 0.92) 0%, rgba(26, 20, 16, 0.75) 50%, rgba(26, 20, 16, 0.88) 100%);
+}
+
+.restaurant-hero .restaurant-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 650px;
+  padding-top: 4rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: rgba(212, 168, 85, 0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.25rem;
+  background: var(--primary);
+  color: var(--bg-dark);
+  text-decoration: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 168, 85, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.25rem;
+  background: transparent;
+  color: var(--text-light);
+  text-decoration: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn-outline:hover {
+  background: var(--text-light);
+  color: var(--bg-dark);
+}
+
+/* Section Styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.section-header h2 {
+  font-size: 2.75rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Menu Section */
+.restaurant-menu {
+  padding: 6rem 0;
+  background: var(--bg-dark);
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.menu-tabs button {
+  padding: 0.875rem 2rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.menu-tabs button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.menu-tabs button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background: var(--bg-warm);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.menu-card-image {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.08);
+}
+
+.menu-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card:hover .menu-card-overlay {
+  opacity: 1;
+}
+
+.quick-add {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: none;
+  color: var(--bg-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform: scale(0.8);
+}
+
+.menu-card:hover .quick-add {
+  transform: scale(1);
+}
+
+.quick-add:hover {
+  background: var(--primary-light);
+  transform: scale(1.1) !important;
+}
+
+.quick-add svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-card-content {
+  padding: 1.5rem;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.menu-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.menu-price {
+  color: var(--primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.menu-card-content > p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.add-to-cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.add-to-cart svg {
+  width: 16px;
+  height: 16px;
+}
+
+.add-to-cart:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+/* About Section */
+.restaurant-about {
+  padding: 6rem 0;
+  background: var(--bg-warm);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-images {
+  position: relative;
+}
+
+.about-img-1 {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-img-2 {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: 60%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 4px solid var(--bg-warm);
+}
+
+.about-content {
+  padding-left: 2rem;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.about-content > p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.about-stat {
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-size: 2.25rem;
+  color: var(--primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Reservation Section */
+.restaurant-reservation {
+  padding: 6rem 0;
+  background: var(--bg-dark);
+}
+
+.reservation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.reservation-info h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.reservation-info > p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.opening-hours {
+  background: var(--bg-warm);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.opening-hours h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.hours-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hours-grid > div {
+  display: flex;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+}
+
+.hours-grid strong {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.hours-grid span {
+  color: var(--primary-light);
+}
+
+.contact-info-box {
+  background: var(--bg-warm);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-info-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.contact-info-box p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-box strong {
+  color: var(--text-light);
+}
+
+/* Reservation Form */
+.reservation-form {
+  background: var(--bg-warm);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.guest-selector {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.guest-selector button {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.guest-selector button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.guest-selector button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+/* Reservation Calendar */
+.reservation-calendar {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-calendar .calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-calendar .calendar-header h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.reservation-calendar .month-nav {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-warm);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reservation-calendar .month-nav:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+.reservation-calendar .month-nav svg {
+  width: 18px;
+  height: 18px;
+}
+
+.reservation-calendar .calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.reservation-calendar .calendar-weekdays span {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.reservation-calendar .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.reservation-calendar .calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.reservation-calendar .calendar-day:hover:not(:disabled) {
+  background: var(--bg-warm);
+}
+
+.reservation-calendar .calendar-day.empty {
+  visibility: hidden;
+}
+
+.reservation-calendar .calendar-day.past,
+.reservation-calendar .calendar-day.closed {
+  color: var(--text-muted);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.reservation-calendar .calendar-day.closed {
+  text-decoration: line-through;
+}
+
+.reservation-calendar .calendar-day.today {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.reservation-calendar .calendar-day.selected {
+  background: var(--primary);
+  color: var(--bg-dark);
+  font-weight: 600;
+}
+
+.reservation-calendar .calendar-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.reservation-calendar .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.reservation-calendar .legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.reservation-calendar .legend-dot.available {
+  background: var(--text-light);
+}
+
+.reservation-calendar .legend-dot.closed {
+  background: var(--text-muted);
+  opacity: 0.4;
+}
+
+.reservation-calendar .legend-dot.selected {
+  background: var(--primary);
+}
+
+/* Time Selection */
+.time-selection {
+  margin-bottom: 1.5rem;
+}
+
+.time-selection label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.time-btn {
+  padding: 0.875rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.time-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.time-btn.selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Reservation Success */
+.reservation-success {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--bg-warm);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--success-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--success);
+}
+
+.reservation-success h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.reservation-success > p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.reservation-details {
+  background: var(--bg-dark);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  color: var(--text-muted);
+}
+
+.detail-row span:last-child {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Footer */
+.restaurant-footer {
+  padding: 4rem 0 2rem;
+  background: var(--bg-warm);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  margin-bottom: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-col h4 {
+  font-size: 0.8rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.footer-col p {
+  color: var(--text-muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.demo-credit a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.demo-credit a:hover {
+  text-decoration: underline;
+}
+
+/* Cart Sidebar */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  max-width: 100%;
+  height: 100vh;
+  background: var(--bg-warm);
+  z-index: 1101;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-header h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.close-cart,
+.back-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.close-cart:hover,
+.back-btn:hover {
+  color: var(--primary);
+}
+
+.close-cart svg,
+.back-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.cart-empty svg {
+  width: 64px;
+  height: 64px;
+  color: var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.cart-empty p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+}
+
+.cart-item-price {
+  color: var(--primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-item-quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-quantity button:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+.cart-item-quantity span {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-width: 20px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.cart-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.order-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.order-type-selector button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.order-type-selector button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.order-type-selector button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.order-type-selector button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+.cart-subtotal,
+.cart-delivery {
+  display: flex;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+
+.cart-total span:last-child {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Checkout Form */
+.checkout-form {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.checkout-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.checkout-form .form-group label {
+  font-size: 0.75rem;
+}
+
+.checkout-summary {
+  background: var(--bg-dark);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.checkout-summary h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.summary-item:last-of-type {
+  border-bottom: none;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+
+.summary-total span:last-child {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Order Success */
+.order-success {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.order-success h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.order-success > p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.order-summary {
+  width: 100%;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.order-summary .detail-row.total span:last-child {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.75rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-content {
+    padding-left: 0;
+  }
+
+  .about-img-2 {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .reservation-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-nav {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-ctas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .menu-tabs {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .menu-tabs button {
+    white-space: nowrap;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-calendar {
+    padding: 1rem;
+  }
+
+  .reservation-calendar .calendar-day {
+    font-size: 0.8rem;
+  }
+
+  .time-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .time-btn {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .reservation-info h2,
+  .about-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .restaurant-container {
+    padding: 0 1rem;
+  }
+
+  .reservation-form {
+    padding: 1.5rem;
+  }
+
+  .guest-selector button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .order-type-selector {
+    grid-template-columns: 1fr;
+  }
+}

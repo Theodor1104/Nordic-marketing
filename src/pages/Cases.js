@@ -7,11 +7,55 @@ import '../styles/Cases.css';
 function Cases() {
   const cases = [
     {
-      id: 'flavour-kitchen',
-      title: 'Flavour Kitchen',
+      id: 'fitness-app',
+      title: 'FitCoach Pro',
+      subtitle: 'Træningsapp til iOS & Android',
+      description: 'En komplet fitness-platform med to apps - én til trænere og én til medlemmer. Coaches kan styre klienter og programmer, mens medlemmer tracker træning, ser fremskridt og kommunikerer med deres personlige træner.',
+      image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop',
+      tags: ['React Native', 'Firebase', 'iOS', 'Android'],
+      features: [
+        'Coach & klient platform',
+        'Træningsprogrammer med øvelser',
+        'Daglig check-in tracking',
+        'Fremskridts-statistik',
+        'Chat med personlige trænere',
+        'Apple Health & Google Fit integration'
+      ],
+      tech: {
+        frontend: 'React Native, Expo',
+        backend: 'Firebase (Auth, Firestore)',
+        hosting: 'App Store & Google Play'
+      },
+      color: '#10b981'
+    },
+    {
+      id: 'the-office',
+      title: 'The Office',
+      subtitle: 'Hjemmeside & Booking System til Kontorhotel',
+      description: 'En komplet hjemmeside med integreret booking-system til et moderne kontorhotel i Danmark. Brugere kan booke mødelokaler, se ledige tider og administrere deres reservationer.',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop',
+      tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Booking System'],
+      features: [
+        'Online booking af mødelokaler',
+        'Bruger login og medlemsportal',
+        'Dynamisk kalender med ledige tider',
+        'Kontaktformularer',
+        'SEO optimeret',
+        'Responsivt design'
+      ],
+      tech: {
+        frontend: 'Next.js, React, Tailwind CSS',
+        backend: 'Supabase (Auth, Database)',
+        hosting: 'Netlify'
+      },
+      color: '#1a1a2e'
+    },
+    {
+      id: 'restaurant-case',
+      title: 'Restaurant Projekt',
       subtitle: 'Restaurant Website med Online Bestilling',
-      description: 'Moderne hjemmeside til en populær restaurant i København med integreret online bestillingssystem. Gæster kan se menuen, bestille take-away og reservere bord direkte på siden.',
-      image: '/images/cases/flavour-kitchen.jpg',
+      description: 'Moderne hjemmeside til en restaurant i København med integreret online bestillingssystem. Gæster kan se menuen, bestille take-away og reservere bord direkte på siden.',
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=500&fit=crop',
       tags: ['React', 'Node.js', 'Stripe', 'Online Bestilling'],
       features: [
         'Online bestilling med live menu',
@@ -29,33 +73,11 @@ function Cases() {
       color: '#c45c26'
     },
     {
-      id: 'fittrack-app',
-      title: 'FitTrack',
-      subtitle: 'Fitness App til iOS & Android',
-      description: 'En komplet fitness-app udviklet til en dansk fitnesskæde. Medlemmer kan booke holdtræning, tracke deres træning, se personlige fremskridt og kommunikere med trænere.',
-      image: '/images/cases/fittrack-app.jpg',
-      tags: ['React Native', 'Firebase', 'iOS', 'Android'],
-      features: [
-        'Holdtræning booking system',
-        'Træningsprogrammer med video',
-        'Fremskridts-tracking med grafer',
-        'Push notifikationer',
-        'Chat med personlige trænere',
-        'Apple Health & Google Fit integration'
-      ],
-      tech: {
-        frontend: 'React Native, Expo',
-        backend: 'Firebase (Auth, Firestore)',
-        hosting: 'App Store & Google Play'
-      },
-      color: '#10b981'
-    },
-    {
-      id: 'nordic-style',
-      title: 'Nordic Style',
+      id: 'webshop-case',
+      title: 'NordicHome',
       subtitle: 'E-commerce Webshop for Møbelbrand',
       description: 'Skalérbar webshop til et dansk møbelbrand med fokus på skandinavisk design. Komplet e-commerce løsning med lagerstyring, betalingsgateway og kundeportal.',
-      image: '/images/cases/nordic-style.jpg',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=500&fit=crop',
       tags: ['Next.js', 'Shopify', 'E-commerce', 'SEO'],
       features: [
         'Produktkatalog med filtrering',
@@ -73,11 +95,11 @@ function Cases() {
       color: '#1e3a5f'
     },
     {
-      id: 'boligportalen',
-      title: 'BoligNu',
+      id: 'bolig-case',
+      title: 'Boligportal',
       subtitle: 'Ejendomsmægler Platform',
       description: 'Digital platform til en ejendomsmæglerkæde med boligsøgning, virtuelle fremvisninger og direkte kontakt til mæglere. Gør boligkøb nemmere for både købere og sælgere.',
-      image: '/images/cases/bolignu.jpg',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop',
       tags: ['React', 'Node.js', 'Google Maps', 'CRM'],
       features: [
         'Avanceret boligsøgning med kort',
@@ -95,11 +117,11 @@ function Cases() {
       color: '#7c3aed'
     },
     {
-      id: 'sundhed-plus',
-      title: 'Sundhed+',
-      subtitle: 'Klinik App med Tidsbestilling',
+      id: 'klinik-app',
+      title: 'Klinik App',
+      subtitle: 'Sundhedsapp med Tidsbestilling',
       description: 'App til en lægeklinik der gør det nemt for patienter at booke tid, se journaler, forny recepter og kommunikere sikkert med lægen via beskedtråde.',
-      image: '/images/cases/sundhed-plus.jpg',
+      image: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=500&fit=crop',
       tags: ['Flutter', 'Firebase', 'GDPR', 'Sundhedsapp'],
       features: [
         'Online tidsbestilling',
@@ -141,7 +163,7 @@ function Cases() {
               Vores <span className="gradient-text">Arbejde</span>
             </h1>
             <p className="hero-subtitle">
-              Se eksempler på hjemmesider og apps vi har udviklet for vores kunder.
+              Udforsk interaktive prototyper og se hvad vi kan bygge til din virksomhed.
             </p>
           </motion.div>
         </div>
@@ -166,6 +188,7 @@ function Cases() {
                   alt={caseItem.title}
                   className="case-image"
                 />
+                <span className="demo-label">Demo</span>
               </div>
 
               {/* Case Details */}
@@ -210,6 +233,13 @@ function Cases() {
                       <span className="tech-value">{caseItem.tech.hosting}</span>
                     </div>
                   </div>
+                </div>
+
+                {/* Demo Button */}
+                <div className="case-actions">
+                  <Link to={`/demo/${caseItem.id}`} className="btn btn-primary">
+                    Se Live Demo
+                  </Link>
                 </div>
 
               </div>

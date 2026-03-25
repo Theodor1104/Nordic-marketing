@@ -464,6 +464,88 @@ function HjemmesiderService() {
         </div>
       </section>
 
+      {/* Website Demo Showcase */}
+      <section className="web-demo-showcase-section">
+        <div className="container">
+          <motion.div
+            className="section-header-web"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="section-badge-web">Interaktiv Demo</span>
+            <h2>Restaurant Website</h2>
+            <p className="section-subtitle-web">Udforsk vores restaurant demo - en komplet hjemmeside med booking og online bestilling</p>
+          </motion.div>
+
+          <motion.div
+            className="web-demo-showcase-card"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="web-demo-showcase-content">
+              <div className="web-demo-showcase-preview">
+                <div className="browser-preview-mini">
+                  <div className="browser-header-mini">
+                    <div className="browser-dots-mini">
+                      <span className="dot-mini red"></span>
+                      <span className="dot-mini yellow"></span>
+                      <span className="dot-mini green"></span>
+                    </div>
+                    <div className="browser-url-mini">smag-behag.dk</div>
+                  </div>
+                  <div className="browser-content-mini">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Restaurant demo preview" />
+                    <div className="browser-overlay-mini">
+                      <Link to="/demo/restaurant-case" className="preview-btn">Se Demo</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="web-demo-showcase-info">
+                <h3>Moderne Restaurant Hjemmeside</h3>
+                <p>En komplet hjemmeside til en restaurant i København med online bestilling, bordreservation og menu visning.</p>
+                <ul className="demo-features-list-web">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Online bordreservation
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Take-away bestilling
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Interaktiv menukort
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    SEO-optimeret design
+                  </li>
+                </ul>
+                <div className="demo-tech-stack-web">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Stripe</span>
+                </div>
+                <div className="demo-cta-group-web">
+                  <Link to="/demo/restaurant-case" className="btn-primary-new demo-btn-web">
+                    <span>Prøv interaktiv demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </Link>
+                  <Link to="/cases" className="btn-secondary-web demo-btn-secondary-web">
+                    Se alle cases
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section 3: CTA (Light with gradient) */}
       <section className="web-cta-section">
         <div className="container">

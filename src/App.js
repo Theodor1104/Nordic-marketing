@@ -15,6 +15,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Cases = lazy(() => import('./pages/Cases'));
 const Process = lazy(() => import('./pages/Process'));
+const CaseDemo = lazy(() => import('./pages/CaseDemo'));
 
 // Simple loading fallback
 const PageLoader = () => (
@@ -40,12 +41,24 @@ const PageLoader = () => (
 function App() {
   const location = useLocation();
   const isAdminPage = location.pathname === '/admin';
+  const isDemoPage = location.pathname.startsWith('/demo/');
 
   // Admin page has its own layout
   if (isAdminPage) {
     return (
       <Suspense fallback={<PageLoader />}>
         <Admin />
+      </Suspense>
+    );
+  }
+
+  // Demo pages are standalone without header/footer
+  if (isDemoPage) {
+    return (
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/demo/:caseId" element={<CaseDemo />} />
+        </Routes>
       </Suspense>
     );
   }
