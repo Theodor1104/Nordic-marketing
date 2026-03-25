@@ -260,6 +260,34 @@
   color: var(--color-accent);
 }
 
+.timeline-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--gradient-accent);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.timeline-case-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
+}
+
+.timeline-case-link svg {
+  transition: transform 0.3s ease;
+}
+
+.timeline-case-link:hover svg {
+  transform: translateX(3px);
+}
+
 /* Benefits Section */
 .process-benefits {
   padding: 5rem 0;

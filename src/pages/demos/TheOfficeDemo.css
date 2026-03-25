@@ -2,22 +2,22 @@
 
 /* Variables */
 :root {
-  --office-primary: #0f172a;
-  --office-secondary: #1e293b;
+  --office-primary: #000000;
+  --office-secondary: #0a0a0a;
   --office-accent: #14b8a6;
   --office-accent-light: #5eead4;
   --office-accent-dark: #0d9488;
   --office-white: #ffffff;
-  --office-off-white: #f8fafc;
-  --office-cream: #f1f5f9;
-  --office-gray-100: #e2e8f0;
-  --office-gray-200: #cbd5e1;
-  --office-gray-300: #94a3b8;
-  --office-gray-400: #64748b;
-  --office-gray-500: #475569;
-  --office-gray-600: #334155;
-  --office-gray-700: #1e293b;
-  --office-gray-800: #0f172a;
+  --office-off-white: #f5f5f5;
+  --office-cream: #fafafa;
+  --office-gray-100: #e5e5e5;
+  --office-gray-200: #d4d4d4;
+  --office-gray-300: #a3a3a3;
+  --office-gray-400: #737373;
+  --office-gray-500: #525252;
+  --office-gray-600: #404040;
+  --office-gray-700: #262626;
+  --office-gray-800: #171717;
   --office-success: #22c55e;
   --office-warning: #f59e0b;
   --office-error: #ef4444;
@@ -25,9 +25,9 @@
 
 .office-demo {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #e2e8f0;
+  background: #000000;
   min-height: 100vh;
-  color: var(--office-gray-800);
+  color: var(--office-white);
   line-height: 1.6;
 }
 
@@ -77,12 +77,12 @@
 
 /* Header */
 .office-header {
-  background: var(--office-white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  background: #0a0a0a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--office-gray-200);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .office-demo .header-content {
@@ -121,13 +121,13 @@
 .office-demo .logo-name {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   line-height: 1.2;
 }
 
 .office-demo .logo-tagline {
   font-size: 0.7rem;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -143,7 +143,7 @@
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -151,12 +151,12 @@
 
 .office-nav button:hover {
   color: var(--office-accent);
-  background: var(--office-gray-100);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .office-nav button.active {
   color: var(--office-accent);
-  background: rgba(20, 184, 166, 0.1);
+  background: rgba(20, 184, 166, 0.15);
 }
 
 .office-demo .header-actions {
@@ -166,11 +166,11 @@
 
 .login-btn {
   background: transparent;
-  border: 1px solid var(--office-gray-300);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.6rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--office-gray-700);
+  color: var(--office-white);
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -220,7 +220,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 30, 50, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
 
 .office-hero .hero-content {
@@ -365,13 +365,13 @@
 .office-demo .section-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 0.5rem;
 }
 
 .office-demo .section-header p {
   font-size: 1.125rem;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .booking-container {
@@ -402,7 +402,7 @@
   align-items: center;
   justify-content: center;
   background: var(--office-gray-300);
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   font-size: 1.125rem;
   font-weight: 700;
@@ -435,7 +435,7 @@
 
 .progress-step.active .step-label,
 .progress-step.completed .step-label {
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .progress-line {
@@ -451,7 +451,7 @@
 .booking-step h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 1.5rem;
 }
 
@@ -471,7 +471,7 @@
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -506,7 +506,7 @@
 .selected-room-badge span {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Room Selection */
@@ -518,7 +518,7 @@
 }
 
 .room-card {
-  background: var(--office-white);
+  background: #111111;
   border: 2px solid #94a3b8;
   border-radius: 16px;
   overflow: hidden;
@@ -580,13 +580,13 @@
 .room-info h4 {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 0.25rem;
 }
 
 .room-description {
   font-size: 0.875rem;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 0.75rem;
 }
 
@@ -602,7 +602,7 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.8rem;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .room-capacity svg {
@@ -613,7 +613,7 @@
 .room-price {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
 }
 
 .room-price.free {
@@ -632,7 +632,7 @@
   border-radius: 50px;
   font-size: 0.7rem;
   font-weight: 500;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .step-actions {
@@ -653,13 +653,13 @@
 .time-section h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 1rem;
 }
 
 .calendar {
-  background: var(--office-white);
-  border: 1px solid var(--office-gray-200);
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
@@ -675,7 +675,7 @@
 .calendar-header h4 {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
 }
 
 .month-nav {
@@ -712,7 +712,7 @@
   text-align: center;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   padding: 0.5rem 0;
 }
@@ -734,7 +734,7 @@
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -789,7 +789,7 @@
   gap: 1.5rem;
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--office-gray-200);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .legend-item {
@@ -797,7 +797,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.75rem;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .legend-dot {
@@ -820,8 +820,8 @@
 
 /* Time Section */
 .time-section {
-  background: var(--office-white);
-  border: 1px solid var(--office-gray-200);
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
@@ -852,7 +852,7 @@
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
@@ -862,10 +862,10 @@
   width: 100%;
   padding: 0.75rem 1rem;
   background: var(--office-gray-100);
-  border: 1px solid var(--office-gray-200);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   font-size: 0.9rem;
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -873,7 +873,7 @@
 .time-field select:focus {
   outline: none;
   border-color: var(--office-accent);
-  background: var(--office-white);
+  background: #111111;
 }
 
 .time-field select:disabled {
@@ -889,7 +889,7 @@
 .slots-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.75rem;
@@ -912,7 +912,7 @@
 .time-slot .slot-time {
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .time-slot.booked {
@@ -941,7 +941,7 @@
 .time-summary h4 {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 1rem;
 }
 
@@ -950,7 +950,7 @@
   justify-content: space-between;
   padding: 0.5rem 0;
   font-size: 0.875rem;
-  border-bottom: 1px solid var(--office-gray-200);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .summary-row:last-child {
@@ -958,17 +958,17 @@
 }
 
 .summary-row span:first-child {
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .summary-row span:last-child {
   font-weight: 600;
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .summary-row.total span:last-child {
   font-size: 1.125rem;
-  color: var(--office-primary);
+  color: var(--office-white);
 }
 
 .summary-row .free {
@@ -1028,7 +1028,7 @@
 .summary-details h4 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 1rem;
 }
 
@@ -1038,7 +1038,7 @@
   gap: 0.75rem;
   padding: 0.5rem 0;
   font-size: 0.9rem;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .detail-item svg {
@@ -1050,7 +1050,7 @@
 .detail-item.price span {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
 }
 
 .detail-item.price .free {
@@ -1059,8 +1059,8 @@
 
 /* Booking Form */
 .booking-form {
-  background: var(--office-white);
-  border: 1px solid var(--office-gray-200);
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
@@ -1069,7 +1069,7 @@
 .booking-form h4 {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 1.5rem;
 }
 
@@ -1092,7 +1092,7 @@
 .form-group label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
@@ -1103,10 +1103,10 @@
 .form-group textarea {
   padding: 0.75rem 1rem;
   background: var(--office-gray-100);
-  border: 1px solid var(--office-gray-200);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   font-size: 0.9rem;
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
   transition: all 0.2s ease;
   font-family: inherit;
 }
@@ -1116,7 +1116,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--office-accent);
-  background: var(--office-white);
+  background: #111111;
 }
 
 .form-group input::placeholder,
@@ -1133,7 +1133,7 @@
   align-items: flex-start;
   gap: 0.75rem;
   font-size: 0.875rem;
-  color: var(--office-gray-600);
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
@@ -1164,7 +1164,7 @@
   margin: 0 auto;
   text-align: center;
   padding: 3rem 2rem;
-  background: var(--office-white);
+  background: #111111;
   border-radius: 24px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
@@ -1189,13 +1189,13 @@
 .booking-confirmation h3 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 0.5rem;
 }
 
 .booking-confirmation > p {
   font-size: 1rem;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2rem;
 }
 
@@ -1211,7 +1211,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--office-gray-200);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .detail-row:last-child {
@@ -1220,13 +1220,13 @@
 
 .detail-label {
   font-size: 0.875rem;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .detail-value {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--office-gray-700);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .confirmation-actions {
@@ -1247,7 +1247,7 @@
 }
 
 .office-demo .feature-card {
-  background: var(--office-white);
+  background: #111111;
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
@@ -1281,13 +1281,13 @@
 .office-demo .feature-card h3 {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--office-primary);
+  color: var(--office-white);
   margin-bottom: 0.5rem;
 }
 
 .office-demo .feature-card p {
   font-size: 0.9rem;
-  color: var(--office-gray-500);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
 }
 

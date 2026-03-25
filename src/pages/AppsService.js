@@ -276,26 +276,6 @@ function AppsService() {
             ))}
           </div>
 
-          {/* Process inline */}
-          <div className="process-inline">
-            {processSteps.map((step, i) => (
-              <motion.div
-                key={i}
-                className="process-step-inline"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="step-num">{step.num}</div>
-                <div className="step-content">
-                  <span className="step-icon">{renderIcon(step.icon, 20)}</span>
-                  <h4>{step.title}</h4>
-                </div>
-                {i < processSteps.length - 1 && <div className="step-arrow">→</div>}
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
