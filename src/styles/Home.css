@@ -136,6 +136,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .service-card {
@@ -301,6 +303,173 @@
 .service-features-list li span {
   color: var(--color-accent);
   font-weight: bold;
+}
+
+/* Cases Showcase Section */
+.cases-showcase {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-white) 100%);
+}
+
+.cases-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.case-preview-card {
+  background: var(--color-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.case-preview-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.case-preview-visual {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.case-preview-visual.app-visual {
+  background: linear-gradient(135deg, #0f2d3d 0%, #1a4a5e 100%);
+}
+
+.case-preview-visual.web-visual {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+}
+
+.mini-phone {
+  width: 60px;
+  height: 120px;
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mini-phone.offset {
+  position: absolute;
+  left: 55%;
+  transform: translateY(10px);
+}
+
+.mini-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+}
+
+.mini-laptop {
+  width: 140px;
+  height: 90px;
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mini-laptop::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 6px;
+  background: #2a2a3e;
+  border-radius: 0 0 4px 4px;
+}
+
+.mini-laptop-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.case-preview-content {
+  padding: 1.5rem;
+}
+
+.case-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.case-preview-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-gray-800);
+}
+
+.case-preview-content p {
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+  line-height: 1.5;
+}
+
+.cases-cta {
+  text-align: center;
+}
+
+.btn-cases {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+}
+
+.btn-cases:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(20, 184, 166, 0.4);
+}
+
+.btn-cases svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-cases:hover svg {
+  transform: translateX(5px);
 }
 
 /* Trust Section */
@@ -495,6 +664,11 @@
     margin: 0 auto;
   }
 
+  .cases-preview {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
   .trust-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
@@ -533,8 +707,27 @@
 
   .services-overview,
   .trust-section,
+  .cases-showcase,
   .home .package-section {
     padding: 4rem 0;
+  }
+
+  .case-preview-visual {
+    height: 160px;
+  }
+
+  .mini-phone {
+    width: 50px;
+    height: 100px;
+  }
+
+  .mini-laptop {
+    width: 120px;
+    height: 75px;
+  }
+
+  .mini-laptop::after {
+    width: 140px;
   }
 
   .home .device-stack {

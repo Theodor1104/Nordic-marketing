@@ -271,7 +271,7 @@
 
 /* Tab Header */
 .tab-header {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .tab-header h1 {
@@ -1981,9 +1981,19 @@
     gap: 2rem;
   }
 
+  .phone-wrapper {
+    gap: 0.5rem;
+  }
+
+  .phone-label {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
   .phone-frame {
     width: 100%;
     max-width: 320px;
+    height: 620px;
   }
 
   .demo-header h1 {
@@ -1999,9 +2009,14 @@
 }
 
 @media (max-width: 400px) {
+  .phone-label {
+    display: none;
+  }
+
   .phone-frame {
     width: 100%;
-    height: 600px;
+    height: 85vh;
+    max-height: 700px;
     border-radius: 35px;
   }
 
@@ -2012,5 +2027,17 @@
   .phone-notch {
     width: 110px;
     height: 24px;
+  }
+
+  .tab-content {
+    padding: 12px;
+  }
+
+  .tab-header {
+    margin-bottom: 10px;
+  }
+
+  .tab-header h1 {
+    font-size: 20px;
   }
 }

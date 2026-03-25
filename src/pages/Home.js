@@ -153,6 +153,78 @@ function Home() {
         </div>
       </section>
 
+      {/* Cases Showcase Section */}
+      <section className="cases-showcase">
+        <div className="container">
+          <motion.div
+            className="section-header"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2>Se vores <span className="gradient-text">arbejde</span></h2>
+            <p>Udforsk vores seneste projekter og se hvad vi kan gøre for dig</p>
+          </motion.div>
+
+          <div className="cases-preview">
+            <motion.div
+              className="case-preview-card"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="case-preview-visual app-visual">
+                <div className="mini-phone">
+                  <div className="mini-screen gradient-green"></div>
+                </div>
+                <div className="mini-phone offset">
+                  <div className="mini-screen gradient-purple"></div>
+                </div>
+              </div>
+              <div className="case-preview-content">
+                <span className="case-tag">App Cases</span>
+                <h3>Fitness & Klinik Apps</h3>
+                <p>Se vores interaktive app demos og oplev funktionaliteten selv</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="case-preview-card"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="case-preview-visual web-visual">
+                <div className="mini-laptop">
+                  <div className="mini-laptop-screen gradient-blue"></div>
+                </div>
+              </div>
+              <div className="case-preview-content">
+                <span className="case-tag">Web Cases</span>
+                <h3>Restaurant & Webshop</h3>
+                <p>Moderne hjemmesider med fokus på brugeroplevelse og konvertering</p>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="cases-cta"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Link to="/cases" className="btn btn-cases">
+              <span>Se alle cases</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Trust Section */}
       <section className="trust-section">
         <div className="container">
