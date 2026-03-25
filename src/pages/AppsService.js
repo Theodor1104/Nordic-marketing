@@ -144,45 +144,59 @@ function AppsService() {
             </motion.div>
 
             <motion.div
-              className="hero-phones hero-phones-small"
+              className="hero-phones"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              <Link to="/demo/fitness-app" className="phones-container phones-link">
+              <div className="phones-container">
                 <motion.div
-                  className="phone phone-front phone-fitness"
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="phone phone-back"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div className="phone-screen">
+                    <div className="screen-header">
+                      <div className="status-bar"></div>
+                    </div>
+                    <div className="screen-content-demo">
+                      <div className="demo-card"></div>
+                      <div className="demo-list">
+                        <div className="demo-item"></div>
+                        <div className="demo-item"></div>
+                        <div className="demo-item"></div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="phone phone-front"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 >
                   <div className="phone-notch"></div>
                   <div className="phone-screen">
-                    <div className="app-demo fitness-demo">
+                    <div className="app-demo">
                       <div className="app-header-demo">
-                        <div className="app-icon-demo fitness-icon">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        </div>
-                        <span>FitCoach Pro</span>
+                        <div className="app-icon-demo" style={{ color: appShowcase[activeApp].color }}>{renderIcon(appShowcase[activeApp].icon, 28)}</div>
+                        <span>{appShowcase[activeApp].name}</span>
                       </div>
                       <div className="app-features-demo">
-                        <div className="feature-item-demo">
-                          <span className="check">✓</span>
-                          <span>Workout tracking</span>
-                        </div>
-                        <div className="feature-item-demo">
-                          <span className="check">✓</span>
-                          <span>Coach platform</span>
-                        </div>
-                        <div className="feature-item-demo">
-                          <span className="check">✓</span>
-                          <span>Fremskridts-data</span>
-                        </div>
-                        <div className="feature-item-demo">
-                          <span className="check">✓</span>
-                          <span>Push notifikationer</span>
-                        </div>
+                        {appShowcase[activeApp].features.map((f, i) => (
+                          <motion.div
+                            key={i}
+                            className="feature-item-demo"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                          >
+                            <span className="check">✓</span>
+                            <span>{f}</span>
+                          </motion.div>
+                        ))}
                       </div>
-                      <div className="app-button-demo">Prøv Demo</div>
+                      <div className="app-button-demo">Åbn App</div>
                     </div>
                   </div>
                 </motion.div>
@@ -190,35 +204,35 @@ function AppsService() {
                 {/* Floating Elements */}
                 <motion.div
                   className="floating-element fe-1"
-                  animate={{ y: [0, -12, 0], rotate: [0, 5, 0] }}
+                  animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
                   transition={{ duration: 5, repeat: Infinity }}
                 >
                   <span className="fe-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                   </span>
-                  <span>Fitness</span>
+                  <span>Hurtig</span>
                 </motion.div>
                 <motion.div
                   className="floating-element fe-2"
-                  animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
+                  animate={{ y: [0, 12, 0], rotate: [0, -5, 0] }}
                   transition={{ duration: 4, repeat: Infinity, delay: 1 }}
                 >
                   <span className="fe-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                   </span>
-                  <span>Native</span>
+                  <span>Sikker</span>
                 </motion.div>
                 <motion.div
                   className="floating-element fe-3"
-                  animate={{ y: [0, -8, 0] }}
+                  animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 6, repeat: Infinity, delay: 0.5 }}
                 >
                   <span className="fe-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
                   </span>
-                  <span>Demo</span>
+                  <span>Native</span>
                 </motion.div>
-              </Link>
+              </div>
             </motion.div>
           </div>
         </div>
