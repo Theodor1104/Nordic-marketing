@@ -188,7 +188,6 @@ function Process() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="hero-badge">Vores Tilgang</span>
             <h1>
               Fra vision til <span className="gradient-text">virkelighed</span>
             </h1>

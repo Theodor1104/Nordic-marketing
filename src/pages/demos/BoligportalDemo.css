@@ -78,7 +78,7 @@
   z-index: 100;
 }
 
-.header-content {
+.bolig-demo .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,13 +103,13 @@
   color: var(--text-dark);
 }
 
-.header-nav {
+.bolig-demo .header-nav {
   display: flex;
   gap: 2rem;
 }
 
-.header-nav a,
-.header-nav button {
+.bolig-demo .header-nav a,
+.bolig-demo .header-nav button {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.95rem;
@@ -121,14 +121,14 @@
   padding: 0;
 }
 
-.header-nav a:hover,
-.header-nav a.active,
-.header-nav button:hover,
-.header-nav button.active {
+.bolig-demo .header-nav a:hover,
+.bolig-demo .header-nav a.active,
+.bolig-demo .header-nav button:hover,
+.bolig-demo .header-nav button.active {
   color: var(--primary);
 }
 
-.header-actions {
+.bolig-demo .header-actions {
   display: flex;
   gap: 0.75rem;
 }
@@ -195,20 +195,20 @@
   z-index: 1;
 }
 
-.hero-content {
+.bolig-demo .hero-content {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
 
-.hero-content h1 {
+.bolig-demo .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
-.hero-content p {
+.bolig-demo .hero-content p {
   font-size: 1.25rem;
   color: rgba(255,255,255,0.8);
   margin-bottom: 2rem;
@@ -687,18 +687,18 @@
   background: var(--bg-light);
 }
 
-.section-header {
+.bolig-demo .section-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.section-header h2 {
+.bolig-demo .section-header h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.section-header p {
+.bolig-demo .section-header p {
   color: var(--text-secondary);
 }
 
@@ -708,7 +708,7 @@
   gap: 1.5rem;
 }
 
-.feature-card {
+.bolig-demo .feature-card {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -733,12 +733,12 @@
   color: var(--primary);
 }
 
-.feature-card h3 {
+.bolig-demo .feature-card h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.feature-card p {
+.bolig-demo .feature-card p {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
@@ -751,28 +751,28 @@
   padding: 4rem 0 2rem;
 }
 
-.footer-grid {
+.bolig-demo .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
 
-.footer-brand p {
+.bolig-demo .footer-brand p {
   color: rgba(255,255,255,0.6);
   margin-top: 1rem;
   font-size: 0.9rem;
 }
 
-.footer-brand .bolig-logo {
+.bolig-demo .footer-brand .bolig-logo {
   color: white;
 }
 
-.footer-brand .bolig-logo span {
+.bolig-demo .footer-brand .bolig-logo span {
   color: white;
 }
 
-.footer-col h4 {
+.bolig-demo .footer-col h4 {
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -780,26 +780,26 @@
   letter-spacing: 0.05em;
 }
 
-.footer-col ul {
+.bolig-demo .footer-col ul {
   list-style: none;
 }
 
-.footer-col li {
+.bolig-demo .footer-col li {
   margin-bottom: 0.5rem;
 }
 
-.footer-col a {
+.bolig-demo .footer-col a {
   color: rgba(255,255,255,0.6);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
-.footer-col a:hover {
+.bolig-demo .footer-col a:hover {
   color: white;
 }
 
-.footer-bottom {
+.bolig-demo .footer-bottom {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
@@ -818,7 +818,7 @@
 }
 
 /* Listing Modal */
-.modal-overlay {
+.bolig-demo .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
@@ -853,7 +853,7 @@
   to { transform: translate(-50%, -50%); opacity: 1; }
 }
 
-.close-modal {
+.bolig-demo .close-modal {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -866,32 +866,32 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.close-modal svg {
+.bolig-demo .close-modal svg {
   width: 20px;
   height: 20px;
   color: var(--text-dark);
 }
 
-.modal-gallery {
+.bolig-demo .modal-gallery {
   display: flex;
   gap: 0.5rem;
   height: 300px;
   overflow: hidden;
 }
 
-.modal-gallery img {
+.bolig-demo .modal-gallery img {
   flex: 1;
   min-width: 0;
   height: 100%;
   object-fit: cover;
 }
 
-.modal-content {
+.bolig-demo .modal-content {
   padding: 2rem;
   overflow-y: auto;
 }
 
-.modal-header {
+.bolig-demo .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -899,31 +899,31 @@
   gap: 2rem;
 }
 
-.modal-header h2 {
+.bolig-demo .modal-header h2 {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.25rem;
 }
 
-.modal-address {
+.bolig-demo .modal-address {
   color: var(--text-secondary);
 }
 
-.modal-price {
+.bolig-demo .modal-price {
   text-align: right;
 }
 
-.modal-price strong {
+.bolig-demo .modal-price strong {
   display: block;
   font-size: 1.75rem;
   color: var(--primary);
 }
 
-.modal-price span {
+.bolig-demo .modal-price span {
   color: var(--text-secondary);
 }
 
-.modal-specs {
+.bolig-demo .modal-specs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -951,18 +951,18 @@
   font-weight: 600;
 }
 
-.modal-description,
-.modal-features {
+.bolig-demo .modal-description,
+.bolig-demo .modal-features {
   margin-bottom: 1.5rem;
 }
 
-.modal-description h3,
-.modal-features h3 {
+.bolig-demo .modal-description h3,
+.bolig-demo .modal-features h3 {
   font-size: 1rem;
   margin-bottom: 0.75rem;
 }
 
-.modal-description p {
+.bolig-demo .modal-description p {
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -979,12 +979,12 @@
   color: var(--primary);
 }
 
-.modal-actions {
+.bolig-demo .modal-actions {
   display: flex;
   gap: 1rem;
 }
 
-.modal-actions .btn-primary {
+.bolig-demo .modal-actions .btn-primary {
   flex: 1;
   padding: 1rem;
   background: var(--primary);
@@ -997,11 +997,11 @@
   transition: background 0.2s;
 }
 
-.modal-actions .btn-primary:hover {
+.bolig-demo .modal-actions .btn-primary:hover {
   background: var(--primary-dark);
 }
 
-.modal-actions .btn-secondary {
+.bolig-demo .modal-actions .btn-secondary {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1016,17 +1016,17 @@
   transition: all 0.2s;
 }
 
-.modal-actions .btn-secondary svg {
+.bolig-demo .modal-actions .btn-secondary svg {
   width: 18px;
   height: 18px;
 }
 
-.modal-actions .btn-secondary:hover {
+.bolig-demo .modal-actions .btn-secondary:hover {
   border-color: var(--danger);
   color: var(--danger);
 }
 
-.modal-actions .btn-secondary.saved {
+.bolig-demo .modal-actions .btn-secondary.saved {
   border-color: var(--danger);
   color: var(--danger);
 }
@@ -1183,7 +1183,7 @@
   font-weight: 600;
 }
 
-.close-sidebar {
+.bolig-demo .close-sidebar {
   background: none;
   border: none;
   padding: 0.5rem;
@@ -1192,11 +1192,11 @@
   transition: background 0.2s;
 }
 
-.close-sidebar:hover {
+.bolig-demo .close-sidebar:hover {
   background: var(--bg-light);
 }
 
-.close-sidebar svg {
+.bolig-demo .close-sidebar svg {
   width: 20px;
   height: 20px;
   color: var(--text-secondary);
@@ -1591,13 +1591,13 @@
   gap: 1.5rem;
 }
 
-.compare-card {
+.bolig-demo .compare-card {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1rem;
 }
 
-.compare-card img {
+.bolig-demo .compare-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -1605,7 +1605,7 @@
   margin-bottom: 1rem;
 }
 
-.compare-card h4 {
+.bolig-demo .compare-card h4 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -1636,7 +1636,7 @@
   color: var(--text-dark);
 }
 
-.compare-card .btn-primary {
+.bolig-demo .compare-card .btn-primary {
   width: 100%;
   padding: 0.75rem;
   background: var(--primary);
@@ -1649,6 +1649,6 @@
   transition: background 0.2s;
 }
 
-.compare-card .btn-primary:hover {
+.bolig-demo .compare-card .btn-primary:hover {
   background: var(--primary-dark);
 }

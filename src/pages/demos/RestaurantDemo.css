@@ -98,14 +98,14 @@
   gap: 0.25rem;
 }
 
-.logo-text {
+.restaurant-demo .logo-text {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   color: var(--text-light);
 }
 
-.logo-accent {
+.restaurant-demo .logo-accent {
   font-size: 1.75rem;
   color: var(--primary);
   font-style: italic;
@@ -136,7 +136,7 @@
   color: var(--primary);
 }
 
-.cart-btn {
+.restaurant-demo .cart-btn {
   position: relative;
   background: transparent;
   border: 1px solid var(--border-color);
@@ -146,22 +146,22 @@
   transition: all 0.3s ease;
 }
 
-.cart-btn svg {
+.restaurant-demo .cart-btn svg {
   width: 20px;
   height: 20px;
   color: var(--text-light);
 }
 
-.cart-btn:hover {
+.restaurant-demo .cart-btn:hover {
   background: var(--primary);
   border-color: var(--primary);
 }
 
-.cart-btn:hover svg {
+.restaurant-demo .cart-btn:hover svg {
   color: var(--bg-dark);
 }
 
-.cart-count {
+.restaurant-demo .cart-count {
   position: absolute;
   top: -5px;
   right: -5px;
@@ -198,12 +198,12 @@
   z-index: 1;
 }
 
-.hero-content {
+.restaurant-demo .hero-content {
   max-width: 650px;
   padding-top: 4rem;
 }
 
-.hero-badge {
+.restaurant-demo .hero-badge {
   display: inline-block;
   padding: 0.5rem 1.25rem;
   background: rgba(212, 168, 85, 0.15);
@@ -217,7 +217,7 @@
   font-weight: 500;
 }
 
-.hero-content h1 {
+.restaurant-demo .hero-content h1 {
   font-size: 3.5rem;
   font-weight: 400;
   line-height: 1.15;
@@ -226,19 +226,19 @@
   color: var(--text-light);
 }
 
-.hero-content p {
+.restaurant-demo .hero-content p {
   font-size: 1.25rem;
   color: var(--text-dark);
   margin-bottom: 2.5rem;
   line-height: 1.8;
 }
 
-.hero-ctas {
+.restaurant-demo .hero-ctas {
   display: flex;
   gap: 1rem;
 }
 
-.btn-primary {
+.restaurant-demo .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -257,13 +257,13 @@
   border-radius: 4px;
 }
 
-.btn-primary:hover {
+.restaurant-demo .btn-primary:hover {
   background: var(--primary-light);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(212, 168, 85, 0.3);
 }
 
-.btn-outline {
+.restaurant-demo .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -282,18 +282,18 @@
   border-radius: 4px;
 }
 
-.btn-outline:hover {
+.restaurant-demo .btn-outline:hover {
   background: var(--text-light);
   color: var(--bg-dark);
 }
 
 /* Section Styling */
-.section-header {
+.restaurant-demo .section-header {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.section-label {
+.restaurant-demo .section-label {
   display: inline-block;
   color: var(--primary);
   font-size: 0.8rem;
@@ -304,14 +304,14 @@
   font-weight: 500;
 }
 
-.section-header h2 {
+.restaurant-demo .section-header h2 {
   font-size: 2.75rem;
   font-weight: 400;
   margin-bottom: 1rem;
   color: var(--text-light);
 }
 
-.section-header p {
+.restaurant-demo .section-header p {
   color: var(--text-muted);
   font-size: 1.125rem;
   max-width: 500px;
@@ -324,7 +324,7 @@
   background: var(--bg-dark);
 }
 
-.menu-tabs {
+.restaurant-demo .menu-tabs {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -332,7 +332,7 @@
   flex-wrap: wrap;
 }
 
-.menu-tabs button {
+.restaurant-demo .menu-tabs button {
   padding: 0.875rem 2rem;
   background: transparent;
   border: 1px solid var(--border-color);
@@ -347,24 +347,24 @@
   border-radius: 4px;
 }
 
-.menu-tabs button:hover {
+.restaurant-demo .menu-tabs button:hover {
   border-color: var(--primary);
   color: var(--primary);
 }
 
-.menu-tabs button.active {
+.restaurant-demo .menu-tabs button.active {
   background: var(--primary);
   border-color: var(--primary);
   color: var(--bg-dark);
 }
 
-.menu-grid {
+.restaurant-demo .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-.menu-card {
+.restaurant-demo .menu-card {
   background: var(--bg-warm);
   border-radius: 12px;
   overflow: hidden;
@@ -567,7 +567,7 @@
   text-align: center;
 }
 
-.stat-num {
+.restaurant-demo .stat-num {
   display: block;
   font-size: 2.25rem;
   color: var(--primary);
@@ -576,7 +576,7 @@
   margin-bottom: 0.25rem;
 }
 
-.stat-text {
+.restaurant-demo .stat-text {
   font-size: 0.8rem;
   color: var(--text-muted);
   font-family: system-ui, -apple-system, sans-serif;
@@ -1046,21 +1046,21 @@
   border-top: 1px solid var(--border-color);
 }
 
-.footer-grid {
+.restaurant-demo .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
 
-.footer-brand p {
+.restaurant-demo .footer-brand p {
   color: var(--text-muted);
   margin-top: 1rem;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
 }
 
-.footer-logo {
+.restaurant-demo .footer-logo {
   margin-bottom: 0;
 }
 
@@ -1093,7 +1093,7 @@
   height: 18px;
 }
 
-.footer-col h4 {
+.restaurant-demo .footer-col h4 {
   font-size: 0.8rem;
   font-family: system-ui, -apple-system, sans-serif;
   text-transform: uppercase;
@@ -1103,20 +1103,20 @@
   font-weight: 600;
 }
 
-.footer-col p {
+.restaurant-demo .footer-col p {
   color: var(--text-muted);
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
 
-.footer-links {
+.restaurant-demo .footer-links {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.footer-links a {
+.restaurant-demo .footer-links a {
   color: var(--text-muted);
   text-decoration: none;
   font-family: system-ui, -apple-system, sans-serif;
@@ -1124,11 +1124,11 @@
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.restaurant-demo .footer-links a:hover {
   color: var(--primary);
 }
 
-.footer-bottom {
+.restaurant-demo .footer-bottom {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
@@ -1148,7 +1148,7 @@
 }
 
 /* Cart Sidebar */
-.cart-overlay {
+.restaurant-demo .cart-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
@@ -1161,7 +1161,7 @@
   to { opacity: 1; }
 }
 
-.cart-sidebar {
+.restaurant-demo .cart-sidebar {
   position: fixed;
   top: 0;
   right: -420px;
@@ -1176,11 +1176,11 @@
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
 }
 
-.cart-sidebar.open {
+.restaurant-demo .cart-sidebar.open {
   right: 0;
 }
 
-.cart-header {
+.restaurant-demo .cart-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1188,7 +1188,7 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.cart-header h3 {
+.restaurant-demo .cart-header h3 {
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--text-light);
@@ -1215,7 +1215,7 @@
   height: 20px;
 }
 
-.cart-empty {
+.restaurant-demo .cart-empty {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1225,64 +1225,64 @@
   padding: 2rem;
 }
 
-.cart-empty svg {
+.restaurant-demo .cart-empty svg {
   width: 64px;
   height: 64px;
   color: var(--border-color);
   margin-bottom: 1.5rem;
 }
 
-.cart-empty p {
+.restaurant-demo .cart-empty p {
   color: var(--text-muted);
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
 }
 
-.cart-items {
+.restaurant-demo .cart-items {
   flex: 1;
   overflow-y: auto;
   padding: 1rem 1.5rem;
 }
 
-.cart-item {
+.restaurant-demo .cart-item {
   display: flex;
   gap: 1rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--border-color);
 }
 
-.cart-item img {
+.restaurant-demo .cart-item img {
   width: 70px;
   height: 70px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.cart-item-info {
+.restaurant-demo .cart-item-info {
   flex: 1;
 }
 
-.cart-item-info h4 {
+.restaurant-demo .cart-item-info h4 {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
   color: var(--text-light);
 }
 
-.cart-item-price {
+.restaurant-demo .cart-item-price {
   color: var(--primary);
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.cart-item-quantity {
+.restaurant-demo .cart-item-quantity {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.cart-item-quantity button {
+.restaurant-demo .cart-item-quantity button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1297,20 +1297,20 @@
   justify-content: center;
 }
 
-.cart-item-quantity button:hover {
+.restaurant-demo .cart-item-quantity button:hover {
   background: var(--primary);
   border-color: var(--primary);
   color: var(--bg-dark);
 }
 
-.cart-item-quantity span {
+.restaurant-demo .cart-item-quantity span {
   font-family: system-ui, -apple-system, sans-serif;
   min-width: 20px;
   text-align: center;
   color: var(--text-light);
 }
 
-.cart-footer {
+.restaurant-demo .cart-footer {
   padding: 1.5rem;
   border-top: 1px solid var(--border-color);
 }
@@ -1354,8 +1354,8 @@
   color: var(--bg-dark);
 }
 
-.cart-subtotal,
-.cart-delivery {
+.restaurant-demo .cart-subtotal,
+.restaurant-demo .cart-delivery {
   display: flex;
   justify-content: space-between;
   font-family: system-ui, -apple-system, sans-serif;
@@ -1364,7 +1364,7 @@
   margin-bottom: 0.5rem;
 }
 
-.cart-total {
+.restaurant-demo .cart-total {
   display: flex;
   justify-content: space-between;
   font-size: 1.25rem;
@@ -1374,7 +1374,7 @@
   color: var(--text-light);
 }
 
-.cart-total span:last-child {
+.restaurant-demo .cart-total span:last-child {
   color: var(--primary);
   font-weight: 600;
 }

@@ -199,7 +199,6 @@ function HjemmesiderService() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="hero-badge">{t('hjemmesider.badge')}</span>
               <h1 className="heading-bold">
                 {t('hjemmesider.title')}
                 <span className="gradient-text"> {t('hjemmesider.title_accent')}</span>
@@ -216,7 +215,9 @@ function HjemmesiderService() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <LaptopMockup />
+              <Link to="/demo/restaurant-case" style={{ display: 'block', cursor: 'pointer' }}>
+                <LaptopMockup />
+              </Link>
             </motion.div>
           </div>
         </div>

@@ -158,7 +158,6 @@ function Cases() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="hero-badge">Portfolio</span>
             <h1 className="heading-bold">
               Vores <span className="gradient-text">Arbejde</span>
             </h1>
@@ -172,79 +171,40 @@ function Cases() {
       {/* Cases Grid */}
       <section className="cases-section">
         <div className="container">
-          {cases.map((caseItem, index) => (
-            <motion.div
-              key={caseItem.id}
-              className="featured-case"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-            >
-              {/* Case Image */}
-              <div className="case-image-wrapper">
-                <img
-                  src={caseItem.image}
-                  alt={caseItem.title}
-                  className="case-image"
-                />
-                <span className="demo-label">Demo</span>
-              </div>
-
-              {/* Case Details */}
-              <div className="case-details">
-                <div className="case-tags">
-                  {caseItem.tags.map((tag, i) => (
-                    <span key={i} className="case-tag">{tag}</span>
-                  ))}
-                </div>
-
-                <h2 className="case-title">{caseItem.title}</h2>
-                <p className="case-subtitle">{caseItem.subtitle}</p>
-                <p className="case-description">{caseItem.description}</p>
-
-                {/* Features */}
-                <div className="case-features-section">
-                  <h3>Funktioner</h3>
-                  <ul className="case-features">
-                    {caseItem.features.map((feature, i) => (
-                      <li key={i}>
-                        <span className="check">&#10003;</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Tech Stack */}
-                <div className="case-tech-section">
-                  <h3>Teknologi</h3>
-                  <div className="tech-grid">
-                    <div className="tech-item">
-                      <span className="tech-label">Frontend</span>
-                      <span className="tech-value">{caseItem.tech.frontend}</span>
-                    </div>
-                    <div className="tech-item">
-                      <span className="tech-label">Backend</span>
-                      <span className="tech-value">{caseItem.tech.backend}</span>
-                    </div>
-                    <div className="tech-item">
-                      <span className="tech-label">Hosting</span>
-                      <span className="tech-value">{caseItem.tech.hosting}</span>
-                    </div>
+          <div className="cases-grid">
+            {cases.map((caseItem, index) => (
+              <motion.div
+                key={caseItem.id}
+                className="case-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Link to={`/demo/${caseItem.id}`} className="case-card-link">
+                  <div className="case-card-image">
+                    <img src={caseItem.image} alt={caseItem.title} />
+                    <span className="demo-badge">Demo</span>
                   </div>
-                </div>
-
-                {/* Demo Button */}
-                <div className="case-actions">
-                  <Link to={`/demo/${caseItem.id}`} className="btn btn-primary">
-                    Se Live Demo
-                  </Link>
-                </div>
-
-              </div>
-            </motion.div>
-          ))}
+                  <div className="case-card-content">
+                    <div className="case-card-tags">
+                      {caseItem.tags.slice(0, 2).map((tag, i) => (
+                        <span key={i} className="case-card-tag">{tag}</span>
+                      ))}
+                    </div>
+                    <h3 className="case-card-title">{caseItem.title}</h3>
+                    <p className="case-card-subtitle">{caseItem.subtitle}</p>
+                    <span className="case-card-cta">
+                      Se Demo
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

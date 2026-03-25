@@ -149,7 +149,7 @@ function AppsService() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              <div className="phones-container">
+              <Link to="/demo/fitness-app" className="phones-container phones-link">
                 <motion.div
                   className="phone phone-back"
                   animate={{ y: [0, -10, 0] }}
@@ -232,7 +232,7 @@ function AppsService() {
                   </span>
                   <span>Native</span>
                 </motion.div>
-              </div>
+              </Link>
             </motion.div>
           </div>
         </div>
