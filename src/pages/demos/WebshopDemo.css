@@ -274,7 +274,7 @@
   margin-bottom: 1.5rem;
 }
 
-.hero-content h1 {
+.webshop-demo .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
@@ -282,19 +282,19 @@
   letter-spacing: -0.02em;
 }
 
-.hero-content p {
+.webshop-demo .hero-content p {
   font-size: 1.1rem;
   color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.7;
 }
 
-.hero-buttons {
+.webshop-demo .hero-buttons {
   display: flex;
   gap: 1rem;
 }
 
-.btn-primary {
+.webshop-demo .btn-primary {
   padding: 1rem 2rem;
   background: var(--primary);
   color: white;
@@ -306,12 +306,12 @@
   transition: all 0.2s;
 }
 
-.btn-primary:hover {
+.webshop-demo .btn-primary:hover {
   background: #333;
   transform: translateY(-2px);
 }
 
-.btn-secondary {
+.webshop-demo .btn-secondary {
   padding: 1rem 2rem;
   background: transparent;
   color: var(--text-dark);
@@ -323,7 +323,7 @@
   transition: all 0.2s;
 }
 
-.btn-secondary:hover {
+.webshop-demo .btn-secondary:hover {
   border-color: var(--text-dark);
 }
 
@@ -378,14 +378,14 @@
   padding: 4rem 0;
 }
 
-.section-header {
+.webshop-demo .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
 
-.section-header h2 {
+.webshop-demo .section-header h2 {
   font-size: 1.75rem;
   font-weight: 700;
 }
@@ -1278,7 +1278,7 @@
   font-weight: 600;
 }
 
-.hero-badge {
+.webshop-demo .hero-badge {
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -1314,7 +1314,7 @@
   gap: 2rem;
 }
 
-.feature-card {
+.webshop-demo .feature-card {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -1322,22 +1322,22 @@
   transition: transform 0.3s ease;
 }
 
-.feature-card:hover {
+.webshop-demo .feature-card:hover {
   transform: translateY(-4px);
 }
 
-.feature-icon {
+.webshop-demo .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.feature-card h3 {
+.webshop-demo .feature-card h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
-.feature-card p {
+.webshop-demo .feature-card p {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;

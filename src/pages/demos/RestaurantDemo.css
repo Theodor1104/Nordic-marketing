@@ -198,12 +198,12 @@
   z-index: 1;
 }
 
-.hero-content {
+.restaurant-hero .hero-content {
   max-width: 650px;
   padding-top: 4rem;
 }
 
-.hero-badge {
+.restaurant-demo .hero-badge {
   display: inline-block;
   padding: 0.5rem 1.25rem;
   background: rgba(212, 168, 85, 0.15);
@@ -217,7 +217,7 @@
   font-weight: 500;
 }
 
-.hero-content h1 {
+.restaurant-hero .hero-content h1 {
   font-size: 3.5rem;
   font-weight: 400;
   line-height: 1.15;
@@ -226,19 +226,19 @@
   color: var(--text-light);
 }
 
-.hero-content p {
+.restaurant-hero .hero-content p {
   font-size: 1.25rem;
   color: var(--text-dark);
   margin-bottom: 2.5rem;
   line-height: 1.8;
 }
 
-.hero-ctas {
+.restaurant-demo .hero-ctas {
   display: flex;
   gap: 1rem;
 }
 
-.btn-primary {
+.restaurant-demo .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -257,7 +257,7 @@
   border-radius: 4px;
 }
 
-.btn-primary:hover {
+.restaurant-demo .btn-primary:hover {
   background: var(--primary-light);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(212, 168, 85, 0.3);
@@ -288,12 +288,12 @@
 }
 
 /* Section Styling */
-.section-header {
+.restaurant-demo .section-header {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.section-label {
+.restaurant-demo .section-label {
   display: inline-block;
   color: var(--primary);
   font-size: 0.8rem;
@@ -304,14 +304,14 @@
   font-weight: 500;
 }
 
-.section-header h2 {
+.restaurant-demo .section-header h2 {
   font-size: 2.75rem;
   font-weight: 400;
   margin-bottom: 1rem;
   color: var(--text-light);
 }
 
-.section-header p {
+.restaurant-demo .section-header p {
   color: var(--text-muted);
   font-size: 1.125rem;
   max-width: 500px;

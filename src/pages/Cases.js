@@ -163,7 +163,7 @@ function Cases() {
               Vores <span className="gradient-text">Arbejde</span>
             </h1>
             <p className="hero-subtitle">
-              Udforsk interaktive prototyper og se hvad vi kan bygge til din virksomhed.
+              Se eksempler på hjemmesider og apps vi har udviklet for vores kunder.
             </p>
           </motion.div>
         </div>
@@ -188,7 +188,6 @@ function Cases() {
                   alt={caseItem.title}
                   className="case-image"
                 />
-                <span className="demo-label">Demo</span>
               </div>
 
               {/* Case Details */}

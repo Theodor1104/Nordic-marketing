@@ -230,7 +230,7 @@
   padding: 4rem 0;
 }
 
-.hero-badge {
+.office-demo .hero-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: rgba(20, 184, 166, 0.15);
@@ -264,30 +264,30 @@
   margin-bottom: 2.5rem;
 }
 
-.stat {
+.office-demo .stat {
   text-align: center;
 }
 
-.stat-number {
+.office-demo .stat-number {
   display: block;
   font-size: 2rem;
   font-weight: 800;
   color: var(--office-accent-light);
 }
 
-.stat-label {
+.office-demo .stat-label {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.hero-cta {
+.office-demo .hero-cta {
   display: flex;
   gap: 1rem;
 }
 
-.btn-primary {
+.office-demo .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -302,23 +302,23 @@
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.office-demo .btn-primary:hover {
   background: var(--office-accent-dark);
   transform: translateY(-2px);
 }
 
-.btn-primary:disabled {
+.office-demo .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
 }
 
-.btn-primary svg {
+.office-demo .btn-primary svg {
   width: 18px;
   height: 18px;
 }
 
-.btn-secondary {
+.office-demo .btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -333,23 +333,23 @@
   transition: all 0.3s ease;
 }
 
-.btn-secondary:hover {
+.office-demo .btn-secondary:hover {
   border-color: var(--office-white);
   background: rgba(255, 255, 255, 0.1);
 }
 
 /* Booking Section */
-.booking-section {
+.office-demo .booking-section {
   padding: 6rem 0;
   background: #cbd5e1;
 }
 
-.section-header {
+.office-demo .section-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.section-tag {
+.office-demo .section-tag {
   display: inline-block;
   padding: 0.4rem 1rem;
   background: rgba(20, 184, 166, 0.1);
@@ -362,14 +362,14 @@
   letter-spacing: 0.5px;
 }
 
-.section-header h2 {
+.office-demo .section-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--office-primary);
   margin-bottom: 0.5rem;
 }
 
-.section-header p {
+.office-demo .section-header p {
   font-size: 1.125rem;
   color: var(--office-gray-500);
 }
@@ -1246,7 +1246,7 @@
   gap: 1.5rem;
 }
 
-.feature-card {
+.office-demo .feature-card {
   background: var(--office-white);
   border-radius: 16px;
   padding: 2rem;
@@ -1256,12 +1256,12 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.feature-card:hover {
+.office-demo .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-.feature-icon {
+.office-demo .feature-icon {
   width: 64px;
   height: 64px;
   margin: 0 auto 1.25rem;
@@ -1272,20 +1272,20 @@
   justify-content: center;
 }
 
-.feature-icon svg {
+.office-demo .feature-icon svg {
   width: 28px;
   height: 28px;
   color: var(--office-accent);
 }
 
-.feature-card h3 {
+.office-demo .feature-card h3 {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--office-primary);
   margin-bottom: 0.5rem;
 }
 
-.feature-card p {
+.office-demo .feature-card p {
   font-size: 0.9rem;
   color: var(--office-gray-500);
   line-height: 1.6;
