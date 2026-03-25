@@ -118,10 +118,10 @@
 /* Phone Frame */
 .phone-frame {
   position: relative;
-  width: 320px;
-  height: 680px;
+  width: 300px;
+  height: 620px;
   background: #000;
-  border-radius: 45px;
+  border-radius: 40px;
   padding: 10px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
               0 0 0 1px rgba(255, 255, 255, 0.1);

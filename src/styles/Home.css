@@ -168,7 +168,7 @@
 
 .service-mockup.laptop {
   width: 200px;
-  height: 130px;
+  height: 140px;
   background: linear-gradient(135deg, #475569, #334155);
   border-radius: 8px;
   padding: 6px;
@@ -197,11 +197,11 @@
 }
 
 .service-mockup.phone {
-  width: 100px;
-  height: 180px;
+  width: 90px;
+  height: 160px;
   background: linear-gradient(135deg, #475569, #334155);
-  border-radius: 20px;
-  padding: 8px;
+  border-radius: 18px;
+  padding: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
@@ -211,7 +211,7 @@
   height: 100%;
   background: white;
   border-radius: 14px;
-  padding: 12px;
+  padding: 10px;
 }
 
 .mockup-content {

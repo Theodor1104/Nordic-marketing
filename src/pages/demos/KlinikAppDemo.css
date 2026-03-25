@@ -68,14 +68,14 @@
 
 /* Phone Frame */
 .phone-frame {
-  width: 375px;
-  height: 812px;
+  width: 340px;
+  height: 700px;
   background: var(--bg-white);
-  border-radius: 55px;
+  border-radius: 50px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 50px 100px rgba(0,0,0,0.4),
-              0 0 0 12px #1a1a2e,
+              0 0 0 10px #1a1a2e,
               inset 0 0 0 2px rgba(255,255,255,0.1);
 }
 

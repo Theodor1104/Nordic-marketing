@@ -8,16 +8,16 @@
   --office-accent-light: #5eead4;
   --office-accent-dark: #0d9488;
   --office-white: #ffffff;
-  --office-off-white: #f5f5f5;
-  --office-cream: #fafafa;
-  --office-gray-100: #e5e5e5;
-  --office-gray-200: #d4d4d4;
-  --office-gray-300: #a3a3a3;
-  --office-gray-400: #737373;
-  --office-gray-500: #525252;
-  --office-gray-600: #404040;
-  --office-gray-700: #262626;
-  --office-gray-800: #171717;
+  --office-off-white: #1a1a1a;
+  --office-cream: #151515;
+  --office-gray-100: #1f1f1f;
+  --office-gray-200: #2a2a2a;
+  --office-gray-300: #3d3d3d;
+  --office-gray-400: #525252;
+  --office-gray-500: #6b6b6b;
+  --office-gray-600: #8a8a8a;
+  --office-gray-700: #a3a3a3;
+  --office-gray-800: #c4c4c4;
   --office-success: #22c55e;
   --office-warning: #f59e0b;
   --office-error: #ef4444;
@@ -341,7 +341,7 @@
 /* Booking Section */
 .booking-section {
   padding: 6rem 0;
-  background: #cbd5e1;
+  background: #0a0a0a;
 }
 
 .office-demo .section-header {
@@ -1237,7 +1237,7 @@
 /* Features Section */
 .features-section {
   padding: 6rem 0;
-  background: var(--office-gray-100);
+  background: #050505;
 }
 
 .features-grid {
@@ -1410,7 +1410,7 @@
 /* Prices Section */
 .prices-section {
   padding: 5rem 0;
-  background: var(--office-gray-900);
+  background: #000000;
 }
 
 .prices-grid {
@@ -1421,12 +1421,12 @@
 }
 
 .price-card {
-  background: var(--office-gray-800);
+  background: #111111;
   border-radius: 16px;
   padding: 2.5rem;
   text-align: center;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
