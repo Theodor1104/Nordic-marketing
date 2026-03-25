@@ -495,15 +495,80 @@ function FitnessAppDemo() {
                         </div>
 
                         <div className="checkin-question">
-                          <label>Ømhed fra sidste træning</label>
-                          <div className="soreness-bar">
-                            <div className="soreness-fill" style={{ width: '40%' }}></div>
+                          <label>Vægt (kg)</label>
+                          <div className="weight-input">
+                            <input type="number" placeholder="75.5" defaultValue="75.5" />
+                            <span>kg</span>
                           </div>
-                          <div className="soreness-labels">
-                            <span>Ingen</span>
-                            <span>Moderat</span>
-                            <span>Meget</span>
+                        </div>
+
+                        <div className="checkin-question">
+                          <label>Vandindtag i dag</label>
+                          <div className="hydration-selector">
+                            {[1, 2, 3, 4, 5].map(l => (
+                              <button key={l} className={`hydration-btn ${l <= 3 ? 'active' : ''}`}>
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 2c-5.33 8-8 12-8 16a8 8 0 1 0 16 0c0-4-2.67-8-8-16z"/>
+                                </svg>
+                              </button>
+                            ))}
                           </div>
+                          <span className="hydration-label">3L / 5L mål</span>
+                        </div>
+
+                        <div className="checkin-question">
+                          <label>Ømhed i kropsdele</label>
+                          <div className="body-parts-grid">
+                            <button className="body-part-btn">
+                              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
+                                <circle cx="20" cy="10" r="6"/>
+                                <path d="M20 16v8M12 20h16M20 24v10"/>
+                              </svg>
+                              <span>Nakke</span>
+                            </button>
+                            <button className="body-part-btn active">
+                              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
+                                <rect x="12" y="8" width="16" height="20" rx="4"/>
+                                <line x1="20" y1="14" x2="20" y2="22"/>
+                              </svg>
+                              <span>Ryg</span>
+                            </button>
+                            <button className="body-part-btn active">
+                              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M14 10c4 0 6 4 6 10s-2 10-6 10"/>
+                                <path d="M26 10c-4 0-6 4-6 10s2 10 6 10"/>
+                              </svg>
+                              <span>Bryst</span>
+                            </button>
+                            <button className="body-part-btn">
+                              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M10 16c0-4 4-6 10-6s10 2 10 6"/>
+                                <path d="M8 20h6M26 20h6"/>
+                              </svg>
+                              <span>Skuldre</span>
+                            </button>
+                            <button className="body-part-btn">
+                              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M12 10v20M28 10v20"/>
+                                <ellipse cx="12" cy="15" rx="4" ry="3"/>
+                                <ellipse cx="28" cy="15" rx="4" ry="3"/>
+                              </svg>
+                              <span>Arme</span>
+                            </button>
+                            <button className="body-part-btn active">
+                              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M14 8v24M26 8v24"/>
+                                <ellipse cx="14" cy="18" rx="4" ry="6"/>
+                                <ellipse cx="26" cy="18" rx="4" ry="6"/>
+                              </svg>
+                              <span>Ben</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="checkin-question">
+                          <label>Noter til coach</label>
+                          <textarea className="checkin-notes" placeholder="Skriv eventuelle noter..." rows="2"></textarea>
                         </div>
 
                         <button className="primary-btn" onClick={submitCheckIn}>
