@@ -371,14 +371,14 @@
 }
 
 /* Section Headers */
-.klinik-app-demo .section-header {
+.section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.klinik-app-demo .section-header h2 {
+.section-header h2 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-dark);

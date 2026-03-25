@@ -963,11 +963,11 @@
 }
 
 /* Section Header */
-.fitness-app-demo .section-header {
+.section-header {
   margin-bottom: 12px;
 }
 
-.fitness-app-demo .section-header h3 {
+.section-header h3 {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);

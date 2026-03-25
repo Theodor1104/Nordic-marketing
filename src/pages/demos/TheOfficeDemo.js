@@ -735,6 +735,85 @@ function TheOfficeDemo() {
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="features-section" id="about">
+        <div className="office-container">
+          <div className="section-header">
+            <span className="section-tag">Hvorfor The Office?</span>
+            <h2>Alt hvad du behøver</h2>
+            <p>Vi har skabt det perfekte miljø for produktivt arbejde</p>
+          </div>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3>Fleksible lokaler</h3>
+              <p>Fra små mødelokaler til store event spaces. Vi har lokaler til alle behov og størrelser.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3>Moderne udstyr</h3>
+              <p>Alle lokaler er udstyret med det nyeste AV-udstyr, hurtig WiFi og videokonference.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                  <line x1="6" y1="1" x2="6" y2="4"/>
+                  <line x1="10" y1="1" x2="10" y2="4"/>
+                  <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+              </div>
+              <h3>Gratis kaffe & te</h3>
+              <p>Ubegrænset adgang til kvalitetskaffe, te, frugt og snacks hele dagen.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <h3>24/7 adgang</h3>
+              <p>Som medlem har du adgang til alle fællesarealer og mødelokaler døgnet rundt.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3>Netværk</h3>
+              <p>Bliv del af et aktivt netværk med 500+ professionelle fra forskellige brancher.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <h3>Central beliggenhed</h3>
+              <p>Placeret midt i byen med nem adgang til offentlig transport og parkering.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prices Section */}
       <section className="prices-section" id="prices">
         <div className="office-container">

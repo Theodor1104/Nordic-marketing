@@ -195,20 +195,20 @@
   z-index: 1;
 }
 
-.bolig-hero .hero-content {
+.hero-content {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
 
-.bolig-hero .hero-content h1 {
+.hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
-.bolig-hero .hero-content p {
+.hero-content p {
   font-size: 1.25rem;
   color: rgba(255,255,255,0.8);
   margin-bottom: 2rem;
@@ -687,18 +687,18 @@
   background: var(--bg-light);
 }
 
-.boligportal-demo .section-header {
+.section-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.boligportal-demo .section-header h2 {
+.section-header h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.boligportal-demo .section-header p {
+.section-header p {
   color: var(--text-secondary);
 }
 
@@ -708,7 +708,7 @@
   gap: 1.5rem;
 }
 
-.boligportal-demo .feature-card {
+.feature-card {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -716,7 +716,7 @@
   border: 1px solid var(--border-color);
 }
 
-.boligportal-demo .feature-icon {
+.feature-icon {
   width: 56px;
   height: 56px;
   background: var(--primary-light);
@@ -727,18 +727,18 @@
   margin: 0 auto 1.5rem;
 }
 
-.boligportal-demo .feature-icon svg {
+.feature-icon svg {
   width: 28px;
   height: 28px;
   color: var(--primary);
 }
 
-.boligportal-demo .feature-card h3 {
+.feature-card h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.boligportal-demo .feature-card p {
+.feature-card p {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
@@ -979,12 +979,12 @@
   color: var(--primary);
 }
 
-.boligportal-demo .modal-actions {
+.modal-actions {
   display: flex;
   gap: 1rem;
 }
 
-.boligportal-demo .modal-actions .btn-primary {
+.modal-actions .btn-primary {
   flex: 1;
   padding: 1rem;
   background: var(--primary);
@@ -997,7 +997,7 @@
   transition: background 0.2s;
 }
 
-.boligportal-demo .modal-actions .btn-primary:hover {
+.modal-actions .btn-primary:hover {
   background: var(--primary-dark);
 }
 
@@ -1636,7 +1636,7 @@
   color: var(--text-dark);
 }
 
-.boligportal-demo .compare-card .btn-primary {
+.compare-card .btn-primary {
   width: 100%;
   padding: 0.75rem;
   background: var(--primary);
@@ -1649,6 +1649,6 @@
   transition: background 0.2s;
 }
 
-.boligportal-demo .compare-card .btn-primary:hover {
+.compare-card .btn-primary:hover {
   background: var(--primary-dark);
 }
