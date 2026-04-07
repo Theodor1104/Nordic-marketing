@@ -190,7 +190,7 @@
   color: var(--text-dark);
 }
 
-.btn-label {
+.webshop-demo .btn-label {
   font-size: 0.7rem;
   color: var(--text-secondary);
 }
@@ -261,7 +261,7 @@
   align-items: center;
 }
 
-.hero-tag {
+.webshop-demo .hero-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--accent);
@@ -289,7 +289,7 @@
   line-height: 1.7;
 }
 
-.hero-buttons {
+.webshop-demo .hero-buttons {
   display: flex;
   gap: 1rem;
 }
@@ -327,11 +327,11 @@
   border-color: var(--text-dark);
 }
 
-.hero-image {
+.webshop-demo .hero-image {
   position: relative;
 }
 
-.hero-image img {
+.webshop-demo .hero-image img {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -1259,13 +1259,13 @@
 }
 
 /* Hero Features */
-.hero-features {
+.webshop-demo .hero-features {
   display: flex;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.hero-feature {
+.webshop-demo .hero-feature {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1273,7 +1273,7 @@
   color: var(--text-secondary);
 }
 
-.hero-feature span {
+.webshop-demo .hero-feature span {
   color: var(--success);
   font-weight: 600;
 }

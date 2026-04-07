@@ -548,15 +548,15 @@
 }
 
 /* Section Card */
-.section-card {
+.fitness-demo .section-card {
   background: var(--bg-card);
   border-radius: 14px;
   padding: 16px;
   margin: 0 16px 16px;
 }
 
-.section-card h3,
-.section-card h4 {
+.fitness-demo .section-card h3,
+.fitness-demo .section-card h4 {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
