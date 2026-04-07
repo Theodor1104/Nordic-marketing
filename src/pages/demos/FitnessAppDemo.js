@@ -134,12 +134,12 @@ function FitnessAppDemo() {
   return (
     <div className="fitness-demo">
       {/* Back Button */}
-      <Link to="/cases" className="fitness-back">
+      <button onClick={() => window.close()} className="fitness-back">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M19 12H5M12 19l-7-7 7-7"/>
         </svg>
-        Tilbage
-      </Link>
+        Luk demo
+      </button>
 
       <div className="demo-header">
         <h1>FitCoach Pro</h1>

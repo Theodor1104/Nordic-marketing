@@ -187,12 +187,12 @@ function RestaurantDemo() {
   return (
     <div className="restaurant-demo">
       {/* Back to Nordic Digital */}
-      <Link to="/cases" className="demo-back-btn restaurant-back">
+      <button onClick={() => window.close()} className="demo-back-btn restaurant-back">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M19 12H5M12 19l-7-7 7-7"/>
         </svg>
-        Tilbage til Nordic Digital
-      </Link>
+        Luk demo
+      </button>
 
       {/* Header */}
       <header className="restaurant-header">
