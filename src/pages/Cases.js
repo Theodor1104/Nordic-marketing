@@ -181,7 +181,7 @@ function Cases() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link to={`/demo/${caseItem.id}`} className="case-card-link">
+                <a href={`/demo/${caseItem.id}`} className="case-card-link" target="_blank" rel="noopener noreferrer">
                   <div className="case-card-image">
                     <img src={caseItem.image} alt={caseItem.title} />
                     <span className="demo-badge">Demo</span>
@@ -201,7 +201,7 @@ function Cases() {
                       </svg>
                     </span>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>

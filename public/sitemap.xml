@@ -6,7 +6,7 @@
   <!-- Forside -->
   <url>
     <loc>https://nordic-digital.dk/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,7 +18,7 @@
   <!-- Apps Service Page -->
   <url>
     <loc>https://nordic-digital.dk/apps</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -30,7 +30,7 @@
   <!-- Hjemmesider Service Page -->
   <url>
     <loc>https://nordic-digital.dk/hjemmesider</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -42,7 +42,7 @@
   <!-- Proces Page -->
   <url>
     <loc>https://nordic-digital.dk/proces</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -50,7 +50,7 @@
   <!-- Om Os Page -->
   <url>
     <loc>https://nordic-digital.dk/om-os</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -58,7 +58,7 @@
   <!-- Kontakt Page -->
   <url>
     <loc>https://nordic-digital.dk/kontakt</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -66,7 +66,7 @@
   <!-- Cases Page -->
   <url>
     <loc>https://nordic-digital.dk/cases</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -78,7 +78,7 @@
   <!-- Blog -->
   <url>
     <loc>https://nordic-digital.dk/blog</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,35 +86,35 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://nordic-digital.dk/blog/app-udvikling-pris-danmark</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/hjemmeside-udvikling-guide</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/seo-guide-danmark-2026</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/google-ads-begynder-guide</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/facebook-annoncering-tips</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
