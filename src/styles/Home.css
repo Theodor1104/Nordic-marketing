@@ -5,6 +5,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .hero > .container {
@@ -93,8 +94,21 @@
 
 .hero .hero-visual {
   flex-shrink: 0;
-  margin-top: -260px !important;
-  margin-right: 250px !important;
+  margin-top: -260px;
+  margin-right: 250px;
+}
+
+@media (max-width: 1200px) {
+  .hero .hero-visual {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero .hero-visual {
+    margin-top: 0;
+    margin-right: 0;
+  }
 }
 
 /* Services Overview Section */
@@ -338,6 +352,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .case-preview-visual.app-visual {
@@ -583,6 +598,7 @@
   justify-content: center;
   align-items: center;
   height: 300px;
+  overflow: hidden;
 }
 
 .home .device-laptop {
@@ -730,9 +746,26 @@
     width: 140px;
   }
 
+  .mini-phone.offset {
+    left: 52%;
+  }
+
+  .case-preview-visual {
+    overflow: hidden;
+  }
+
   .home .device-stack {
     transform: scale(0.8);
     height: 240px;
+  }
+
+  .home .device-laptop::after {
+    width: 280px;
+  }
+
+  .home .device-phone {
+    width: 70px;
+    height: 140px;
   }
 
   .section-header {
@@ -766,6 +799,25 @@
 
   .hero-buttons .btn {
     width: 100%;
+  }
+
+  .home .device-stack {
+    transform: scale(0.65);
+    height: 200px;
+  }
+
+  .home .device-laptop {
+    width: 240px;
+    height: 150px;
+  }
+
+  .home .device-laptop::after {
+    width: 260px;
+  }
+
+  .home .device-phone {
+    width: 60px;
+    height: 120px;
   }
 
   .service-card {
@@ -839,6 +891,10 @@
     height: 85px;
   }
 
+  .service-mockup.laptop::after {
+    width: 150px;
+  }
+
   .service-mockup.phone {
     width: 60px;
     height: 105px;
@@ -850,5 +906,28 @@
 
   .service-features-list li {
     font-size: 0.85rem;
+  }
+
+  .home .device-stack {
+    transform: scale(0.5);
+    height: 180px;
+  }
+
+  .mini-phone {
+    width: 45px;
+    height: 90px;
+  }
+
+  .mini-laptop {
+    width: 110px;
+    height: 70px;
+  }
+
+  .mini-laptop::after {
+    width: 125px;
+  }
+
+  .case-preview-visual {
+    height: 140px;
   }
 }
