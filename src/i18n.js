@@ -13,14 +13,17 @@ i18n
       da: { translation: da },
       en: { translation: en }
     },
-    fallbackLng: 'da',
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false
     },
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage']
-    }
+      order: ['navigator'],
+      caches: [],
+      checkWhitelist: true
+    },
+    supportedLngs: ['da', 'en'],
+    nonExplicitSupportedLngs: false
   });
 
 export default i18n;

@@ -10,12 +10,7 @@ function Header() {
   const lastScrollY = useRef(0);
   const location = useLocation();
   const isDarkHeroPage = ['/', '/apps', '/hjemmesider', '/cases', '/om-os', '/proces'].includes(location.pathname);
-  const { t, i18n } = useTranslation();
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'da' ? 'en' : 'da';
-    i18n.changeLanguage(newLang);
-  };
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,11 +51,6 @@ function Header() {
           <span className="logo-accent">Digital</span>
         </Link>
 
-        {/* Mobile language switcher - visible only on mobile */}
-        <button className="lang-switcher-mobile" onClick={toggleLanguage} aria-label="Switch language">
-          {i18n.language === 'da' ? 'EN' : 'DA'}
-        </button>
-
         <button
           className={`menu-toggle ${menuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
@@ -91,9 +81,6 @@ function Header() {
             <NavLink to="/om-os" className="nav-link" onClick={closeMenu}>
               {t('nav.about')}
             </NavLink>
-            <button className="lang-switcher" onClick={toggleLanguage} aria-label="Switch language">
-              {i18n.language === 'da' ? 'EN' : 'DA'}
-            </button>
             <NavLink to="/kontakt" className="nav-link cta-button" onClick={closeMenu}>
               {t('nav.contact')}
             </NavLink>
