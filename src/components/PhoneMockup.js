@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import '../styles/PhoneMockup.css';
 
 function PhoneMockup() {
+  const { t } = useTranslation();
   const [activeView, setActiveView] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   const [selectedDay, setSelectedDay] = useState(17);
   const [selectedTime, setSelectedTime] = useState(1);
 
-  const views = ['Forside', 'Services', 'Booking', 'Kontakt'];
+  const views = t('phone.views', { returnObjects: true });
 
   // Auto-cycle views
   useEffect(() => {
@@ -38,9 +40,9 @@ function PhoneMockup() {
             className="screen-content"
           >
             <div className="hero-card" onClick={() => handleNavClick(1)} style={{ cursor: 'pointer' }}>
-              <span className="hero-badge">Apps & Web</span>
-              <h3 className="hero-title">Din digitale partner</h3>
-              <p className="hero-desc">Professionelle løsninger der virker</p>
+              <span className="hero-badge">{t('phone.hero_badge')}</span>
+              <h3 className="hero-title">{t('phone.hero_title')}</h3>
+              <p className="hero-desc">{t('phone.hero_subtitle')}</p>
               <div className="hero-visual">
                 <div className="visual-circle"></div>
               </div>
@@ -48,15 +50,15 @@ function PhoneMockup() {
             <div className="quick-stats">
               <div className="quick-stat" onClick={() => handleNavClick(3)} style={{ cursor: 'pointer' }}>
                 <span className="stat-num">100%</span>
-                <span className="stat-txt">Tilfredshed</span>
+                <span className="stat-txt">{t('phone.stat_satisfaction')}</span>
               </div>
               <div className="quick-stat" onClick={() => handleNavClick(2)} style={{ cursor: 'pointer' }}>
                 <span className="stat-num">24/7</span>
-                <span className="stat-txt">Support</span>
+                <span className="stat-txt">{t('phone.stat_support')}</span>
               </div>
               <div className="quick-stat" onClick={() => handleNavClick(3)} style={{ cursor: 'pointer' }}>
                 <span className="stat-num">DK</span>
-                <span className="stat-txt">Baseret</span>
+                <span className="stat-txt">{t('phone.stat_based')}</span>
               </div>
             </div>
           </motion.div>
@@ -71,12 +73,12 @@ function PhoneMockup() {
             exit={{ opacity: 0, x: -20 }}
             className="screen-content"
           >
-            <p className="screen-label">Vores Services</p>
+            <p className="screen-label">{t('phone.our_services')}</p>
             <div className="service-list">
               {[
-                { icon: 'app', name: 'Apps', desc: 'Mobil', nav: 2 },
-                { icon: 'web', name: 'Hjemmesider', desc: 'Web', nav: 2 },
-                { icon: 'seo', name: 'SEO', desc: 'Synlighed', nav: 3 }
+                { icon: 'app', name: t('nav.apps'), desc: t('phone.services_app_desc'), nav: 2 },
+                { icon: 'web', name: t('nav.websites'), desc: t('phone.services_web_desc'), nav: 2 },
+                { icon: 'seo', name: 'SEO', desc: t('phone.services_seo_desc'), nav: 3 }
               ].map((service, idx) => (
                 <div key={idx} className="service-item" onClick={() => handleNavClick(service.nav)}>
                   <div className={`service-icon ${service.icon}`}>
@@ -116,17 +118,17 @@ function PhoneMockup() {
             exit={{ opacity: 0, x: -20 }}
             className="screen-content"
           >
-            <p className="screen-label">Booking System</p>
+            <p className="screen-label">{t('phone.booking_system')}</p>
             <div className="booking-preview">
               <div className="calendar-header">
-                <span>Marts 2026</span>
+                <span>{t('phone.booking_month')}</span>
                 <div className="calendar-nav">
                   <button>‹</button>
                   <button>›</button>
                 </div>
               </div>
               <div className="calendar-grid">
-                {['Ma', 'Ti', 'On', 'To', 'Fr', 'Lø', 'Sø'].map((day, i) => (
+                {t('phone.weekdays', { returnObjects: true }).map((day, i) => (
                   <span key={i} className="cal-day-name">{day}</span>
                 ))}
                 {[...Array(31)].map((_, i) => (
@@ -146,7 +148,7 @@ function PhoneMockup() {
                 <span className={`time-slot ${selectedTime === 2 ? 'active' : ''}`} onClick={() => setSelectedTime(2)} style={{ cursor: 'pointer' }}>14:00</span>
               </div>
             </div>
-            <button className="book-btn" onClick={() => handleNavClick(3)}>Book møde</button>
+            <button className="book-btn" onClick={() => handleNavClick(3)}>{t('phone.book_meeting')}</button>
           </motion.div>
         );
 
@@ -159,30 +161,30 @@ function PhoneMockup() {
             exit={{ opacity: 0, x: -20 }}
             className="screen-content"
           >
-            <p className="screen-label">Kontakt Os</p>
+            <p className="screen-label">{t('phone.contact_title')}</p>
             <div className="contact-form">
               <div className="form-field">
-                <label>Navn</label>
-                <div className="input-preview">Dit navn...</div>
+                <label>{t('contact.form_name')}</label>
+                <div className="input-preview">{t('contact.form_name_placeholder')}</div>
               </div>
               <div className="form-field">
-                <label>Email</label>
-                <div className="input-preview">din@email.dk</div>
+                <label>{t('contact.form_email')}</label>
+                <div className="input-preview">{t('contact.form_email_placeholder')}</div>
               </div>
               <div className="form-field">
-                <label>Besked</label>
-                <div className="input-preview textarea">Fortæl os om dit projekt...</div>
+                <label>{t('phone.message_label')}</label>
+                <div className="input-preview textarea">{t('phone.message_placeholder')}</div>
               </div>
             </div>
-            <button className="send-btn" onClick={() => handleNavClick(0)}>Send besked</button>
+            <button className="send-btn" onClick={() => handleNavClick(0)}>{t('phone.send_message')}</button>
             <div className="contact-info">
               <div className="contact-item" style={{ cursor: 'pointer' }} onClick={() => handleNavClick(0)}>
                 <span>📧</span>
-                <span>kontakt@nordic.dk</span>
+                <span>hello@nordic-digital.dk</span>
               </div>
               <div className="contact-item" style={{ cursor: 'pointer' }} onClick={() => handleNavClick(0)}>
                 <span>📍</span>
-                <span>København, DK</span>
+                <span>{t('phone.location')}</span>
               </div>
             </div>
           </motion.div>
@@ -274,8 +276,8 @@ function PhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">SEO Optimeret</span>
-          <span className="float-desc">Top rankings</span>
+          <span className="float-title">{t('phone.float_seo')}</span>
+          <span className="float-desc">{t('phone.float_seo_desc')}</span>
         </div>
       </motion.div>
 
@@ -292,8 +294,8 @@ function PhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">Booking System</span>
-          <span className="float-desc">Nem tidsbestilling</span>
+          <span className="float-title">{t('phone.float_offer')}</span>
+          <span className="float-desc">{t('phone.float_offer_desc')}</span>
         </div>
       </motion.div>
 
@@ -311,8 +313,8 @@ function PhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">Dansk Team</span>
-          <span className="float-desc">Personlig service</span>
+          <span className="float-title">{t('phone.float_team')}</span>
+          <span className="float-desc">{t('phone.float_team_desc')}</span>
         </div>
       </motion.div>
 
@@ -328,8 +330,8 @@ function PhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">App & Web</span>
-          <span className="float-desc">Udvikling</span>
+          <span className="float-title">{t('phone.float_prices')}</span>
+          <span className="float-desc">{t('phone.float_prices_desc')}</span>
         </div>
       </motion.div>
     </motion.div>

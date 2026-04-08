@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import '../styles/PhoneMockup.css';
 
 function AppPhoneMockup() {
+  const { t } = useTranslation();
   const [activeView, setActiveView] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
 
-  const views = ['Dashboard', 'Profil', 'Aktivitet', 'Shop'];
+  const views = t('app_phone.views', { returnObjects: true });
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -34,9 +36,9 @@ function AppPhoneMockup() {
             className="screen-content"
           >
             <div className="hero-card">
-              <span className="hero-badge">Din App</span>
-              <h3 className="hero-title">Velkommen tilbage!</h3>
-              <p className="hero-desc">Du har 3 nye notifikationer</p>
+              <span className="hero-badge">{t('app_phone.your_app')}</span>
+              <h3 className="hero-title">{t('app_phone.welcome_back')}</h3>
+              <p className="hero-desc">{t('app_phone.new_notifications')}</p>
               <div className="hero-visual">
                 <div className="visual-circle"></div>
               </div>
@@ -44,15 +46,15 @@ function AppPhoneMockup() {
             <div className="quick-stats">
               <div className="quick-stat">
                 <span className="stat-num">2.4k</span>
-                <span className="stat-txt">Brugere</span>
+                <span className="stat-txt">{t('app_phone.users')}</span>
               </div>
               <div className="quick-stat">
                 <span className="stat-num">98%</span>
-                <span className="stat-txt">Rating</span>
+                <span className="stat-txt">{t('app_phone.rating')}</span>
               </div>
               <div className="quick-stat">
                 <span className="stat-num">↑12%</span>
-                <span className="stat-txt">Vækst</span>
+                <span className="stat-txt">{t('app_phone.growth')}</span>
               </div>
             </div>
           </motion.div>
@@ -76,23 +78,23 @@ function AppPhoneMockup() {
               <div className="profile-stats">
                 <div className="profile-stat">
                   <span className="stat-value">127</span>
-                  <span className="stat-label">Point</span>
+                  <span className="stat-label">{t('app_phone.points')}</span>
                 </div>
                 <div className="profile-stat">
                   <span className="stat-value">Gold</span>
-                  <span className="stat-label">Niveau</span>
+                  <span className="stat-label">{t('app_phone.level')}</span>
                 </div>
               </div>
             </div>
             <div className="profile-menu">
               <div className="menu-item">
                 <span>⚙️</span>
-                <span>Indstillinger</span>
+                <span>{t('app_phone.settings')}</span>
                 <span className="menu-arrow">→</span>
               </div>
               <div className="menu-item">
                 <span>🔔</span>
-                <span>Notifikationer</span>
+                <span>{t('app_phone.notifications')}</span>
                 <span className="menu-arrow">→</span>
               </div>
             </div>
@@ -108,34 +110,34 @@ function AppPhoneMockup() {
             exit={{ opacity: 0, x: -20 }}
             className="screen-content"
           >
-            <p className="screen-label">Seneste Aktivitet</p>
+            <p className="screen-label">{t('app_phone.recent_activity')}</p>
             <div className="activity-list">
               <div className="activity-item">
                 <div className="activity-icon green-bg">✓</div>
                 <div className="activity-info">
-                  <span className="activity-title">Ordre fuldført</span>
-                  <span className="activity-time">For 2 min siden</span>
+                  <span className="activity-title">{t('app_phone.order_completed')}</span>
+                  <span className="activity-time">{t('app_phone.time_2min')}</span>
                 </div>
               </div>
               <div className="activity-item">
                 <div className="activity-icon blue-bg">↑</div>
                 <div className="activity-info">
-                  <span className="activity-title">Niveau opgraderet</span>
-                  <span className="activity-time">For 1 time siden</span>
+                  <span className="activity-title">{t('app_phone.level_upgraded')}</span>
+                  <span className="activity-time">{t('app_phone.time_1hour')}</span>
                 </div>
               </div>
               <div className="activity-item">
                 <div className="activity-icon purple-bg">★</div>
                 <div className="activity-info">
-                  <span className="activity-title">Ny bedømmelse</span>
-                  <span className="activity-time">For 3 timer siden</span>
+                  <span className="activity-title">{t('app_phone.new_review')}</span>
+                  <span className="activity-time">{t('app_phone.time_3hours')}</span>
                 </div>
               </div>
               <div className="activity-item">
                 <div className="activity-icon teal-bg">💬</div>
                 <div className="activity-info">
-                  <span className="activity-title">Ny besked</span>
-                  <span className="activity-time">I går</span>
+                  <span className="activity-title">{t('app_phone.new_message')}</span>
+                  <span className="activity-time">{t('app_phone.yesterday')}</span>
                 </div>
               </div>
             </div>
@@ -151,24 +153,24 @@ function AppPhoneMockup() {
             exit={{ opacity: 0, x: -20 }}
             className="screen-content"
           >
-            <p className="screen-label">In-App Shop</p>
+            <p className="screen-label">{t('app_phone.in_app_shop')}</p>
             <div className="shop-grid">
               <div className="shop-item">
                 <div className="shop-image">🎁</div>
                 <span className="shop-name">Premium</span>
-                <span className="shop-price">49 kr/md</span>
+                <span className="shop-price">{t('app_phone.price_49')}</span>
               </div>
               <div className="shop-item featured">
                 <div className="shop-image">⭐</div>
                 <span className="shop-name">Pro</span>
-                <span className="shop-price">99 kr/md</span>
+                <span className="shop-price">{t('app_phone.price_99')}</span>
               </div>
             </div>
-            <button className="book-btn">Opgrader nu</button>
+            <button className="book-btn">{t('app_phone.upgrade_now')}</button>
             <div className="shop-features">
-              <div className="shop-feature">✓ Ingen reklamer</div>
-              <div className="shop-feature">✓ Premium features</div>
-              <div className="shop-feature">✓ Priority support</div>
+              <div className="shop-feature">✓ {t('app_phone.no_ads')}</div>
+              <div className="shop-feature">✓ {t('app_phone.premium_features')}</div>
+              <div className="shop-feature">✓ {t('app_phone.priority_support')}</div>
             </div>
           </motion.div>
         );
@@ -191,7 +193,7 @@ function AppPhoneMockup() {
           <div className="app-header">
             <div className="app-logo">
               <span className="app-logo-icon">A</span>
-              <span className="app-logo-text">AppNavn</span>
+              <span className="app-logo-text">{t('app_phone.app_name')}</span>
             </div>
           </div>
 
@@ -255,7 +257,7 @@ function AppPhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">Cross-Platform</span>
+          <span className="float-title">{t('app_phone.float_crossplatform')}</span>
           <span className="float-desc">iOS & Android</span>
         </div>
       </motion.div>
@@ -272,8 +274,8 @@ function AppPhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">Push Notifikationer</span>
-          <span className="float-desc">Real-time alerts</span>
+          <span className="float-title">{t('app_phone.float_push')}</span>
+          <span className="float-desc">{t('app_phone.float_push_desc')}</span>
         </div>
       </motion.div>
 
@@ -289,8 +291,8 @@ function AppPhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">In-App Betaling</span>
-          <span className="float-desc">Sikker betaling</span>
+          <span className="float-title">{t('app_phone.float_payment')}</span>
+          <span className="float-desc">{t('app_phone.float_payment_desc')}</span>
         </div>
       </motion.div>
 
@@ -307,8 +309,8 @@ function AppPhoneMockup() {
           </svg>
         </div>
         <div className="float-text">
-          <span className="float-title">Analytics</span>
-          <span className="float-desc">Bruger indsigt</span>
+          <span className="float-title">{t('app_phone.float_analytics')}</span>
+          <span className="float-desc">{t('app_phone.float_analytics_desc')}</span>
         </div>
       </motion.div>
     </motion.div>
