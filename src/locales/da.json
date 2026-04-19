@@ -578,6 +578,22 @@
     "cta_desc": "Book en gratis konsultation og lad os tale om dit projekt",
     "cta_button": "Kontakt os"
   },
+  "cases": {
+    "section_title": "Se vores",
+    "section_title_highlight": "arbejde",
+    "section_subtitle": "Udforsk vores seneste projekter og se hvad vi kan gøre for dig",
+    "app_tag": "App",
+    "web_tag": "Hjemmeside",
+    "fitness_title": "Fitness App",
+    "fitness_desc": "Komplet fitness app med træningsprogrammer, tracking og sociale features",
+    "restaurant_title": "Restaurant Hjemmeside",
+    "restaurant_desc": "Moderne restaurant hjemmeside med online menu og bordbestilling",
+    "webshop_title": "Webshop",
+    "webshop_desc": "Professionel e-commerce løsning med betaling og lagerstyring",
+    "boligportal_title": "Boligportal App",
+    "boligportal_desc": "Boligsøgnings app med filtre, favoritter og direkte kontakt",
+    "see_all": "Se alle cases"
+  },
   "apps": {
     "badge": "App bureau i Danmark",
     "title": "App udvikling",

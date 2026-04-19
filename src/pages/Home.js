@@ -162,51 +162,101 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>Se vores <span className="gradient-text">arbejde</span></h2>
-            <p>Udforsk vores seneste projekter og se hvad vi kan gøre for dig</p>
+            <h2>{t('cases.section_title')} <span className="gradient-text">{t('cases.section_title_highlight')}</span></h2>
+            <p>{t('cases.section_subtitle')}</p>
           </motion.div>
 
           <div className="cases-preview">
-            <motion.div
-              className="case-preview-card"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="case-preview-visual app-visual">
-                <div className="mini-phone">
-                  <div className="mini-screen gradient-green"></div>
+            <Link to="/demo/fitness-app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <motion.div
+                className="case-preview-card"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="case-preview-visual app-visual">
+                  <div className="mini-phone">
+                    <div className="mini-screen gradient-green"></div>
+                  </div>
+                  <div className="mini-phone offset">
+                    <div className="mini-screen gradient-purple"></div>
+                  </div>
                 </div>
-                <div className="mini-phone offset">
-                  <div className="mini-screen gradient-purple"></div>
+                <div className="case-preview-content">
+                  <span className="case-tag">{t('cases.app_tag')}</span>
+                  <h3>{t('cases.fitness_title')}</h3>
+                  <p>{t('cases.fitness_desc')}</p>
                 </div>
-              </div>
-              <div className="case-preview-content">
-                <span className="case-tag">App Cases</span>
-                <h3>Fitness & Klinik Apps</h3>
-                <p>Se vores interaktive app demos og oplev funktionaliteten selv</p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
 
-            <motion.div
-              className="case-preview-card"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="case-preview-visual web-visual">
-                <div className="mini-laptop">
-                  <div className="mini-laptop-screen gradient-blue"></div>
+            <Link to="/demo/restaurant" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <motion.div
+                className="case-preview-card"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="case-preview-visual web-visual">
+                  <div className="mini-laptop">
+                    <div className="mini-laptop-screen gradient-blue"></div>
+                  </div>
                 </div>
-              </div>
-              <div className="case-preview-content">
-                <span className="case-tag">Web Cases</span>
-                <h3>Restaurant & Webshop</h3>
-                <p>Moderne hjemmesider med fokus på brugeroplevelse og konvertering</p>
-              </div>
-            </motion.div>
+                <div className="case-preview-content">
+                  <span className="case-tag">{t('cases.web_tag')}</span>
+                  <h3>{t('cases.restaurant_title')}</h3>
+                  <p>{t('cases.restaurant_desc')}</p>
+                </div>
+              </motion.div>
+            </Link>
+
+            <Link to="/demo/webshop" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <motion.div
+                className="case-preview-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="case-preview-visual web-visual">
+                  <div className="mini-laptop">
+                    <div className="mini-laptop-screen gradient-purple"></div>
+                  </div>
+                </div>
+                <div className="case-preview-content">
+                  <span className="case-tag">{t('cases.web_tag')}</span>
+                  <h3>{t('cases.webshop_title')}</h3>
+                  <p>{t('cases.webshop_desc')}</p>
+                </div>
+              </motion.div>
+            </Link>
+
+            <Link to="/demo/boligportal" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <motion.div
+                className="case-preview-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="case-preview-visual app-visual">
+                  <div className="mini-phone">
+                    <div className="mini-screen gradient-blue"></div>
+                  </div>
+                  <div className="mini-phone offset">
+                    <div className="mini-screen gradient-green"></div>
+                  </div>
+                </div>
+                <div className="case-preview-content">
+                  <span className="case-tag">{t('cases.app_tag')}</span>
+                  <h3>{t('cases.boligportal_title')}</h3>
+                  <p>{t('cases.boligportal_desc')}</p>
+                </div>
+              </motion.div>
+            </Link>
           </div>
 
           <motion.div
@@ -216,7 +266,7 @@ function Home() {
             viewport={{ once: true }}
           >
             <Link to="/cases" className="btn btn-cases">
-              <span>Se alle cases</span>
+              <span>{t('cases.see_all')}</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>

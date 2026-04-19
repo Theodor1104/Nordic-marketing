@@ -370,6 +370,22 @@
     "cta_desc": "Book a free consultation and let's talk about your project",
     "cta_button": "Contact us"
   },
+  "cases": {
+    "section_title": "See our",
+    "section_title_highlight": "work",
+    "section_subtitle": "Explore our latest projects and see what we can do for you",
+    "app_tag": "App",
+    "web_tag": "Website",
+    "fitness_title": "Fitness App",
+    "fitness_desc": "Complete fitness app with training programs, tracking and social features",
+    "restaurant_title": "Restaurant Website",
+    "restaurant_desc": "Modern restaurant website with online menu and table booking",
+    "webshop_title": "Webshop",
+    "webshop_desc": "Professional e-commerce solution with payment and inventory management",
+    "boligportal_title": "Housing Portal App",
+    "boligportal_desc": "Housing search app with filters, favorites and direct contact",
+    "see_all": "See all cases"
+  },
   "apps": {
     "badge": "App Agency in Denmark",
     "title": "App development",
