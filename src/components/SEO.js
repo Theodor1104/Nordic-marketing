@@ -10,13 +10,14 @@ function SEO({
   schema = null,
   breadcrumbs = null,
   noindex = false,
-  lastModified = null
+  lastModified = null,
+  lang = 'da'
 }) {
   const siteTitle = 'Nordic Digital';
-  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Marketing Bureau Danmark | SEO, Google Ads & Webdesign`;
-  const defaultDescription = 'Nordic Digital er Danmarks bedste marketing bureau for små virksomheder. Eksperter i SEO, Google Ads, Facebook annoncering & webdesign. Priser fra 2.500 kr/md. Gratis konsultation i hele Danmark. No cure, no pay!';
-  const defaultKeywords = 'marketing bureau danmark, digital marketing bureau danmark, SEO bureau danmark, Google Ads bureau danmark, Meta Ads bureau danmark, Facebook annoncering danmark, webdesign bureau danmark, marketing bureau København, SEO København, GEO optimering, AI søgning, lokal SEO Danmark, bedste marketing bureau';
-  const modifiedDate = lastModified || new Date().toISOString().split('T')[0];
+  const fullTitle = title ? `${title}` : `App Udvikling & Hjemmeside Udvikling Danmark | ${siteTitle}`;
+  const defaultDescription = 'Nordic Digital - Professionel app udvikling og hjemmeside udvikling i Danmark. iOS & Android apps fra 25.000 kr. Moderne hjemmesider fra 5.000 kr. React Native, Flutter & SEO. ✓ Dansk team ✓ Gratis konsultation ✓ Kvalitetsgaranti';
+  const defaultKeywords = 'app udvikling, app udvikling danmark, app udvikler danmark, ios app udvikling, android app udvikling, react native danmark, flutter app udvikling, hjemmeside udvikling, hjemmeside udvikling danmark, webbureau københavn, webdesign danmark, professionel hjemmeside, SEO optimering, app bureau danmark, mobilapp udvikling, cross-platform app, webapp udvikling';
+  const modifiedDate = lastModified || '2026-04-21';
 
   // Breadcrumb Schema
   const breadcrumbSchema = breadcrumbs ? {

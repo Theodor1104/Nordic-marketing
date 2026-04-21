@@ -3,82 +3,130 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Forside -->
+  <!-- Forside - Hovedside -->
   <url>
     <loc>https://nordic-digital.dk/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nordic-digital.dk/" />
     <image:image>
       <image:loc>https://nordic-digital.dk/og-image.jpg</image:loc>
       <image:title>App Udvikling og Hjemmeside Udvikling Danmark - Nordic Digital</image:title>
+      <image:caption>Nordic Digital - Professionel app udvikling og hjemmeside udvikling til danske virksomheder</image:caption>
     </image:image>
   </url>
 
-  <!-- Apps Service Page -->
+  <!-- Apps Service Page - Hovedservice -->
   <url>
     <loc>https://nordic-digital.dk/apps</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/apps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/apps?lang=en" />
     <image:image>
       <image:loc>https://nordic-digital.dk/og-image.jpg</image:loc>
-      <image:title>App Udvikling Danmark - iOS og Android App Bureau København</image:title>
+      <image:title>App Udvikling Danmark - iOS og Android App Bureau</image:title>
+      <image:caption>Professionel app udvikling til iOS og Android med React Native og Flutter</image:caption>
     </image:image>
   </url>
 
-  <!-- Hjemmesider Service Page -->
+  <!-- Hjemmesider Service Page - Hovedservice -->
   <url>
     <loc>https://nordic-digital.dk/hjemmesider</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/hjemmesider" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/hjemmesider?lang=en" />
     <image:image>
       <image:loc>https://nordic-digital.dk/og-image.jpg</image:loc>
-      <image:title>Hjemmeside Udvikling Danmark - Professionelt Webbureau København</image:title>
+      <image:title>Hjemmeside Udvikling Danmark - Professionelt Webbureau</image:title>
+      <image:caption>Moderne hjemmesider med SEO optimering til danske virksomheder</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Cases Page - Portfolio -->
+  <url>
+    <loc>https://nordic-digital.dk/cases</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/cases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/cases?lang=en" />
+    <image:image>
+      <image:loc>https://nordic-digital.dk/og-image.jpg</image:loc>
+      <image:title>Cases og Portfolio - Nordic Digital App og Web Projekter</image:title>
+      <image:caption>Se vores seneste app og hjemmeside projekter</image:caption>
     </image:image>
   </url>
 
   <!-- Proces Page -->
   <url>
     <loc>https://nordic-digital.dk/proces</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/proces" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/proces?lang=en" />
   </url>
 
   <!-- Om Os Page -->
   <url>
     <loc>https://nordic-digital.dk/om-os</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/om-os" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/om-os?lang=en" />
   </url>
 
-  <!-- Kontakt Page -->
+  <!-- Kontakt Page - Vigtig for konvertering -->
   <url>
     <loc>https://nordic-digital.dk/kontakt</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="da" href="https://nordic-digital.dk/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nordic-digital.dk/kontakt?lang=en" />
   </url>
 
-  <!-- Cases Page -->
+  <!-- Demo Pages - Cases -->
   <url>
-    <loc>https://nordic-digital.dk/cases</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://nordic-digital.dk/og-image.jpg</image:loc>
-      <image:title>Cases og Portfolio - Nordic Digital App og Web Udvikling</image:title>
-    </image:image>
+    <loc>https://nordic-digital.dk/demo/fitness-app</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://nordic-digital.dk/demo/restaurant</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://nordic-digital.dk/demo/webshop</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://nordic-digital.dk/demo/boligportal</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <!-- Blog -->
   <url>
     <loc>https://nordic-digital.dk/blog</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,35 +134,35 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://nordic-digital.dk/blog/app-udvikling-pris-danmark</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/hjemmeside-udvikling-guide</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/seo-guide-danmark-2026</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/google-ads-begynder-guide</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://nordic-digital.dk/blog/facebook-annoncering-tips</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

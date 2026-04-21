@@ -23,10 +23,11 @@ function Home() {
   return (
     <div className="home">
       <SEO
-        title="App Udvikling & Hjemmeside Udvikling Danmark | Nordic Digital"
-        description="Professionel app udvikling og hjemmeside udvikling til danske virksomheder. iOS & Android apps fra 25.000 kr. Moderne hjemmesider fra 5.000 kr. ✓ Gratis konsultation"
-        keywords="app udvikling, app udvikling danmark, hjemmeside udvikling, hjemmeside udvikling danmark, app udvikler, webbureau danmark, iOS app, Android app, React Native, Flutter, professionel hjemmeside, webdesign"
+        title="App Udvikling Danmark | Hjemmeside Udvikling | Nordic Digital"
+        description="Nordic Digital - Dit app bureau i Danmark. Professionel app udvikling til iOS & Android fra 25.000 kr. Hjemmeside udvikling fra 5.000 kr. React Native, Flutter, SEO. ✓ Dansk team i København ✓ Gratis konsultation ✓ Kvalitetsgaranti"
+        keywords="app udvikling, app udvikling danmark, app udvikler danmark, app bureau, ios app udvikling, android app udvikling, react native danmark, flutter udvikling, hjemmeside udvikling, hjemmeside udvikling danmark, webbureau københavn, webdesign danmark, professionel hjemmeside, mobilapp udvikling, cross-platform app, webapp udvikling, SEO optimering"
         canonical="https://nordic-digital.dk/"
+        lastModified="2026-04-21"
       />
 
       {/* Hero Section */}
