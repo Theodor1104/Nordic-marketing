@@ -712,6 +712,10 @@
     padding: 4rem 0 3rem;
   }
 
+  .hero .hero-visual {
+    display: none;
+  }
+
   .hero-logo {
     font-size: 2.5rem;
     margin-bottom: 1rem;
